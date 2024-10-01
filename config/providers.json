@@ -1,0 +1,3186 @@
+{
+ "NV003": {
+  "status": "new", 
+  "name": "HEALTH CARE PARTNERS OF NEVADA"
+ }, 
+ "CA084": {
+  "status": "new", 
+  "name": "PHYSICIANS HEALTHWAYS"
+ }, 
+ "CA087": {
+  "status": "new", 
+  "name": "PHYSICIANS MG SANTA CRUZ"
+ }, 
+ "OH003": {
+  "status": "new", 
+  "name": "ALLIANCE HEALTH PARTNERS"
+ }, 
+ "GA024": {
+  "status": "new", 
+  "name": "NORTHSIDE HOSPITAL, INC"
+ }, 
+ "OH006": {
+  "status": "new", 
+  "name": "CHILDREN'S HOSP MED CENTER (CIN)"
+ }, 
+ "OH007": {
+  "status": "new", 
+  "name": "CHILDREN'S HOSPITAL MEDICAL CENTER OF AKRON"
+ }, 
+ "OH004": {
+  "status": "new", 
+  "name": "AMERICAN HEALTH NETWORK (OH) (AHN)"
+ }, 
+ "OH005": {
+  "status": "existing", 
+  "name": "CENTRAL OHIO PRIMARY CARE PHYSICIANS, INC. (COPCP)"
+ }, 
+ "CA081": {
+  "status": "new", 
+  "name": "PALO ALTO MEDICAL FOUNDATION"
+ }, 
+ "OH008": {
+  "status": "existing", 
+  "name": "CLEVELAND CLINIC FOUNDATION"
+ }, 
+ "CA080": {
+  "status": "new", 
+  "name": "PACIFIC INDEPENDENT PHYS ASSOC"
+ }, 
+ "IL019": {
+  "status": "existing", 
+  "name": "NORTHWEST ILLINOIS PHYSICIANS ASSOCIATION"
+ }, 
+ "GA020": {
+  "status": "new", 
+  "name": "THE PIEDMONT CLINIC"
+ }, 
+ "CA078": {
+  "status": "new", 
+  "name": "OMNI IPA"
+ }, 
+ "CA079": {
+  "status": "new", 
+  "name": "OMNICARE MG"
+ }, 
+ "TX061": {
+  "status": "new", 
+  "name": "HEALTH FIRST OF TEXAS"
+ }, 
+ "CA172": {
+  "status": "new", 
+  "name": "ASIAN AMERICAN MEDICAL GROUP"
+ }, 
+ "TX067": {
+  "status": "new", 
+  "name": "SADLER CLINIC ASSOC., INC."
+ }, 
+ "CA174": {
+  "status": "new", 
+  "name": "BORREGO COMMUNITY HEALTH FOUNDATION"
+ }, 
+ "TX065": {
+  "status": "new", 
+  "name": "MID VALLEY PHYSICIAN ASSOCIATION (MVPA)"
+ }, 
+ "TX064": {
+  "status": "new", 
+  "name": "MHMD IPA"
+ }, 
+ "CA070": {
+  "status": "new", 
+  "name": "MIDCOAST CARE IPA"
+ }, 
+ "CA071": {
+  "status": "new", 
+  "name": "MID-COUNTY PHYSICIANS MG"
+ }, 
+ "CA072": {
+  "status": "new", 
+  "name": "MILLS PENINSULA"
+ }, 
+ "CA073": {
+  "status": "new", 
+  "name": "MONARCH HEALTHCARE"
+ }, 
+ "CA074": {
+  "status": "new", 
+  "name": "MULTI-CULTURAL PRIMARY CARE MG"
+ }, 
+ "CA075": {
+  "status": "new", 
+  "name": "NOBLE AMA IPA"
+ }, 
+ "PA024": {
+  "status": "new", 
+  "name": "GEISINGER HEALTH SYSTEM"
+ }, 
+ "PA025": {
+  "status": "new", 
+  "name": "WELLSPAN HEALTH SYSTEM"
+ }, 
+ "PA026": {
+  "status": "new", 
+  "name": "OSS ORTHOPEDIC HOSPITAL"
+ }, 
+ "PA021": {
+  "status": "new", 
+  "name": "THE MILTON S. HERSHEY MEDICAL CENTER"
+ }, 
+ "PA022": {
+  "status": "new", 
+  "name": "VALE U HEALTH"
+ }, 
+ "PA023": {
+  "status": "new", 
+  "name": "ALBERT EINSTEIN HEALTHCARE NETWORK"
+ }, 
+ "CA089": {
+  "status": "new", 
+  "name": "PIONEER PROVIDER NETWORK"
+ }, 
+ "OK005": {
+  "status": "new", 
+  "name": "MERCY CLINIC OKLAHOMA COMMUNITIES INC"
+ }, 
+ "CA088": {
+  "status": "new", 
+  "name": "PINNACLE MEDICAL GROUP"
+ }, 
+ "OK004": {
+  "status": "new", 
+  "name": "PRIMORIS PROVIDER NETWORK"
+ }, 
+ "IL011": {
+  "status": "new", 
+  "name": "OSF ST FRANCIS, INC"
+ }, 
+ "CT005": {
+  "status": "new", 
+  "name": "ST. FRANCIS HEALTHCARE PARTNERS"
+ }, 
+ "OK002": {
+  "status": "new", 
+  "name": "OU PHYSICIANS"
+ }, 
+ "UB168": {
+  "status": "new", 
+  "name": "SANFORD BEHAVIORAL HEALTH-SD"
+ }, 
+ "OK001": {
+  "status": "new", 
+  "name": "OKLAHOMA PHYSICIANS ASSOCIATION"
+ }, 
+ "IN008": {
+  "status": "new", 
+  "name": "INDIANA UNIVERSITY HEALTHCARE ASSOCIATION, INC. (IUMG)"
+ }, 
+ "NY004": {
+  "status": "new", 
+  "name": "KINGSBROOK JEWISH MEDICAL CENTER"
+ }, 
+ "NY006": {
+  "status": "new", 
+  "name": "MEMORIAL SLOAN KETTERING"
+ }, 
+ "NY001": {
+  "status": "new", 
+  "name": "BRONX LEBANON HOSPITAL"
+ }, 
+ "FL009": {
+  "status": "new", 
+  "name": "NEMOURS CHILDREN'S CLINIC"
+ }, 
+ "FL008": {
+  "status": "new", 
+  "name": "MAYO CLINIC JACKSONVILLE"
+ }, 
+ "FL007": {
+  "status": "new", 
+  "name": "LIFETIME CANCER SCREENING DBA MOFFITT MEDICAL GROUP"
+ }, 
+ "FL006": {
+  "status": "new", 
+  "name": "HOLY CROSS MEDICAL GROUP"
+ }, 
+ "FL005": {
+  "status": "new", 
+  "name": "HEALTH CHOICE NETWORK"
+ }, 
+ "FL004": {
+  "status": "new", 
+  "name": "EMERALD COAST HEALTH ALLIANCE"
+ }, 
+ "FL003": {
+  "status": "new", 
+  "name": "CLEVELAND CLINIC"
+ }, 
+ "NY009": {
+  "status": "existing", 
+  "name": "MT. SINAI HEALTH PARTNERS IPA, LLC."
+ }, 
+ "CA009": {
+  "status": "new", 
+  "name": "RIVERSIDE MEDICAL CLINIC"
+ }, 
+ "CA005": {
+  "status": "new", 
+  "name": "LAKEWOOD IPA AKA LAKEWOOD HEALTH PLAN"
+ }, 
+ "CA004": {
+  "status": "new", 
+  "name": "FAMILY PRACTICE MG OF SAN BERNARDINO"
+ }, 
+ "CA006": {
+  "status": "new", 
+  "name": "MEDICAL DIMENSIONS, INC."
+ }, 
+ "CA002": {
+  "status": "new", 
+  "name": "APPLECARE MG-DOWNEY SELECT IPA"
+ }, 
+ "MO009": {
+  "status": "new", 
+  "name": "SSM MANAGED CARE ORGANIZATION, LLC"
+ }, 
+ "MO008": {
+  "status": "new", 
+  "name": "COX MEDICAL CENTER-BRANSON"
+ }, 
+ "MO005": {
+  "status": "new", 
+  "name": "COX HEALTH NETWORK-SPRINGFIELD"
+ }, 
+ "MO004": {
+  "status": "new", 
+  "name": "CAPITAL REGION MEDICAL GROUP (CRMG)"
+ }, 
+ "MO007": {
+  "status": "new", 
+  "name": "MOSAIC LIFE CARE"
+ }, 
+ "MO006": {
+  "status": "new", 
+  "name": "FREEMAN PHO"
+ }, 
+ "MO001": {
+  "status": "new", 
+  "name": "CHILDREN'S MERCY HOSPITAL"
+ }, 
+ "MO003": {
+  "status": "new", 
+  "name": "BJC MEDICAL GROUP"
+ }, 
+ "MO002": {
+  "status": "new", 
+  "name": "TRUMAN MEDICAL CENTER (UNIVERSITY PHYSICIANS ASSOCIATES"
+ }, 
+ "IA014": {
+  "status": "new", 
+  "name": "SANFORD CLINICS & SANFORD HEALTH NETWORK"
+ }, 
+ "UB008": {
+  "status": "new", 
+  "name": "EVERETT CLINIC EVERETT WASHINGTON"
+ }, 
+ "UB009": {
+  "status": "new", 
+  "name": "GEORGETOWN UNIVERSITY"
+ }, 
+ "IA010": {
+  "status": "new", 
+  "name": "GREAT RIVER MEDICAL CENTER"
+ }, 
+ "IA011": {
+  "status": "new", 
+  "name": "GENESIS HEALTH SYSTEMS"
+ }, 
+ "IA012": {
+  "status": "new", 
+  "name": "AVERA HEALTH PLAN"
+ }, 
+ "UB003": {
+  "status": "new", 
+  "name": "BANNER HEALTH AZ"
+ }, 
+ "UB001": {
+  "status": "new", 
+  "name": "AURORA BEHAVIORAL HEALTH"
+ }, 
+ "UB007": {
+  "status": "new", 
+  "name": "CLEVELAND CLINIC FOUNDATION"
+ }, 
+ "UB004": {
+  "status": "new", 
+  "name": "BURRELL BEHAVIORAL HEALTH"
+ }, 
+ "UB125": {
+  "status": "new", 
+  "name": "MEDOPTIONS, LLC"
+ }, 
+ "UB124": {
+  "status": "new", 
+  "name": "THEDACARE INC"
+ }, 
+ "UB127": {
+  "status": "new", 
+  "name": "UT PHYSICIANS"
+ }, 
+ "IL008": {
+  "status": "existing", 
+  "name": "NORTHSHORE UNIVERSITY HEALTH SYSTEM"
+ }, 
+ "IL009": {
+  "status": "existing", 
+  "name": "NORTHWESTERN HEALTHCARE CORPORATION"
+ }, 
+ "CA094": {
+  "status": "new", 
+  "name": "PROSPECT MG"
+ }, 
+ "CA095": {
+  "status": "new", 
+  "name": "PRUDENT MEDICAL GROUP AKA HOLLYWOOD PRESBYTERIAN MG"
+ }, 
+ "CA092": {
+  "status": "new", 
+  "name": "PRIMECARE MG OF CORONA, INC."
+ }, 
+ "CA093": {
+  "status": "new", 
+  "name": "PROMED HLTH NTWK OF POMONA VLY"
+ }, 
+ "CA090": {
+  "status": "new", 
+  "name": "PREMIER PHYSICIANS NETWORK"
+ }, 
+ "CA091": {
+  "status": "new", 
+  "name": "PRIMARY CARE ASSOC. MG"
+ }, 
+ "UB099": {
+  "status": "new", 
+  "name": "HEALTH CONCEPTS FAMILY SERVICES OK"
+ }, 
+ "IL001": {
+  "status": "new", 
+  "name": "ADVOCATE PHYSICIAN PARTNERS"
+ }, 
+ "IL002": {
+  "status": "existing", 
+  "name": "CHILDREN'S HOSPITAL OF CHICAGO FACULTY PRACTICE PLAN"
+ }, 
+ "IL003": {
+  "status": "new", 
+  "name": "DUPAGE MEDICAL GROUP"
+ }, 
+ "IL004": {
+  "status": "new", 
+  "name": "ELMCARE MEMORIAL HEALTHCARE DBA ELMHURST CLINIC"
+ }, 
+ "IL005": {
+  "status": "new", 
+  "name": "GOTTLIEB WEST TOWNS PHO"
+ }, 
+ "CA098": {
+  "status": "new", 
+  "name": "REGAL MG"
+ }, 
+ "CA099": {
+  "status": "new", 
+  "name": "RIVERSIDE PHYS NETWORK"
+ }, 
+ "UB047": {
+  "status": "new", 
+  "name": "MAYO HEALTH SYSTEM FRANCISCAN HEALTHCARE LACROSSE"
+ }, 
+ "WA006": {
+  "status": "new", 
+  "name": "PACIFIC MEDICAL CARE (PACMED)"
+ }, 
+ "WI001": {
+  "status": "new", 
+  "name": "AGNESIAN HEALTHCARE  (AGNESIAN - WAUPON ER PHYSICIANS)"
+ }, 
+ "UB137": {
+  "status": "new", 
+  "name": "AVERA MCKENNAN"
+ }, 
+ "UB134": {
+  "status": "new", 
+  "name": "MAYO CLINIC HEALTH SYSTEM"
+ }, 
+ "UB135": {
+  "status": "new", 
+  "name": "PALO ALTO MEDICAL FOUNDATION - SUTTER"
+ }, 
+ "UB132": {
+  "status": "new", 
+  "name": "VIDANT HEALTH"
+ }, 
+ "UB133": {
+  "status": "new", 
+  "name": "WEST VIRGINIA UNITED INSURANCE SERVICES"
+ }, 
+ "WI007": {
+  "status": "new", 
+  "name": "MINISTRY HEALTHCARE"
+ }, 
+ "UB131": {
+  "status": "new", 
+  "name": "SWOPE HEALTH SERVICES"
+ }, 
+ "WI009": {
+  "status": "existing", 
+  "name": "MAYO CLINIC HEALTH SYSTEM LACROSSE FKA FRANCISCAN SKEMP"
+ }, 
+ "UB138": {
+  "status": "new", 
+  "name": "HEALTHPARTNERS - MN"
+ }, 
+ "UB139": {
+  "status": "new", 
+  "name": "KINGSBROOK JEWISH MEDICAL CENTER - NY"
+ }, 
+ "IN011": {
+  "status": "new", 
+  "name": "ST. FRANCIS HOSPITAL SYSTEM AND MD NETWORKS"
+ }, 
+ "IN013": {
+  "status": "new", 
+  "name": "SUBURBAN HEALTH ORGANIZATION"
+ }, 
+ "WA024": {
+  "status": "new", 
+  "name": "OLYMPIC MEDICAL CENTER"
+ }, 
+ "WA023": {
+  "status": "new", 
+  "name": "SKAGIT REGIONAL HEALTH"
+ }, 
+ "IN014": {
+  "status": "new", 
+  "name": "ESKENAZI MEDICAL GROUP"
+ }, 
+ "MI009": {
+  "status": "new", 
+  "name": "UPPER PENINSULA HEALTH PLAN"
+ }, 
+ "MI008": {
+  "status": "new", 
+  "name": "MT PLEASANT AREA PHYS HOSP ORG AND CENTRAL MI COMM HOSP"
+ }, 
+ "MI007": {
+  "status": "new", 
+  "name": "LAKE HURON PHO"
+ }, 
+ "MI006": {
+  "status": "new", 
+  "name": "MCLAREN"
+ }, 
+ "MI005": {
+  "status": "new", 
+  "name": "INTEGRATED HEALTH PARTNERS (IHP)"
+ }, 
+ "MI004": {
+  "status": "new", 
+  "name": "HOLLAND PHO (F/K/A PRINCIPAL HEALTH PHO)"
+ }, 
+ "MI003": {
+  "status": "new", 
+  "name": "HENRY FORD HEALTH SYSTEM, MANAGED CARE CONTRACTING"
+ }, 
+ "MI002": {
+  "status": "existing", 
+  "name": "BORGESS PHYSICIAN PROMED & BORGESS LEE MEDICAL GROUP"
+ }, 
+ "MI001": {
+  "status": "new", 
+  "name": "BEAUMONT HOSPITALS"
+ }, 
+ "TX027": {
+  "status": "new", 
+  "name": "PREMIER PHYSICIANS NETWORK"
+ }, 
+ "TX026": {
+  "status": "new", 
+  "name": "PHYSICIANS OPTIMAL NETWORK INCORPORATED (PONI)"
+ }, 
+ "TX025": {
+  "status": "new", 
+  "name": "PHYSICIANS OF EAST TEXAS"
+ }, 
+ "TX024": {
+  "status": "new", 
+  "name": "PHYSICIANS CONTRACTING ORGANIZATION OF TEXAS"
+ }, 
+ "TX023": {
+  "status": "new", 
+  "name": "PHYSICIANS ASSOCIATION OF NORTH TEXAS"
+ }, 
+ "TX022": {
+  "status": "new", 
+  "name": "PHYSICIAN DIRECT ACCESS (PDA)"
+ }, 
+ "TX021": {
+  "status": "new", 
+  "name": "PERMIAN BASIN HEALTHCARE NETWORK"
+ }, 
+ "TX020": {
+  "status": "new", 
+  "name": "PATIENT PHYSICIAN NETWORK (PPN)"
+ }, 
+ "TX029": {
+  "status": "new", 
+  "name": "SHANNON CLINIC"
+ }, 
+ "TX028": {
+  "status": "new", 
+  "name": "PRI-MED HEALTH NETWORK"
+ }, 
+ "UB161": {
+  "status": "new", 
+  "name": "INPATHY"
+ }, 
+ "TN002": {
+  "status": "new", 
+  "name": "UT MEDICAL GROUP, INC."
+ }, 
+ "TN001": {
+  "status": "new", 
+  "name": "HEALTH CHOICE, LLC"
+ }, 
+ "TN007": {
+  "status": "new", 
+  "name": "VANDERBILT UNIVERSITY"
+ }, 
+ "TN006": {
+  "status": "new", 
+  "name": "UNIVERSITY PHYSICIAN ASSOCIATES (UPA)"
+ }, 
+ "TN005": {
+  "status": "new", 
+  "name": "ST. JUDE CHILDREN'S RESEARCH HOSPITAL"
+ }, 
+ "TN004": {
+  "status": "new", 
+  "name": "MEMORIAL HEALTH SERVICES, INC."
+ }, 
+ "UB118": {
+  "status": "new", 
+  "name": "UPSTATE UNIVERSITY MEDICAL ASSOC @ SYRACUSE INC - NY"
+ }, 
+ "UB043": {
+  "status": "new", 
+  "name": "BAYLORMEDCARE"
+ }, 
+ "UB119": {
+  "status": "new", 
+  "name": "SEA MAR COMMUNITY HEALTH CENTER"
+ }, 
+ "WI029": {
+  "status": "new", 
+  "name": "AFFINITY MEDICAL GROUP"
+ }, 
+ "WI028": {
+  "status": "new", 
+  "name": "WISCONSIN IPA, INC"
+ }, 
+ "CA041": {
+  "status": "new", 
+  "name": "FACEY MEDICAL FOUNDATION"
+ }, 
+ "CA040": {
+  "status": "new", 
+  "name": "EXCEPTIONAL CARE MG/MABUHAY"
+ }, 
+ "CA043": {
+  "status": "new", 
+  "name": "FAMILY CHOICE MEDICAL GROUP"
+ }, 
+ "CA042": {
+  "status": "new", 
+  "name": "FAMILY CARE SPECIALISTS"
+ }, 
+ "CA045": {
+  "status": "new", 
+  "name": "GOOD SAM MED PRACTICE ASSOC"
+ }, 
+ "CA044": {
+  "status": "new", 
+  "name": "GOLDEN EMPIRE MANAGED CARE"
+ }, 
+ "CA047": {
+  "status": "new", 
+  "name": "GREATER TRI-CITIES IPA"
+ }, 
+ "CA046": {
+  "status": "new", 
+  "name": "GREATER NEWPORT PHYSICIANS"
+ }, 
+ "CA049": {
+  "status": "new", 
+  "name": "HEMET COMMUNITY MG"
+ }, 
+ "NY041": {
+  "status": "new", 
+  "name": "HHC - LINCOLN HEALTH CENTER"
+ }, 
+ "NY043": {
+  "status": "new", 
+  "name": "CONTINUUM"
+ }, 
+ "NY044": {
+  "status": "new", 
+  "name": "MFHA IPA/BOSTON CHILDRENS HEALTH PHYSICIANS"
+ }, 
+ "NY045": {
+  "status": "new", 
+  "name": "ST JOHNS EPISCOPAL HOSPITAL"
+ }, 
+ "NY046": {
+  "status": "new", 
+  "name": "COLUMBIA DOCTORS"
+ }, 
+ "NY047": {
+  "status": "new", 
+  "name": "CORNELL WEILL IPA VOLUNTARY"
+ }, 
+ "WI024": {
+  "status": "new", 
+  "name": "PROHEALTH SOLUTIONS, LLC (PHS)"
+ }, 
+ "CA128": {
+  "status": "new", 
+  "name": "UCI UNIVERSITY PHYSICIANS AND SURGEONS"
+ }, 
+ "CA129": {
+  "status": "new", 
+  "name": "UCLA MED GRP"
+ }, 
+ "CA127": {
+  "status": "new", 
+  "name": "TORRANCE HOSPITAL IPA (THIPA)"
+ }, 
+ "WI022": {
+  "status": "existing", 
+  "name": "THEDACARE INC."
+ }, 
+ "PA019": {
+  "status": "new", 
+  "name": "WASHINGTON PHO"
+ }, 
+ "PA014": {
+  "status": "new", 
+  "name": "THE CHILDREN'S HOSPITAL OF PHILADELPHIA"
+ }, 
+ "PA017": {
+  "status": "existing", 
+  "name": "UPHS- UNIVERSITY OF PENNSYLVANIA HEALTH SYSTEM"
+ }, 
+ "PA016": {
+  "status": "new", 
+  "name": "UNIVERSITY OF PITTSBURGH PHYSICIANS (UPP)"
+ }, 
+ "PA010": {
+  "status": "new", 
+  "name": "MT. NITTANY MEDICAL CENTER"
+ }, 
+ "PA012": {
+  "status": "new", 
+  "name": "PINNACLE HEALTH SYSTEM (PRIMESOURCE)"
+ }, 
+ "GA009": {
+  "status": "new", 
+  "name": "KIDS FIRST"
+ }, 
+ "GA008": {
+  "status": "new", 
+  "name": "HEALTHWEST (TANNER MEDICAL CENTER)"
+ }, 
+ "GA003": {
+  "status": "new", 
+  "name": "CENTRAL GEORGIA HEALTH NETWORK"
+ }, 
+ "GA002": {
+  "status": "new", 
+  "name": "CAMDEN HEALTHCARE NETWORK, PHO"
+ }, 
+ "GA005": {
+  "status": "new", 
+  "name": "CHILDRENS HEALTHCARE OF ATLANTA"
+ }, 
+ "GA004": {
+  "status": "new", 
+  "name": "CENTRAL GEORGIA MEDICAL CARE NETWORK"
+ }, 
+ "GA007": {
+  "status": "new", 
+  "name": "EMORY HEALTHCARE"
+ }, 
+ "GA006": {
+  "status": "new", 
+  "name": "DEKALB MEDICAL PHO"
+ }, 
+ "MA010": {
+  "status": "new", 
+  "name": "MASS GENERAL HOSPITAL"
+ }, 
+ "MA011": {
+  "status": "new", 
+  "name": "TUFTS MEDICAL CENTER"
+ }, 
+ "MA013": {
+  "status": "new", 
+  "name": "UMASS"
+ }, 
+ "MA015": {
+  "status": "new", 
+  "name": "LAHEY CLINICS"
+ }, 
+ "MA017": {
+  "status": "existing", 
+  "name": "NORTH SHORE HEALTH SYSTEM"
+ }, 
+ "MA019": {
+  "status": "new", 
+  "name": "SOUTHCOAST HEALTH"
+ }, 
+ "TX063": {
+  "status": "new", 
+  "name": "THE UNIVERSITY OF TEXAS, M.D. ANDERSON CANCER CENTER"
+ }, 
+ "TX062": {
+  "status": "new", 
+  "name": "KELSEY-SEYBOLD  MEDICAL GROUP , P.A."
+ }, 
+ "NY031": {
+  "status": "new", 
+  "name": "SLOCUM DICKSON MEDICAL GROUP (SDMG)"
+ }, 
+ "NY030": {
+  "status": "new", 
+  "name": "NYU/UMSO"
+ }, 
+ "NY033": {
+  "status": "new", 
+  "name": "SUNY-UNIVERSITY PHYSICIANS OF BROOKLYN"
+ }, 
+ "NY032": {
+  "status": "new", 
+  "name": "STATE UNIV OF NY FOR UNIV HOSPITAL @ STONY BROOK"
+ }, 
+ "US003": {
+  "status": "new", 
+  "name": "CONSULATE"
+ }, 
+ "US002": {
+  "status": "new", 
+  "name": "CONCENTRA"
+ }, 
+ "US005": {
+  "status": "new", 
+  "name": "GOLDEN LIVING/ASERACARE"
+ }, 
+ "US004": {
+  "status": "new", 
+  "name": "GENESIS"
+ }, 
+ "US007": {
+  "status": "new", 
+  "name": "LHC GROUP"
+ }, 
+ "US006": {
+  "status": "new", 
+  "name": "HEARTLAND HOME HEALTH AND HOSPICE"
+ }, 
+ "US009": {
+  "status": "new", 
+  "name": "MANOR CARE"
+ }, 
+ "US008": {
+  "status": "new", 
+  "name": "MANAGEMENT & NETWORK SERVICES"
+ }, 
+ "TX066": {
+  "status": "new", 
+  "name": "PRIVA MG GULF COAST PLLC"
+ }, 
+ "MD004": {
+  "status": "new", 
+  "name": "JOHNS HOPKINS HOSPITAL (ON BEHALF OF  SOM PHYSICIANS)"
+ }, 
+ "MD006": {
+  "status": "new", 
+  "name": "MEDSTAR HEALTH NORTH   (HH MEDSTAR HEALTH) (WHITEMARSH)"
+ }, 
+ "MD007": {
+  "status": "new", 
+  "name": "MERCY MEDICAL CENTER"
+ }, 
+ "MD001": {
+  "status": "new", 
+  "name": "GREATER BALTIMORE MEDICAL CENTER"
+ }, 
+ "MD003": {
+  "status": "new", 
+  "name": "JOHNS HOPKINS COMMUNITY PHYSICIANS  (JHCP)"
+ }, 
+ "MD008": {
+  "status": "new", 
+  "name": "MOUNT WASHINGTON PEDIATRICS"
+ }, 
+ "MD009": {
+  "status": "new", 
+  "name": "LIFEBRIDGE HEALTH, INC"
+ }, 
+ "UB073": {
+  "status": "new", 
+  "name": "UNM PHYSICIANS (UNIVERSITY OF NEBRASKA)"
+ }, 
+ "UB072": {
+  "status": "new", 
+  "name": "UNIVERSITY PHYSICIANS ASSOC @ U OF LOUISVILLE KY"
+ }, 
+ "UB071": {
+  "status": "new", 
+  "name": "UNIVERSITY OF VIRGINIA"
+ }, 
+ "UB034": {
+  "status": "new", 
+  "name": "UNIVERSITY OF OKLAHOMA OKLAHOMA"
+ }, 
+ "UB077": {
+  "status": "new", 
+  "name": "COLUMBIADOCTORS"
+ }, 
+ "UB076": {
+  "status": "new", 
+  "name": "WAYNE STATE UNIVERSITY PHYSICIAN GROUP"
+ }, 
+ "UB075": {
+  "status": "new", 
+  "name": "VIRGIN ISLANDS EQUICARE INC"
+ }, 
+ "UB074": {
+  "status": "new", 
+  "name": "VALLEY HEALTH PLAN"
+ }, 
+ "UB079": {
+  "status": "new", 
+  "name": "OSCHNER CLINIC"
+ }, 
+ "UB078": {
+  "status": "new", 
+  "name": "DENVER HEALTH AND HOSPITAL AUTHORITY"
+ }, 
+ "UB060": {
+  "status": "new", 
+  "name": "TEXAS CHILDRENS PHYSICIAN SERVICE ORGANIZATION"
+ }, 
+ "IL031": {
+  "status": "new", 
+  "name": "COOK COUNTY HEALTH & HOSPITAL SYSTEMS"
+ }, 
+ "IL030": {
+  "status": "new", 
+  "name": "CENTEGRA HEALTH SYSTEMS"
+ }, 
+ "IL032": {
+  "status": "new", 
+  "name": "UNITY POINT"
+ }, 
+ "UB039": {
+  "status": "new", 
+  "name": "VANDERBILT UNIVERSITY"
+ }, 
+ "AC004": {
+  "status": "new", 
+  "name": "PHYSIOTHERAPY ASSOCIATES"
+ }, 
+ "UB048": {
+  "status": "new", 
+  "name": "MCLEAN HOSPITAL BOSTON MA"
+ }, 
+ "CA162": {
+  "status": "new", 
+  "name": "VISTA COMMUNITY CLINIC"
+ }, 
+ "CA163": {
+  "status": "new", 
+  "name": "HEALTHGUARD IPA"
+ }, 
+ "CA160": {
+  "status": "new", 
+  "name": "LEISURE WORLD MANAGED CARE MG, INC"
+ }, 
+ "CA161": {
+  "status": "new", 
+  "name": "FAMILY HEALTH CENTERS OF SAN DIEGO"
+ }, 
+ "TX078": {
+  "status": "new", 
+  "name": "CHRISTUS PHYSICIAN GROUP"
+ }, 
+ "CA164": {
+  "status": "new", 
+  "name": "PROVIDENCE HEALTH NETWORK"
+ }, 
+ "CA165": {
+  "status": "new", 
+  "name": "EMPLOYEE HEALTH SYSTEMS"
+ }, 
+ "TX074": {
+  "status": "existing", 
+  "name": "TMH PHYSICIAN ORGANIZATION (TMHPO)"
+ }, 
+ "TX075": {
+  "status": "new", 
+  "name": "THE UNIVERSITY OF TEXAS MEDICAL BRANCH (UTMB)"
+ }, 
+ "CA168": {
+  "status": "new", 
+  "name": "CHILDREN'S HOSPITAL LOS ANGELES MEDICAL GROUP"
+ }, 
+ "CA169": {
+  "status": "existing", 
+  "name": "SAN YSIDRO HEALTH CENTER"
+ }, 
+ "TX010": {
+  "status": "new", 
+  "name": "DIGESTIVE HEALTH ASSOCIATES OF TEXAS, P.A."
+ }, 
+ "TX072": {
+  "status": "new", 
+  "name": "TEXAS CHILDREN'S PHYSICIAN SERVICES ORG"
+ }, 
+ "TX073": {
+  "status": "new", 
+  "name": "TEXAS PROFESSIONAL HEALTHCARE ALLIANCE"
+ }, 
+ "PR001": {
+  "status": "new", 
+  "name": "MAPFRE"
+ }, 
+ "TX011": {
+  "status": "new", 
+  "name": "EAST TEXAS HEALTH BENEFIT NETWORK"
+ }, 
+ "TX016": {
+  "status": "new", 
+  "name": "JEFFERSON PHYSICIAN GROUP"
+ }, 
+ "TX017": {
+  "status": "new", 
+  "name": "MEDICAL EDGE HEALTHCARE"
+ }, 
+ "TX014": {
+  "status": "new", 
+  "name": "HEALTH TEXAS PROVIDER NETWORK (HTPN)"
+ }, 
+ "TX015": {
+  "status": "new", 
+  "name": "HENDRICK HEALTH NETWORK"
+ }, 
+ "DC001": {
+  "status": "new", 
+  "name": "CHILDREN'S NATIONAL MEDICAL CENTER"
+ }, 
+ "DC002": {
+  "status": "new", 
+  "name": "GEORGE WASHINGTON UNIVERSITY MFA"
+ }, 
+ "DC003": {
+  "status": "new", 
+  "name": "GEORGETOWN/MEDSTAR SOUTH"
+ }, 
+ "DC005": {
+  "status": "new", 
+  "name": "PROVIDENCE HOSPITAL"
+ }, 
+ "DC007": {
+  "status": "new", 
+  "name": "MARYS CENTER FOR MATERNAL AND CHILD CARE"
+ }, 
+ "DC009": {
+  "status": "new", 
+  "name": "ZOWARD UNIVERSITY FACULTY PRACTICE PLAN"
+ }, 
+ "NM012": {
+  "status": "new", 
+  "name": "HOLY CROSS PHO"
+ }, 
+ "NM010": {
+  "status": "new", 
+  "name": "DAVITA MEDICAL GROUP NEW MEXICO, LLC"
+ }, 
+ "FL018": {
+  "status": "new", 
+  "name": "UNIVERSITY OF SOUTH FLORIDA PHYSICIANS' GROUP"
+ }, 
+ "FL019": {
+  "status": "new", 
+  "name": "WATSON CLINIC"
+ }, 
+ "NY072": {
+  "status": "existing", 
+  "name": "SBH HEALTH SYSYTEM"
+ }, 
+ "FL010": {
+  "status": "new", 
+  "name": "ORLANDO REGIONAL HEALTH SYSTEMS DBA(HEALTHCHOICE, INC.)"
+ }, 
+ "FL011": {
+  "status": "new", 
+  "name": "PEDIATRIC ASSOCIATES"
+ }, 
+ "FL012": {
+  "status": "new", 
+  "name": "PEDIATRIC SERVICES OF FLORIDA"
+ }, 
+ "FL013": {
+  "status": "new", 
+  "name": "PHYSICIANS REGIONAL MEDICAL CENTER"
+ }, 
+ "FL014": {
+  "status": "new", 
+  "name": "SHANDS -GAINESVILLE"
+ }, 
+ "FL015": {
+  "status": "new", 
+  "name": "SHANDS JACKSONVILLE"
+ }, 
+ "FL017": {
+  "status": "existing", 
+  "name": "UNIVERSITY OF MIAMI"
+ }, 
+ "WI033": {
+  "status": "new", 
+  "name": "HEALTH PARTNERS WATERTOWN REGIONAL MEDICAL CENTER"
+ }, 
+ "CA018": {
+  "status": "new", 
+  "name": "ALTA BATES MG"
+ }, 
+ "CA019": {
+  "status": "new", 
+  "name": "ALTAMED HEALTH SERVICES CORPORATION"
+ }, 
+ "CA017": {
+  "status": "new", 
+  "name": "ALLIED PACIFIC OF CA"
+ }, 
+ "CA014": {
+  "status": "new", 
+  "name": "ALLCARE IPA DBA INDEPENDENT PHYS ASSOC"
+ }, 
+ "CA015": {
+  "status": "new", 
+  "name": "ALLIANCE DESERT PHYSICIANS"
+ }, 
+ "CA012": {
+  "status": "new", 
+  "name": "AFFILIATED DOCTORS OF ORANGE COUNTY"
+ }, 
+ "CA013": {
+  "status": "new", 
+  "name": "AFFINITY MEDICAL GROUP"
+ }, 
+ "CA010": {
+  "status": "new", 
+  "name": "UC DAVIS"
+ }, 
+ "CA011": {
+  "status": "new", 
+  "name": "ACCESS MG"
+ }, 
+ "WV001": {
+  "status": "new", 
+  "name": "UNIVERSITY HEALTH ASSOCIATES"
+ }, 
+ "WV003": {
+  "status": "existing", 
+  "name": "WEST VIRGINIA UNITED INSURANCE SERVICES"
+ }, 
+ "UB035": {
+  "status": "new", 
+  "name": "UNIVERSITY OF SOUTH FLORIDA FLORIDA"
+ }, 
+ "NV002": {
+  "status": "existing", 
+  "name": "SIERRA"
+ }, 
+ "UB032": {
+  "status": "new", 
+  "name": "UNIVERSITY OF NORTH TEXAS SCIENCES (UNT)"
+ }, 
+ "MO014": {
+  "status": "new", 
+  "name": "MERCY AND AFFILIATES, LLC"
+ }, 
+ "MO012": {
+  "status": "new", 
+  "name": "WASHINGTON UNIVERSITY PHYSICIAN NETWORK"
+ }, 
+ "MO013": {
+  "status": "new", 
+  "name": "MERCY HEALTH SPRINGFIELD COMMUNITIES"
+ }, 
+ "MO010": {
+  "status": "new", 
+  "name": "ST. LOUIS UNIVERSITY/SLU CARE"
+ }, 
+ "MO011": {
+  "status": "new", 
+  "name": "UNIVERSITY OF MISSOURI"
+ }, 
+ "CT008": {
+  "status": "new", 
+  "name": "COMMUNITY MEDICAL GROUP"
+ }, 
+ "MA020": {
+  "status": "new", 
+  "name": "MASSACHUSETTS EYE AND EAR ASSOCIATES"
+ }, 
+ "UB082": {
+  "status": "new", 
+  "name": "PATHWAYS COMMUNITY BEHAVIORAL HEALTHCARE INC"
+ }, 
+ "UB083": {
+  "status": "new", 
+  "name": "GUNDERSON LUTHERAN"
+ }, 
+ "UB081": {
+  "status": "new", 
+  "name": "PROVIDENCE HEALTH AND SERVICES WASHINGTON"
+ }, 
+ "UB086": {
+  "status": "new", 
+  "name": "MERCY MEDICAL CENTER"
+ }, 
+ "UB084": {
+  "status": "new", 
+  "name": "ALEGENT HEALTH"
+ }, 
+ "UB088": {
+  "status": "new", 
+  "name": "MERCY HEALTH SPRINGFIELD"
+ }, 
+ "UB089": {
+  "status": "new", 
+  "name": "PRESBYTERIAN MEDICAL SERVICES - SANTA FE"
+ }, 
+ "UB103": {
+  "status": "new", 
+  "name": "COMMUNITY HEALTH NETWORK IN"
+ }, 
+ "UB101": {
+  "status": "new", 
+  "name": "MERCY AFFILIATE LLC"
+ }, 
+ "UB100": {
+  "status": "new", 
+  "name": "HEALTH CONCEPTS FAMILY SERVICES TX"
+ }, 
+ "UB107": {
+  "status": "new", 
+  "name": "MENTAL HEALTH PARTNERS"
+ }, 
+ "UB106": {
+  "status": "new", 
+  "name": "PRESBYTERIAN HEALTH SERVICES - ALBUQUERQUE"
+ }, 
+ "UB105": {
+  "status": "new", 
+  "name": "VALLEY MENTAL HEALTH"
+ }, 
+ "WI015": {
+  "status": "existing", 
+  "name": "MONROE CLINIC"
+ }, 
+ "WI018": {
+  "status": "existing", 
+  "name": "PREVEA"
+ }, 
+ "UB108": {
+  "status": "new", 
+  "name": "CHILDRENS HOSPITAL AND HEALTH SYSTEM"
+ }, 
+ "MI018": {
+  "status": "new", 
+  "name": "GREATER MACOMB PHO (MERCY MACOMB)"
+ }, 
+ "MI019": {
+  "status": "existing", 
+  "name": "OAKLAND PHYSICIAN NETWORK SERVICES INC (OPNS)"
+ }, 
+ "IN001": {
+  "status": "new", 
+  "name": "COMMUNITY FOUNDATION OF NORTHWEST INDIANA"
+ }, 
+ "IN006": {
+  "status": "existing", 
+  "name": "COMMUNITY PHYSICIANS OF INDIANA (CPI)"
+ }, 
+ "IN007": {
+  "status": "new", 
+  "name": "INDIANA LAKES MANAGED CARE"
+ }, 
+ "IN005": {
+  "status": "new", 
+  "name": "INDIANA UNVERSITY HEALTH INC."
+ }, 
+ "PTEST": {
+  "status": "existing", 
+  "name": "PROVIDER TEST"
+ }, 
+ "MI012": {
+  "status": "new", 
+  "name": "UNIVERSITY OF MICHIGAN HEALTH SYSTEM"
+ }, 
+ "IN009": {
+  "status": "new", 
+  "name": "REID PHO"
+ }, 
+ "MI014": {
+  "status": "new", 
+  "name": "LAKELAND CARE INC."
+ }, 
+ "MI015": {
+  "status": "new", 
+  "name": "LENAWEE CLINICAL PARTNERS"
+ }, 
+ "MI017": {
+  "status": "new", 
+  "name": "AFFINIA HEALTH NETWORK LAKESHORE"
+ }, 
+ "NJ004": {
+  "status": "new", 
+  "name": "VIRTUA MEDICAL GROUP"
+ }, 
+ "NJ006": {
+  "status": "new", 
+  "name": "RUTGERS NEW JERSEY MEDICAL SCHOOL"
+ }, 
+ "NJ001": {
+  "status": "new", 
+  "name": "COOPER UNIVERSITY PHYSICIANS"
+ }, 
+ "NJ003": {
+  "status": "new", 
+  "name": "SUMMIT MEDICAL GROUP"
+ }, 
+ "TX030": {
+  "status": "new", 
+  "name": "SOUTHWEST PHYSICIAN ASSOCIATES (AKA SPA)"
+ }, 
+ "TX031": {
+  "status": "new", 
+  "name": "GENESIS PHYSICIAN GROUP"
+ }, 
+ "TX033": {
+  "status": "existing", 
+  "name": "TEXAS HEALTH PHYSICIAN GROUP"
+ }, 
+ "TX034": {
+  "status": "new", 
+  "name": "TEXAS INDEPENDENT OSTEOPATHIC PHYSICIANS ASSOCIATION"
+ }, 
+ "NY002": {
+  "status": "new", 
+  "name": "CORINTHIAN INDEPENDENT PRACTICE ASSOCIATION, INC."
+ }, 
+ "TX036": {
+  "status": "new", 
+  "name": "TEXAS ONCOLOGY PA. (TOPA)"
+ }, 
+ "TX037": {
+  "status": "new", 
+  "name": "TEXAS TECH AMARILLO"
+ }, 
+ "TX038": {
+  "status": "new", 
+  "name": "TEXAS TECH UNIVERSITY HEALTH SCIENCE CTR. - ODESSA"
+ }, 
+ "TX039": {
+  "status": "new", 
+  "name": "TEXAS TECH UNIVERSITY HEALTH SCIENCE CENTER"
+ }, 
+ "NY003": {
+  "status": "new", 
+  "name": "EXCELSIOR MEDICAL IPA, LLC"
+ }, 
+ "KY008": {
+  "status": "new", 
+  "name": "TRI STATE QUALITY HEALTH NETWORK"
+ }, 
+ "VA001": {
+  "status": "existing", 
+  "name": "CARILION CLINIC CMG PHYSICIAN"
+ }, 
+ "KY005": {
+  "status": "new", 
+  "name": "UNIVERSITY OF KENTUCKY  KMSF"
+ }, 
+ "KY004": {
+  "status": "new", 
+  "name": "LEXINGTON CLINIC"
+ }, 
+ "KY006": {
+  "status": "new", 
+  "name": "UNIVERSITY PHYSICIANS ASSOCIATES (UPA) SERVICES, INC."
+ }, 
+ "KY001": {
+  "status": "existing", 
+  "name": "ASHLAND AREA HEALTH ALLIANCE"
+ }, 
+ "KY003": {
+  "status": "new", 
+  "name": "COOPERATIVE CARE"
+ }, 
+ "KY002": {
+  "status": "new", 
+  "name": "CENTER CARE"
+ }, 
+ "NY008": {
+  "status": "new", 
+  "name": "MORRIS HEIGHTS HEALTH CENTER"
+ }, 
+ "TN014": {
+  "status": "new", 
+  "name": "FAST PACE URGENT CARE CLINICS"
+ }, 
+ "VI001": {
+  "status": "new", 
+  "name": "VI EQUICARE"
+ }, 
+ "TN012": {
+  "status": "new", 
+  "name": "OPTUM MEDICAL SERVICES"
+ }, 
+ "TN013": {
+  "status": "new", 
+  "name": "HCA PHYSICIAN SERVICES GROUP"
+ }, 
+ "NC010": {
+  "status": "new", 
+  "name": "VIDANT HEALTH"
+ }, 
+ "VT001": {
+  "status": "existing", 
+  "name": "THE UNIV OF VT HEALTH NETWORK C&E"
+ }, 
+ "TX045": {
+  "status": "new", 
+  "name": "UNIVERSITY OF TEXAS HEALTH CENTER AT TYLER"
+ }, 
+ "CA053": {
+  "status": "new", 
+  "name": "HILL PHYSICIANS MG"
+ }, 
+ "TX047": {
+  "status": "new", 
+  "name": "CENTRAL TEXAS COMMUNITY HEALTH CENTERS"
+ }, 
+ "TX046": {
+  "status": "new", 
+  "name": "AUSTIN REGIONAL CLINIC PA"
+ }, 
+ "TX041": {
+  "status": "new", 
+  "name": "MEDICAL CLINIC OF NORTH TEXAS, PLLC."
+ }, 
+ "CA057": {
+  "status": "existing", 
+  "name": "DIGNITY HEALTH MEDICAL GROUP-INLAND EMPIRE"
+ }, 
+ "TX043": {
+  "status": "new", 
+  "name": "TRINITY CLINIC"
+ }, 
+ "CA055": {
+  "status": "new", 
+  "name": "IMPERIAL CNTY PHYS MED GRP"
+ }, 
+ "CA058": {
+  "status": "new", 
+  "name": "JOHN MUIR PHYSICIAN NETWORK"
+ }, 
+ "CA059": {
+  "status": "new", 
+  "name": "KOREAN AMERICAN MEDICAL GROUP"
+ }, 
+ "TX049": {
+  "status": "existing", 
+  "name": "CENTRAL TEXAS PROVIDER NTWK (CTPN)"
+ }, 
+ "TX048": {
+  "status": "new", 
+  "name": "SETON PHYSICIAN HOSPITAL NETWORK"
+ }, 
+ "UB115": {
+  "status": "new", 
+  "name": "INTERMOUNTAIN HEALTH"
+ }, 
+ "WI012": {
+  "status": "new", 
+  "name": "INDEPENDENT PHYSICIAN NETWORK (IPN)"
+ }, 
+ "CA118": {
+  "status": "new", 
+  "name": "SUTTER EAST BAY MEDICAL FOUNDATION"
+ }, 
+ "CA113": {
+  "status": "new", 
+  "name": "SHARP REES STEALY MEDICAL GRP"
+ }, 
+ "CA112": {
+  "status": "new", 
+  "name": "SHARP COMMUNITY MG"
+ }, 
+ "CA110": {
+  "status": "new", 
+  "name": "SEOUL MG"
+ }, 
+ "CA117": {
+  "status": "new", 
+  "name": "ST. VINCENT MED GRP IPA"
+ }, 
+ "CA116": {
+  "status": "new", 
+  "name": "ST. JOSEPH HEALTH SYSTEMS"
+ }, 
+ "PA008": {
+  "status": "new", 
+  "name": "JEFFCARE"
+ }, 
+ "PA009": {
+  "status": "new", 
+  "name": "LEHIGH VALLEY PHO"
+ }, 
+ "WI016": {
+  "status": "existing", 
+  "name": "NORTH SHORE HEALTH NETWORK, AKA BAY AREA MEDICAL CENTER"
+ }, 
+ "PA004": {
+  "status": "new", 
+  "name": "CUMBERLAND VALLEY HEALTH NETWORK"
+ }, 
+ "PA002": {
+  "status": "new", 
+  "name": "BERKSHIRE HEALTH PARTNERS"
+ }, 
+ "PA001": {
+  "status": "existing", 
+  "name": "ALLEGHENY HEALTH NETWORK"
+ }, 
+ "GA018": {
+  "status": "new", 
+  "name": "NORTHEAST GEORGIA HEALTH SYSTEM"
+ }, 
+ "GA019": {
+  "status": "new", 
+  "name": "HARBIN CLINIC"
+ }, 
+ "WI014": {
+  "status": "new", 
+  "name": "MEDICAL COLLEGE OF WISCONSIN (MCW)"
+ }, 
+ "GA012": {
+  "status": "new", 
+  "name": "PHOEBE HEALTH PARTNERS, INC."
+ }, 
+ "GA013": {
+  "status": "new", 
+  "name": "PHYSTAR (CAAP)"
+ }, 
+ "GA010": {
+  "status": "new", 
+  "name": "MEDICAL COLLEGE OF GEORGIA"
+ }, 
+ "GA011": {
+  "status": "new", 
+  "name": "MEMORIAL HEALTH UNIVERSITY PHYSICIANS"
+ }, 
+ "GA016": {
+  "status": "new", 
+  "name": "UNIVERSITY HEALTH LINK"
+ }, 
+ "GA017": {
+  "status": "new", 
+  "name": "WELLSTAR HEALTH SYSTEM"
+ }, 
+ "GA014": {
+  "status": "new", 
+  "name": "SOUTH GEORGIA PHYSICIANS NETWORK"
+ }, 
+ "GA015": {
+  "status": "new", 
+  "name": "SOUTHEASTERN HEALTHCARE ALLIANCE, INC."
+ }, 
+ "FL021": {
+  "status": "new", 
+  "name": "MEDNAX SERVICES (DBA PEDIATRIX)"
+ }, 
+ "FL020": {
+  "status": "new", 
+  "name": "WHITE WILSON MEDICAL CENTER"
+ }, 
+ "FL023": {
+  "status": "new", 
+  "name": "HEALTHPOINT MEDICAL GROUP"
+ }, 
+ "FL022": {
+  "status": "new", 
+  "name": "SHERIDAN HEALTHCORP INC."
+ }, 
+ "FL025": {
+  "status": "new", 
+  "name": "KEYS PHYS HOSP ALLIANCE, INC"
+ }, 
+ "FL024": {
+  "status": "new", 
+  "name": "VARIETY CHILDREN'S HOSP DBA NICKLAUS CHILDREN'S HOSP"
+ }, 
+ "FL027": {
+  "status": "new", 
+  "name": "LAKELAND REGIONAL HEALTH SYSTEM"
+ }, 
+ "FL029": {
+  "status": "new", 
+  "name": "JMG SPECIALTY PHYSICIANS"
+ }, 
+ "FL028": {
+  "status": "new", 
+  "name": "FLORIDA HEALTH SCIENCES CTR/TAMPA GENERAL HOSP"
+ }, 
+ "WA009": {
+  "status": "existing", 
+  "name": "PROVIDENCE PHYSICIAN GROUP"
+ }, 
+ "NY028": {
+  "status": "new", 
+  "name": "MEDISYS"
+ }, 
+ "NY029": {
+  "status": "new", 
+  "name": "NASSAU HEALTHCARE CORPORATION"
+ }, 
+ "NY026": {
+  "status": "new", 
+  "name": "BASSETT HEALTHCARE"
+ }, 
+ "NY027": {
+  "status": "new", 
+  "name": "HELEN HAYES"
+ }, 
+ "NY024": {
+  "status": "new", 
+  "name": "SUNY COLLEGE OF OPTOMETRY"
+ }, 
+ "NY025": {
+  "status": "new", 
+  "name": "ALBANY MEDICAL CENTER"
+ }, 
+ "NY022": {
+  "status": "existing", 
+  "name": "WESTCHESTER MEDICAL GROUP"
+ }, 
+ "NY023": {
+  "status": "new", 
+  "name": "UNIVERSITY OF ROCHESTER MEDICAL FACULTY GROUP"
+ }, 
+ "NY020": {
+  "status": "new", 
+  "name": "SUNY UPSTATE MEDICAL CENTER( SUNY UMAS)"
+ }, 
+ "NY021": {
+  "status": "new", 
+  "name": "WEILL CORNELL PO"
+ }, 
+ "US010": {
+  "status": "new", 
+  "name": "MAXIM HEALTHCARE SERVICES, INC."
+ }, 
+ "UB147": {
+  "status": "new", 
+  "name": "ACCLAIM  TX"
+ }, 
+ "UB146": {
+  "status": "new", 
+  "name": "ONLINE CARE NETWORK - AMERICANWELL"
+ }, 
+ "UB145": {
+  "status": "new", 
+  "name": "LOUISIANA STATE UNIVERSITY"
+ }, 
+ "UB144": {
+  "status": "new", 
+  "name": "LEHIGH VALLEY - PA"
+ }, 
+ "UB142": {
+  "status": "new", 
+  "name": "UNIVERSITY OF PITTSBURGH"
+ }, 
+ "UB141": {
+  "status": "new", 
+  "name": "PROHEALTH CARE MEDICAL ASSOCIATES - WI"
+ }, 
+ "UB140": {
+  "status": "new", 
+  "name": "MONROE CLINIC - WI"
+ }, 
+ "UB149": {
+  "status": "new", 
+  "name": "MERCY OF IOWA CITY REGIONAL PHO (IA)"
+ }, 
+ "UB148": {
+  "status": "new", 
+  "name": "DOCTOR ON DEMAND"
+ }, 
+ "UB068": {
+  "status": "new", 
+  "name": "UNIVERSITY OF TEXAS MEDICAL BRANCH GALVESTON"
+ }, 
+ "UB069": {
+  "status": "new", 
+  "name": "UNIVERSITY OF TEXAS SOUTH WEST"
+ }, 
+ "UB064": {
+  "status": "new", 
+  "name": "UNIVERSITY OF ILLINOIS AT CHICAGO"
+ }, 
+ "UB065": {
+  "status": "new", 
+  "name": "UNIVERSITY OF MIAMI/MILLER SCHOOL OF MEDICINE/UMMG"
+ }, 
+ "UB066": {
+  "status": "new", 
+  "name": "UNIVERSITY OF NORTH CAROLINA"
+ }, 
+ "UB067": {
+  "status": "new", 
+  "name": "UNIVERSITY OF TEXAS HEALTH SCIENCES CENTER SAN ANTONIO"
+ }, 
+ "AR011": {
+  "status": "new", 
+  "name": "ARKANSAS CHILDREN'S HOSPITAL PROFESSIONAL FEES GROUP"
+ }, 
+ "UB061": {
+  "status": "new", 
+  "name": "TEXAS TECH UNIVERSITY HEALTH SCIENCES CENTER LUBBOCK"
+ }, 
+ "UB063": {
+  "status": "new", 
+  "name": "UNIVERSITY OF ARKANSAS FOR MEDICAL SCIENCES"
+ }, 
+ "TX056": {
+  "status": "new", 
+  "name": "UT MEDICINE"
+ }, 
+ "WA002": {
+  "status": "new", 
+  "name": "EVERETT CLINIC"
+ }, 
+ "TX057": {
+  "status": "existing", 
+  "name": "WELLMED"
+ }, 
+ "WA005": {
+  "status": "new", 
+  "name": "MULTICARE HEALTH SYSTEMS"
+ }, 
+ "WA004": {
+  "status": "new", 
+  "name": "FRANCISCAN MEDICAL GROUP (FMG)"
+ }, 
+ "IL022": {
+  "status": "new", 
+  "name": "RUSH HEALTH"
+ }, 
+ "IL023": {
+  "status": "new", 
+  "name": "ADVENTIST HEALTH PARTNERS"
+ }, 
+ "IL020": {
+  "status": "new", 
+  "name": "MCDONOUGH PHYSICIAN-HOSPITAL ORGANIZATION INC"
+ }, 
+ "IL021": {
+  "status": "existing", 
+  "name": "CHG MEDICAL CTR AND CHG HLTH CTR, LTD"
+ }, 
+ "IL026": {
+  "status": "new", 
+  "name": "MEMORIAL MEDICAL GROUP"
+ }, 
+ "WA007": {
+  "status": "new", 
+  "name": "PHYSICIANS CARE NETWORK (THE POLY CLINIC)"
+ }, 
+ "IL025": {
+  "status": "new", 
+  "name": "SARAH BUSH PHYSICIAN GROUP"
+ }, 
+ "AZ024": {
+  "status": "new", 
+  "name": "HONOR HEALTH"
+ }, 
+ "IL029": {
+  "status": "new", 
+  "name": "CADENCE MEDICAL PARTNERS"
+ }, 
+ "AZ020": {
+  "status": "new", 
+  "name": "ARIZONA COMMUNITY PHYSICIANS"
+ }, 
+ "AZ021": {
+  "status": "new", 
+  "name": "OPTUMCARE AZ"
+ }, 
+ "AZ022": {
+  "status": "new", 
+  "name": "EL RIO HEALTH CENTER"
+ }, 
+ "TX053": {
+  "status": "new", 
+  "name": "SCOTT & WHITE CLINIC"
+ }, 
+ "MI013": {
+  "status": "new", 
+  "name": "WAYNE STATE UNIVERSITY GROUP"
+ }, 
+ "TX050": {
+  "status": "new", 
+  "name": "GUADALUPE VALLEY HEALTHCARE NETWORK"
+ }, 
+ "VA008": {
+  "status": "new", 
+  "name": "INTEGRATED SOLUTIONS HEALTH NETWORK"
+ }, 
+ "TX051": {
+  "status": "new", 
+  "name": "HEALTH TEXAS PROVIDER NETWORK"
+ }, 
+ "VA009": {
+  "status": "new", 
+  "name": "INOVA HEALTH CARE SERVICES"
+ }, 
+ "WI032": {
+  "status": "new", 
+  "name": "COLUMBIA ST. MARYS HOSPITALS"
+ }, 
+ "MI020": {
+  "status": "new", 
+  "name": "BRONSON HEALTHCARE GROUP"
+ }, 
+ "WA025": {
+  "status": "new", 
+  "name": "WESTERN WASHINGTON MEDICAL GROUP"
+ }, 
+ "CA109": {
+  "status": "new", 
+  "name": "SEA VIEW IPA HPG"
+ }, 
+ "OH028": {
+  "status": "new", 
+  "name": "MT. CARMEL HEALTH PARTNERS"
+ }, 
+ "OH029": {
+  "status": "new", 
+  "name": "ADENA HEALTH SYSTEM"
+ }, 
+ "WA001": {
+  "status": "new", 
+  "name": "CHILDREN'S UNIVERSITY MEDICAL GROUP (CUMG)"
+ }, 
+ "OH021": {
+  "status": "new", 
+  "name": "UNIVERSITY HOSPITAL"
+ }, 
+ "WA003": {
+  "status": "new", 
+  "name": "EVERGREEN MEDICAL GROUP"
+ }, 
+ "OH023": {
+  "status": "new", 
+  "name": "WOOD CARENET"
+ }, 
+ "OH024": {
+  "status": "new", 
+  "name": "AKRON GENERAL HEALTH SYSTEM"
+ }, 
+ "OH025": {
+  "status": "new", 
+  "name": "HOLZER CLINIC"
+ }, 
+ "OH026": {
+  "status": "new", 
+  "name": "OHIO COOPERATIVE CARE"
+ }, 
+ "OH027": {
+  "status": "new", 
+  "name": "PRIMARY CARE OF NORTHERN OHIO (PCNO)"
+ }, 
+ "CA048": {
+  "status": "new", 
+  "name": "HEALTHCARE PARTNERS"
+ }, 
+ "TX009": {
+  "status": "new", 
+  "name": "DIAGNOSTIC CLINIC OF LONGVIEW, PA"
+ }, 
+ "TX008": {
+  "status": "new", 
+  "name": "DALLAS METHODIST PHYSICIAN NETWORK (DMPN)"
+ }, 
+ "CA159": {
+  "status": "new", 
+  "name": "CLINICA SIERRA VISTA"
+ }, 
+ "CA158": {
+  "status": "new", 
+  "name": "VISALIA MEDICAL CLINIC"
+ }, 
+ "UT004": {
+  "status": "new", 
+  "name": "GRANGER MEDICAL CLINIC"
+ }, 
+ "CA156": {
+  "status": "new", 
+  "name": "KEY MEDICAL GROUP"
+ }, 
+ "TX003": {
+  "status": "new", 
+  "name": "CARDIVASCULAR PROVIDER RESOURCES DBA HEART PLACE"
+ }, 
+ "CA154": {
+  "status": "new", 
+  "name": "DESERT VALLEY MEDICAL GROUP"
+ }, 
+ "CA153": {
+  "status": "new", 
+  "name": "SANTA CLARA VALLEY MEDICAL CENTER"
+ }, 
+ "UT001": {
+  "status": "new", 
+  "name": "INTERMOUNTAIN MEDICAL GROUP"
+ }, 
+ "TX007": {
+  "status": "new", 
+  "name": "COVENANT HEALTH SYSTEM"
+ }, 
+ "UT003": {
+  "status": "new", 
+  "name": "IASIS PHYSICIAN GROUP"
+ }, 
+ "OR001": {
+  "status": "new", 
+  "name": "TRILLIUM COMMUNITY HEALTH PLAN"
+ }, 
+ "OR002": {
+  "status": "new", 
+  "name": "OHSU UNIVERSITY MEDICAL GROUP  (& INSTITUTE OF BREAST H"
+ }, 
+ "OR003": {
+  "status": "new", 
+  "name": "THE CORVALLIS CLINIC"
+ }, 
+ "OR004": {
+  "status": "new", 
+  "name": "TUALITY HEALTH ALLIANCE (THA)"
+ }, 
+ "OR005": {
+  "status": "new", 
+  "name": "PRIMECARE INC"
+ }, 
+ "OR006": {
+  "status": "new", 
+  "name": "HEALTHCARE RESOURCES NORTHWEST"
+ }, 
+ "OR007": {
+  "status": "new", 
+  "name": "ST. CHARLES HEALTH SYSTEM"
+ }, 
+ "OR008": {
+  "status": "new", 
+  "name": "ZOOMCARE"
+ }, 
+ "OR009": {
+  "status": "new", 
+  "name": "SAMARITAN HEALTH SERVICES"
+ }, 
+ "CO008": {
+  "status": "new", 
+  "name": "COLORADO SPRINGS HEALTH PARTNERS"
+ }, 
+ "NM008": {
+  "status": "new", 
+  "name": "UNIVERSITY OF NEW MEXICO"
+ }, 
+ "NM009": {
+  "status": "new", 
+  "name": "WHITE SANDS HEALTH CARE SYSTEM LLC"
+ }, 
+ "NM002": {
+  "status": "new", 
+  "name": "LA VIDA HEALTH SERVICES ORGANIZATION"
+ }, 
+ "NM004": {
+  "status": "new", 
+  "name": "PRESBYTERIAN HEALTHCARE SERVICES"
+ }, 
+ "NM005": {
+  "status": "new", 
+  "name": "PRESBYTERIAN MEDICAL SERVICES"
+ }, 
+ "NM006": {
+  "status": "new", 
+  "name": "REHOBOTH MCKINLEY CHRISTIAN HEALTH CARE SERVICES"
+ }, 
+ "NM007": {
+  "status": "new", 
+  "name": "SAN JUAN IPA"
+ }, 
+ "NY062": {
+  "status": "new", 
+  "name": "MAIMONIDES MEDICAL CENTER"
+ }, 
+ "TX001": {
+  "status": "new", 
+  "name": "BAPTIST ST. ANTHONY PROVIDER NETWORK"
+ }, 
+ "NY061": {
+  "status": "new", 
+  "name": "THE BROOKLYN HOSPITAL CENTER"
+ }, 
+ "NY067": {
+  "status": "new", 
+  "name": "PROHEALTH CARE ASSOCIATES"
+ }, 
+ "NY065": {
+  "status": "new", 
+  "name": "COLUMBIA AFFILIATED PHYSICIANS"
+ }, 
+ "NY068": {
+  "status": "new", 
+  "name": "THE INSTITUTE FOR FAMILY HEALTH"
+ }, 
+ "TX035": {
+  "status": "new", 
+  "name": "TEXAS & OKLAHOMA PREFERRED PROVIDERS SYSTEMS (TOPPS)"
+ }, 
+ "CA029": {
+  "status": "new", 
+  "name": "CEDARS SINAI"
+ }, 
+ "CA028": {
+  "status": "new", 
+  "name": "BROWN & TOLAND MG"
+ }, 
+ "CA173": {
+  "status": "new", 
+  "name": "ORANGE COUNTY ADVANTAGE MG, INC"
+ }, 
+ "CA022": {
+  "status": "new", 
+  "name": "HERITAGE PROVIDER NETWORK"
+ }, 
+ "CA021": {
+  "status": "new", 
+  "name": "AXMINSTER MG"
+ }, 
+ "CA020": {
+  "status": "new", 
+  "name": "AMVI (AMERICAN VIETNAMESE)"
+ }, 
+ "CA027": {
+  "status": "new", 
+  "name": "MEMORIALCARE MEDICAL GROUP"
+ }, 
+ "CA026": {
+  "status": "new", 
+  "name": "BRIGHT PHYSICIANS DBA PIH PHYSICIANS"
+ }, 
+ "CA025": {
+  "status": "new", 
+  "name": "BEAVER MEDICAL GROUP"
+ }, 
+ "CA152": {
+  "status": "new", 
+  "name": "NORTHBAY HEALTHCARE GROUP"
+ }, 
+ "UT002": {
+  "status": "new", 
+  "name": "UNIV OF UT MED GRP, UNIV OF UT COMMUNITY BASED MD"
+ }, 
+ "WI038": {
+  "status": "new", 
+  "name": "BELLIN MEMORIAL HOSPITAL INC"
+ }, 
+ "CA150": {
+  "status": "new", 
+  "name": "SUTTER WEST BAY MEDICAL FOUNDATION"
+ }, 
+ "UB020": {
+  "status": "new", 
+  "name": "STANFORD UNIVERSITY"
+ }, 
+ "UB021": {
+  "status": "new", 
+  "name": "STONY BROOK UNIVERSITY MEDICAL CENTER"
+ }, 
+ "UB022": {
+  "status": "new", 
+  "name": "UNIVERSITY OF CA DAVIS"
+ }, 
+ "UB023": {
+  "status": "new", 
+  "name": "UNIVERSITY OF CA IRVINE"
+ }, 
+ "MN002": {
+  "status": "new", 
+  "name": "MAYO CLINIC ROCHESTER"
+ }, 
+ "UB025": {
+  "status": "new", 
+  "name": "UNIVERSITY OF CA SAN DIEGO"
+ }, 
+ "UB026": {
+  "status": "new", 
+  "name": "UNIVERSITY OF CA SAN FRANCISCO"
+ }, 
+ "MN001": {
+  "status": "new", 
+  "name": "LABORCARE/MEDICA HEALTH PLANS"
+ }, 
+ "UB028": {
+  "status": "new", 
+  "name": "UNIVERSITY OF IOWA CLINICIAN STAFF OFFICE (CSO)"
+ }, 
+ "UB029": {
+  "status": "new", 
+  "name": "CURATORS OF THE UNIVERSITY OF MISSOURI"
+ }, 
+ "IL016": {
+  "status": "new", 
+  "name": "THE CARLE FOUNDATION"
+ }, 
+ "AL002": {
+  "status": "new", 
+  "name": "UN OF AL HOSP & UN OF AL HLTH SERVICE FOUNDATION"
+ }, 
+ "AL003": {
+  "status": "new", 
+  "name": "AMERICAN FAMILY CARE"
+ }, 
+ "HI001": {
+  "status": "new", 
+  "name": "MDX OF HAWAII"
+ }, 
+ "UB055": {
+  "status": "new", 
+  "name": "OREGON HEALTH & SCIENCE UNIVERSITY"
+ }, 
+ "UB054": {
+  "status": "new", 
+  "name": "OHIO STATE UNIVERSITY (OSU) COLUMBUS"
+ }, 
+ "UB057": {
+  "status": "new", 
+  "name": "PACIFIC MEDICAL CENTER PACMED"
+ }, 
+ "UB056": {
+  "status": "new", 
+  "name": "ORLANDO HEALTH PHYSICIANS GROUP"
+ }, 
+ "UB051": {
+  "status": "new", 
+  "name": "MEDICAL UNIVERSITY OF SOUTH CAROLINA"
+ }, 
+ "UB050": {
+  "status": "new", 
+  "name": "MEDICAL COLLEGE OF WISCONSIN"
+ }, 
+ "UB053": {
+  "status": "new", 
+  "name": "NATIONAL REHAB HOSPITAL DC"
+ }, 
+ "UB052": {
+  "status": "new", 
+  "name": "MINISTRY HEALTH CARE WI"
+ }, 
+ "UB114": {
+  "status": "new", 
+  "name": "UNIVERSITY OF NEW MEXICO"
+ }, 
+ "WI026": {
+  "status": "new", 
+  "name": "WHEATON FRANCISCAN MEDICAL GROUP"
+ }, 
+ "UB116": {
+  "status": "new", 
+  "name": "SEATTLE CHILDRENS HOSPITAL"
+ }, 
+ "UB117": {
+  "status": "new", 
+  "name": "GREENVILLE HEALTH SYSTEM - SC"
+ }, 
+ "UB059": {
+  "status": "new", 
+  "name": "SUTTER"
+ }, 
+ "UB058": {
+  "status": "new", 
+  "name": "SANSUM CLINIC SANTA BARBARA CA"
+ }, 
+ "UB113": {
+  "status": "new", 
+  "name": "UNIVERSITY OF ARIZONA HEALTH NETWORK"
+ }, 
+ "UB091": {
+  "status": "new", 
+  "name": "MULTICARE HEALTH SYSTEM"
+ }, 
+ "UB090": {
+  "status": "new", 
+  "name": "JEFFERSON CENTER FOR MENTAL HEALTH"
+ }, 
+ "UB093": {
+  "status": "new", 
+  "name": "WESTERN PSYCHOLOGICAL AND COUNSELING"
+ }, 
+ "AZ014": {
+  "status": "new", 
+  "name": "BANNER UNIVERSITY PHYSICIAN MEDICAL GROUP"
+ }, 
+ "UB092": {
+  "status": "new", 
+  "name": "UNIVERSITY PHYSICIANS INC"
+ }, 
+ "AZ011": {
+  "status": "new", 
+  "name": "NATIONWIDE VISION CENTER"
+ }, 
+ "AZ010": {
+  "status": "existing", 
+  "name": "MEDPRO"
+ }, 
+ "AZ013": {
+  "status": "existing", 
+  "name": "DIGNITY HEALTH SJHMC"
+ }, 
+ "UB095": {
+  "status": "new", 
+  "name": "SWEDISH HEALTH SYSTEM"
+ }, 
+ "AZ018": {
+  "status": "new", 
+  "name": "PHOENIX CHILDREN'S MEDICAL GROUP (PCMG)"
+ }, 
+ "UB094": {
+  "status": "new", 
+  "name": "MEDIMORE"
+ }, 
+ "UB097": {
+  "status": "new", 
+  "name": "ASPENPOINTE HEALTH SERVICES"
+ }, 
+ "UB096": {
+  "status": "new", 
+  "name": "ARAPAHOE HOUSE"
+ }, 
+ "UB098": {
+  "status": "new", 
+  "name": "NEIGHBORCARE HEALTH"
+ }, 
+ "MS009": {
+  "status": "new", 
+  "name": "PREMIER HEALTH"
+ }, 
+ "MS008": {
+  "status": "new", 
+  "name": "NORTH MISSISSIPPI MEDICAL CLINICS (HEALTH LINK)"
+ }, 
+ "MS001": {
+  "status": "new", 
+  "name": "HATTIESBURG CLINIC"
+ }, 
+ "MS003": {
+  "status": "new", 
+  "name": "RIVER REGION (THE VERIFICATION GROUP)"
+ }, 
+ "MS005": {
+  "status": "new", 
+  "name": "MHG PHYSICIANS CORPORATION"
+ }, 
+ "MS004": {
+  "status": "new", 
+  "name": "UNIVERSITY PHYSICIANS, PLLC"
+ }, 
+ "MS006": {
+  "status": "new", 
+  "name": "HUB HEALTH"
+ }, 
+ "OH010": {
+  "status": "new", 
+  "name": "CORNERSTONE ALLIANCE, INC."
+ }, 
+ "OH013": {
+  "status": "new", 
+  "name": "LICKING MEMORIAL PROFESSIONAL CORPORATION"
+ }, 
+ "OH012": {
+  "status": "new", 
+  "name": "LAKE PHO"
+ }, 
+ "OH015": {
+  "status": "new", 
+  "name": "METRO HEALTH MEDICAL CENTER"
+ }, 
+ "IL006": {
+  "status": "new", 
+  "name": "LOYOLA UNIVERSITY HEALTH SYSTEMS"
+ }, 
+ "OH017": {
+  "status": "new", 
+  "name": "OHIO STATE UNIVERSITY (OSU)"
+ }, 
+ "OH016": {
+  "status": "new", 
+  "name": "OHIOHEALTH PHYSICIAN GROUP, INC"
+ }, 
+ "OH019": {
+  "status": "new", 
+  "name": "STARK REGIONAL PHO"
+ }, 
+ "OH018": {
+  "status": "new", 
+  "name": "PARTNERS FOR KIDS"
+ }, 
+ "IL007": {
+  "status": "new", 
+  "name": "MACNEAL HEALTH PROVIDERS"
+ }, 
+ "NC006": {
+  "status": "new", 
+  "name": "UNC HEALTH CARE SYSTEM"
+ }, 
+ "NC007": {
+  "status": "new", 
+  "name": "WAKE MED( WAKE AHEC, WFP)"
+ }, 
+ "NC004": {
+  "status": "new", 
+  "name": "NC BAPTIST HOSPITAL (WAKE FOREST UNIVERSITY)"
+ }, 
+ "NC005": {
+  "status": "new", 
+  "name": "TRIAD PHYSICIAN NETWORK"
+ }, 
+ "NC003": {
+  "status": "new", 
+  "name": "DUKE UNIVERSITY MEDICAL CENTER"
+ }, 
+ "NC001": {
+  "status": "new", 
+  "name": "CAROLINAS HEALTHCARE SYSTEMS/CPN/MHN"
+ }, 
+ "WI030": {
+  "status": "new", 
+  "name": "CHILDRENS HOSPITAL AND HEALTH SYSTEM"
+ }, 
+ "NC009": {
+  "status": "new", 
+  "name": "NOVANT MEDICAL GROUP"
+ }, 
+ "CA104": {
+  "status": "new", 
+  "name": "SANSUM CLINIC"
+ }, 
+ "CA105": {
+  "status": "new", 
+  "name": "SANTA BARBARA SELECT IPA"
+ }, 
+ "CA106": {
+  "status": "new", 
+  "name": "SANTA CLARA COUNTY IPA"
+ }, 
+ "TX055": {
+  "status": "new", 
+  "name": "AUSTIN DIAGNOSTIC CLINIC"
+ }, 
+ "CA100": {
+  "status": "new", 
+  "name": "SAN BERNARDINO MED GRP"
+ }, 
+ "CA101": {
+  "status": "new", 
+  "name": "SCRIPPS PHYSICIANS MEDICAL GROUP"
+ }, 
+ "CA102": {
+  "status": "new", 
+  "name": "DCHS MED FOUNDATION DBA SAN JOSE MEDICAL GROUP"
+ }, 
+ "CA068": {
+  "status": "new", 
+  "name": "MERCY MG"
+ }, 
+ "TX059": {
+  "status": "new", 
+  "name": "CARDIOVASCULAR CARE PROVIDERS, INC (CVCP)"
+ }, 
+ "CA066": {
+  "status": "new", 
+  "name": "MARIN IPA"
+ }, 
+ "CA065": {
+  "status": "new", 
+  "name": "LOMA LINDA UNIV HEALTHCARE"
+ }, 
+ "CA108": {
+  "status": "new", 
+  "name": "SCRIPPS CLINIC"
+ }, 
+ "CA062": {
+  "status": "new", 
+  "name": "LAKESIDE COMMUNITY HEALTHCARE NETWORK"
+ }, 
+ "TX058": {
+  "status": "new", 
+  "name": "BAYLOR MEDCARE (BAYLOR COLLEGE OF MEDICINE HEALTHCARE)"
+ }, 
+ "CA060": {
+  "status": "new", 
+  "name": "LAKESIDE COMMUNITY HEALTHARE MEDICAL GROUP WEST COVINA"
+ }, 
+ "NH001": {
+  "status": "new", 
+  "name": "HITCHCOCK NORTHERN (DARTMOUTH)"
+ }, 
+ "WA008": {
+  "status": "new", 
+  "name": "PROLIANCE SURGEONS, INC."
+ }, 
+ "OK006": {
+  "status": "new", 
+  "name": "OU PHYSICIANS - TULSA"
+ }, 
+ "OH014": {
+  "status": "existing", 
+  "name": "MERCY HEALTH SYSTEM"
+ }, 
+ "FL032": {
+  "status": "new", 
+  "name": "LEE MEMORIAL HEALTH SYSTEMS"
+ }, 
+ "FL033": {
+  "status": "new", 
+  "name": "MANATEE COUNTY RURAL HEALTH SERVICES"
+ }, 
+ "UB155": {
+  "status": "new", 
+  "name": "COMPASS HEALTH - MO"
+ }, 
+ "FL031": {
+  "status": "new", 
+  "name": "ALL CHILDREN'S HOSPITAL, INC"
+ }, 
+ "FL037": {
+  "status": "new", 
+  "name": "BAPTIST HEALTH MEDICAL GROUP"
+ }, 
+ "FL034": {
+  "status": "new", 
+  "name": "ADVENTIST HEALTH SYSTEMS"
+ }, 
+ "FL035": {
+  "status": "new", 
+  "name": "SOUTH FLORIDA HEALTH PLAN"
+ }, 
+ "NE001": {
+  "status": "new", 
+  "name": "METHODIST HEALTH PARTNERS & HLTHCARE PARTNERS OF W. IA"
+ }, 
+ "NE002": {
+  "status": "new", 
+  "name": "SAINT ELIZABETH - THE PHYSICIAN NETWORK"
+ }, 
+ "NE003": {
+  "status": "existing", 
+  "name": "UNINET HEALTHCARE SYSTEM"
+ }, 
+ "NE004": {
+  "status": "new", 
+  "name": "NEBRASKA HEALTH PARTNERS"
+ }, 
+ "NE005": {
+  "status": "new", 
+  "name": "UNINET-KEARNEY"
+ }, 
+ "NY063": {
+  "status": "new", 
+  "name": "ESSEN MEDICAL ASSOCIATES"
+ }, 
+ "NY012": {
+  "status": "new", 
+  "name": "NYPHS"
+ }, 
+ "NY011": {
+  "status": "new", 
+  "name": "NORTHWELL HEALTH, INC"
+ }, 
+ "NY010": {
+  "status": "new", 
+  "name": "MULTIPLAN/PHCS (MP ACQUIRED PHCS 10/06)"
+ }, 
+ "NY017": {
+  "status": "existing", 
+  "name": "HHC - QUEENS HEALTH NETWORK MANAGED CARE"
+ }, 
+ "WI003": {
+  "status": "new", 
+  "name": "AURORA HEALTH CARE INC."
+ }, 
+ "WI002": {
+  "status": "existing", 
+  "name": "ASPIRUS COLLEGE OF WISCONSIN"
+ }, 
+ "WI005": {
+  "status": "new", 
+  "name": "BELOIT MEMORIAL HOSPITAL"
+ }, 
+ "WI004": {
+  "status": "new", 
+  "name": "BAYCARE HEALTH SYSTEMS/ BAYCARE CLINIC"
+ }, 
+ "UB151": {
+  "status": "new", 
+  "name": "CHILDRENS HEALTH SYSTEM TEXAS"
+ }, 
+ "UB152": {
+  "status": "new", 
+  "name": "DARTMOUTH HITCHCOCK CLINIC"
+ }, 
+ "UB153": {
+  "status": "new", 
+  "name": "ABILTO INC"
+ }, 
+ "UB154": {
+  "status": "new", 
+  "name": "WHEATON FRANCISCAN"
+ }, 
+ "UB130": {
+  "status": "new", 
+  "name": "OLMSTED MEDICAL CENTER"
+ }, 
+ "UB157": {
+  "status": "new", 
+  "name": "HCA - HOSPITAL CORP OF AMERICA"
+ }, 
+ "CUSTOM4": {
+  "status": "existing", 
+  "name": "DEMO PRAC ADD NINTH JULY"
+ }, 
+ "UB159": {
+  "status": "new", 
+  "name": "ROCKY MOUNTAIN HEALTH NETWORK"
+ }, 
+ "WI006": {
+  "status": "existing", 
+  "name": "DEAN HEALTH PLAN"
+ }, 
+ "CUSTOM1": {
+  "status": "existing", 
+  "name": "UHC Com"
+ }, 
+ "CUSTOM2": {
+  "status": "existing", 
+  "name": "Delegation Roster"
+ }, 
+ "UB019": {
+  "status": "new", 
+  "name": "SHEPPARD PRATT"
+ }, 
+ "UB018": {
+  "status": "new", 
+  "name": "SHANDS"
+ }, 
+ "TX004": {
+  "status": "new", 
+  "name": "COMMUNITY HEALTH ALLIANCE"
+ }, 
+ "AR008": {
+  "status": "new", 
+  "name": "HEALTH PARTNERS PHO"
+ }, 
+ "AR009": {
+  "status": "new", 
+  "name": "NEA BAPTIST HEALTH SERVICES GROUP"
+ }, 
+ "AR006": {
+  "status": "new", 
+  "name": "SPARKS PREMIERCARE--FT.SMITH"
+ }, 
+ "AR007": {
+  "status": "new", 
+  "name": "UAMS MEDICAL CENTER"
+ }, 
+ "AR005": {
+  "status": "new", 
+  "name": "SHARP PHO"
+ }, 
+ "UB015": {
+  "status": "new", 
+  "name": "PENN STATE HERSHEY MEDICAL CENTER"
+ }, 
+ "UB014": {
+  "status": "new", 
+  "name": "PARK NICOLLET"
+ }, 
+ "UB017": {
+  "status": "new", 
+  "name": "PSYCHIATRIC CENTERS OF SAN DIEGO INC CA"
+ }, 
+ "AR001": {
+  "status": "new", 
+  "name": "COOPER CLINIC"
+ }, 
+ "IA009": {
+  "status": "new", 
+  "name": "UNIVERSITY OF IOWA HEALTH CARE"
+ }, 
+ "IA008": {
+  "status": "new", 
+  "name": "TRI-STATE IPA"
+ }, 
+ "IA003": {
+  "status": "new", 
+  "name": "COVENANT CLINICS"
+ }, 
+ "IA002": {
+  "status": "new", 
+  "name": "PARAMOUNT HEALTH OPTIONS"
+ }, 
+ "IA001": {
+  "status": "new", 
+  "name": "MERCY OF IOWA CITY REGIONAL PHO"
+ }, 
+ "IA007": {
+  "status": "new", 
+  "name": "MERCY MEDICAL CENTER NORTH IOWA"
+ }, 
+ "IA006": {
+  "status": "new", 
+  "name": "MERCY MEDICAL CENTER DES MOINES"
+ }, 
+ "IA005": {
+  "status": "new", 
+  "name": "MEDIMORE"
+ }, 
+ "IA004": {
+  "status": "new", 
+  "name": "MCFARLAND CLINIC, PC"
+ }, 
+ "KS003": {
+  "status": "new", 
+  "name": "VIA CHRISTI CLINIC"
+ }, 
+ "KS002": {
+  "status": "new", 
+  "name": "UNIVERSITY OF KANSAS HOSPITAL"
+ }, 
+ "KS001": {
+  "status": "new", 
+  "name": "NEOSHO MEMORIAL REGIONAL MEDICAL CENTER"
+ }, 
+ "CA086": {
+  "status": "new", 
+  "name": "PHYSICIANS MG OF SAN JOSE"
+ }, 
+ "GA023": {
+  "status": "new", 
+  "name": "SOUTH GEORGIA PHYSICIANS ASSOCIATES"
+ }, 
+ "KS006": {
+  "status": "existing", 
+  "name": "SWOPE HEALTH SERVICES"
+ }, 
+ "KS005": {
+  "status": "new", 
+  "name": "STORMONT VAIL HEALTHCARE"
+ }, 
+ "IL018": {
+  "status": "existing", 
+  "name": "ST MARY'S GOOD SAMARITAN PHO"
+ }, 
+ "CT002": {
+  "status": "new", 
+  "name": "COMMUNITY HEALTH CENTER, INC"
+ }, 
+ "CT003": {
+  "status": "new", 
+  "name": "CT CHILDREN'S MEDICAL CENTER FACULTY PRACTICE PLAN"
+ }, 
+ "IL015": {
+  "status": "new", 
+  "name": "UNIVERSITY OF ILLINOIS AT CHICAGO"
+ }, 
+ "IL014": {
+  "status": "new", 
+  "name": "UNIVERSITY OF CHICAGO PHYSICIAN GROUP"
+ }, 
+ "IL013": {
+  "status": "new", 
+  "name": "SWEDISH AMERICAN HEALTH SYSTEM/STAFFCORP"
+ }, 
+ "CT007": {
+  "status": "new", 
+  "name": "YALE MEDICAL GROUP"
+ }, 
+ "CT004": {
+  "status": "new", 
+  "name": "HARTFORD PHO"
+ }, 
+ "IL010": {
+  "status": "new", 
+  "name": "ROCKFORD HEALTH SYSTEM"
+ }, 
+ "WI027": {
+  "status": "new", 
+  "name": "MERCY HEALTH SYSTEM"
+ }, 
+ "SC008": {
+  "status": "new", 
+  "name": "MARY BLACK HEALTH NETWORK"
+ }, 
+ "SC003": {
+  "status": "new", 
+  "name": "MUSC"
+ }, 
+ "SC002": {
+  "status": "new", 
+  "name": "LEXINGTON MEDICAL CENTER"
+ }, 
+ "SC001": {
+  "status": "new", 
+  "name": "UPSTATE AFFILIATE ORGANIZATION"
+ }, 
+ "SC007": {
+  "status": "new", 
+  "name": "ST. FRANCIS PHYSICIANS SERVICES"
+ }, 
+ "SC006": {
+  "status": "new", 
+  "name": "SPARTANBURG REGIONAL HEALTHCARE SYSTEM (SRHS)  (RHP)"
+ }, 
+ "TX006": {
+  "status": "new", 
+  "name": "COOK CHILDREN'S PHY NETWORK (CCPN)"
+ }, 
+ "UB070": {
+  "status": "new", 
+  "name": "UNIVERSITY OF UTAH"
+ }, 
+ "ID001": {
+  "status": "new", 
+  "name": "IDAHO PHYSICIAN NETWORK (IPN)"
+ }, 
+ "ID002": {
+  "status": "new", 
+  "name": "KOOTENAI HEALTH"
+ }, 
+ "UB126": {
+  "status": "new", 
+  "name": "CHILDREN'S UNIVERSITY MEDICAL GROUP"
+ }, 
+ "UB121": {
+  "status": "new", 
+  "name": "MENTAL HEALTH PARTNERS"
+ }, 
+ "UB120": {
+  "status": "new", 
+  "name": "FRANCISCAN MEDICAL GROUP"
+ }, 
+ "UB123": {
+  "status": "new", 
+  "name": "UNINET HEALTHCARE NETWORK"
+ }, 
+ "UB122": {
+  "status": "new", 
+  "name": "MERCY BEHAVIORAL HEALTH CLINIC"
+ }, 
+ "UB128": {
+  "status": "new", 
+  "name": "INOVA HEALTH SYSTEMS"
+ }, 
+ "WA022": {
+  "status": "new", 
+  "name": "UW MEDICINE NORTHWEST HOSPITAL & MEDICAL CENTER"
+ }, 
+ "SC005": {
+  "status": "new", 
+  "name": "PREFERRED CARE OF AIKEN, INC."
+ }, 
+ "UB046": {
+  "status": "new", 
+  "name": "LAUREATE PSYCHIATRIC CLINIC"
+ }, 
+ "WA021": {
+  "status": "new", 
+  "name": "SEATTLE CHILDREN'S HOSPITAL"
+ }, 
+ "TX044": {
+  "status": "new", 
+  "name": "UMC PHYSICIAN NETWORK SERVICES"
+ }, 
+ "WA020": {
+  "status": "new", 
+  "name": "ROCKWOOD CLINIC"
+ }, 
+ "WA019": {
+  "status": "new", 
+  "name": "VALLEY MEDICAL GROUP"
+ }, 
+ "WA012": {
+  "status": "new", 
+  "name": "VIRGINIA MASON MEDICAL CENTER (VMMC)"
+ }, 
+ "WA013": {
+  "status": "new", 
+  "name": "WALLA WALLA CLINIC"
+ }, 
+ "WA010": {
+  "status": "new", 
+  "name": "SWEDISH HEALTH SYSTEM"
+ }, 
+ "WA011": {
+  "status": "new", 
+  "name": "UNIVERSITY OF WASHINGTON PHYSICIANS"
+ }, 
+ "WA016": {
+  "status": "new", 
+  "name": "PEACEHEALTH MEDICAL GROUP"
+ }, 
+ "WA017": {
+  "status": "new", 
+  "name": "NORTHWEST PHYSICIAN NETWORK OF WA"
+ }, 
+ "WA014": {
+  "status": "new", 
+  "name": "WENATCHEE VALLEY CLINIC"
+ }, 
+ "WA015": {
+  "status": "new", 
+  "name": "YAKIMA VALLEY FARM WORKS CLINIC"
+ }, 
+ "UB040": {
+  "status": "new", 
+  "name": "WASHINGTON HOSPITAL CENTER"
+ }, 
+ "TX042": {
+  "status": "existing", 
+  "name": "THE UNIVERSITY OF TEXAS SOUTHWESTERN MEDICAL AT DALLAS"
+ }, 
+ "CA148": {
+  "status": "new", 
+  "name": "SUTTER MEDICAL FOUNDATION"
+ }, 
+ "CA149": {
+  "status": "new", 
+  "name": "SUTTER REGIONAL MEDICAL FOUNDATION"
+ }, 
+ "TX018": {
+  "status": "existing", 
+  "name": "NACOGDOCHES AREA PHYSICIANS ASSOC. & TEXAS DIRECTCARE"
+ }, 
+ "TX019": {
+  "status": "new", 
+  "name": "NORTH TEXAS EAR NOSE &THROAT (NTENT)"
+ }, 
+ "TX013": {
+  "status": "new", 
+  "name": "GOOD SHEPHERD HEALTH NETWORK"
+ }, 
+ "CA142": {
+  "status": "new", 
+  "name": "VENTURA COUNTY MEDICAL CENTER"
+ }, 
+ "CA143": {
+  "status": "new", 
+  "name": "SIERRA MEDICAL GROUP"
+ }, 
+ "CA144": {
+  "status": "new", 
+  "name": "SUTTER GOULD MEDICAL FOUNDATION"
+ }, 
+ "CA145": {
+  "status": "new", 
+  "name": "LUCILE PACKARD CHILDRENS HOSPITAL MEDICAL GROUP"
+ }, 
+ "CA146": {
+  "status": "existing", 
+  "name": "STANFORD PHYSICIANS & CLINIC"
+ }, 
+ "CA147": {
+  "status": "new", 
+  "name": "SAN LUIS OBISPO SELECT IPA"
+ }, 
+ "UB162": {
+  "status": "new", 
+  "name": "SCOTT AND WHITE - TX"
+ }, 
+ "TX080": {
+  "status": "new", 
+  "name": "MISSION HEALTH NETWORK"
+ }, 
+ "TX083": {
+  "status": "new", 
+  "name": "CHILDREN'S HEALTH SYSTEM OF TEXAS"
+ }, 
+ "TX082": {
+  "status": "new", 
+  "name": "PROVIDENCE HEALTHCARE NETWORK"
+ }, 
+ "TX084": {
+  "status": "new", 
+  "name": "LONE STAR CIRCLE OF CARE"
+ }, 
+ "WI023": {
+  "status": "new", 
+  "name": "UNIVERSITY OF WISCONSIN HOSPITALS AND CLINICS AUTHORITY"
+ }, 
+ "UB049": {
+  "status": "new", 
+  "name": "MEDICAL COLLEGE OF VIRGINIA"
+ }, 
+ "UB163": {
+  "status": "new", 
+  "name": "BAYCARE MEDICAL GROUP"
+ }, 
+ "CA034": {
+  "status": "new", 
+  "name": "CHINO MEDICAL GROUP"
+ }, 
+ "CA035": {
+  "status": "new", 
+  "name": "CHOICE MEDICAL GROUP"
+ }, 
+ "CA036": {
+  "status": "new", 
+  "name": "DESERT OASIS HEALTHCARE"
+ }, 
+ "CA037": {
+  "status": "new", 
+  "name": "EMPIRE PHYSICIANS MG"
+ }, 
+ "CA031": {
+  "status": "new", 
+  "name": "CENTINELA VALLEY IPA MG"
+ }, 
+ "CA032": {
+  "status": "new", 
+  "name": "RADY CHILDREN'S HEALTH NETWORK"
+ }, 
+ "NY057": {
+  "status": "new", 
+  "name": "BROOKDALE HOSPITAL MEDICAL CENTER"
+ }, 
+ "NY056": {
+  "status": "new", 
+  "name": "FAXTON ST LUKES HOSPITAL"
+ }, 
+ "TX040": {
+  "status": "new", 
+  "name": "TEXOMA INDEPENDENT PHYSICIANS"
+ }, 
+ "NY053": {
+  "status": "new", 
+  "name": "WYCKOFF HEIGHTS MEDICAL CENTER"
+ }, 
+ "CA039": {
+  "status": "new", 
+  "name": "EXCEPTIONAL CARE MG/AVALON"
+ }, 
+ "NY051": {
+  "status": "new", 
+  "name": "ST ELIZABETH MEDICAL CENTER"
+ }, 
+ "NY050": {
+  "status": "new", 
+  "name": "COMMUNITY HEALTHCARE NETWORK"
+ }, 
+ "VA005": {
+  "status": "new", 
+  "name": "UNIVERSITY OF VA HEALTH SERVICES FOUND."
+ }, 
+ "VA007": {
+  "status": "existing", 
+  "name": "COMMUNITY CARE NETWORK OF VIRGINIA (CCNV)"
+ }, 
+ "DE002": {
+  "status": "new", 
+  "name": "CHRISTIANA CARE HEALTH SERVICES INC."
+ }, 
+ "CA138": {
+  "status": "new", 
+  "name": "WOODLAND CLINIC MED GRP"
+ }, 
+ "VA003": {
+  "status": "new", 
+  "name": "MEDICAL COLLEGE OF VIRGINIA"
+ }, 
+ "CA135": {
+  "status": "new", 
+  "name": "USC CARE/USC PHYSICIANS"
+ }, 
+ "CA134": {
+  "status": "new", 
+  "name": "UPLAND MEDICAL GROUP"
+ }, 
+ "CA136": {
+  "status": "new", 
+  "name": "VALLEY CARE IPA"
+ }, 
+ "CA131": {
+  "status": "new", 
+  "name": "UCSF MG"
+ }, 
+ "CA130": {
+  "status": "new", 
+  "name": "UCSD MEDICAL GROUP"
+ }, 
+ "CO007": {
+  "status": "new", 
+  "name": "NATIONAL JEWISH HOSPITAL"
+ }, 
+ "CO006": {
+  "status": "new", 
+  "name": "UNIVERSITY PHYSICIANS INC."
+ }, 
+ "CO005": {
+  "status": "new", 
+  "name": "SOUTHWEST HEALTH NETWORK"
+ }, 
+ "CO004": {
+  "status": "existing", 
+  "name": "NORTHERN COLORADO IPA"
+ }, 
+ "CO003": {
+  "status": "new", 
+  "name": "DENVER HEALTH AND HOSPITAL AUTHORITY(DENVER HEALTH ASSO"
+ }, 
+ "CO002": {
+  "status": "new", 
+  "name": "CENTURA HEALTH DBA CATHOLIC HEALTH INITIATIVES"
+ }, 
+ "CO001": {
+  "status": "new", 
+  "name": "BOULDER VALLEY IPA"
+ }, 
+ "OH022": {
+  "status": "new", 
+  "name": "UNIVERSITY OF TOLEDO PHYSICIANS"
+ }, 
+ "IN003": {
+  "status": "new", 
+  "name": "AMERICAN HEALTH NETWORKS OF INDIANA, LLC (INDIANAPOLIS)"
+ }, 
+ "CA038": {
+  "status": "new", 
+  "name": "ENCOMPASS MG"
+ }, 
+ "CA069": {
+  "status": "new", 
+  "name": "MERCY PHYS MED GRP"
+ }, 
+ "MA007": {
+  "status": "new", 
+  "name": "BOSTON CHILDREN'S HOSPITAL"
+ }, 
+ "CT009": {
+  "status": "existing", 
+  "name": "PROHEALTH PHYSICIANS, INC."
+ }, 
+ "MA005": {
+  "status": "new", 
+  "name": "CAMBRIDGE HEALTH ALLIANCE"
+ }, 
+ "MA004": {
+  "status": "existing", 
+  "name": "BRIGHAM/ WOMEN'S ( BWPO)"
+ }, 
+ "MA003": {
+  "status": "new", 
+  "name": "BIDPO (BETH ISRAEL/ DEACONESS)"
+ }, 
+ "MA001": {
+  "status": "new", 
+  "name": "BAYSTATE HEALTH"
+ }, 
+ "UB024": {
+  "status": "new", 
+  "name": "UNIVERSITY OF CA LOS ANGELES"
+ }, 
+ "TX076": {
+  "status": "existing", 
+  "name": "UT PHYSICIANS (PREV. UCP)"
+ }, 
+ "MA008": {
+  "status": "new", 
+  "name": "DANA FARBER CANCER INSTITUTE DBA BINNEY MEDICAL ASSOC"
+ }, 
+ "TX077": {
+  "status": "new", 
+  "name": "GREATER HILL COUNTRY HEALTHCARE ALLIANCE"
+ }, 
+ "AZ007": {
+  "status": "new", 
+  "name": "GILA RIVER HEALTH CARE CORPORATION"
+ }, 
+ "UB136": {
+  "status": "new", 
+  "name": "OPTUM INSPIRIS"
+ }, 
+ "TX071": {
+  "status": "new", 
+  "name": "TEXAS CHILDREN'S PEDIATRIC ASSOCIATES (TCPA)"
+ }, 
+ "CA107": {
+  "status": "new", 
+  "name": "SANTE COMM. PHYS"
+ }, 
+ "AZ005": {
+  "status": "new", 
+  "name": "CHILDREN'S CLINICS"
+ }, 
+ "AZ002": {
+  "status": "new", 
+  "name": "BANNER HEALTH PHYSICIANS"
+ }, 
+ "UB016": {
+  "status": "new", 
+  "name": "PSYCARE INC"
+ }, 
+ "AZ003": {
+  "status": "new", 
+  "name": "BANNER HEALTH NETWORK"
+ }, 
+ "MT004": {
+  "status": "new", 
+  "name": "ST. PETER'S HOSPITAL"
+ }, 
+ "MT005": {
+  "status": "new", 
+  "name": "BENEFIS HOSPITAL"
+ }, 
+ "UB044": {
+  "status": "new", 
+  "name": "CHILDRENS HOSPITAL CINCINNATI"
+ }, 
+ "UB045": {
+  "status": "new", 
+  "name": "CHILDRENS NATIONAL HOSPITAL DC"
+ }, 
+ "UB042": {
+  "status": "new", 
+  "name": "WEST VIRGINIA UNIVERSITY INC"
+ }, 
+ "MT001": {
+  "status": "new", 
+  "name": "DEACONESS BILLINGS CLINIC"
+ }, 
+ "MT002": {
+  "status": "new", 
+  "name": "ROCKY MOUNTAIN HEALTH NETWORK"
+ }, 
+ "UB041": {
+  "status": "new", 
+  "name": "WASHINGTON UNIVERSITY MO"
+ }, 
+ "MD013": {
+  "status": "new", 
+  "name": "KENNEDY KRIEGER ASSOCIATES"
+ }, 
+ "WI031": {
+  "status": "new", 
+  "name": "FROEDTERT PHYSICIAN PARTNERS"
+ }, 
+ "MD011": {
+  "status": "existing", 
+  "name": "UNIVERSITY OF MARYLAND (UNIV. PHYS. INC.)"
+ }, 
+ "MD010": {
+  "status": "new", 
+  "name": "ST. AGNES/SETON MEDICAL GROUP"
+ }, 
+ "WI034": {
+  "status": "new", 
+  "name": "GUNDERSEN HEALTH SYSTEM"
+ }, 
+ "WI035": {
+  "status": "new", 
+  "name": "HOLY FAMILY MEMORIAL HOSPITAL"
+ }, 
+ "MD015": {
+  "status": "new", 
+  "name": "UNIV OF MARYLAND COMM MG"
+ }, 
+ "MD014": {
+  "status": "new", 
+  "name": "PENINSULA REGIONAL MEDICAL CENTER"
+ }, 
+ "CT006": {
+  "status": "new", 
+  "name": "UCONN MEDICAL GROUP"
+ }, 
+ "LA002": {
+  "status": "new", 
+  "name": "LOUISIANA REGIONAL PHO (LRPHO)"
+ }, 
+ "LA003": {
+  "status": "new", 
+  "name": "LOUISIANA STATE UNIVERSITY HEALTH SCIENCE CENTER"
+ }, 
+ "AZ004": {
+  "status": "new", 
+  "name": "CARONDELET MG"
+ }, 
+ "LA001": {
+  "status": "new", 
+  "name": "HEALTH SERVICES OF NORTHEAST LOUISIANA"
+ }, 
+ "LA006": {
+  "status": "new", 
+  "name": "TULANE UNIVERSITY MEDICAL GROUP"
+ }, 
+ "LA007": {
+  "status": "new", 
+  "name": "WILLIS KNIGHTON PHYSICIAN NETWORK"
+ }, 
+ "LA004": {
+  "status": "new", 
+  "name": "LSU HEALTH CARE NETWORK - NEW ORLEANS"
+ }, 
+ "LA005": {
+  "status": "new", 
+  "name": "OCHSNER"
+ }, 
+ "LA008": {
+  "status": "new", 
+  "name": "SOUTH LOUISIANA MEDICAL ASSOCIATES"
+ }, 
+ "LA009": {
+  "status": "new", 
+  "name": "FRANCISCAN MISSIONARIES OF OUR LADY HEALTH SYSTEM"
+ }, 
+ "AZ008": {
+  "status": "new", 
+  "name": "MARICOPA INTEGRATED HEALTH CARE SYSTEMS"
+ }, 
+ "AZ009": {
+  "status": "new", 
+  "name": "MAYO CLINIC ARIZONA"
+ }
+}

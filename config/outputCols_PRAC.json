@@ -1,0 +1,236 @@
+{
+    "order": 0,
+    "finalDfColNames": [
+      {
+        "outputColName": "Prac_Type",
+        "dfColName": "OUT_PRACT_TYPE",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_LastNm",
+        "dfColName": "OUT_NAME_LAST",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_FirstNm",
+        "dfColName": "OUT_NAME_FIRST",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_MidNm",
+        "dfColName": "OUT_NAME_MIDDLE",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_Suffix",
+        "dfColName": "OUT_SUFFIX",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_DelCredDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_Degree",
+        "dfColName": "OUT_TITLE_DEGREE_CREDENTIAL",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_PrimaryDegreeInd",
+        "dfColName": "OUT_DEGREE_PRIMARY_IND",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_MPIN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_NPI",
+        "dfColName": "OUT_NPI",
+        "dataType": "numeric",
+        "format": "0000000000",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_TaxonomyCd",
+        "dfColName": "OUT_TAXONOMY",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_GrpNm",
+        "dfColName": "OUT_GROUP_NAME_ABRV",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_Prov/GrpEmail",
+        "dfColName": "OUT_ELECTRONIC_COMM_NM",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_IsProvPCP?",
+        "dfColName": "PCP_IND",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_Spec",
+        "dfColName": "OUT_NDB_SPEC_NAME",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_SupervisingSpecialty",
+        "dfColName": "OUT_SUPER_SPEC_PSI",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_SupPhysLastNm",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_SupPhysFirstNm",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_SupPhysMidNm",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_SupPhysSuffix",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_SupPhysMPIN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_TIN",
+        "dfColName": "OUT_TAX_ID",
+        "dataType": "numeric",
+        "format": "000000000",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_ParStatus_M&R",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_ParStatus_E&I",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_ParStatus_C&S",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_ParStatus_VA CCN",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_TPSMCode",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_TPSMDesc",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_TPSMEffDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_TPSMInactDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_Zip",
+        "dfColName": "SV_OUT_ADDRESS_ZIP",
+        "dataType": "numeric",
+        "format": "00000",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_State",
+        "dfColName": "SV_OUT_ADDRESS_STATE",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_PrimaryTin",
+        "dfColName": "Prac_PrimaryTin",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      }
+    ]
+}

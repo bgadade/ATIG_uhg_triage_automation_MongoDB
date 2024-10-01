@@ -1,0 +1,344 @@
+{
+    "order": 0,
+    "finalDfColNames": [
+      {
+        "outputColName": "ContrPracAdd_RetroRsnCd",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_RetroApproval?",
+        "dfColName": "RETRO_DEFAULT_VAL",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_EffDt",
+        "dfColName": "OUT_EFFECTIVE_DATE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_GrpEmail",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_RosterAttached?",
+        "dfColName": "OUT_ROSTER_ATTACHED",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_PaperType",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None",
+        "outputScreen":"nonDelegate"
+      },
+      {
+        "outputColName": "ContrPracAdd_PaperType",
+        "dfColName": "REQ_FIELD_CLAR_DEL",
+        "dataType": "text",
+        "format": "None",
+        "outputScreen":"delegate"
+      },
+      {
+        "outputColName": "ContrPracAdd_DocID",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None",
+        "outputScreen":"nonDelegate"
+      },
+      {
+        "outputColName": "ContrPracAdd_DocID",
+        "dfColName": "REQ_FIELD_CLAR_DEL",
+        "dataType": "text",
+        "format": "None",
+        "outputScreen":"delegate"
+      },
+      {
+        "outputColName": "ContrPracAdd_ContrProds",
+        "dfColName": "OUT_CONTR_PRODS",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_OtherProd",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_FeeSched",
+        "dfColName": "OUT_FEE_SCHED",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_ENWind",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_ProdEffDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_PTIMPIN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_TF",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_TFapplyToAllProds?",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_Prods",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_ProdSpecificTF",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_ProdsReqstd_E&I",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_ProdsReqstd_C&S",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_ProdsReqstd_M&R",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_ProdsReqstd_VA CCN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_ProdsApprvd_E&I",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_ProdsApprvd_C&S",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_ProdsApprvd_M&R",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_ProdsApprvd_VA CCN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ContrPracAdd_CredCompDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NDBImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NDBEMPIREImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NICEImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      
+      {
+        "outputColName": "Import_CLMImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_EmptorisImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NDBCOSMOSImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NDBCSPFACETSImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NonDel_Segment_E&I",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NonDel_Segment_C&S",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+          {
+        "outputColName": "Import_NonDel_Product_IFP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_MEDICAID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_DSNP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+       {
+        "outputColName": "Import_NonDel_Segment_M&R",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NonDel_Segment_VA CCN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+    {
+      "outputColName": "Import_Del_Segment_E&I",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None",
+      "outputScreen":"delegate"
+    },{
+      "outputColName": "Import_Del_Segment_C&S",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None",
+      "outputScreen":"delegate"
+    },
+      {
+      "outputColName": "Import_Del_Product_IFP",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None",
+      "outputScreen":"delegate"
+    },
+      {
+      "outputColName": "Import_Del_Product_MEDICAID",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None",
+      "outputScreen":"delegate"
+    },
+      {
+      "outputColName": "Import_Del_Product_DSNP",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None",
+      "outputScreen":"delegate"
+    },
+      {
+      "outputColName": "Import_Del_Segment_M&R",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None",
+      "outputScreen":"delegate"
+    },{
+      "outputColName": "Import_Del_Segment_VA CCN",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None",
+      "outputScreen":"delegate"
+    },
+    {
+      "outputColName": "Import_Del_Segment_EmpireCSP",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None",
+      "outputScreen":"delegate"
+    },
+    {
+      "outputColName": "Import_Del_Segment_ndbZline",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None",
+      "outputScreen":"delegate"
+    },
+    {
+      "outputColName": "Import_Del_Segment_ndbYline",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None",
+      "outputScreen":"delegate"
+    },
+    {
+      "outputColName": "Import_Del_Segment_ndbFacetsHline",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None",
+      "outputScreen":"delegate"
+    },
+    {
+      "outputColName": "Import_Del_Segment_ndbFacetsYline",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None",
+      "outputScreen":"delegate"
+    }
+   ]
+}

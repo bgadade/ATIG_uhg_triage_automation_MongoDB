@@ -1,0 +1,57 @@
+<link href="../static/css/login.css" rel="stylesheet" />
+
+    <header class="container-fluid" data-ng-init="loginStart()">
+      <aside><img src="/static/images/Logo_holmes.png" class="img-responsive"/></aside>
+      <section></section>
+      <aside><img src="/static/images/logo_wipro.png" class="img-responsive"/></aside>
+    </header>
+
+    <div class="container-fluid bg">
+      <article id="formContaner">
+        <aside class="shadowLeft"><img src="/static/images/shadow_left.png" alt="shadow" class="img-responsive" /></aside>
+        <section id="formMidlleSection">
+          <div class="loginHeader">
+            <br /><br />
+            <img src="/static/images/solutionname_KnowYourProvider_login.png" class="img-responsive" style="margin:auto; display:block"/>
+          </div>
+
+          <section class="formInputs">
+            <form name="loginForm" ng-submit="login()">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input id="email" type="text" class="form-control-login" name="name" placeholder="WIPRO AD ID" ng-model="user.name" autocomplete="off" required>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input id="password"  type="password" class="form-control-login" name="password" placeholder="PASSWORD" ng-model="user.password" ng-required="true" minlength="5"  maxlength="16"  autocomplete="off">
+              </div>
+
+              <div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-6"></div>
+                  <div class="alpha col-md-3 col-sm-3 col-xs-3"></div>
+                  <div class="alpha col-md-3 col-sm-3 col-xs-3">
+                    <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="bluebtn btn-default pull-right">
+                  </div>
+                </div>
+
+              <div id="invalidLogin" ng-if="error" style=" margin-top: 15px" class="alert alert-danger" role="alert">
+                {{error}}
+              </div>
+            </form>
+          </section>
+        </section>
+        <aside class="shadowRight"><img src="/static/images/shadow_right.png" alt="shadow" class="img-responsive" /></aside>
+      </article>
+    </div>
+
+    <!--Footer-->
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <b>Copyright 2017 © Wipro Ltd.</b><br /><br />
+          Disclaimer:  This site is intended solely for use by Wipro’s authorized users. Use of this site is subject to the Legal Notices, Terms of Use, and Privacy
+          Statement located on this site. Use of the site by customers and partners, if authorized, is also subject to the terms of your contract(s) with Wipro. Use of this site by Wipro employees is also subject to company policies, including the Code of Conduct. Unauthorized access or breach of these terms may result in termination of your authorization to use this site and/or civil and criminal penalties.
+         </div>
+      </div>
+    </footer>

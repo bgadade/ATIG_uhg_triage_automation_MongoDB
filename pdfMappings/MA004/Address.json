@@ -1,0 +1,68 @@
+{"ADDRESS_LINE_1": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "start": {"text": ["BILLING INFORMATION"]},
+                        "min_Y": {"text": ["Phone:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_Y": {"text": ["Tax ID:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":"None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":["Phone:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}} }
+                 }]
+   }
+  ]
+ },
+ "ADDRESS_PHONE": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "start": {"text": ["BILLING INFORMATION"]},
+                        "min_Y": {"text": ["Phone:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_Y": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 1},
+                        "min_X": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Phone:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":"None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                               "max_Y": {"text":["Phone:"], "point":"TOP_RIGHT", "occurence":1}} }
+                 }]
+   }
+  ]
+ },
+ "ADDRESS_PHONE_FAX": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                  "parentBB": {
+                        "start": {"text": ["BILLING INFORMATION"]},
+                        "min_Y": {"text": ["Fax:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_Y": {"text": ["Fax:"],"point": "TOP_RIGHT","occurence": 1},
+                        "min_X": {"text": ["Fax:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+
+}

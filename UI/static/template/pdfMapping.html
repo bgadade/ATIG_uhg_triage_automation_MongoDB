@@ -1,0 +1,273 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+    <div class="main">
+        <div class="alpha">
+            <ul class="pageHeader">
+                <li>Configure PDF</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="contentSection">
+        <div class="row tableBox">
+            <!-- Your Page Content Here -->
+            <div class="container-fluid contentbody">
+                <div class="row" data-ng-init="getPdfFile()">
+                    <div class="col-md-7">
+                        <iframe ng-src="{{myPdfUrl}}" style="width: 114%;height: 490px;margin-top: -24px;margin-left: -16px;" type='application/pdf'></iframe>
+                    </div>
+
+                    <div class="col-md-5" style="margin-top: -21px;padding-left: 86px;" >
+                        <select class="pdfSelect" ng-model="selectedCategory" ng-options="category for category in categories" required>
+                            <option value="" class="dropdownlist"> Select Category </option>
+                        </select>
+                        <input type="button" value="OPEN PDF" ng-click = "openPDF()">
+
+                        <div ng-if="selectedCategory=='Table Info'">
+                            <p>
+                                <select style="margin-top:10px;" class="pdfSelect" ng-model="tableParentCategory" ng-options="parCategory for parCategory in parentCategories">
+                                    <option value="">Select Parent Category</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label>Type</label>
+                                <input style="margin-left:71px" ng-model="type" type="text">
+                            </p>
+                            <p>
+                                <label>Table ID</label>
+                                <input style="margin-left:50px" ng-model="tableId" type="text">
+                            </p>
+                            <p>
+                                <label>Table Header</label>
+                                <input style="margin-left:18px" ng-model="tableHeader" type="text">
+                            </p>
+                            <p>
+                                <label>Table X Margin</label>
+                                <input style="margin-left:6px" ng-model="tableXMargin" type="text">
+                            </p>
+                            <p class="text-uppercase">
+                                <select class="pdfSelect"  style="margin-left: 0px;" ng-model="tablePosition" ng-options="position for position in mappingPositions" ng-change="resetTablePosition()" required>
+                                    <option value=""> Select Position</option>
+                                </select>
+                                <br>
+                            </p>
+                            <p>
+                                <label>Set References</label>
+                            </p>
+                            <div style="padding-left: 14px;">
+                                <p  ng-repeat="val in tableInputFields" class="text-uppercase">Text
+                                    <input type="text" style="margin-left: 60px;width: 50%;" ng-model="tableTextValues[$index]" required>
+                                    <button ng-click="addTableText()" style="width: 35px;height: 32px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                    <br>
+                                </p>
+                                <p class="text-uppercase">Point
+                                    <select style="margin-left: 54px;" ng-model="selectedTablePoint" ng-options="point for point in ['BOTTOM_LEFT','TOP_RIGHT']" required></select>
+                                    <br>
+                                </p>
+                                <p class="text-uppercase">Occurence
+                                    <input style="margin-left: 8px;" type="text" ng-model="tableOccurence" required>
+                                </p>
+                            </div>
+                                <input class="btn btndefault" style="width: 40%;" type="button" value="Add Positions" ng-click="addPositions(tablePosition,tableTextValues,selectedTablePoint,tableOccurence)">
+                            <br>
+                            <br>
+                            <input class="btn btndefault" style="width:60%;" type="button" value="CREATE TABLE INFO" ng-click="createTableInfo(tableParentCategory,type,tableId,tableHeader,tableXMargin,tablePosition,tableTextValues,selectedTablePoint,tableOccurence)">
+                        </div>
+                        <div ng-if="selectedCategory=='Loop Info'">
+                            <p>
+                                <select  style="margin-top:10px;" class="pdfSelect" ng-model="parentCategory" ng-options="parCategory for parCategory in parentCategories" ng-change = "resetOutField()">
+                                    <option value="">Select Parent Category</option>
+                                </select>
+                            </p>
+                            <p style="margin-top:10px">
+                                <label>Loop ID</label>
+                                <input style="margin-left: 10px;" ng-model="loopId" type="text">
+                            </p>
+                            <br>
+                            <p style="margin-top:-16px">
+                                <label>Direction</label>
+                                <input style="margin-left: 4px;" ng-model="direction" type="text">
+                            </p>
+                            <p ng-repeat="val in delimiters" class="text-uppercase">Delimiter
+                                <input type="text" style="margin-left: 2px;width: 50%;" ng-model="delimiter[$index]" required>
+                                <button ng-click="addDelimiters()" style="width: 35px;height: 32px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <br>
+                            </p>
+                            <p class="text-uppercase">
+                                <select class="pdfSelect"  style="margin-left: 0px;" ng-model="loopPosition" ng-options="position for position in mappingPositions" ng-change="resetLoopPosition()" required>
+                                    <option value=""> Select Position</option>
+                                </select>
+                                <br>
+                            </p>
+                            <p>
+                                <label>Set References</label>
+                            </p>
+                            <div style="padding-left: 14px;">
+                                <p ng-repeat="val in loopInputFields" class="text-uppercase">Text
+                                    <input type="text" style="margin-left: 60px;" ng-model="loopTextValues[$index]" required>
+                                    <button ng-click="addLoopText()" style="width: 35px;height: 32px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                    <br>
+                                </p>
+                                <p class="text-uppercase">Point
+                                    <select style="margin-left: 54px;" ng-model="selectedLoopPoint" ng-options="point for point in ['BOTTOM_LEFT','TOP_RIGHT']" required></select>
+                                    <br>
+                                </p>
+                                <p class="text-uppercase">Occurence
+                                    <input style="margin-left: 8px;" type="text" ng-model="loopOccurence" required>
+                                </p>
+                            </div>
+                            <input type="button" value="Add Positions" ng-click="addPositions(loopPosition,loopTextValues,selectedLoopPoint,loopOccurence)">
+                            <br>
+                            <br>
+                            <input class="btn btndefault" style="width:60%;" type="button" value="CREATE LOOP INFO" ng-click="createLoopInfo(parentCategory,loopId,direction,delimiter,loopPosition,selectedLoopPoint,loopOccurence)">
+                        </div>
+
+                        <div ng-if="selectedCategory=='Multivalue'">
+                            <p>
+                                <select  class="pdfSelect" style="margin-top:10px" ng-model="parentCategory" ng-options="parentCategory for parentCategory in parentCategories">
+                                    <option value= "">Select Parent Category</option>
+                                </select>
+                            </p>
+                            <p>
+                                <select   class="pdfSelect" ng-model="outField" ng-options="outField for outField in mvMap[parentCategory].outField">
+                                    <option value="">Select out field</option>
+                                </select>
+                            </p>
+                            <p>
+                                <select  class="pdfSelect" ng-model="tag" ng-options="tag for tag in mvMap[parentCategory].tags">
+                                    <option value="">Select Tags</option>
+                                </select>
+                            </p>
+
+                            <div>
+                                <select  class="pdfSelect"  ng-model="loopDetails" ng-options="loopDetails for loopDetails in ['None','loopDetail']">
+                                    <option value="">Create Loop Details</option>
+                                </select>
+                                <div class="scrollbar" ng-show="loopDetails=='loopDetail'">
+                                    <div style="padding-left: 14px;">
+                                            <label style="margin-top:10px">Loop ID</label>
+                                            <input type="text" ng-model="loopId">
+                                            <br>
+                                            <p style="margin-top:10px" class="text-uppercase">
+                                                <select class="pdfSelect"  style="margin-left: 8px;" ng-model="mvLoopPosition" ng-options="position for position in mappingPositions" ng-change="resetPosition(textVal,selectedPoint,occurence)" required>
+                                                    <option value=""> Select Position</option>
+                                                </select>
+                                                <br>
+                                            </p>
+                                             <p ng-repeat="val in mvLoopInputFields" class="text-uppercase">Text
+                                            <input type="text" style="margin-left: 8px;" ng-model="mvLooptextValues[$index]" required>
+                                            <button ng-click="addMvLoopText()" style="width: 35px;height: 32px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                            <br>
+                                        </p>
+                                        <p class="text-uppercase">Point
+                                            <select style="margin-left: 8px;" ng-model="mvLoopSelectedPoint" ng-options="point for point in ['BOTTOM_LEFT','TOP_RIGHT']" required></select>
+                                            <br>
+                                        </p>
+                                        <p class="text-uppercase">Occurence
+                                            <input style="margin-left: 8px;" type="text" ng-model="mvLoopOccurence" required>
+                                        </p>
+                                        <input type="button" value="Add Positions" ng-click="addPositions(mvLoopPosition,mvLooptextValues,mvLoopSelectedPoint,mvLoopOccurence)">
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                <select  class="pdfSelect" style="margin-top:10px" ng-model="tableDetails" ng-options="tableDetails for tableDetails in ['None','tableDetail']">
+                                    <option value="">Create Table Details</option>
+                                </select>
+                                <div ng-show="tableDetails=='tableDetail'">
+                                    <label>Table ID</label>
+                                    <input type="text" ng-model="tableId">
+                                    <br>
+                                    <label>Column Index</label>
+                                    <input type="text" ng-model="columnIndex">
+                                </div>
+                            </p>
+                             <select  style="margin-top:10px;" class="pdfSelect" ng-model="groupDetails" ng-options="groupDetail for groupDetail in ['None','groupDetails']">
+                                    <option value="">Create Group Details</option>
+                             </select>
+                            <div ng-show="groupDetails=='groupDetails'">
+                                <p ng-repeat="val in groupValuesFields"><label>Group Text</label><input type="text" style="margin-left: 8px;" ng-model="groupText[$index]" required>
+                                   <button ng-click="groupValues()" style="width: 35px;height: 32px;"><i class="fa fa-plus" aria-hidden="true"></i></button></p>
+                                 <p>
+                                    <select style="margin-top:10px" ng-model="groupTextLine" ng-options="textLine for textLine in ['True','False']">
+                                        <option value="">Set Text Line</option>
+                                    </select>
+                                </p>
+
+                                <p class="text-uppercase">
+                                    <select class="pdfSelect"  style="margin-left: 8px;" ng-model="mvGroupPosition" ng-options="position for position in mappingPositions" ng-change="resetPosition(textVal,selectedPoint,occurence)" required>
+                                        <option value="">Select position</option>
+                                    </select>
+                                    <br>
+                                </p>
+                                <p>
+                                    <label>Set References</label>
+                                </p>
+                                <div style="padding-left: 14px;">
+                                    <p ng-repeat="val in mvGroupInputFields" class="text-uppercase">Text
+                                        <input type="text" style="margin-left: 8px;" ng-model="mvGroupTextValues[$index]" required>
+                                        <button ng-click="addmvGroupText()" style="width: 35px;height: 32px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        <br>
+                                    </p>
+                                    <p class="text-uppercase">Point
+                                        <select style="margin-left: 8px;" ng-model="mvGroupSelectedPoint" ng-options="point for point in ['BOTTOM_LEFT','TOP_RIGHT']" required></select>
+                                        <br>
+                                    </p>
+                                    </p>
+                                    <p class="text-uppercase">Reference
+                                        <select style="margin-left: 8px;" ng-model="groupSelectedRef" ng-options="point for point in ['BOTTOM_LEFT','TOP_RIGHT']" required></select>
+                                    </p>
+                                    <input type="button" value="Add Positions" ng-click="addGroupPositions(mvGroupPosition,mvGroupTextValues,mvGroupSelectedPoint,groupSelectedRef)">
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <select  style="margin-top:10px;" class="pdfSelect" ng-model="parentBB" ng-options="parentBB for parentBB in ['None','parentBBDetail']">
+                                <option value="">Create Parent Bounding Box</option>
+                            </select>
+                            <div ng-show="parentBB=='parentBBDetail'">
+                                <p>
+                                    <select style="margin-top:10px" ng-model="textLine" ng-options="textLine for textLine in ['True','False']">
+                                        <option value="">Set Text Line</option>
+                                    </select>
+                                </p>
+                                <p class="text-uppercase">
+                                    <select class="pdfSelect"  style="margin-left: 8px;" ng-model="BBPosition" ng-options="position for position in mappingPositions" ng-change="resetPosition(textVal,selectedPoint,occurence)" required>
+                                        <option value="">Select position</option>
+                                    </select>
+                                    <br>
+                                </p>
+                                <p>
+                                    <label>Set References</label>
+                                </p>
+                                <div style="padding-left: 14px;">
+                                    <p ng-repeat="val in mvParentBBInFields" class="text-uppercase">Text
+                                            <input type="text" style="margin-left: 8px;" ng-model="BBtextValues[$index]" required>
+                                        <button ng-click="addBBText()" style="width: 35px;height: 32px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        <br>
+                                    </p>
+                                    <p class="text-uppercase">Point
+                                        <select style="margin-left: 8px;" ng-model="BBSelectedPoint" ng-options="point for point in ['BOTTOM_LEFT','TOP_RIGHT']" required></select>
+                                        <br>
+                                    </p>
+                                    <p class="text-uppercase">Occurence
+                                        <input style="margin-left: 8px;" type="text" ng-model="BBOccurence" required>
+                                    </p>
+                                    <input type="button" value="Add Positions" ng-click="addPositions(BBPosition,BBtextValues,BBSelectedPoint,BBOccurence)">
+                                    <br>
+                                    <br>                                </div>
+
+                            </div>
+                            <input class="btn btndefault" style="width:49%;margin-top:10px;" type="button" ng-click="addLocationDetails(loopDetails,tableDetails,groupDetails,groupText,parentBB,parentBB,textLine,loopId,tableId,columnIndex,tag)" value="Add Location">
+                            <input class="btn btndefault" style="margin-top:10px;" type="button" value="create multivalue map" ng-click="createMultivalueMap(parentCategory,outField)">
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>

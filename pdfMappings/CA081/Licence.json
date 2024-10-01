@@ -1,0 +1,136 @@
+{
+  "LICENCE_NUMBER": {
+    "PARENT_CATEGORY": "Licence",
+    "Column_Type": [
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Expiration Date:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Licenses/Certificates:"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Licenses/Certificates:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "DEA Certificate:"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  },
+  "LICENCE_EXPIRY_DATE": {
+    "PARENT_CATEGORY": "Licence",
+    "Column_Type": [
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": "None",
+                "point": "TOP_RIGHT",
+                "text": "None"
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Licenses/Certificates:"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Expiration Date:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "DEA Certificate:"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  },
+  "LICENCE_STATE": {
+    "PARENT_CATEGORY": "Licence",
+    "Column_Type": [
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Medical License:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Licenses/Certificates:"
+                ]
+              },
+              "min_X": {
+                "occurence": "None",
+                "point": "BOTTOM_LEFT",
+                "text": "None"
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "DEA Certificate:"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  }
+}

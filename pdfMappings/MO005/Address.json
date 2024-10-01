@@ -1,0 +1,110 @@
+{"ADDRESS_LINE_1": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Collaborating Provider"], "point":"BOTTOM_LEFT", "occurence":1},
+                                               "max_X": {"text":["Provider Type ID"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Fax"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Provider Type ID"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 }]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Billing Information"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":["Closed to New Patients"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Billing Information"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 }]
+   },
+   {
+    "Tag": "MAIL",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Mailing Address"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["Fee Sch"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Collaborating Provider"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Age Limits", "Office Manager"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 }]
+   }
+  ]
+ },
+ "ADDRESS_PHONE": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Ph:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["Fax"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Office Manager"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Ph:"], "point":"TOP_RIGHT", "occurence":1}} }
+                 }]
+   }
+  ]
+ },
+ "ADDRESS_PHONE_FAX": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Fax"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["Provider Type ID"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Office Manager"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Fax"], "point":"TOP_RIGHT", "occurence":1}} }
+                 }]
+   }
+
+  ]
+ },
+ "ADDRESS_COUNTY": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["County:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["Office Manager"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Age Limits", "Mailing Address"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Fax"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 }]
+   }
+
+  ]
+ },
+ "WORKING_HOURS": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Office Hours:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["Provider Type ID"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Mailing Address"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Office Manager"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 }]
+   }
+
+  ]
+ },
+ "AGE_LIMIT": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Age Limits:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["Office Hours"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Mailing Address"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Office Manager"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 }]
+   }
+
+  ]
+ }
+
+
+
+}

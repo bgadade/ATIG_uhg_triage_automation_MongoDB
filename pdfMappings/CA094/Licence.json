@@ -1,0 +1,146 @@
+{
+  "LICENCE_NUMBER": {
+    "PARENT_CATEGORY": "Licence",
+    "Column_Type": [
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Confirmed:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Type: State Medical License"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "License #:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Expiration Date:"
+                ]
+              },
+              "start": {
+                "text": [
+                  "Type: State Medical License"
+                ]
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  },
+  "LICENCE_STATE": {
+    "PARENT_CATEGORY": "Licence",
+    "Column_Type": [
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Expiration Date:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Type: State Medical License"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "State:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Expiration Date:"
+                ]
+              },
+              "start": {
+                "text": [
+                  "Type: State Medical License"
+                ]
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  },
+  "LICENCE_EXPIRY_DATE": {
+    "PARENT_CATEGORY": "Licence",
+    "Column_Type": [
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Confirmed By:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Type: State Medical License"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Expiration Date:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Expiration Date:"
+                ]
+              },
+              "start": {
+                "text": [
+                  "Type: State Medical License"
+                ]
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  }
+}

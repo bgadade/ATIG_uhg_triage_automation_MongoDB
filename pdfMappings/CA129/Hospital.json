@@ -1,0 +1,28 @@
+{"HOSPITAL_AFF_STATUS": {
+  "PARENT_CATEGORY": "Hospital",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Medical Staff Affiliation:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":"None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                                 "max_Y": {"text":["Hospital/Institution:"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 }]
+   }
+  ]
+ },
+ "HOSPITAL_NAME": {
+  "PARENT_CATEGORY": "Hospital",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Hospital/Institution:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":["Medical Staff Affiliation:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}} }}]
+   }
+  ]
+ }
+}

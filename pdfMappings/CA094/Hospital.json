@@ -1,0 +1,88 @@
+{
+  "HOSPITAL_NAME": {
+    "PARENT_CATEGORY": "Hospital",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Active Date"
+                  ]
+                },
+                "min_X": {
+                  "occurence": "None",
+                  "point": "BOTTOM_LEFT",
+                  "text": "None"
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Position"
+                  ]
+                }
+              },
+              "loopId": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "HOSPITAL_AFF_STATUS": {
+    "PARENT_CATEGORY": "Hospital",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_X": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Status:"
+                  ]
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Confirmed Date"
+                  ]
+                }
+              },
+              "loopId": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

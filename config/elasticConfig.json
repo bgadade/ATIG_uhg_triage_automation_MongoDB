@@ -1,0 +1,793 @@
+{
+  "fields": {
+    "master_degree": {
+      "mid_level_indicator": {
+        "index": true,
+        "type": "keyword"
+      },
+      "master_list_indicator": {
+        "index": true,
+        "type": "keyword"
+      },
+      "degree": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "master_degree_test": {
+      "mid_level_indicator": {
+        "index": true,
+        "type": "keyword"
+      },
+      "master_list_indicator": {
+        "index": true,
+        "type": "keyword"
+      },
+      "degree": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "mid_level_ndbSpec": {
+      "mid_level_ndbSpec": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "rfp_grid": {
+      "ndb_spec": {
+        "index": true,
+        "type": "keyword"
+      },
+      "state": {
+        "index": true,
+        "type": "keyword"
+      },
+      "specialty_token_count": {
+        "index": true,
+        "type": "keyword"
+      },
+      "specialty": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "credentialing_required": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "hbp_speciality": {
+      "specialty_name": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "specialty_name_token_count": {
+        "index": true,
+        "type": "keyword"
+      },
+      "specialty_code": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "sv_nlp": {
+      "sotColNameNlpBufferSubWord": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "outputCol": {
+        "index": true,
+        "type": "keyword"
+      },
+      "sotColNameNlpBufferWord": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "sotColNameBufferOriginal": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "custom_stem"
+          }
+        }
+      }
+    },
+    "sv_nlp_test": {
+      "sotColNameNlpBufferSubWord": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "outputCol": {
+        "index": true,
+        "type": "keyword"
+      },
+      "sotColNameNlpBufferWord": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "sotColNameBufferOriginal": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "custom_stem"
+          }
+        }
+      }
+    },
+    "mv_nlp": {
+      "sotColNameNlpBufferSubWord": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "sotColNameBufferOriginal": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "custom_stem"
+          }
+        }
+      },
+      "sotColNameNlpBufferWord": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "parentCat": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "mv_nlp_test": {
+      "sotColNameNlpBufferSubWord": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "sotColNameBufferOriginal": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "custom_stem"
+          }
+        }
+      },
+      "sotColNameNlpBufferWord": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "parentCat": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "specialty_exceptions": {
+      "specialty_name_in_sot_token_count": {
+        "index": true,
+        "type": "keyword"
+      },
+      "specialty_name_in_sot": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "specialty_name_in_taxonomy_grid": {
+        "index": true,
+        "type": "keyword"
+      },
+      "degree": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "specialty_exceptions_test": {
+      "specialty_name_in_sot_token_count": {
+        "index": true,
+        "type": "keyword"
+      },
+      "specialty_name_in_sot": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "specialty_name_in_taxonomy_grid": {
+        "index": true,
+        "type": "keyword"
+      },
+      "degree": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "c_and_s": {
+      "code": {
+        "index": true,
+        "type": "keyword"
+      },
+      "individual_enrollment_limit": {
+        "index": true,
+        "type": "keyword"
+      },
+      "state": {
+        "index": true,
+        "type": "keyword"
+      },
+      "age_limit_of_patients": {
+        "index": true,
+        "type": "keyword"
+      },
+      "provider_specialty": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "provider_specialty_token_count": {
+        "index": true,
+        "type": "keyword"
+      },
+      "group_enrollment_limit": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "pcp_vs_specialist": {
+      "specialty_name": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "specialty_name_token_count": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_specialty_code": {
+        "index": true,
+        "type": "keyword"
+      },
+      "cosmos_provider_number": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "language_code": {
+      "code_token_count": {
+        "index": true,
+        "type": "keyword"
+      },
+      "code": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "language_description": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "language_description_token_count": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "ndb_taxonomy_test": {
+      "cos_prov": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_deg": {
+        "index": true,
+        "type": "keyword"
+      },
+      "prov_type_name": {
+        "index": true,
+        "type": "text"
+      },
+      "cos_cred": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ur_ind": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_spec": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_rec": {
+        "index": true,
+        "type": "keyword"
+      },
+      "prov_type_name_token_count": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "mid_specialty": {
+      "cos_cred": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_deg": {
+        "index": true,
+        "type": "keyword"
+      },
+      "prov_type_name": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "ndb_spec": {
+        "index": true,
+        "type": "keyword"
+      },
+      "prov_type_name_token_count": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "school_code": {
+      "school_code": {
+        "index": true,
+        "type": "keyword"
+      },
+      "school_description": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "school_description_token_count": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "nucc": {
+      "nucc_description_token_count": {
+        "index": true,
+        "type": "keyword"
+      },
+      "nucc_description": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "ndb_record_type": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_specialty_code": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_degree": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_org_type": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_description": {
+        "index": true,
+        "type": "text"
+      },
+      "nucc_taxonomy_code": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "ndb_taxonomy": {
+      "cos_prov": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_deg": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ur_ind": {
+        "index": true,
+        "type": "keyword"
+      },
+      "prov_type_name": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "cos_cred": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_spec": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_rec": {
+        "index": true,
+        "type": "keyword"
+      },
+      "prov_type_name_token_count": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "ndb_taxonomy_stem": {
+      "cos_prov": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_deg": {
+        "index": true,
+        "type": "keyword"
+      },
+      "prov_type_name": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "cos_cred": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ur_ind": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_spec": {
+        "index": true,
+        "type": "keyword"
+      },
+      "ndb_rec": {
+        "index": true,
+        "type": "keyword"
+      },
+      "prov_type_name_token_count": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "hospital_list": {
+      "lastname": {
+        "index": true,
+        "type": "text"
+      },
+      "taxid": {
+        "index": true,
+        "type": "keyword"
+      },
+      "mpin": {
+        "index": true,
+        "type": "keyword"
+      },
+      "provstatus": {
+        "index": true,
+        "type": "keyword"
+      },
+      "provtype": {
+        "index": true,
+        "type": "keyword"
+      },
+      "orgtypecd": {
+        "index": true,
+        "type": "keyword"
+      },
+      "state": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "hosp_aff_status": {
+      "acronym": {
+        "index": true,
+        "type": "keyword"
+      },
+      "abb": {
+        "index": true,
+        "type": "text"
+      }
+    },
+    "comm_types": {
+      "comm_type_acrnm": {
+        "index": true,
+        "type": "keyword"
+      },
+      "comm_type_abb": {
+        "index": true,
+        "type": "text"
+      }
+    },
+    "medicaid_numbers": {
+      "state": {
+        "index": true,
+        "type": "text"
+      },
+      "state_code": {
+        "index": true,
+        "type": "keyword"
+      },
+      "provider_address_level": {
+        "index": true,
+        "type": "keyword"
+      },
+      "medicaid_states_per_state_guidelines": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "us_states": {
+      "us_state": {
+        "index": true,
+        "type": "text"
+      },
+      "abbreviation": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "ver_source": {
+      "ver_source": {
+        "index": true,
+        "type": "keyword"
+      },
+      "board_name": {
+        "index": true,
+        "type": "text",
+        "fields": {
+          "english": {
+            "type": "text",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      }
+    },
+        "us_cities": {
+            "county": {
+                "index": true,
+                "type": "text"
+            },
+            "city": {
+                "index": true,
+                "type": "text"
+            },
+            "state_short": {
+                "index": true,
+                "type": "keyword"
+            },
+            "state_full": {
+                "index": true,
+                "type": "text"
+            }
+        },
+          "reason_desc_code": {
+            "rsn_description": {
+              "index": true,
+              "type": "text"
+            },
+            "primary_reason_code": {
+              "index": true,
+              "type": "keyword"
+            }
+          },
+    "spec_psi": {
+            "spec": {
+                "index": true,
+                "type": "text"
+            },
+            "is_mid_level": {
+                "index": true,
+                "type": "keyword"
+            }
+
+        },
+    "degree_psi": {
+            "code": {
+                "index": true,
+                "type": "keyword"
+            },
+      "description": {
+                "index": true,
+                "type": "text"
+            },
+      "is_mid_level": {
+                "index": true,
+                "type": "keyword"
+            }
+
+        },
+    "degree_exceptions": {
+      "degree_in_sot": {
+        "index": true,
+        "type": "text"
+      },
+      "degree_in_master_list": {
+        "index": true,
+        "type": "keyword"
+      }
+    },
+    "contact_type_exceptions":{
+      "contact_type_input": {
+        "index": true,
+        "type": "text"
+      },
+      "contact_type_master": {
+        "index": true,
+        "type": "keyword"
+      }
+    }
+  },
+  "mappings": {
+    "properties": {}
+  },
+  "settings": {
+    "analysis": {
+      "filter": {
+        "my_snow": {
+          "type": "snowball",
+          "language": "english"
+        },
+        "my_stemmer": {
+          "type": "stemmer",
+          "name": "english"
+        }
+      },
+      "analyzer": {
+        "custom_nostem": {
+          "filter": [
+            "lowercase"
+          ],
+          "type": "custom",
+          "tokenizer": "standard"
+        },
+        "my_custom_analyzer": {
+          "filter": [
+            "lowercase",
+            "my_snow"
+          ],
+          "type": "custom",
+          "tokenizer": "standard"
+        }
+      }
+    }
+  },
+  "index_input_files":{"HBP_Speciality":"hbp_speciality","C&S_Excel_singlesheet":"c_and_s",
+       "Language_Code":"language_code","Master_Degree":"master_degree",
+       "NDB_Taxonomy":"ndb_taxonomy","PCP vs Specialist":"pcp_vs_specialist",
+       "School_Code":"school_code","RFP_Grid":"rfp_grid",
+                   "NUCC_NDB_Grid": "nucc",
+                   "mid_level_specialty":"mid_specialty",
+        "specialty_exceptions":"specialty_exceptions",
+    "NDB_Hospital_List":"hospital_list",
+    "hosp_aff_status": "hosp_aff_status",
+    "us_states" : "us_states",
+    "ver_source" : "ver_source",
+    "COMM_Types": "comm_types",
+    "Medicaid_Numbers": "medicaid_numbers",
+    "us_cities": "us_cities",
+    "Reason_Desc_Code": "reason_desc_code",
+    "spec_psi":"spec_psi",
+    "degree_psi":"degree_psi",
+    "degree_exceptions":"degree_exceptions",
+    "contact_type_exceptions":"contact_type_exceptions"
+},
+  "project_name":"triage"
+}

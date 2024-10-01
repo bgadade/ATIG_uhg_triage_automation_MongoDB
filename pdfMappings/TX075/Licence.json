@@ -1,0 +1,45 @@
+{"LICENCE_STATE": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 1, "columnIndex": 2}}]
+   }
+  ]
+ },
+ "LICENCE_NUMBER": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 1, "columnIndex": 3}}]
+   }
+  ]
+ },
+ "LICENCE_EXPIRY_DATE": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 1, "columnIndex": 6}}]
+   }
+  ]
+ },
+ "STATE_LICENCE_EFFECTIVE_DATE": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 1, "columnIndex": 5}}]
+   }
+  ]
+ }
+}

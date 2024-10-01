@@ -1,0 +1,116 @@
+{"SPECIALITY": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Attending Physician (if"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["DEA Number"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Primary Specialty"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Board Certified"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SECONDARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Hospital Privileges"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Secondary Specialty, if any"],"point": "TOP_RIGHT","occurence": 1},
+                        "min_X": {"text": ["Secondary Specialty, if any"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Board Certified"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "BOARD_CERTIFIED_SPEC": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Issued"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["DEA Number"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Board Certified"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SECONDARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Issued"],"point": "TOP_RIGHT","occurence": 3},
+                        "max_Y": {"text": ["Secondary Specialty, if any"],"point": "TOP_RIGHT","occurence": 1},
+                        "min_X": {"text": ["Board Certified"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "BOARD_CERT_DATE_SPEC": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Expiration"],"point": "TOP_RIGHT","occurence": 3},
+                        "max_Y": {"text": ["Board Certified"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Issued"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SECONDARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Expiration"],"point": "TOP_RIGHT","occurence": 4},
+                        "max_Y": {"text": ["Board Certified"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Issued"],"point": "TOP_RIGHT","occurence": 3},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "BOARD_CERT_EXPIRATION_DATE_SPEC": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Attending Physician (if"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Issued:"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Expiration"],"point": "TOP_RIGHT","occurence": 3},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SECONDARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Hospital Privileges"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Issued"],"point": "BOTTOM_LEFT","occurence": 3},
+                        "min_X": {"text": ["Expiration"],"point": "TOP_RIGHT","occurence": 4},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "SUPERVISING_PHYSICIAN": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Secondary Specialty, if any"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Expiration"],"point": "BOTTOM_LEFT","occurence": 3},
+                        "min_X": {"text": ["Attending Physician (if"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Board Certified"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

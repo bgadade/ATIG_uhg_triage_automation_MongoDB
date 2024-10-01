@@ -1,0 +1,16 @@
+{"PROVIDER_LANGUAGE": {
+  "PARENT_CATEGORY": "ProviderLanguage",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                            "min_Y": { "text": ["Specialty:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_Y": { "text": ["Group NPI:"],"point": "BOTTOM_LEFT","occurence": 1},
+                            "min_X": { "text": ["Foreign Languages:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_X": { "text": ["Age Restrictions:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+  }
+  ]
+ }
+   }

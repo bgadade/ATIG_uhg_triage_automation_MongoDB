@@ -1,0 +1,104 @@
+[
+  {"LayerName": "CleanseDataFrame","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"singleValue": {
+      "derivations": [
+        {"name": "applyRegex","type": "mv_cmn","input": {"inputCol":"EFFECTIVE_DATE", "regexKey":"EFFECTIVE_DATE"}}
+      ]
+    }},
+    {"Address":{
+      "derivations":[
+        {"name": "standardizeColumn","type": "mv_cmn","input": {"inputCol":["ADDRESS_LINE_1","ADDRESS_LINE_2"],"standardsKeys":["Blvd","Rd","Ave","Ste", "Trl", "Ln", "Fl", "Mt", "Dr", "Ct"]}},
+        {"name": "processCombinedAddTypeInd","type": "mv_cmn","input": {"inputCol":"COMBINED_ADDRESS_TYPE_IND","outputCol":["ADDRESS_TYPE","ADDRESS_INDICATOR"],"standardsKeys":["Primary","Secondary"]}}
+    ]}}
+  ]},
+  {"LayerName": "CleanseLayer1","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "var_parseDate","type": "mv_cmn","input": ["EFFECTIVE_DATE", "C"],"col": "PARSED_EFFECTIVE_DATE"},
+        {"name": "var_parseDate","type": "mv_cmn","input": ["ORIGINAL_DEL_DATE", "C"],"col": "PARSED_ORIGINAL_DEL_DATE"}
+        ]
+    }},
+    {"Address":{
+      "derivations":[
+        {"name": "var_mergeDerivedWithInput","type": "mv_cmn","input": ["ADDRESS_INDICATOR", "DERIVED_ADDRESS_INDICATOR"],"col": "MERGE_ADDRESS_INDICATOR"},
+        {"name": "var_addOrderInd","type": "mv_cmn","input": ["ADDRESS_ORDER", "MERGE_ADDRESS_INDICATOR"],"col": "ADDRESS_ORDER_INDICATOR"},
+        {"name": "var_mergeDerivedWithInput","type": "mv_cmn","input": ["ADDRESS_TYPE", "DERIVED_ADDRESS_TYPE"],"col": "MERGE_ADDRESS_TYPE"},
+        {"name": "standardisePSIndi","type": "mv_cmn","input": ["ADDRESS_ORDER_INDICATOR", ["Primary", "Secondary"]],"col": "CLEAN_ADDRESS_IND"},
+        {"name": "var_standardiseString","type": "mv_cmn","input": ["MERGE_ADDRESS_TYPE", ["PLSV", "Bill", "Combo", "Mail", "Cred"]],"col": "OUT_ADDRESS_TYPE"},
+        {"name": "var_deriveAddressIndicator", "type": "mv_cmn", "input": ["CLEAN_ADDRESS_IND", "OUT_ADDRESS_TYPE"], "col": "OUT_ADDRESS_IND"}
+      ]
+    }}]},
+  {"LayerName": "CleanseLayer2","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"Address":{
+      "derivations":[
+        {"name": "removeAndPrioritizeCategory","type": "mv_cmn","input":{"qry1":"OUT_ADDRESS_IND.str.lower() == 'p' and OUT_ADDRESS_TYPE.str.lower() == 'plsv'","qry2":"OUT_ADDRESS_TYPE.str.lower() in ['general','plsv','combo']","topRow":true}}
+      ]
+    }}
+  ]},
+
+  {"LayerName": "multivaluedCols","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+     {"singleValue": {
+      "derivations": [
+      {"name": "placeHolder","type": "mv_cmn","input": [],"col": "placeHolder"}
+    ]}},
+    {"Address":{
+      "derivations":[
+        {"name": "var_ConcatAddress","type": "mv_cmn","input": [{"address1":"ADDRESS_LINE_1","address2":"ADDRESS_LINE_2","city": "ADDRESS_CITY", "state": "ADDRESS_STATE", "zip_code": "ADDRESS_ZIP"}],"col": "CONCAT_ADDRESS"},
+        {"name": "var_ParseAddress","type": "mv_cmn","input": ["'CONCAT_ADDRESS'"],"col": "PARSED_ADDRESS"},
+        {"name": "var_getZipCode","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "OUT_ADDRESS_ZIP"},
+        {"name": "var_getZipPlus4", "type":"mv_cmn", "input": ["PARSED_ADDRESS", "ADDRESS_ZIP4"], "col": "OUT_ADDRESS_ZIP4"},
+        {"name": "var_getAddress1","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "OUT_ADDRESS_LINE_1"},
+        {"name": "var_getAddress2","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "OUT_ADDRESS_LINE_2"},
+        {"name": "var_getCity","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "PAR_ADDRESS_CITY"},
+        {"name": "var_fnlCity","type": "mv_cmn","input": ["PAR_ADDRESS_CITY", "OUT_ADDRESS_LINE_1", "ADDRESS_CITY"],"col": "OUT_ADDRESS_CITY"},
+        {"name": "var_getState","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "PAR_ADDRESS_STATE"},
+        {"name": "var_fnlState","type": "mv_cmn","input": ["PAR_ADDRESS_STATE", "OUT_ADDRESS_LINE_1", "ADDRESS_CITY"],"col": "OUT_ADDRESS_STATE"},
+        {"name": "var_removeSpecialCharacters", "type":"mv_cmn", "input":["OUT_ADDRESS_LINE_1"], "col": "OUT_ADDRESS_LINE_1"},
+        {"name": "var_removeSpecialCharacters", "type":"mv_cmn", "input":["OUT_ADDRESS_LINE_2"], "col": "OUT_ADDRESS_LINE_2"}
+      ]
+    }}
+  ]},
+  {"LayerName": "FinalCleansingLayer","LayerType": "DF","ProcessStage": 0, "Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "effectiveDatePsi","type": "mv_cmn","input": {"inputCol":["PARSED_EFFECTIVE_DATE", "PARSED_ORIGINAL_DEL_DATE"],"outputCol":"OUT_EFFECTIVE_DATE"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_EFFECTIVE_DATE", "10", "max", "OUT_EFFECTIVE_DATE"]}},
+        {"name": "updateClarification","type": "mv_cmn","input": {"ignore":0,"updateFrom":"errDictDupValInSv","colMapping":{"EFFECTIVE_DATE":"OUT_EFFECTIVE_DATE"},"conditionMapping":{}}},
+        {"name": "createCol","type": "mv_cmn","input": {"defVal": "N/A", "outputCol": "DEFAULT_AMEND_EXE_MAIL_TYPE_VAL"}},
+        {"name": "createCol","type": "mv_cmn","input": {"defVal": "Y", "outputCol": "DEFAULT_AMEND_EXE_ROSTER_VAL"}},
+        {"name": "createAndClarifyCol","type": "mv_cmn","input": {"clrMsg": "Mandatory field Missing Value", "outputCol": "DEFAULT_AMEND_EXE_PAPER_TYPE_VAL"}},
+        {"name": "createCol","type": "mv_cmn","input": {"defVal": "All Other", "outputCol": "DEFAULT_AMEND_CONTR_PROD_VAL"}}
+        ]
+    }},
+    {"Address":{
+      "derivations":[
+        {"name": "mapStdValues","type": "mv_cmn","input": {"inputCol":"OUT_ADDRESS_TYPE", "standardsKeys": ["OUT_ADDRESS_TYPE"], "outputCol": "OUT_STD_ADDRESS_TYPE", "isMandatory":true}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_ZIP", "5", "eql", "OUT_ADDRESS_ZIP"], "mandatory":"True"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_ZIP4", "4", "eql", "OUT_ADDRESS_ZIP4"], "mandatory":"True"}},
+        {"name": "clarifyFields","type": "mv_cmn","input": ["OUT_ADDRESS_ZIP"]},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_CITY", "32", "max", "OUT_ADDRESS_CITY"]}, "mandatory":"True"},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_STATE", "2", "max", "OUT_ADDRESS_STATE"]}, "mandatory":"True"},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_LINE_1", "32", "max", "OUT_ADDRESS_LINE_1"], "mandatory":"True"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_LINE_2", "32", "max", "OUT_ADDRESS_LINE_2"], "mandatory":"False"}},
+        {"name": "combineAddressLine1n2", "type": "mv_cmn", "input": {"inputCol": ["OUT_ADDRESS_LINE_1", "OUT_ADDRESS_LINE_2"], "outputCol":"ADDR_ADD"}},
+        {"name": "addrCheck", "type": "mv_cmn", "input": {"inputCol": ["ADDR_ADD","OUT_ADDRESS_TYPE"], "outputCol":"ADDR_ADD"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["ADDR_ADD", "32", "max", "ADDR_ADD"], "mandatory":"True"}}
+      ]
+    }}
+  ]},
+  {"LayerName": "conflictRemovalLayer","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"singleValue": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}},
+    {"Address": {
+      "derivations": [
+        {"name": "replicationAtEnd", "type": "mv_cmn", "input":{"diDf":{"Address": true}, "colsToBeReplicated": ["OUT_ADDRESS_LINE_1", "OUT_ADDRESS_LINE_2","OUT_ADDRESS_CITY","OUT_ADDRESS_STATE","OUT_ADDRESS_ZIP","OUT_ADDRESS_ZIP4"]}},
+        {"name": "dropColumns","type": "mv_cmn","input": ["index", "ROW_COUNT", "ROW_NUM", "level_0"]}
+      ]
+    }}
+  ]},
+  {"LayerName": "MasterDictListLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]},
+  {"LayerName": "fdfLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]}
+
+]

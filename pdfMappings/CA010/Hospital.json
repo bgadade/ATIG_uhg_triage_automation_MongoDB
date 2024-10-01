@@ -1,0 +1,16 @@
+{"HOSPITAL_NAME": {
+  "PARENT_CATEGORY": "Hospital",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Medical School / College"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Expiration"],"point": "BOTTOM_LEFT","occurence": 4},
+                        "min_X": {"text": ["Hospital Privileges"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

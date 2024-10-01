@@ -1,0 +1,210 @@
+{
+    "order": 0,
+    "finalDfColNames": [
+      {
+        "outputColName": "Prac_ParStatus_M&R",
+        "dfColName": "Prac_ParStatus_M&R",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_ParStatus_E&I",
+        "dfColName": "Prac_ParStatus_E&I",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_ParStatus_C&S",
+        "dfColName": "Prac_ParStatus_C&S",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_ParStatus_VA CCN",
+        "dfColName": "Prac_ParStatus_VA CCN",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Prac_ParStatus_M&VWest",
+        "dfColName": "Prac_ParStatus_M&VWest",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_NDBImpacted",
+        "dfColName": "Import_NDBImpacted",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_NDBEMPIREImpacted",
+        "dfColName": "Import_NDBEMPIREImpacted",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_NICEImpacted",
+        "dfColName": "Import_NICEImpacted",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_RVFacetsImpacted",
+        "dfColName": "Import_RVFacetsImpacted",
+        "dataType": "numeric",
+        "format": "0000000000",
+        "inclusionLevel":"Prac"
+      },
+	  {
+        "outputColName": "Import_CLMImpacted",
+        "dfColName": "Import_CLMImpacted",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_EmptorisImpacted",
+        "dfColName": "Import_EmptorisImpacted",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_NDBCOSMOSImpacted",
+        "dfColName": "Import_NDBCOSMOSImpacted",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_NDBCSPFACETSImpacted",
+        "dfColName": "Import_NDBCSPFACETSImpacted",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Segment_E&I",
+        "dfColName": "Import_Del_Segment_E&I",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Segment_C&S",
+        "dfColName": "Import_Del_Segment_C&S",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Product_IFP",
+        "dfColName": "Import_Del_Product_IFP",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Product_MEDICAID",
+        "dfColName": "Import_Del_Product_MEDICAID",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Product_DSNP",
+        "dfColName": "Import_Del_Product_DSNP",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Segment_M&R",
+        "dfColName": "Import_Del_Segment_M&R",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Segment_VA CCN",
+        "dfColName": "Import_Del_Segment_VA CCN",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Segment_M&VWest",
+        "dfColName": "Import_Del_Segment_M&VWest",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Segment_EmpireCSP",
+        "dfColName": "Import_Del_Segment_EmpireCSP",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Segment_ndbZline",
+        "dfColName": "Import_Del_Segment_ndbZline",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Segment_ndbYline",
+        "dfColName": "Import_Del_Segment_ndbYline",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Segment_ndbFacetsHline",
+        "dfColName": "Import_Del_Segment_ndbFacetsHline",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"Prac"
+      },
+      {
+        "outputColName": "Import_Del_Segment_ndbFacetsYline",
+        "dfColName": "Import_Del_Segment_ndbFacetsYline",
+        "dataType": "numeric",
+        "format": "000000000",
+        "inclusionLevel":"Prac"
+      },
+	  {
+        "outputColName": "DelPracAdd_UHCPar?",
+        "dfColName": "DelPracAdd_UHCPar?",
+        "dataType": "text",
+        "format": "None"
+      },
+	  {
+        "outputColName": "DelPracAdd_OxPar?",
+        "dfColName": "DelPracAdd_OxPar?",
+        "dataType": "text",
+        "format": "None"
+      },
+        {
+        "outputColName": "DelPracAdd_McarePar?",
+        "dfColName": "DelPracAdd_McarePar?",
+        "dataType": "text",
+        "format": "None"
+      },
+        {
+        "outputColName": "DelPracAdd_McaidPar?",
+        "dfColName": "DelPracAdd_McaidPar?",
+        "dataType": "text",
+        "format": "None"
+      }
+    ]
+}

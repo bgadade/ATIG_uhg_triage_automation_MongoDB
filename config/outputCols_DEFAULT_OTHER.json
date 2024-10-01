@@ -1,0 +1,223 @@
+{
+    "order": 0,
+    "finalDfColNames": [
+      {
+        "outputColName": "NonMassProj_EffDt",
+        "dfColName": "OUT_EFFECTIVE_DATE",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_NDBImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "NonMassProj_NDB_Inst",
+        "dfColName": "provLocationInFile",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+       {
+        "outputColName": "Import_NDBEMPIREImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "NonMassProj_NDBEMPIRE_Inst",
+        "dfColName": "provLocationInFile",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_NICEImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "NonMassProj_NICE_Inst",
+        "dfColName": "provLocationInFile",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      
+      {
+        "outputColName": "NonMassProj_PULSE_Inst",
+        "dfColName": "provLocationInFile",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "NonMassProj_RVFacets_Inst",
+        "dfColName": "provLocationInFile",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "NonMassProj_CPS/Iliad_Inst",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "NonMassProj_SIERRAFACETS_Inst",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_EmptorisImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "NonMassProj_Emptoris_Inst",
+        "dfColName": "provLocationInFile",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_NDBCOSMOSImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "NonMassProj_NDBCOSMOS_Inst",
+        "dfColName": "provLocationInFile",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_NDBCSPFACETSImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "NonMassProj_CSPFACETS_Inst",
+        "dfColName": "provLocationInFile",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "NonMassProj_NDBDIAMOND_Inst",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_Del_Segment_E&I",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_Del_Segment_C&S",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_Del_Product_IFP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+           {
+        "outputColName": "Import_Del_Product_MEDICAID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+           {
+        "outputColName": "Import_Del_Product_DSNP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_Del_Segment_M&R",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_Del_Segment_VA CCN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_Del_Segment_EmpireCSP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_Del_Segment_ndbZline",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_Del_Segment_ndbYline",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_Del_Segment_ndbFacetsHline",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "Import_Del_Segment_ndbFacetsYline",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      },
+      {
+        "outputColName": "TransactionType",
+        "dfColName": "VALIDATED_ACTION",
+        "dataType": "text",
+        "format": "None",
+        "inclusionLevel":"NonMass"
+      }
+    ]
+}

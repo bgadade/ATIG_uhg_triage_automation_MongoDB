@@ -1,0 +1,31 @@
+{"LICENCE_NUMBER": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Federal DEA:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Licenses / Certificates"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["State License:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Exp. Date"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "LICENCE_EXPIRY_DATE": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Federal DEA:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Licenses / Certificates"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Number"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

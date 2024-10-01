@@ -1,0 +1,16 @@
+{"PROV_MEDICAID": {
+  "PARENT_CATEGORY": "Medicaid",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                            "min_Y": { "text": ["Medicaid#:"],"point": "BOTTOM_LEFT","occurence": 1},
+                            "max_Y": { "text": ["NPI#"],"point": "BOTTOM_LEFT","occurence": 1},
+                            "min_X": { "text": ["Medicaid#:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_X": { "text": ["Date of Change:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+  }
+  ]
+ }
+   }

@@ -1,0 +1,42 @@
+{
+  "Speciality" : [{"type": "table2",
+                  "xMargin": 4.5,
+                  "tableId":1,
+                  "parentBB":{
+                        "min_Y": {"text": ["Boards","Appointments"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Specialties"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                  "tableHeader": 1
+  }],
+  "Licence": [{"type": "table2",
+              "xMargin": 4.5,
+              "tableId":1,
+              "parentBB":{
+                        "min_Y": {"text": ["DEA Certificate", "Insurance"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Licenses"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+              "tableHeader": 1
+  }],
+  "Board": [{"type": "table2",
+             "xMargin": 4.5,
+             "tableId":1,
+             "parentBB":{
+                        "min_Y": {"text": ["Appointments"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Boards"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+              "tableHeader": 1
+  }],
+  "Dea": [{"type": "table2",
+              "xMargin": 4.5,
+              "tableId":1,
+              "parentBB":{
+                        "min_Y": {"text": ["DEA Schedule"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["State License"],"point": "BOTTOM_LEFT","occurence": "last"},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+              "tableHeader": "None"
+  }]
+}

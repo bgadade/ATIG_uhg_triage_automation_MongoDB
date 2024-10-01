@@ -1,0 +1,86 @@
+{
+  "DOB": {
+    "min_Y": {"text": ["INITIAL APPTOINTMENT"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["LAST NAME"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["DOB"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["GENDER"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "GENDER": {
+    "min_Y": {"text": ["INITIAL APPTOINTMENT"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["LAST NAME"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["GENDER"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["ETHNICITY"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "INDIVIDUAL_NPI": {
+    "min_Y": {"text": ["INITIAL APPTOINTMENT"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["LAST NAME"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["NPI#"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["PCP STATUS"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "NAME_LAST": {
+    "min_Y": {"text": ["DOB"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["LAST NAME"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["LAST NAME"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["FIRST NAME"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "NAME_FIRST": {
+    "min_Y": {"text": ["DOB"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["LAST NAME"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["FIRST NAME"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["MIDDLE"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "NAME_MIDDLE": {
+    "min_Y": {"text": ["DOB"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["LAST NAME"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["MIDDLE"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["SUFFIX"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "NAME_SUFFIX": {
+    "min_Y": {"text": ["SUFFIX"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_Y": { "text": ["LAST NAME"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["SUFFIX"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["DEGREE"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "PROVIDER_TYPE": {
+    "min_Y": {"text": ["INITIAL APPTOINTMENT"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["LAST NAME"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["PCP STATUS"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "ORIGINAL_DEL_DATE": {
+    "min_Y": {"text": ["SPECIALTY"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["DOB"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["INITIAL APPTOINTMENT"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["EFFECTIVE DATE"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "EFFECTIVE_DATE": {
+    "min_Y": {"text": ["SPECIALTY"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["DOB"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["EFFECTIVE DATE"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["NEXT CREDENTIAL DATE"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "CURRENT_DEL_DATE": {
+    "min_Y": {"text": ["SPECIALTY"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["DOB"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["NEXT CREDENTIAL DATE"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "TAX_ID":  {
+  "min_Y": {"text": ["BOARD CERTIFICATION"],"point": "TOP_RIGHT","occurence": 1},
+  "max_Y": { "text": ["F:"],"point": "BOTTOM_LEFT","occurence": 3},
+  "min_X": { "text": ["TIN"],"point": "TOP_RIGHT","occurence": 2},
+  "max_X": { "text": ["SECONDARY:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "GROUP_NAME": {
+    "min_Y": {"text": ["F:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["PRIMARY LOCATION"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+    "max_X": { "text": ["P:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "NAME_OF_LEGAL_TAX_ID_OWNER": {
+    "min_Y": {"text": ["TIN"],"point": "TOP_RIGHT","occurence": 2},
+    "max_Y": { "text": ["P:"],"point": "BOTTOM_LEFT","occurence": 3},
+    "min_X": { "text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+    "max_X": { "text": ["F:"],"point": "BOTTOM_LEFT","occurence": 3}
+  }
+}

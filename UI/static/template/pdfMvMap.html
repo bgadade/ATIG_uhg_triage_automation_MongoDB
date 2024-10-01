@@ -1,0 +1,522 @@
+ <div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+        <div class="main">
+            <div class="alpha">
+                <ul class="pageHeader">
+                    <li>Configure Multivalue Info</li>
+                </ul>
+            </div>
+        </div>
+     <!--Main content -->
+        <section class="contentSection" data-ng-init="getPdfMvData()">
+                <div class="row tableBox"  style="margin-bottom: 20px;">
+                        <div class="container-fluid contentbody">
+                            <div class="row" style="margin-top: -17px;margin-bottom: 1%;">
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btndefault" ui-sref="loopInfo"> Back</button>
+                                </div>
+                                <div class="col-md-8">
+
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" name="button" class="btn btndefault"  ng-click="saveMultiValueJson()">Next</button>
+                                </div>
+                            </div>
+
+                        <label >Select Parent Category</label>
+                        <select style="width: 187px;" class="pdfSelect" ng-model="mvParCat"
+                                ng-options="parCategory for parCategory in parentCategory"
+                                ng-change="getTableData();getLoopInfo();getTableIdDetails(mvParCat);
+                                getLoopIdDetails(mvParCat);getParCatDetails(mvParCat);" required>
+                            <option value="">Select Parent Category</option>
+                        </select>
+                         <label style="margin-left: 154px;">Select Detail Type </label>
+                        <select ng-disabled="detailTypeFlag" style="width: 187px;" class="pdfSelect" ng-model="detailType" ng-options="detailType for detailType in ['parentBB','loopDetails','tableDetails']" ng-change="getDetailType(detailType)"required>
+                            <option value="">Select Detail type</option>
+                        </select>
+                        <br>
+                        <span style="margin-left: 49%;" ng-if="detailType=='tableDetails'" ng-repeat="tIds in tableIDs track by $index" >
+                            <input type="radio" name="optradio" checked ng-model="checkedTableID">
+                            <a style="width: 10%;margin-top: 11px;"  data-toggle="modal" ng-click="fillMvTableDetails(mvParCat,tIds)" data-target="#tableModal" >
+                                Table ID :  {{tIds}}
+                            </a>
+                        </span>
+                        <span style="margin-left: 49%;" ng-if="detailType=='loopDetails' && loopIDs" ng-repeat="lIds in loopIDs" >
+                                <input type="radio" name="optradio" ng-model="checkedLoopID" ng-checked="lIds==checkedLoopID">
+                                 <a style="width: 10%;margin-top: 11px;"  data-toggle="modal" ng-click="fillMVLoopDetails(mvParCat,lIds)" data-target="#loopModal" >
+                                    Loop ID :  {{lIds}}
+                                </a>
+                            </span>
+                            <br>
+                            <label>Select Tag</label>
+                            <select style="width: 18%;margin-top: 7px;margin-left: 82px;" class="pdfSelect" ng-model="selectedTag" ng-options="allTag for allTag in allTags" ng-change="addNewTag()">
+                                <option value="">Select Tag</option>
+                            </select>
+                            <button class="btn btndefault" style="width: 4%;margin-top: -4px;margin-left: 0%;" ng-click="addTag(selectedTag,mvParCat)"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            <br>
+
+                            <ul id = "myTab" class = "nav nav-tabs" style="margin-top: 5px;">
+                                    <li class = "active" ng-repeat="mappedTag in mappedTags track by $index">
+                                        <button style="border-radius: 11px 11px 0px 0px;margin-left: 15px" type="button" class="btn btn-lg sheetBtn" data-toggle="popover" data-placement="top" data-trigger="hover" title="{{mappedTag}}" ng-class="$index == selectedIndex ? 'successBtn':'tabsBtn'"  ng-click="selectMvTag(mappedTag,$index);fillTagDetails(mvParCat,mappedTag,$index)">{{mappedTag}}
+                                                <span class="glyphicon glyphicon-remove " style="cursor:pointer;" ng-click="removeTab($index,mappedTag,mvParCat);"></span>
+                                        </button>
+                                    </li>
+                            </ul>
+                        <div class="row" style="margin-top:1%;" ng-if="detailType && detailType!='None' && selectedTag">
+                                <div class="col-sm-3 ">
+                                        <div class="row mappingheading">Unmapped Output Fields</div>
+                                        <div class="row unmapOtptDiv scrollbar" style="height: 245px;" >
+                                            <div class="row unmapOtpt" ng-repeat="unmapOtField in mvUnmappedColList track by $index" data-trigger="hover">
+                                                <button type="button" class="btn button-shadow dropdownBtn" ng-class="unmapOtField==selectMvOutItem?'dropdownSuccess':'dropdownBtn'" ng-click="selectMvOutField(unmapOtField);reset();">
+                                                    {{unmapOtField}}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="col-sm-5" style="margin-left: -6px;" >
+                                            <div class="col-sm-1">
+                                            </div>
+                                            <div class="col-sm-10 ">
+                                                <div class="row mappingheading">Mapping</div>
+                                                <div class="row mapped scrollbar" style="height: 245px;">
+                                                    <div>
+                                                        <div >
+                                                            <ul class="statuslist"  >
+                                                                <li ng-if="detailType=='loopDetails' || detailType=='parentBB'">
+                                                                <div style="margin-top:-4px;margin-right: 17%;margin-left: 4%;" ng-hide="groupFlag">
+                                                                    <label style="margin-left: 14px;">TextLine</label>
+                                                                    <input type="radio" style="margin-left: 25px;" name="textline" value="True" ng-model="textline" required> True
+                                                                    <input type="radio" style="margin-left: 15px;" name="textline" value="False"  ng-model="textline" checked required> False
+                                                                </div>
+                                                                    <div class="input-group" style="margn-top:10px;" ng-if="detailType=='parentBB'">
+                                                                        <label style="width:25%" class="input-group-addon">Start</label>
+                                                                        <input style="width: 132%;" type="text" class="form-control" ng-model="mvUserData.mvStartText">
+                                                                    </div>
+                                                                <div class="input-group" style="margn-top:10px;">
+                                                                        <label class="input-group-addon" ng-init="min_X='min_X'">min_X</label>
+
+                                                                        <p ng-repeat="val in minXInputFields track by $index">
+                                                                            <input class="form-control" placeholder="Text" type="text" ng-model="minXTextVal[$index]" required>
+                                                                            <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeMinX($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                                            <button class="form-control addButton" ng-click="minXaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                                        </p>
+                                                                        <input type="text" class="form-control" placeholder="Occurence" ng-model="mvUserData.minXOccurence" required />
+                                                                        <select class="form-control" ng-model="mvUserData.minXPoint" ng-options="minXPoint for minXPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                                                            <option value="">Select Point </option>
+                                                                        </select>
+                                                                </div>
+                                                                <div class="input-group">
+                                                                    <label class="input-group-addon" ng-init="max_X='max_X'">max_X</label>
+                                                                    <p class="setLeftMargin" ng-repeat="val in maxXInputFields track by $index">
+                                                                        <input class="form-control" placeholder="Text" type="text" ng-model="maxXTextVal[$index]" required />
+                                                                        <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeMaxX($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                                        <button class="form-control addButton" ng-click="maxXaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                                    </p>
+                                                                    <input type="text" class="form-control setLeftMargin" placeholder="Occurence" ng-model="mvUserData.maxXOccurence" required />
+                                                                    <select class="form-control setLeftMargin" ng-model="mvUserData.maxXPoint" ng-options="maxXPoint for maxXPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                                                        <option value="">Select Point </option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="input-group">
+                                                                    <label class="input-group-addon" ng-init="min_Y='min_Y'">min_Y</label>
+                                                                    <p ng-repeat="val in minYInputFields track by $index">
+                                                                        <input class="form-control" placeholder="Text" type="text" ng-model="minYTextVal[$index]" required />
+                                                                        <button class="form-control addButton" style="width: 35px;margin-left:-70px;" ng-click="removeMinY($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                                        <button class="form-control addButton" ng-click="minYaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                                    </p>
+                                                                    <input type="text" class="form-control " placeholder="Occurence" ng-model="mvUserData.minYOccurence" required />
+                                                                    <select class="form-control" ng-model="mvUserData.minYPoint" ng-options="minYPoint for minYPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                                                        <option value="">Select Point </option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="input-group">
+                                                                    <label class="input-group-addon" ng-init="max_Y='max_Y'">max_Y</label>
+
+                                                                    <p class="setLeftMargin" ng-repeat="val in maxYInputFields track by $index">
+                                                                        <input class="form-control" placeholder="Text" type="text" ng-model="maxYTextVal[$index]" required />
+                                                                        <button class="form-control addButton" style="width: 35px;margin-left:-70px;" ng-click="removeMaxY($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                                        <button class="form-control addButton" ng-click="maxYaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                                    </p>
+                                                                    <input type="text" class="form-control setLeftMargin" placeholder="Occurence" ng-model="mvUserData.maxYOccurence" required/>
+                                                                    <select class="form-control setLeftMargin" ng-model="mvUserData.maxYPoint" ng-options="maxYPoint for maxYPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                                                        <option value="">Select Point </option>
+                                                                    </select>
+                                                                </div>
+                                                            </li>
+                                                            <li ng-show="groupFlag">
+                                                                    <label style="margin-top: 28px;margin-left: 21px;">Group Details</label>
+                                                                    <div class="input-group">
+                                                                        <label class="input-group-addon">GText</label>
+                                                                        <input class="form-control" ng-repeat="val in groupInputFields" placeholder="Text" type="text" ng-model="grpTextVal[$index]">
+                                                                        <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeGrpText($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                                        <button class="form-control addButton" ng-click="addGrpText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                                    </div>
+                                                                <div>
+                                                                    <label style="margin-left: 14px;">TextLine</label>
+                                                                    <input type="radio" style="margin-left: 25px;" name="grptextline" value="True" ng-model="mvUserData.grptextline" /> True
+                                                                    <input type="radio" style="margin-left: 15px;" name="grptextline" value="False"  ng-model="mvUserData.grptextline" checked/> False
+                                                                </div>
+                                                                <div>
+                                                            <div class="input-group" >
+                                                                <label class="input-group-addon" ng-init="min_X='min_X'">min_X</label>
+                                                                <input class="form-control" ng-repeat="val in grpMinXInputFields" placeholder="Text" type="text" ng-model="minXGrpTextVal[$index]">
+                                                                <button class="form-control addButton" ng-click="grpMinXaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                                <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeGrpMinX($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                                <select class="form-control" ng-model="mvUserData.minxReference" ng-options="minxReference for minxReference in ['TOP_RIGHT','BOTTOM_LEFT']">
+                                                                    <option value="">Select Reference </option>
+                                                                </select>
+                                                                <select class="form-control" ng-model="mvUserData.grpMinXPoint" ng-options="grpMinXPoint for grpMinXPoint in ['TOP_RIGHT','BOTTOM_LEFT']">
+                                                                    <option value="">Select Point </option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="input-group">
+                                                    <label class="input-group-addon" ng-init="max_X='max_X'">max_X</label>
+                                                    <input class="form-control" ng-repeat="val in grpMaxXInputFields" placeholder="Text" type="text" ng-model="grpMaxXTextVal[$index]">
+                                                    <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeGrpMaxX($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                    <button class="form-control addButton" ng-click="grpMaxXaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+                                                    <select class="form-control" ng-model="mvUserData.maxXReference" ng-options="maxXReference for maxXReference in ['TOP_RIGHT','BOTTOM_LEFT']">
+                                                        <option value="">Select Reference </option>
+                                                    </select>
+
+                                                    <select class="form-control" ng-model="mvUserData.grpMaxXPoint" ng-options="grpMaxXPoint for grpMaxXPoint in ['TOP_RIGHT','BOTTOM_LEFT']" >
+                                                        <option value="">Select Point </option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-group">
+                                                    <label class="input-group-addon" ng-init="min_Y='min_Y'">min_Y</label>
+                                                    <input class="form-control " ng-repeat="val in grpMinYInputFields" placeholder="Text" type="text" ng-model="grpMinYTextVal[$index]">
+                                                    <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeGrpMinY($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                    <button class="form-control addButton" ng-click="grpMinYaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+                                                    <select class="form-control" ng-model="mvUserData.minYReference" ng-options="minYReference for minYReference in ['TOP_RIGHT','BOTTOM_LEFT']">
+                                                        <option value="">Select Reference </option>
+                                                    </select>
+
+                                                    <select class="form-control" ng-model="mvUserData.grpMinYPoint" ng-options="grpMinYPoint for grpMinYPoint in ['TOP_RIGHT','BOTTOM_LEFT']">
+                                                        <option value="">Select Point </option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-group">
+                                                    <label class="input-group-addon" ng-init="max_Y='max_Y'">max_Y</label>
+                                                    <input class="form-control" ng-repeat="val in grpMaxYInputFields" placeholder="Text" type="text" ng-model="grpMaxYTextVal[$index]">
+                                                    <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeGrpMaxY($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                    <button class="form-control addButton" ng-click="grpMaxYaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+                                                    <select class="form-control" ng-model="mvUserData.maxYReference" ng-options="maxYReference for maxYReference in ['TOP_RIGHT','BOTTOM_LEFT']">
+                                                        <option value="">Select Reference </option>
+                                                    </select>
+
+                                                    <select class="form-control" ng-model="mvUserData.grpMaxYPoint" ng-options="grpMaxYPoint for grpMaxYPoint in ['TOP_RIGHT','BOTTOM_LEFT']">
+                                                        <option value="">Select Point </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                                        </li>
+
+                                                        <li ng-if="detailType=='tableDetails'">
+                                                                    <table class="table table-hover" style="width: 92%;">
+                                                                        <tbody>
+                                                        <tr>
+                                                            <td class="inputBodyData" style="width: 1%">Table Id</td>
+                                                            <td class="inputBodyData" style="width: 1%">
+                                                                <input type="text" ng-model="mvUserData.tableId">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inputBodyData">Column Index</td>
+                                                            <td class="inputBodyData" style="width: 300px;">
+                                                                <input type="text" ng-model="mvUserData.columnIndex">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                                    </table>
+                                                                </li>
+                                                                <button class="btn btndefault"  style="width:30%;margin-top: 6px;margin-left: 21px;" ng-show="showAddGroup" ng-click="addGroupDetailFlag()">Add Group</button>
+                                                                <button class="btn btndefault"  style="width:35%;margin-top: 6px;" ng-show="GrpTextLineFlag" ng-click="removeGroup()">Remove Group</button>
+                                                                <button class="btn btndefault"  style="width:30%;margin-top: 6px;" ng-click="saveMultiValueMap(mvParCat,checkedLoopID);reset();">Save</button>
+                                                                <button class="btn btndefault"  style="width:30%;margin-top: 6px;" ng-click="deleteMvMap(mvParCat);reset();">Remove</button>
+                                                         </ul>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                </div>
+                                <div class="col-sm-4 " style="margin-left: -7px;">
+                                        <div class="row mappingheading" >Mapped Output Fields</div>
+                                        <div class="row unmapOtptDiv scrollbar"style="height: 245px;">
+                                        <div class="row unmapOtpt" ng-repeat="mappedOutField in mappedMvOutCols track by $index" data-trigger="hover">
+                                            <button type="button" class="btn button-shadow dropdownBtn" ng-class="mappedOutField==selectMvOutItem?'dropdownSuccess':'dropdownBtn'" ng-click="selectMvOutField(mappedOutField);fillOutFields(mvParCat,mappedOutField);" >
+                                                {{mappedOutField}}
+                                            </button>
+                                        </div>
+                                        </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+      <!-- Table Modal -->
+     <div class="modal fade" id="tableModal" role="dialog" >
+        <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header" style="background:#838282;color:white;height:50px">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Table Information</h4>
+        </div>
+        <div class="modal-body" style="height: 400px;overflow-y: auto;">
+        <fieldset>
+        <table class="table table-hover">
+        <thead>
+        <tr>
+        <th>Table Columns</th>
+        <th>Table Data</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td class="inputBodyData" style="width: 300px;">Type</td>
+        <td class="inputBodyData" style="width: 300px;" ng-model="type">{{type}}</td>
+        </tr>
+        <tr>
+        <td class="inputBodyData">Table Id</td>
+        <td class="inputBodyData" style="width: 300px;">{{tableId}}</td>
+        </tr>
+        <tr>
+        <td class="inputBodyData">Table Header</td>
+        <td class="inputBodyData" style="width: 300px;" >{{tableHeader}}</td>
+        </tr>
+        <tr>
+        <td class="inputBodyData">Table X Margin</td>
+        <td class="inputBodyData" style="width: 300px;">{{tableXMargin}}</td>
+        </tr>
+    <tr>
+            <td class="inputBodyData">min_X
+            <td>
+            <table class="table table-hover table-bordered" style="margin-left: 0%;width: 354px;">
+                <tbody>
+                    <tr>
+                        <td class="inputBodyData">TEXT</td>
+                        <td class="inputBodyData"><input class="form-control"  ng-readonly="true"  ng-repeat="val in table_minXInputFields" placeholder="Text" type="text" ng-model="table_minXTextVal[$index]"></td>
+                    </tr>
+                    <tr>
+                        <td class="inputBodyData">point</td>
+                        <td class="inputBodyData" >{{tableminXPoint}}</td>
+                    </tr>
+                    <tr>
+                        <td class="inputBodyData">Occurence</td>
+                        <td class="inputBodyData" >{{tableminXOccurence}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+            <td class="inputBodyData">max_X<td>
+            <table class="table table-hover table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="inputBodyData">TEXT</td>
+                        <td class="inputBodyData"><input class="form-control" ng-repeat="val in table_maxXInputFields" type="text"  ng-readonly="true" ng-model="table_maxXTextVal[$index]" required></td>
+                    </tr>
+                    <tr>
+                        <td class="inputBodyData">point</td>
+                        <td class="inputBodyData">{{tablemaxXPoint}}</td>
+                    </tr>
+                    <tr>
+                        <td class="inputBodyData">Occurence</td>
+                        <td class="inputBodyData">{{tablemaxXOccurence}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+            <td class="inputBodyData">min_Y<td>
+            <table class="table table-hover table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="inputBodyData">Text</td>
+                        <td class="inputBodyData"><input class="form-control"  ng-readonly="true" ng-repeat="val in table_minYInputFields"  type="text" ng-model="table_minYTextVal[$index]" required></td>
+                    </tr>
+                    <tr>
+                        <td class="inputBodyData">Point</td>
+                        <td class="inputBodyData">{{tableminYPoint}}</td>
+                    </tr>
+                    <tr>
+                        <td class="inputBodyData">Occurence</td>
+                        <td class="inputBodyData">{{tableminYOccurence}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+            <td class="inputBodyData">max_Y<td>
+            <table class="table table-hover table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="inputBodyData">TEXT</td>
+                        <td class="inputBodyData"><input style="margin-left: -5px;width: 93% !important;" class="form-control pdfInput" ng-repeat="val in table_maxYInputFields" placeholder="Text" type="text" ng-model="table_maxYTextVal[$index]" ng-readonly="true" required></td>
+                    </tr>
+                    <tr>
+                        <td class="inputBodyData">point</td>
+                        <td class="inputBodyData">{{tablemaxYPoint}}</td>
+                    </tr>
+                    <tr>
+                        <td class="inputBodyData">Occurence</td>
+                        <td class="inputBodyData" ng-readonly="true">{{tablemaxYOccurence}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+        </tbody>
+        </table>
+
+        </fieldset>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btndefault" style="width:15%" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- Loop Modal -->
+    <div class="modal fade" id="loopModal" role="dialog" >
+    <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+    <div class="modal-header" style="background:#838282;color:white;height:50px">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Loop Information</h4>
+    </div>
+    <div class="modal-body" style="height: 400px;overflow-y: auto;">
+    <fieldset>
+    <table class="table table-hover">
+    <thead>
+    <tr>
+    <th>Loop Columns</th>
+    <th>Loop Data</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="inputBodyData" style="width: 300px;">Loop ID</td>
+    <td class="inputBodyData" style="width: 300px;">{{loopId}}</td>
+    </tr>
+    <tr>
+    <td class="inputBodyData">Select Direction</td>
+    <td class="inputBodyData" style="width: 300px;">{{loopDirection}}</td>
+    </tr>
+    <tr>
+    <td class="inputBodyData">Type</td>
+    <td class="inputBodyData" style="width: 300px;">{{loopType}}</td>
+    </tr>
+    <tr>
+    <td class="inputBodyData">Delimter</td>
+    <td class="inputBodyData"><input class="form-control pdfInput" ng-repeat="val in delInputfields_1" placeholder="Text" type="text" ng-readonly="true" ng-model="delTextVal_1[$index]"></td>
+    </tr>
+<tr>
+        <td class="inputBodyData">min_X
+        <td>
+        <table class="table table-hover table-bordered" style="margin-left: 0%;width: 354px;">
+            <tbody>
+                <tr>
+                    <td class="inputBodyData">TEXT</td>
+                    <td class="inputBodyData"><input class="form-control"  ng-readonly="true"  ng-repeat="val in loop_minXInputFields" placeholder="Text" type="text" ng-model="loop_minXTextVal[$index]"></td>
+                </tr>
+                <tr>
+                    <td class="inputBodyData">point</td>
+                    <td class="inputBodyData">{{loopminXPoint}}</td>
+                </tr>
+                <tr>
+                    <td class="inputBodyData">Occurence</td>
+                    <td class="inputBodyData">{{loopminXOccurence}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+<tr>
+        <td class="inputBodyData">max_X
+        <td>
+        <table class="table table-hover table-bordered">
+            <tbody>
+                <tr>
+                    <td class="inputBodyData">TEXT</td>
+                    <td class="inputBodyData"><input class="form-control" ng-repeat="val in loop_maxXInputFields" type="text"  ng-readonly="true" ng-model="loop_maxXTextVal[$index]" required></td>
+                </tr>
+                <tr>
+                    <td class="inputBodyData">point</td>
+                    <td class="inputBodyData" >{{loopmaxXPoint}}</td>
+                </tr>
+                <tr>
+                    <td class="inputBodyData">Occurence</td>
+                    <td class="inputBodyData">{{loopmaxXOccurence}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+<tr>
+        <td class="inputBodyData">min_Y<td>
+        <table class="table table-hover table-bordered">
+            <tbody>
+                <tr>
+                    <td class="inputBodyData">Text</td>
+                    <td class="inputBodyData"><input class="form-control"  ng-readonly="true" ng-repeat="val in loop_minYInputFields"  type="text" ng-model="loop_minYTextVal[$index]" required></td>
+                </tr>
+                <tr>
+                    <td class="inputBodyData">Point</td>
+                    <td class="inputBodyData">{{loopminYPoint}}</td>
+                </tr>
+                <tr>
+                    <td class="inputBodyData">Occurence</td>
+                    <td class="inputBodyData">{{loopminYOccurence}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+<tr>
+        <td class="inputBodyData">max_Y<td>
+        <table class="table table-hover table-bordered">
+            <tbody>
+                <tr>
+                    <td class="inputBodyData">TEXT</td>
+                    <td class="inputBodyData"><input style="margin-left: -5px;width: 93% !important;" class="form-control pdfInput" ng-repeat="val in loop_maxYInputFields" placeholder="Text" type="text" ng-model="loop_maxYTextVal[$index]" ng-readonly="true" required></td>
+                </tr>
+                <tr>
+                    <td class="inputBodyData">point</td>
+                    <td class="inputBodyData">{{loopmaxYPoint}}</td>
+                </tr>
+                <tr>
+                    <td class="inputBodyData">Occurence</td>
+                    <td class="inputBodyData" ng-readonly="true">{{loopmaxYOccurence}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+    </tbody>
+    </table>
+
+    </fieldset>
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btndefault" style="width:15%" data-dismiss="modal">Close</button>
+    </div>
+    </div>
+
+    </div>
+    </div>
+    <!-- End Modal -->

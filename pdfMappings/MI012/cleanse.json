@@ -1,0 +1,24 @@
+[
+  {"LayerName": "CleanTableDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"Dea":[
+          {"name": "chooseRows","type": "clean","input": {"refCol":1, "refVal":"DEA Certificate"}}
+      ]},
+       {"SchoolDetails":[
+          {"name": "chooseRows","type": "clean","input": {"refCol":3, "refVal":"Medical School"}}
+      ]},
+      {"Licence":[
+          {"name": "mergeRows","type": "clean","input": {"refCol":4}}
+      ]}
+  ]},
+  {"LayerName": "CleanFinalDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"name": "cleanString","type": "clean","input": {"col":"DIR_IND","type":"mv","start":"","end":"","regex":"Address|\\-|Prim|\\(NPI\\)|\\-|cont\\."}},
+      {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_LINE_1","type":"mv","start":"","end":"","regex":"Clinic Address"}},
+      {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_LINE_1","type":"mv","start":"","end":"","regex":"Address|\\-|Prim|\\(NPI\\)|\\-|cont\\."}},
+      {"name": "createMvDefaultCol", "type": "clean", "input": {"col":"ADDRESS_INDICATOR", "tag": "PLSV", "refCol":"ADDRESS_LINE_1", "val":{"1":"P", "default":"S"}}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"DEGREE","outCol":"DEGREE","type":"mv","splitBy":",","startIdx":-1}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"GROUP_NAME","type":"sv"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"NAME_OF_LEGAL_TAX_ID_OWNER","type":"sv"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"TAX_ID","type":"sv", "errMsg":"Multiple Tax Id case", "errInput":"True"}},
+      {"name": "addClarificationOnRefColVal", "type": "clean", "input": {"refCol":"INDIVIDUAL_NPI", "inpCol":"PROVIDER_LANGUAGE", "refVal":[""]}}
+  ]}
+]

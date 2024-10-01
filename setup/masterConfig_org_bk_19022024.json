@@ -1,0 +1,18 @@
+{
+  "elastic": {
+    "host": "localhost",
+    "port": 9200
+  },
+  "app": {
+  "host": "localhost",
+  "port": 8090
+  },
+  "mongo" :{
+    "host" : "localhost",
+    "port" : 27017
+  },
+   "security" :{
+    "keyFilePath" : "E:/Triage_PDF/webep1851.ms.ds.uhc.com/webep1851.ms.ds.uhc.com.key",
+    "crtFilePath" : "E:/Triage_PDF/webep1851.ms.ds.uhc.com/webep1851.ms.ds.uhc.com.crt"
+  }
+}

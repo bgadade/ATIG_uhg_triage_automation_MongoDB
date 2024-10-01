@@ -1,0 +1,68 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+       Extracted Email
+      <!-- <small>Optional description</small> -->
+    </h1>
+  </section>
+  <!-- Main content -->
+  <section class="content">
+    <!-- Your Page Content Here -->
+    <div class="container-fluid contentbody" style="padding-right:6%" data-ng-init="extractEmail()">
+      <div class="row" style="margin-top:-3%">
+        <div class="col-md-2 pull-right">
+          <button type="button" class="btn btndefault" name="button" ui-sref="processInput({attachmentFile: attachmentFile})">Next> </button>
+        </div>
+      </div>
+    </br>
+      <div class="row">
+        <div class="col-md-3">
+          <span class="side-title" style="font-size:25px">From:</span>
+        </div>
+         <div class="col-md-9 well">
+           <div class="col-xs-6">{{mailData.From}}</div>
+         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <span class="side-title" style="font-size:25px">To:</span>
+        </div>
+         <div class="col-md-9 well">
+           <div class="col-xs-6">{{mailData.To}}</div>
+         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <span class="side-title" style="font-size:25px">Date Received:</span>
+        </div>
+         <div class="col-md-9 well">
+           <div class="col-xs-6">{{mailData.Sent}}</div>
+         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <span class="side-title" style="font-size:25px">Subject:</span>
+        </div>
+         <div class="col-md-9 well">
+           <div class="col-xs-6">{{mailData.Subject}}</div>
+         </div>
+      </div>
+      <!-- <div class="row"> -->
+        <div class="row">
+          <div class="col-md-3">
+            <span class="side-title" style="font-size:25px">Email Body:</span>
+          </div>
+        </div>
+         <div class="row well">
+           <!-- <div class="col-md-9"> -->
+             <div class="col-md-12" style="text-align:justify">{{mailData.Body}}</div>
+           <!-- </div> -->
+         </div>
+      <!-- </div> -->
+    </div>
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

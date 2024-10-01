@@ -1,0 +1,140 @@
+ty <div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+        <div class="main">
+            <div class="alpha">
+                <ul class="pageHeader">
+                    <li>Configure Table Info</li>
+                </ul>
+            </div>
+        </div>
+        <section class="contentSection" >
+            <div class="row tableBox">
+                <form name="tableForm">
+                    <div class="container-fluid contentbody" data-ng-init="getTableData()">
+                     <div class="row" style="margin-top: -17px;">
+                           <div class="col-md-2">
+                                <button type="button" class="btn btndefault" ui-sref="pdfSVMap"> < Back</button>
+                           </div>
+                          <div class="col-md-5">
+                          </div>
+                          <div class="col-md-2" style="margin-left: 8%;">
+                              <button type="button" class="btn btndefault" name="button" ng-click="openPDFFile()">Open PDF</button>
+                          </div>
+
+                          <div class="col-md-2">
+                             <button type="button" class="btn btndefault" name="button"  ng-click="saveTableMapJson()">Next</button>
+                          </div>
+
+                     </div>
+                    <div class="row" style="margin-top: -29px;">
+                        <div class="col-md-6">
+                            <div>
+                                <label>Select Parent Category </label>
+                                <select style="margin-top:10px;" class="pdfSelect" ng-model="tableParentCategory" ng-options="parCategory for parCategory in parentCategory" ng-change="resetTableDetails();reset();getTableIdDetails(tableParentCategory)" required>
+                                    <option value="">Select Parent Category</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4" style="margin-top:35px" >
+                                    <ul style="list-style: none;" ng-repeat="tId in tableIDs track by $index">
+                                        <li>
+                                            <a  style="margin-top: 10px;" href="" ng-click="fillTableDetails(tId,tableParentCategory)" >
+                                                    Table ID :{{tId}}
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-sm-8" ng-show="showTableFlag" style="margin-top: 29px;">
+                                    <p>
+                                        <label style="margin-top:10px">Type</label>
+                                        <input style="margin-left:70px" ng-model="type" type="text" required>
+                                    </p>
+                                    <p>
+                                        <label>Table ID</label>
+                                        <input style="margin-left:50px" type="text" ng-model="tableId" required>
+                                    </p>
+                                    <p>
+                                        <label>Table Header</label>
+                                        <input style="margin-left:18px" ng-model="tableHeader" type="text" required>
+                                    </p>
+                                    <p>
+                                        <label>Table X Margin</label>
+                                        <input style="margin-left:6px" ng-model="tableXMargin" type="text" required>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btndefault" style="margin-top: 9px;margin-bottom: 4px;width: 30%" ng-click="resetTableDetails();createTableId(tableParentCategory);">Add New</button>
+                            <div ng-show="showTableFlag">
+                                <div class="input-group" style="margn-top:10px;">
+                                    <label style="width: 25%;" class="input-group-addon">Start</label>
+                                    <input style="width: 224%;" type="text" class="form-control" ng-model="startText">
+                                </div>
+                                <div class="input-group" style="margn-top:10px;">
+                                                <label class="input-group-addon" ng-init="min_X='min_X'">min_X</label>
+
+                                                <p ng-repeat="val in minXInputFields track by $index">
+                                                    <input class="form-control" placeholder="Text" type="text" ng-model="minXTextVal[$index]" required>
+                                                    <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeMinX($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                    <button class="form-control addButton" ng-click="minXaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                </p>
+                                                <input type="text" class="form-control" placeholder="Occurence" ng-model="minXOccurence" required />
+                                                <select class="form-control" ng-model="minXPoint" ng-options="minXPoint for minXPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                                    <option value="">Select Point </option>
+                                                </select>
+                                            </div>
+                                <div class="input-group">
+                                    <label class="input-group-addon" ng-init="max_X='max_X'">max_X</label>
+                                    <p class="setLeftMargin" ng-repeat="val in maxXInputFields track by $index">
+                                        <input class="form-control" placeholder="Text" type="text" ng-model="maxXTextVal[$index]" required>
+                                        <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeMaxX($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                        <button class="form-control addButton" ng-click="maxXaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                    </p>
+                                    <input type="text" class="form-control setLeftMargin" placeholder="Occurence" ng-model="maxXOccurence" required />
+                                    <select class="form-control setLeftMargin" ng-model="maxXPoint" ng-options="maxXPoint for maxXPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                        <option value="">Select Point </option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label class="input-group-addon" ng-init="min_Y='min_Y'">min_Y</label>
+
+                                    <p ng-repeat="val in minYInputFields track by $index">
+                                        <input class="form-control" placeholder="Text" type="text" ng-model="minYTextVal[$index]" required>
+                                        <button class="form-control addButton" style="width: 35px;margin-left:-70px;" ng-click="removeMinY($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                        <button class="form-control addButton" ng-click="minYaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                    </p>
+                                    <input type="text" class="form-control " placeholder="Occurence" ng-model="minYOccurence"required />
+                                    <select class="form-control" ng-model="minYPoint" ng-options="minYPoint for minYPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                        <option value="">Select Point </option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                                <label class="input-group-addon" ng-init="max_Y='max_Y'">max_Y</label>
+                                                <p  class="setLeftMargin" ng-repeat="val in maxYInputFields track by $index">
+                                                    <input class="form-control" placeholder="Text" type="text" ng-model="maxYTextVal[$index]" required>
+                                                    <button class="form-control addButton" style="width: 35px;margin-left: -72px;" ng-click="removeMaxY($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                    <button class="form-control addButton" ng-click="maxYaddText()" style="width: 36px;margin-left: -37px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                </p>
+                                                <input type="text" class="form-control setLeftMargin" placeholder="Occurence" ng-model="maxYOccurence" required />
+                                                <select class="form-control setLeftMargin" ng-model="maxYPoint" ng-options="maxYPoint for maxYPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                                    <option value="">Select Point </option>
+                                                </select>
+                                            </div>
+                                <div>
+                                    <div>
+                                        <button class="btn btndefault" style="width:27%;margin-top: 6px;" ng-click="addTableMappings(tableParentCategory,tableId)">Save</button>
+                                <button class="btn btndefault" style="width:27%;margin-top: 6px;margin-left:2%;" ng-click="deleteTableMap(tableParentCategory)">Remove</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </section>
+
+    </div>

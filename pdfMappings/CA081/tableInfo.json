@@ -1,0 +1,76 @@
+{
+  "Hospital": [
+    {
+      "parentBB": {
+        "max_X": {
+          "occurence": "None",
+          "point": "TOP_RIGHT",
+          "text": "None"
+        },
+        "max_Y": {
+          "occurence": 1,
+          "point": "BOTTOM_LEFT",
+          "text": [
+            "Hospital Affiliations"
+          ]
+        },
+        "min_X": {
+          "occurence": "None",
+          "point": "BOTTOM_LEFT",
+          "text": "None"
+        },
+        "min_Y": {
+          "occurence": 1,
+          "point": "TOP_RIGHT",
+          "text": [
+            "General Liability"
+          ]
+        },
+        "start": {
+          "text": []
+        }
+      },
+      "tableHeader": "None",
+      "tableId": 1,
+      "type": "table2",
+      "xMargin": 4.5
+    }
+  ],
+  "Address": [
+    {
+      "parentBB": {
+        "max_X": {
+          "occurence": "None",
+          "point": "TOP_RIGHT",
+          "text": "None"
+        },
+        "max_Y": {
+          "occurence": 1,
+          "point": "BOTTOM_LEFT",
+          "text": [
+            "Suppress from Directory:"
+          ]
+        },
+        "min_X": {
+          "occurence": "None",
+          "point": "BOTTOM_LEFT",
+          "text": "None"
+        },
+        "min_Y": {
+          "occurence": 1,
+          "point": "TOP_RIGHT",
+          "text": [
+            "Board Certification and Specialty"
+          ]
+        },
+        "start": {
+          "text": []
+        }
+      },
+      "tableHeader": "None",
+      "tableId": 1,
+      "type": "table1",
+      "xMargin": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{"PROV_MEDICAID": {
+  "PARENT_CATEGORY": "Medicaid",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                            "min_Y": { "text": ["PRACTICE GROUP INFORMATION"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_Y": { "text": ["INDIVIDUAL"],"point": "TOP_RIGHT","occurence": 2},
+                            "min_X": { "text": ["MEDICAID #s:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "textline":"True",
+                 "tableDetails": "None"}]
+  }
+  ]
+ }
+   }

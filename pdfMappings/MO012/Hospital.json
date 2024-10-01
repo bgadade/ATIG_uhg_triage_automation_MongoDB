@@ -1,0 +1,32 @@
+{
+  "HOSPITAL_NAME": {
+  "PARENT_CATEGORY": "Hospital",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["FOREIGN LANGUAGES SPOKEN"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["HOSPITAL AFFILIATIONS"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+  "HOSPITAL_AFF_STATUS": {
+  "PARENT_CATEGORY": "Hospital",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["FOREIGN LANGUAGES SPOKEN"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["HOSPITAL AFFILIATIONS"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

@@ -1,0 +1,62 @@
+{
+  "NAME_FIRST": {
+    "min_Y": {"text": ["DOB:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["First Name:"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["First Name:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Gender:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "NAME_LAST": {
+    "min_Y": {"text": ["Credentialing Activity"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Middle Name:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Last Name:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Gender"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "NAME_MIDDLE": {
+    "min_Y": {"text": ["Last Name:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["First Name:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Middle Name:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Languages:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "DOB": {
+    "min_Y": {"text": ["SSN:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["ID#:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["DOB:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Middle Name:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "GENDER": {
+    "min_Y": {"text": ["Languages:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Gender:"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["Gender:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "SSN": {
+    "min_Y": {"text": ["Credentialing Activity"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["DOB:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["SSN:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Last Name:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "INDIVIDUAL_NPI": {
+    "min_Y": {"text": ["Credentialing Activity"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Languages:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["NPI (Type 1):"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "TAXONOMY": {
+    "min_Y": {"text": ["Education Verification"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Taxonomy Code"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Taxonomy Code"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "TAX_ID": {
+    "min_Y": {"text": ["NPI for Provider"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Tax ID:"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["Tax ID:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Billing Address:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "ORIGINAL_DEL_DATE": {
+    "min_Y": {"text": ["ActivityDate:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["AttestationDate:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["StartDate:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  }
+}

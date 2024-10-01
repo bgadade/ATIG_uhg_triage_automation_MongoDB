@@ -1,0 +1,106 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Confirmed- <small>SingleValue Mapping</small></li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox">
+      <!-- Your Page Content Here -->
+        <!-- <div id="mydiv">
+          <img  class="mappingSpinner" src="/static/images/page-loader.gif"/>
+        </div> -->
+        <div class="container-fluid contentbody" data-ng-init="getSvAdminMap()">
+          <div class="row">
+            <table class="col-md-8" ng-repeat="singleValue in singleValueMap">
+              <thead>
+                <tr>
+                  <th class="col-md-3">
+                    <div class="row mappingheading">
+                      Output Fields
+                    </div>
+                  </th>
+                  <th class="col-md-1"></th>
+                  <th class="col-md-4">
+                    <div class="row mappingheading">
+                      User Mapped Input Fields
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody ng-repeat="(outField,inField) in singleValue">
+                <tr ng-if="inField.Input_Column[0]">
+                  <td class="col-md-3">
+                    <div class="row unmapOtpt button-shadow" style="margin-left: -4.5%">
+                      <button type="button" class="btn dropdownBtn">
+                        {{outField}}
+                      </button>
+                    </div>
+                  </td>
+                  <td class="col-md-1"></td>
+                  <td class="col-md-4">
+                    <div class="row unmapOtpt button-shadow" style="margin-left: -5%" title="{{inField.Input_Column[0]}}" data-toggle="popover" data-trigger="hover">
+                      <span class="glyphicon glyphicon-remove statusicon pull-left" ng-click="rmSvOutField(outField,inField.Input_Column[0])" style="cursor:pointer;color:red;padding: 3% 2% 3% 3%;width: 5%;font-size: 16px;"></span>
+                      <!-- <span class="glyphicon glyphicon-repeat pull-left" style="cursor:pointer;" ng-hide="true"></span> -->
+                      <button type="button"style="width:220px;text-overflow:ellipsis;overflow:hidden" class="btn dropdownBtn">
+                      {{inField.Input_Column[0]}}
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="col-md-3"></td>
+                  <td class="col-md-1"></td>
+                  <td class="col-md-4">
+                    <div class="row unmapOtpt button-shadow" style="margin-left: -5%" ng-repeat="inputs in inField.Input_Column track by $index" ng-if="$index!=0" title="{{inputs}}" data-toggle="popover" data-trigger="hover">
+                      <span class="glyphicon glyphicon-remove statusicon pull-left" ng-click="rmSvOutField(outField,inputs)" style="cursor:pointer;color:red;padding: 3% 2% 3% 3%;width: 5%;font-size: 16px;"></span>
+                      <!-- <span class="glyphicon glyphicon-repeat pull-left" style="cursor:pointer;" ng-hide="true"></span> -->
+                      <button type="button"style="width:220px;text-overflow:ellipsis;overflow:hidden" class="btn dropdownBtn">
+                      {{inputs}}
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row pull-right" style="padding-right:50px;">
+            <div class="saveDiv">
+              <span class="glyphicon glyphicon-floppy-saved saveIcon" data-toggle="modal" data-target="#setSvMapModal" ></span>
+            </div>
+            <!-- Modal -->
+             <div class="modal fade" id="setSvMapModal" role="dialog">
+               <div class="modal-dialog">
+
+                 <!-- Modal content-->
+                 <div class="modal-content">
+                   <div class="modal-header" style="background:#838282;color:white;height:50px">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title">Success</h4>
+                   </div>
+                   <div class="modal-body">
+                     <h4><span>Mappings Saved Successfully</span></h4>
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" class="btn btndefault" style="width:15%" data-dismiss="modal" ng-click="setSvAdminMap()">Save</button>
+                     <button type="button" class="btn btndefault" style="width:15%" data-dismiss="modal">Cancel</button>
+                   </div>
+                   <!-- <div class="modal-footer">
+                     <button type="button" class="btn btndefault" style="width:20%" data-dismiss="modal">Close</button>
+                   </div> -->
+                 </div>
+
+               </div>
+             </div>
+            <!-- End Modal -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+  <!-- /.content-wrapper -->
+
+</div>

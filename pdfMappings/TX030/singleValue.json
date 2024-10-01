@@ -1,0 +1,63 @@
+{
+  "NAME_LAST": {
+    "min_Y": {"text": ["Date of Birth:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Southwest Physician Associates"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "DOB": {
+    "min_Y": {"text": ["Gender:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Date of Birth:"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["Date of Birth:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "GENDER": {
+    "min_Y": {"text": ["Age Restrictions:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Date of Birth:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Gender:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "INDIVIDUAL_NPI": {
+    "min_Y": {"text": ["Group NPI:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["NPI:"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["NPI:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Date of Birth:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "GROUP_NPI": {
+    "min_Y": {"text": ["Foreign Languages:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["NPI:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Group NPI:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Gender:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "TAX_ID": {
+    "min_Y": {"text": ["Tax ID Name:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Fax:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Tax ID:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Mon"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "ORIGINAL_DEL_DATE": {
+    "min_Y": {"text": ["Office Information:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Foreign Languages:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["IPA Start Date:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Last Credential Date:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "CURRENT_DEL_DATE": {
+    "min_Y": {"text": ["Office Information:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Foreign Languages:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Last Credential Date:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "GROUP_NAME": {
+    "min_Y": {"text": ["Primary Office Address"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Office Information:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Group Name:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "NAME_OF_LEGAL_TAX_ID_OWNER": {
+    "min_Y": {"text": ["Secondary Office Address"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Tax ID:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+    "max_X": { "text": ["IPA Start Date:"],"point": "BOTTOM_LEFT","occurence": 1}
+  }
+
+}

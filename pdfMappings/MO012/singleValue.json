@@ -1,0 +1,50 @@
+{
+  "NAME_LAST": {
+		"min_Y": {"text": ["GENDER"], "point": "TOP_RIGHT", "occurence": 1},
+		"max_Y": {"text": ["CREDENTIALING INFORMATION SHEET FOR:"], "point": "BOTTOM_LEFT", "occurence": 1},
+		"min_X": {"text": "None", "point": "BOTTOM_LEFT", "occurence": "None"},
+		"max_X": {"text": "None", "point": "TOP_RIGHT", "occurence": "None"}
+  },
+  "INDIVIDUAL_NPI": {
+    "min_Y": { "text": ["MEDICAL LIABILITY CARRIER:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["LICENSE TYPE"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["LICENSE TYPE"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_X": { "text": [" ISS. DATE"],"point": "BOTTOM_RIGHT","occurence": 1}
+  },
+  "DOB": {
+    "min_Y": { "text": ["DEPARTMENT"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["DEGREE"],"point": "BOTTOM_RIGHT","occurence": 1},
+    "min_X": { "text": ["DATE OF BIRTH:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["GENDER"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "GENDER": {
+    "min_Y": { "text": ["DEPARTMENT"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["GENDER"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["GENDER:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "GROUP_NPI": {
+    "min_Y": {"text": ["Group NPI(s) apply to the Department shown"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Primary:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Group NPI(s) Associated w/This Dept:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["DIVISION (IF APPLICABLE)"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "TAX_ID": {
+    "min_Y": {"text": ["GROUP PRACTICE NAME:"],"point": "TOP_RIGHT","occurence": 3},
+    "max_Y": { "text": ["Address:"],"point": "BOTTOM_LEFT","occurence": 2},
+    "min_X": { "text": ["Tax ID:"],"point": "TOP_RIGHT","occurence": 2},
+    "max_X": { "text": ["TIN Assigned To:"],"point": "BOTTOM_LEFT","occurence": 2}
+  },
+  "GROUP_NAME": {
+		"min_Y": {"text": ["STREET"], "point": "TOP_RIGHT", "occurence": 5},
+		"max_Y": {"text": ["GROUP PRACTICE NAME:"], "point": "TOP_RIGHT", "occurence": 3},
+		"min_X": {"text": ["GROUP PRACTICE NAME:"], "point": "TOP_RIGHT", "occurence": 3},
+		"max_X": {"text": "None", "point": "TOP_RIGHT", "occurence": "None"}
+  },
+  "EFFECTIVE_DATE": {
+    "min_Y": { "text": ["Page"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["FOREIGN LANGUAGES SPOKEN"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["WUMS EFFECTIVE DATE:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  }
+}

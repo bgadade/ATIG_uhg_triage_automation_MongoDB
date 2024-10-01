@@ -1,0 +1,24 @@
+{"HOSPITAL_AFF_STATUS": {
+  "PARENT_CATEGORY": "Hospital",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "groupDetails":"None",
+                 "tableDetails":{"tableId": 2, "columnIndex": 2}}]
+   }
+  ]
+ },
+ "HOSPITAL_NAME": {
+  "PARENT_CATEGORY": "Hospital",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 2, "columnIndex": 1}}]
+   }
+  ]
+ }
+}

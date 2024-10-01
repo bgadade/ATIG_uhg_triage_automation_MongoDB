@@ -1,0 +1,217 @@
+{
+    "order": 0,
+    "finalDfColNames": [
+      {
+      "outputColName": "AddrInact_CancelDt",
+      "dfColName": "OUT_ADDR_EFFECTIVE_DATE",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+        "outputColName": "Addr_M-AID",
+        "dfColName": "STD_M_AID_VAL",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AddrInact_Adr",
+        "dfColName": "ADDR_ADD",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_City",
+        "dfColName": "OUT_ADDRESS_CITY",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_State",
+        "dfColName": "OUT_ADDRESS_STATE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_Zip",
+        "dfColName": "OUT_ADDRESS_ZIP",
+        "dataType": "numeric",
+        "format": "00000"
+      },
+      {
+        "outputColName": "Addr_Plus4",
+        "dfColName": "OUT_ADDRESS_ZIP4",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_AddrType",
+        "dfColName": "OUT_STD_ADDRESS_TYPE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_Inact_B-AID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_Inact_BAIDType",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+      "outputColName": "Addr_CancelRsnCd",
+      "dfColName": "OUT_CANCEL_REASON_CODE",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NDBImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NDBEMPIREImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NICEImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      
+      {
+      "outputColName": "Import_NDBCOSMOSImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NDBCSPFACETSImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NonDel_Segment_E&I",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NonDel_Segment_C&S",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+        "outputColName": "Import_NonDel_Product_IFP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_MEDICAID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_DSNP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+      {
+      "outputColName": "Import_NonDel_Segment_M&R",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NonDel_Segment_VA CCN",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_E&I",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_C&S",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+        "outputColName": "Import_Del_Product_IFP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_Del_Product_MEDICAID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_Del_Product_DSNP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+      {
+      "outputColName": "Import_Del_Segment_M&R",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_VA CCN",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_EmpireCSP",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_ndbZline",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_ndbYline",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_ndbFacetsHline",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_ndbFacetsYline",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      }
+
+   ]
+}

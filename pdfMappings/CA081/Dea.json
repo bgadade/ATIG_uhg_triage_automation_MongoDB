@@ -1,0 +1,92 @@
+{
+  "DEA_NUMBER": {
+    "PARENT_CATEGORY": "Dea",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Expiration Date:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Medical License:"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Licenses/Certificates:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Hospital Affiliations"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  },
+  "DEA_EXPIRY_DATE": {
+    "PARENT_CATEGORY": "Dea",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": "None",
+                "point": "TOP_RIGHT",
+                "text": "None"
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Medical License:"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Expiration Date:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Hospital Affiliations"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  }
+}

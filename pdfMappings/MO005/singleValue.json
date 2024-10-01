@@ -1,0 +1,63 @@
+{
+  "NAME_LAST": {
+    "min_Y": {"text": ["CoxHealth Network", "Phelps County", "Ozarks Community Hospital"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_Y": { "text": "None","point": "TOP_RIGHT","occurence": "None"},
+    "min_X": { "text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+    "max_X": { "text": ["CoxHealth Network", "Phelps County", "Ozarks Community Hospital"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "DOB": {
+    "min_Y": {"text": ["DOB:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_Y": { "text": ["NPI#"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["DOB:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["MCR ID:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "GENDER": {
+    "min_Y": {"text": ["DOB:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["PHYSICIAN INFORMATION"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Gender:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Status:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "INDIVIDUAL_NPI": {
+    "min_Y": {"text": ["DOB:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["PHYSICIAN INFORMATION"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["NPI#"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["SSN:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "SSN": {
+    "min_Y": {"text": ["DOB:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["PHYSICIAN INFORMATION"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["SSN:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Gender:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "EFFECTIVE_DATE": {
+    "min_Y": { "text": ["Date of Change"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["CREDENTIALING INFORMATION"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Effective:"],"point": "TOP_RIGHT","occurence": "last"},
+    "max_X": { "text": ["Term Date"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "ORIGINAL_DEL_DATE": {
+    "min_Y": { "text": ["Last Recred:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_Y": { "text": ["Term Date"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Last Recred:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+   "CANCEL_DATE": {
+    "min_Y": { "text": ["Date of Change"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["CREDENTIALING INFORMATION"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Term Date:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "TAX_ID": {
+    "start": {"text": ["PRACTICE LOCATIONS"]},
+    "min_Y": { "text": ["Billing Information"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Practicing Specialty"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["TIN:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Group NPI#"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "PROVIDER_TYPE": {
+    "min_Y": { "text": ["Practicing Specialty"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Provider Type ID:"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["Provider Type ID:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  }
+}

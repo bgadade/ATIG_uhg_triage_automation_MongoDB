@@ -1,0 +1,48 @@
+{
+  "SPECIALITY": {
+    "PARENT_CATEGORY": "Speciality",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "NPI Number:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Birth Date:"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Practicing Specialty:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Provider Status/Type:"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  }
+}

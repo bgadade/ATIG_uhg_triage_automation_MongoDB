@@ -1,0 +1,270 @@
+{
+  "BOARD_NAME_SPEC": {
+    "PARENT_CATEGORY": "Speciality",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Type:"
+                  ]
+                },
+                "min_X": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Board:"
+                  ]
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Issued:"
+                  ]
+                }
+              },
+              "loopId": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "BOARD_CERTIFIED_SPEC": {
+    "PARENT_CATEGORY": "Speciality",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_X": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Type:"
+                  ]
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Confirmed:"
+                  ]
+                }
+              },
+              "loopId": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "BOARD_CERT_DATE_SPEC": {
+    "PARENT_CATEGORY": "Speciality",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Certificate #"
+                  ]
+                },
+                "min_X": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Issued:"
+                  ]
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Board:"
+                  ]
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Expires"
+                  ]
+                }
+              },
+              "loopId": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "SPECIALITY": {
+    "PARENT_CATEGORY": "Speciality",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Primary Specialty"
+                  ]
+                },
+                "min_X": {
+                  "occurence": "None",
+                  "point": "BOTTOM_LEFT",
+                  "text": "None"
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Expires"
+                  ]
+                },
+                "min_Y": {
+                  "occurence": "None",
+                  "point": "BOTTOM_LEFT",
+                  "text": "None"
+                }
+              },
+              "loopId": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "SPECIALITY_INDICATOR": {
+    "PARENT_CATEGORY": "Speciality",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_X": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Primary Specialty:"
+                  ]
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Confirmed By"
+                  ]
+                },
+                "min_Y": {
+                  "occurence": "None",
+                  "point": "BOTTOM_LEFT",
+                  "text": "None"
+                }
+              },
+              "loopId": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "BOARD_CERT_EXPIRATION_DATE_SPEC": {
+    "PARENT_CATEGORY": "Speciality",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "ReCertification"
+                  ]
+                },
+                "min_X": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Expires:"
+                  ]
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Issued"
+                  ]
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Specialty:"
+                  ]
+                }
+              },
+              "loopId": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

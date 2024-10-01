@@ -1,0 +1,110 @@
+{
+  "non-mass": {
+    "mv": "mvDerivation_NonMass",
+    "var": "variables_NonMass",
+    "output": "outputCols_NonMass"
+  },
+  "tax-id": {
+    "mv": "mvDerivation_TAXID",
+    "var": "variables_TAXID",
+    "output": "outputCols_TAXID"
+  },
+  "demo-prac-add": {
+    "mv": "mvDerivation_DEMO_PRAC_ADD",
+    "var": "variables_DEMO_PRAC_ADD",
+    "output": "outputCols_DEMO_PRAC_ADD"
+  },
+  "demo-taxid-inact": {
+    "mv": "mvDerivation_DEMO_TAXID_INACT",
+    "var": "variables_DEMO_TAXID_INACT",
+    "output": "outputCols_DEMO_TAXID_INACT"
+  },
+  "demo-addr-add": {
+    "mv": "mvDerivation_DEMO_ADDR_ADD",
+    "var": "variables_DEMO_ADDR_ADD",
+    "output": "outputCols_DEMO_ADDR_ADD"
+  },
+  "demo-addr-inact": {
+    "mv": "mvDerivation_DEMO_ADDR_INACTIVE",
+    "var": "variables_DEMO_ADDR_INACTIVE",
+    "output": "outputCols_DEMO_ADDR_INACTIVE"
+  },
+  "demo-addr-change": {
+    "mv": "mvDerivation_DEMO_ADDR_CHANGE",
+    "var": "variables_DEMO_ADDR_CHANGE",
+    "output": "outputCols_DEMO_ADDR_CHANGE"
+  },
+  "allTemplates": {
+    "var": "variables_AllTemplates"
+  },
+  "default-other": {
+    "mv": "mvDerivation_DEFAULT_OTHER",
+    "var": "variables_DEFAULT_OTHER",
+    "output": "outputCols_DEFAULT_OTHER"
+  },
+  "prac": {
+    "mv": "mvDerivation_PRAC",
+    "var": "variables_PRAC",
+    "output": "outputCols_PRAC"
+  },
+  "plmi": {
+    "mv": "mvDerivation_PLMI",
+    "var": "variables_PLMI",
+    "output": "outputCols_PLMI"
+  },
+  "demo-other": {
+    "mv": "mvDerivation_DEMO_OTHER",
+    "var": "variables_DEMO_OTHER",
+    "output": "outputCols_DEMO_OTHER"
+  },
+  "contract-prac-add-to-grp": {
+    "mv": "mvDerivation_CONTRACT_PRAC_ADD",
+    "var": "variables_CONTRACT_PRAC_ADD",
+    "output": "outputCols_CONTRACT_PRAC_ADD"
+  },
+  "actions": {
+    "mv": "mvDerivation_ACTIONS",
+    "var": "variables_ACTIONS",
+    "output": "outputCols_ACTIONS"
+  },
+  "demo-non-prac-add": {
+    "mv": "mvDerivation_DEMO_NON_PRAC_ADD",
+    "var": "variables_DEMO_NON_PRAC_ADD",
+    "output": "outputCols_DEMO_NON_PRAC_ADD"
+  },
+  "cont-tin-inactivate": {
+    "mv": "mvDerivation_CONT_TIN_INACTIVATE",
+    "var": "variables_CONT_TIN_INACTIVATE",
+    "output": "outputCols_CONT_TIN_INACTIVATE"
+  },
+  "contract-author-execute": {
+    "mv": "mvDerivation_CONTRACT_AUTHOR_EXECUTE",
+    "var": "variables_CONTRACT_AUTHOR_EXECUTE",
+    "output": "outputCols_CONTRACT_AUTHOR_EXECUTE"
+  },
+  "contract-execute": {
+    "mv": "mvDerivation_CONTRACT_EXECUTE",
+    "var": "variables_CONTRACT_EXECUTE",
+    "output": "outputCols_CONTRACT_EXECUTE"
+  },
+   "cont-amend-execute": {
+    "mv": "mvDerivation_CONT_AMEND_EXECUTE",
+    "var": "variables_CONT_AMEND_EXECUTE",
+    "output": "outputCols_CONT_AMEND_EXECUTE"
+  },
+   "contract-other": {
+    "mv": "mvDerivation_CONTRACT_OTHER",
+    "var": "variables_CONTRACT_OTHER",
+    "output": "outputCols_CONTRACT_OTHER"
+  },
+   "cont_modf_inact": {
+    "mv": "mvDerivation_CONT_MODF_INACT",
+    "var": "variables_CONT_MODF_INACT",
+    "output": "outputCols_CONT_MODF_INACT"
+  },
+   "cont_modf_add": {
+    "mv": "mvDerivation_CONT_MODF_ADD",
+    "var": "variables_CONT_MODF_ADD",
+    "output": "outputCols_CONT_MODF_ADD"
+  }
+}

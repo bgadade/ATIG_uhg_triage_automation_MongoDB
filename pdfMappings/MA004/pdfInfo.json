@@ -1,0 +1,13 @@
+{
+  "pdfSections":
+      {"header": "None",
+       "footer": {"lineCount":1}
+      },
+  "recordDelimitation":
+      {"recordType":"multiple",
+       "ruleType":"textlineRule",
+       "extractDetails":{"pageCount":"None", "identifierTextCheck":"OFFICE ADDRESS", "identifierLine":1, "location":"top"}
+      },
+  "yMargin":2.7,
+  "xMargin":0
+}

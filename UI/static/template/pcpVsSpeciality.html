@@ -1,0 +1,106 @@
+  <div class="main">
+    <div class="alpha">
+      <div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+      <ul class="pageHeader">
+        <li>Reference Data- <small>PCP Vs Speciality</small></li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox">
+      <!-- Your Page Content Here -->
+      <div class="container-fluid contentbody" data-ng-init="getDataList('PCP vs Specialist.csv')">
+        <div ng-include="'static/template/refDataHeader.html'"></div>
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6">
+                <button type="button" class="btn btn-md pull-left addRowBtn" ng-click="addRow()">ADD Row</button>
+              </div>
+              <div class="col-md-6">
+                <input class="inputSearch" type="text" placeholder="Search" ng-model="viewSearch">
+              </div>
+            </div>
+            <div class="row">
+              <table class="col-md-12 table table-striped table-hover" cellspacing="0" width="100%" fixed-header height="327px;">
+                  <thead class="inputHead">
+                    <tr>
+                        <th></th>
+                        <th>Specialty Name</th>
+                        <th>NDB Specialty Code</th>
+                        <th>Cosmos Provider Number</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-ng-repeat="newDt in newDataList track by $index">
+                      <td>
+                        <span class="glyphicon glyphicon-remove removeRow" ng-click="removeNewData($index)"></span>
+                      </td>
+                      <td>
+                        <div class="form-group inputControl">
+                          <input type="text" class="form-control" ng-model="newDt.specialty_name">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group inputControl">
+                          <input type="text" class="form-control" ng-model="newDt.ndb_specialty_code">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group inputControl">
+                          <input type="text" class="form-control" ng-model="newDt.cosmos_provider_number">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr ng-repeat="dt in dataList | filter:viewSearch track by $index">
+                        <td>
+                          <span class="glyphicon glyphicon-remove removeRow" ng-click="removeData($index)"></span>
+                        </td>
+                        <td class="inputBodyData" style="font-size:12px;">{{dt.specialty_name}}</td>
+                        <td class="inputBodyData" style="font-size:12px;">{{dt.ndb_specialty_code}}</td>
+                        <td class="inputBodyData" style="font-size:12px;">{{dt.cosmos_provider_number}}</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-2">
+          </div>
+        </div>
+        <div class="row pull-right">
+          <div class="saveDiv">
+            <span class="glyphicon glyphicon-floppy-saved saveIcon" ng-click="setPCPVsSpecList()"></span>
+          </div>
+          <!-- Modal -->
+           <div class="modal fade" id="setDataModal" role="dialog">
+             <div class="modal-dialog">
+
+               <!-- Modal content-->
+               <div class="modal-content">
+                 <div class="modal-header" style="background:#838282;color:white;height:50px">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Success</h4>
+                 </div>
+                 <div class="modal-body">
+                   <h4><span>PCP Vs Speciality Saved Successfully</span></h4>
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="btn btndefault" style="width:15%" data-dismiss="modal">Close</button>
+                 </div>
+               </div>
+
+             </div>
+           </div>
+          <!-- End Modal -->
+        </div>
+      </div>
+     </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</div>

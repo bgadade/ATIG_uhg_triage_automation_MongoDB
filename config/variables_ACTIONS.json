@@ -1,0 +1,26 @@
+[
+  {"LayerName": "common","LayerType": "DF","ProcessStage": 0,"Transformation": [
+
+    {"data": {
+      "derivations": [
+        {"name":"gatherColumns","type":"var","input":{}}
+      ]
+    }}
+  ]},
+  {"LayerName": "train","LayerType": "DF","ProcessStage": 0,"Transformation": [
+
+    {"data": {
+      "derivations": [
+
+      ]
+    }}
+  ]},
+  {"LayerName": "predict","LayerType": "DF","ProcessStage": 0,"Transformation": [
+
+    {"data": {
+      "derivations": [
+
+      ]
+    }}
+  ]}
+]

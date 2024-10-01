@@ -1,0 +1,12 @@
+{"MEDICARE": {
+  "PARENT_CATEGORY": "Medicare",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 7, "columnIndex": 3}}]
+   }
+  ]
+ }
+}

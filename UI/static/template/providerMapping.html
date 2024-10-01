@@ -1,0 +1,239 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Provider Mapping</li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox" style="height:495px;">
+      <!-- Your Page Content Here -->
+      <div id="mydiv">
+        <img  class="mappingSpinner" src="/static/images/page-loader.gif"/>
+      </div>
+      <div class="container-fluid contentbody" style="padding-right:6%;position:relative" data-ng-init="getProviderMap()">
+
+        <div class="row" class="autoMargin">
+          <div class="row row-centered">
+              <div class="content">
+                <form name="myForm" ng-submit="setProvUser()">
+                  <div class="col-md-3 col-centered">
+                      <p class="strngHreadings">
+                          <strong>Providers</strong>
+                      </p>
+                      <div class="list-group" style="overflow-y: scroll;overflow-x: hidden;height: 384px;margin-top: 28px;">
+                          <button type="button" class="list-group-item lstBtn" ng-class="provider == activeProvider?'lstBtnSuccess':''" style="padding:6%" ng-repeat="(provider, userMap) in providerMap.existing"  ng-if="isEmpty(userMap)" ng-click="setActiveProvData(userMap,provider);">
+                              {{provider}}
+                          </button>
+                          <button type="button" class="list-group-item lstBtn" ng-class="provider == activeProvider?'lstBtnSuccess':''" style="padding:6%" ng-repeat="(provider, userMap) in providerMap.new" ng-if="isEmpty(userMap)" ng-click="setActiveNewProvData(userMap,provider);">
+                              {{provider}}
+                          </button>
+                      </div>
+                  </div>
+                  <div class="col-md-9 col-centered" style="position: inherit">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <p class="hider strngHreadings">
+                            <strong>Mappings</strong>
+                        </p>
+                      </div>
+                        <div class="col-md-2" style="margin-top:-10px">
+                          <button type="button" class="btn btndefault" ng-click="clearProvUser(activeProvider)">Clear</button>
+                        </div>
+                        <div class="col-md-2" style="margin-top:-10px">
+                          <button type="button" class="btn btndefault" ng-click="setIgnoreStatus(activeProvider)">Ignore All</button>
+                        </div>
+                      </div>
+                      <div class="list-group" style="overflow-y:scroll;overflow-x:hidden;height:333px;margin-top:20px">
+                        <!-- {{myForm.optradio}} -->
+                        <div class="provUserMappings" ng-repeat="(user,sheets) in activeUserMap">
+                          <div class="radio">
+                            <div class="col-md-1">
+                              <label style="margin-top:10px;"><input type="radio" name="{{activeProvider}}" ng-model="userProv[activeProvider]" value="{{user}}"/></label>
+                            </div>
+                            <div class="col-md-11" style="margin-left:-30px;width:95%">
+                              <uib-accordion>
+                                <div uib-accordion-group class="panel-default" is-open="status.open" >
+                                  <uib-accordion-heading>
+                                    <span>
+                                      <span class="textSize">{{user}}</span>
+                                      <i class="pull-right glyphicon" style="position:inherit;" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                                    </span>
+                                  </uib-accordion-heading>
+                                  <div class="panel-body">
+                                    <div class="row" ng-repeat="(sheet,map) in sheets">
+                                      <h4><span style="text-decoration:underline">{{sheet}}</span> : <span ng-if="map|typeof:'string'">{{map}}</span></h4>
+                                      <fieldset ng-if="map|typeof:'object'">
+                                        <legend class="legendStyle">SingleValue Mapping:</legend>
+                                          <table class="table table-striped table-hover">
+                                            <thead class="inputHead">
+                                              <td class="inputData" style="width: 300px;">Output Fields</td>
+                                              <td class="inputData">Input Fields</td>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td class="inputBodyData" style="font-size:15px;font-weight:bold">Additions:</td>
+                                                <td class="inputBodyData"></td>
+                                              </tr>
+                                              <tr ng-repeat="(key,value) in map.sv.additions">
+                                                <td class="inputBodyData" style="padding-left:50px">{{value}}</td>
+                                                <td class="inputBodyData">{{key}}</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="inputBodyData" style="font-size:15px;font-weight:bold">Deletions:</td>
+                                                <td class="inputBodyData"></td>
+                                              </tr>
+                                              <tr ng-repeat="(key,value) in map.sv.deletions">
+                                                <td class="inputBodyData" style="padding-left:50px">{{value}}</td>
+                                                <td class="inputBodyData">{{key}}</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="inputBodyData" style="font-size:15px;font-weight:bold">Differences:</td>
+                                                <td class="inputBodyData"></td>
+                                              </tr>
+                                              <tr ng-repeat="(key,value) in map.sv.diff">
+                                                <td class="inputBodyData" style="padding-left:50px">{{value}}</td>
+                                                <td class="inputBodyData">{{key}}</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                      <!-- </fieldset>
+                                      <fieldset> -->
+                                        <legend class="legendStyle">MultiValue Mapping:</legend>
+                                          <legend class="legendStyle" style="font-size:15px;font-weight:bold">Additions:</legend>
+                                          <table class="table table-striped table-hover" ng-repeat="(parent,mapType) in map.mv.additions">
+                                            <thead class="inputHead">
+                                              <td class="inputData">{{parent}}</td>
+                                              <td class="inputData"></td>
+                                            </thead>
+                                            <tbody  ng-repeat="(key,map) in mapType">
+                                              <tr>
+                                                <td class="inputBodyData" style="width: 350px;font-size:15px;font-weight:bold">{{key.replace(" ",". ")}}</td>
+                                                <td class="inputBodyData"></td>
+                                              </tr>
+                                              <tr ng-repeat="(outfield,infield) in map">
+                                                <td class="inputBodyData" style="width: 350px;padding-left:50px">{{outfield}}</td>
+                                                <td class="inputBodyData">{{infield}}</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <legend class="legendStyle" style="font-size:15px;font-weight:bold">Deletions:</legend>
+                                          <table class="table table-striped table-hover" ng-repeat="(parent,mapType) in map.mv.deletions">
+                                            <thead class="inputHead">
+                                              <td class="inputData">{{parent}}</td>
+                                              <td class="inputData"></td>
+                                            </thead>
+                                            <tbody  ng-repeat="(key,map) in mapType">
+                                              <tr>
+                                                <td class="inputBodyData" style="width: 350px;font-size:15px;font-weight:bold">{{key.replace(" ",". ")}}</td>
+                                                <td class="inputBodyData"></td>
+                                              </tr>
+                                              <tr ng-repeat="(outfield,infield) in map">
+                                                <td class="inputBodyData" style="width: 350px;padding-left:50px">{{outfield}}</td>
+                                                <td class="inputBodyData">{{infield}}</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <legend class="legendStyle" style="font-size:15px;font-weight:bold">Differences:</legend>
+                                          <table class="table table-striped table-hover" ng-repeat="(parent,mapType) in map.mv.diff">
+                                            <thead class="inputHead">
+                                              <td class="inputData">{{parent}}</td>
+                                              <td class="inputData"></td>
+                                            </thead>
+                                            <tbody  ng-repeat="(key,map) in mapType">
+                                              <tr>
+                                                <td class="inputBodyData" style="width: 350px;font-size:15px;font-weight:bold">{{key.replace(" ",". ")}}</td>
+                                                <td class="inputBodyData"></td>
+                                              </tr>
+                                              <tr ng-repeat="(outfield,infield) in map">
+                                                <td class="inputBodyData" style="width: 350px;padding-left:50px">{{outfield}}</td>
+                                                <td class="inputBodyData">{{infield}}</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                      </fieldset>
+                                    </div>
+                                  </div>
+                                </div>
+                              </uib-accordion>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="provUserMappings" ng-repeat="(user,sheets) in activeNewUserMap">
+                          <div class="radio">
+                            <div class="col-md-1">
+                              <label style="margin-top:20px"><input type="radio" name="{{activeProvider}}" ng-model="userProv[activeProvider]" value="{{user}}"/></label>
+                            </div>
+                            <div class="col-md-11" style="margin-left:-30px;width:95%">
+                              <uib-accordion>
+                                <div uib-accordion-group class="panel-default" is-open="status.open" >
+                                  <uib-accordion-heading>
+                                    <h5>
+                                      <span class="textSize">{{user}}</span>
+                                      <i class="pull-right glyphicon" style="position:inherit;" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                                    </h5>
+                                  </uib-accordion-heading>
+                                  <div class="panel-body">
+                                    <div class="row" ng-repeat="(sheet,map) in sheets">
+                                      <h4><span style="text-decoration:underline">{{sheet}}</span> :<span ng-if="map|typeof:'string'">{{map}}</span></h4>
+                                      <fieldset ng-if="map|typeof:'object'">
+                                        <legend class="legendStyle">SingleValue Mapping:</legend>
+                                          <table class="table table-striped table-hover">
+                                            <thead class="inputHead">
+                                              <td class="inputData" style="width: 300px;">Output Fields</td>
+                                              <td class="inputData">Input Fields</td>
+                                            </thead>
+                                            <tbody>
+                                              <tr ng-repeat="(key,value) in map.sv">
+                                                <td class="inputBodyData" style="padding-left:50px">{{value}}</td>
+                                                <td class="inputBodyData">{{key}}</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                      <!-- </fieldset>
+                                      <fieldset> -->
+                                        <legend class="legendStyle">MultiValue Mapping:</legend>
+                                          <table class="table table-striped table-hover" ng-repeat="(parent,mapType) in map.mv">
+                                            <thead class="inputHead">
+                                              <td class="inputData">{{parent}}</td>
+                                              <td class="inputData"></td>
+                                            </thead>
+                                            <tbody  ng-repeat="(key,map) in mapType">
+                                              <tr>
+                                                <td class="inputBodyData" style="width: 350px;font-size:15px;font-weight:bold">{{key.replace(" ",". ")}}</td>
+                                                <td class="inputBodyData"></td>
+                                              </tr>
+                                              <tr ng-repeat="(outfield,infield) in map">
+                                                <td class="inputBodyData" style="width: 350px;padding-left:50px">{{outfield}}</td>
+                                                <td class="inputBodyData">{{infield}}</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                      </fieldset>
+                                    </div>
+                                  </div>
+                                </div>
+                              </uib-accordion>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row pull-right" style="margin-right:15px">
+                    <button type="submit" class="btn btndefault">Submit</button>
+                  </div>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</div>

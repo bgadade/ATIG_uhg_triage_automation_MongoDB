@@ -1,0 +1,21 @@
+{
+  "Address" : [{"loopId":1,
+                "direction": "X",
+                "delimiter": {"1": ["Phone:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["NPI"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Tax ID"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Billing Address"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                },
+                {"loopId":2,
+                "direction": "X",
+                "delimiter": {"1":["NEW Address:","OLD Address:","Address"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["Tax ID"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["PCP Status"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Office Address"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                }
+              ]
+}

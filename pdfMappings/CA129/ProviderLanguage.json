@@ -1,0 +1,16 @@
+{"PROVIDER_LANGUAGE": {
+  "PARENT_CATEGORY": "ProviderLanguage",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                            "min_Y": { "text": ["Start Date:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_Y": { "text": ["DOB:"],"point": "BOTTOM_LEFT","occurence": 1},
+                            "min_X": { "text": ["Language:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+  }
+  ]
+ }
+   }

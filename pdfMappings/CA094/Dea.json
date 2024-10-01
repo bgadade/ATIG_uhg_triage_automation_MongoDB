@@ -1,0 +1,98 @@
+{
+  "DEA_NUMBER": {
+    "PARENT_CATEGORY": "Dea",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Confirmed:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Type: DEA Registration"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "License #:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Type: DEA Registration"
+                ]
+              },
+              "start": {
+                "text": [
+                  "Type: DEA Registration"
+                ]
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  },
+  "DEA_EXPIRY_DATE": {
+    "PARENT_CATEGORY": "Dea",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Confirmed By"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Type: DEA Registration"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Expiration Date:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Expiration Date"
+                ]
+              },
+              "start": {
+                "text": [
+                  "Type: DEA Registration"
+                ]
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  }
+}

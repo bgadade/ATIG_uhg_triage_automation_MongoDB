@@ -1,0 +1,16 @@
+{"DEGREE": {
+  "PARENT_CATEGORY": "Degree",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["CoxHealth Network", "Phelps County", "Ozarks Community Hospital"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_Y": { "text": "None","point": "TOP_RIGHT","occurence": "None"},
+                        "min_X": { "text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": { "text": ["CoxHealth Network", "Phelps County", "Ozarks Community Hospital"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

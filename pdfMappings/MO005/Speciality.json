@@ -1,0 +1,32 @@
+{
+  "SPECIALITY": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Practicing Specialty:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":["TIN:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Provider Type ID:"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 }]
+   }
+
+  ]
+ },
+  "SUPERVISING_PHYSICIAN": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Collaborating Provider:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["Provider Type ID:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":"None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                               "max_Y": {"text":["Collaborating Provider:"], "point":"TOP_RIGHT", "occurence":1}} }
+                 }]
+   }
+
+  ]
+ }
+}

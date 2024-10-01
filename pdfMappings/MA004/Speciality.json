@@ -1,0 +1,23 @@
+{
+  "SPECIALITY": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Specialty 1:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":["Specialty 2:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Division"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 },
+                  {"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Specialty 2:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":["Appt. Type "], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Specialty 1"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 }]
+   }
+
+  ]
+ }
+}

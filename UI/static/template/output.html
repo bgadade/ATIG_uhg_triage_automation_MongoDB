@@ -1,0 +1,131 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Review SOT Data
+    </h1>
+  </section>
+  <!-- Main content -->
+  <section class="content">
+    <!-- Your Page Content Here -->
+    <!-- <div id="mydiv">
+      <img  class="mappingSpinner" src="/static/images/page-loader.gif"/>
+    </div> -->
+    <div class="container-fluid contentbody" style="padding-right:6%;position:relative" data-ng-init="getOutputData()">
+      <div class="row" class="autoMargin">
+        <div class="row row-centered">
+          <div class="row" style="margin-left:-2%;margin-right:-9%">
+            <div class="col-md-9">
+              <div class="col-md-2"  ng-repeat="(sheetName, sheetData) in altJson" style="margin-right: -2.5%;">
+                <button style="border-radius: 11px 11px 0px 0px;" type="button" class="btn btn-lg sheetBtn" data-toggle="popover" data-placement="top" data-trigger="hover" title="{{sheetName}}" ng-class="sheetName == selectedSheet?'successBtn':'tabsBtn'" ng-click="showSheet(sheetName)">{{sheetName}}</button>
+              </div>
+            </div>
+            <div class="col-md-2" ng-show="selectedSheet == 'Psi'">
+              <button type="button" class="btn btndefault" name="button">Create GD</button>
+            </div>
+          </div>
+            <div class="content" style="margin-left:-2%" ng-if="selectedSheet == 'Psi'">
+              <form name="myForm" ng-submit="setProvUser()">
+                <div class="col-md-3 col-centered">
+                    <div class="list-group" style="overflow-y:auto;margin-top:-6%;height:427px;">
+                        <button type="button" class="list-group-item lstBtn" ng-class="$index == selectedPsiSheet?'lstBtnSuccess':''" style="padding:6%" ng-repeat="data in psiJson track by $index" ng-click="setActivePsiData($index,data);">
+                            NPI: {{data['NPI']}}</br>
+                            Tax ID: {{data['TAX ID']}}
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-9 col-centered" style="position: inherit">
+                    <div class="row" style="overflow-y:scroll;overflow-x:hidden;height:425px;margin-top:-1.5%;background-color:white;padding:4%">
+                      <div class="row" style="margin-top:-4%">
+                          <h3>Output:</h3>
+                      </div>
+                      <div class="row" style="overflow-x:scroll;" key-navigation>
+                        <table class="table table-striped table-hover MyTable">
+                          <thead class="inputHead">
+                            <tr style="height:40px;">
+                              <td class="inputData" ng-repeat="cols in activePsiMap['PSI ROW'].colSet track by $index">{{cols}}</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="inputBodyData" ng-repeat="value in activePsiMap['PSI ROW'].dataSet track by $index" ng-class="errorOutput(value)?'errField':''">
+                                <span ng-if="errorOutput(value)" ng-model="value">
+                                  <div class="popover-wrapper">
+                                    <a href="#" style="color:white">{{value || 'empty' }}</a>
+                                  </div>
+                                </span>
+                                <span ng-if="!errorOutput(value)">{{value}}</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="row" style="margin-top:4%">
+                        <table>
+                          <tr>
+                            <th>TransactionType</th>
+                            <th></th>
+                          </tr>
+                          <tr ng-repeat="type in activePsiMap['TRANSACTION TYPE']" ng-if="type != ''">
+                            <td style="width:92%;height:60px">
+                              {{type}}
+                            </td>
+                            <td>
+                              <span class="glyphicon glyphicon-play processIcon" aria-hidden="true"></span>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="content" style="margin-left:-2%" ng-if="selectedSheet == 'Sot'">
+              <form name="myForm" ng-submit="setProvUser()">
+                <div class="col-md-3 col-centered">
+                    <div class="list-group" style="overflow-y:auto;margin-top:-6%;height:427px;">
+                        <button type="button" class="list-group-item lstBtn" ng-class="key == selectedSotSheet?'lstBtnSuccess':''" style="padding:6%" ng-repeat="(key,data) in sotJson" ng-click="setActiveSotData(key,data);">
+                          {{key}}
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-9 col-centered" style="position: inherit">
+                    <div class="row" style="overflow-y:scroll;overflow-x:hidden;height:425px;margin-top:-1.5%;background-color:white;padding:4%">
+                      <div class="row" style="margin-top:-4%">
+                          <h3>Output:</h3>
+                      </div>
+                      <div class="row" style="overflow-x:scroll;" key-navigation>
+                        <table class="table table-striped table-hover MyTable">
+                          <thead class="inputHead">
+                            <tr style="height:40px;">
+                              <td class="inputData" ng-repeat="cols in activeSotMap.colSet track by $index">{{cols}}</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr ng-repeat="data in activeSotMap.dataSet track by $index">
+                              <td class="inputBodyData" ng-repeat="value in data track by $index" ng-class="errorOutput(value)?'errField':''">
+                                <span ng-if="errorOutput(value)" ng-model="value">
+                                  <div class="popover-wrapper">
+                                    <a href="#" style="color:white">{{value || 'empty' }}</a>
+                                  </div>
+                                </span>
+                                <span ng-if="!errorOutput(value)">{{value}}</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

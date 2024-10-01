@@ -1,0 +1,21 @@
+{"Speciality" : [{"type": "table1",
+                  "xMargin": 4.5,
+                  "tableId":1,
+                  "parentBB":{
+                        "min_Y": {"text": ["ID NUMBERS"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["SPECIALTY"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["PERSONAL INFORMATION"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                  "tableHeader": 1
+  }],
+  "Hospital" : [{"type": "table1",
+                  "xMargin": 4.5,
+                  "tableId":1,
+                  "parentBB":{
+                        "min_Y": {"text": ["EDUCATION/TRAINING"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["HOSPITAL PRIVILEGES"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                  "tableHeader": 1
+  }]
+}

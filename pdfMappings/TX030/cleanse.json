@@ -1,0 +1,7 @@
+[
+  {"LayerName": "CleanFinalDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"name": "cleanString","type": "clean","input": {"col":"PROVIDER_LANGUAGE","type":"mv","start":"","end":"","regex":"None Listed"}},
+      {"name": "cleanString","type": "clean","input": {"col":"NAME_OF_LEGAL_TAX_ID_OWNER","type":"sv","start":"","end":"","regex":"Tax ID Name\\:"}}
+
+  ]}
+]

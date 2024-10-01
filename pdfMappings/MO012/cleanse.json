@@ -1,0 +1,33 @@
+[
+  {"LayerName": "CleanTableDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"Dea":[
+          {"name": "chooseRows","type": "clean","input": {"refCol":1, "refVal":"DEA Number"}}
+      ]},
+      {"Licence":[
+          {"name": "chooseRows","type": "clean","input": {"refCol":1, "refVal":"State License"}}
+      ]},
+      {"Medicare":[
+          {"name": "chooseRows","type": "clean","input": {"refCol":1, "refVal":"Medicare Provider"}}
+      ]},
+    {"SchoolDetails":[
+          {"name": "chooseRows","type": "clean","input": {"refCol":1, "refVal":"Medical School "}}
+      ]}
+  ]},
+  {"LayerName": "CleanFinalDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"name": "createMultipleColumns","type": "clean","input": {"inpCol":"PRIMARY@HOSPITAL_NAME@0","type":"mv"}},
+    {"name": "hosAffStatus","type": "clean","input": {"inpCol":"PRIMARY@HOSPITAL_AFF_STATUS@0","type":"mv"}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"EFFECTIVE_DATE","outCol":"EFFECTIVE_DATE","type":"sv","splitBy":":","startIdx":-1}},
+
+
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"INDIVIDUAL_NPI","outCol":"INDIVIDUAL_NPI","type":"sv","splitBy":"NPI Number","startIdx":-1}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"INDIVIDUAL_NPI","outCol":"INDIVIDUAL_NPI","type":"sv","splitBy":" ","startIdx":0,"EndIdx":1}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"LICENCE_NUMBER","outCol":"LICENCE_NUMBER","type":"mv","splitBy":" ","startIdx":0,"EndIdx":1}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"STATE_LICENCE_EFFECTIVE_DATE","outCol":"STATE_LICENCE_EFFECTIVE_DATE","type":"mv","splitBy":" ","startIdx":-1}},
+
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_LINE_1","outCol":"ADDRESS_LINE_1","type":"mv","splitBy":"-","startIdx":-1}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_CITY","outCol":"ADDRESS_CITY","type":"mv","splitBy":" ","startIdx":-4,"EndIdx":-2}},
+    {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_CITY","type":"mv","start":"","end":"$","regex":"\\d{1,}|\\W"}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_STATE","outCol":"ADDRESS_STATE","type":"mv","splitBy":" ","startIdx":1,"EndIdx":-1}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_ZIP","outCol":"ADDRESS_ZIP","type":"mv","splitBy":" ","startIdx":-1}}
+  ]}
+]

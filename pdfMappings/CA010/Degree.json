@@ -1,0 +1,16 @@
+{"DEGREE": {
+  "PARENT_CATEGORY": "Degree",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": { "text": ["PCP Status"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": { "text": ["Action Effective Date"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": { "text": ["Name"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": { "text": ["PCP Provider"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

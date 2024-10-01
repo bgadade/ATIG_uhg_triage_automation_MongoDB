@@ -1,0 +1,13 @@
+{
+  "pdfSections":
+      {"header":{"lineCount":1},
+       "footer":{"lineCount":3}
+      },
+  "recordDelimitation":
+      {"recordType":"single",
+       "ruleType":"None",
+       "extractDetails":{"pageCount":0, "identifierTextCheck":"None", "identifierLine":0, "location":"None"}
+      },
+  "yMargin":4.5,
+  "xMargin":2.3
+}

@@ -1,0 +1,68 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Specialty Exceptions</li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox">
+      <!-- Your Page Content Here -->
+        <div class="container-fluid contentbody" style="padding-right:6%">
+          <form ng-submit="sbmtExcept()">
+            <div class="row" style="margin:2%">
+              <div class="col-md-1">
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label for="usr">SOT :</label>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label for="usr">NDB Taxonomy :</label>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label for="usr">Degree :</label>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin:-1% 2% 2% 2%;" data-ng-repeat="excpetion in excpetions">
+              <div class="col-md-1">
+                <span class="glyphicon glyphicon-remove removeRow" ng-click="removeException($index)"></span>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <input type="text" class="form-control"  ng-model="excpetion.specialty_name_in_sot">
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <input type="text" class="form-control"  ng-model="excpetion.specialty_name_in_taxonomy_grid">
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <input type="text" class="form-control"  ng-model="excpetion.degree">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3" style="margin-left:65.5%">
+                <div class="form-group">
+                  <span class="col-md-4 glyphicon glyphicon-plus addBtn" id="addDiv" ng-click="addNewException()"></span>
+                  <button type="submit" class="col-md-4 btn btndefault sbmtBtn">Submit</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->

@@ -1,0 +1,31 @@
+{"SPECIALITY": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Supervising Physician"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["INITIAL APPTOINTMENT"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["SPECIALTY"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["LANGUAGE(S"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "SUPERVISING_PHYSICIAN": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["OFFICE LOCATIONS"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["SPECIALTY"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Supervising Physician"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["ALT ADMIT PHYS"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

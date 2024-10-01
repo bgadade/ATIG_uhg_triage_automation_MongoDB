@@ -1,0 +1,69 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Log Report</li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox">
+      <!-- Your Page Content Here -->
+       <div id="mydiv">
+            <img  class="mappingSpinner" src="/static/images/page-loader.gif"/>
+       </div>
+      <div class="container-fluid contentbody" data-ng-init="getLogData()">
+          <div class="row">
+              <div class="col-md-1">
+                <button class="btn btn-default" style="width: 200%;margin-top: 0%;margin-left: -6%;border-radius: 6px;" ng-click="fetchReportLog()"> Fetch</button>
+              </div>
+              <div class="col-sm-3">
+                  <div class="dropdown">
+                      <button style="width:70%;border-radius: 6px;margin-left: 16%;" class="btn btn-default dropdown-toggle" type="button"
+                              id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         {{selectedUser}}<span class="glyphicon glyphicon-chevron-down arrowStyleForBrowser"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="margin-left: 16%;width: 70%;">
+                        <li data-ng-repeat="user in users" data-e-ng-model="selectedUser"><a ng-click="selectUser(user)">{{user}}</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-sm-3" style="margin-top:-19px;margin-left:-5%;">
+                <span> Start Date <input style="border-radius: 6px;" class="form-control" type="date" ng-model="start_date"></span>
+              </div>
+              <div class="col-sm-3" style="margin-top:-19px;margin-left: -2%;">
+                 <span>End Date <input style="border-radius: 6px;" class="form-control"  type="date" ng-model="end_date"></span>
+              </div>
+              <div class="col-sm-1">
+                  <i style="font-size: 20px;border-radius: 6px;" class="fa fa-filter btn btn-default" aria-hidden="true"
+                   ng-click="filterLogData(selectedUser,start_date,end_date)" title="Filter Data"></i>
+              </div>
+              <div class="col-sm-1">
+                  <span style="font-size: 14px;border-radius: 6px;margin-left: -57%;margin-top: -1px;color:red"
+                        class="glyphicon glyphicon-remove btn btn-default" ng-click="resetData()"
+                  ></span>
+              </div>
+          </div>
+          <div class="row logDataScroll scrollbar" style="margin-top: 2%;" ng-if="reportLog && logData">
+            <table class="table">
+                <thead style="white-space:nowrap">
+                  <tr style="background-color: lightgrey;">
+                    <th ng-repeat="col in logData.colSet">{{col}}</th>
+                  </tr>
+                </thead>
+                <tbody ng-repeat="rows in logData.dataSet">
+                  <tr>
+                    <td style="white-space:nowrap" ng-repeat="row in rows track by $index">{{row}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+     </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</div>

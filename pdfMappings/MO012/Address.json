@@ -1,0 +1,130 @@
+{
+  "ADDRESS_LINE_1": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":"None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                               "max_X": {"text":["CITY"], "point":"TOP_RIGHT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Specialties Practiced At This Location","Associated Billing","TRAINING TYPE"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["STREET"], "point":"BOTTOM_LEFT", "occurence":1}} },
+                 "parentBB": "None",
+                 "tableDetails":"None"}]
+   },
+    {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId":2, "columnIndex":2}}]
+   }
+  ]
+ },
+  "ADDRESS_CITY": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["SUITE"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["ZIP CODE"], "point":"TOP_RIGHT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Specialties Practiced At This Location","Associated Billing","TRAINING TYPE"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["CITY"], "point":"BOTTOM_LEFT", "occurence":1}} },
+                 "parentBB": "None",
+                 "tableDetails":"None"}]
+   },
+    {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                 "locationX": {"min_X":{"text":["SUITE"], "point":"TOP_RIGHT", "occurence":2},
+                                               "max_X": {"text":["ZIP CODE"], "point":"TOP_RIGHT", "occurence":2}},
+                                 "locationY": {"min_Y":{"text":["TIN Assigned To:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["CITY"], "point":"BOTTOM_LEFT", "occurence":2}} },
+                 "parentBB": "None",
+                 "tableDetails":"None"}]
+   }
+  ]
+ },
+  "ADDRESS_STATE": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["CITY"], "point":"BOTTOM_LEFT", "occurence":1},
+                                               "max_X": {"text":["ZIP CODE"], "point":"TOP_RIGHT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Specialties Practiced At This Location","Associated Billing","TRAINING TYPE"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["ST"], "point":"BOTTOM_LEFT", "occurence":1}} },
+                 "parentBB": "None",
+                 "tableDetails":"None"}]
+   },
+    {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId":2, "columnIndex":4}}]
+   }
+  ]
+ },
+  "ADDRESS_ZIP": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["CITY"], "point":"BOTTOM_LEFT", "occurence":1},
+                                               "max_X": {"text":["PHONE"], "point":"TOP_RIGHT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Specialties Practiced At This Location","Associated Billing","TRAINING TYPE"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["ZIP CODE"], "point":"BOTTOM_LEFT", "occurence":1}} },
+                 "parentBB": "None",
+                 "tableDetails":"None"}]
+   },
+    {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId":2, "columnIndex":5}}]
+   }
+  ]
+ },
+  "ADDRESS_PHONE": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["ZIP CODE"], "point":"BOTTOM_LEFT", "occurence":1},
+                                               "max_X": {"text":["FAX"], "point":"TOP_RIGHT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Specialties Practiced At This Location","Associated Billing","TRAINING TYPE"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["PHONE"], "point":"BOTTOM_LEFT", "occurence":1}} },
+                 "parentBB": "None",
+                 "tableDetails":"None"}]
+   },
+    {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+    "min_Y": {"text": ["GROUP PRACTICE NAME:"],"point": "TOP_RIGHT","occurence": 2},
+    "max_Y": { "text": ["Address:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Phone"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+  "ADDRESS_PHONE_FAX": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["PHONE"], "point":"BOTTOM_LEFT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":["Specialties Practiced At This Location","Associated Billing","TRAINING TYPE"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["FAX"], "point":"BOTTOM_LEFT", "occurence":1}} },
+                 "parentBB": "None",
+                 "tableDetails":"None"}]
+   }
+  ]
+ }
+}

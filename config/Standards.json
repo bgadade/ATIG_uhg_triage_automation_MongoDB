@@ -1,0 +1,434 @@
+{
+  "Primary": [
+    "p",
+    "prim",
+    "primary",
+    "prmry",
+    "y",
+    "yes",
+    "p = primary",
+    "primary practice",
+    "primary practice address"
+  ],
+  "Secondary": [
+    "sec",
+    "s",
+    "secondary",
+    "second",
+    "no",
+    "n",
+    "additional office",
+    "additional",
+    "s = secondary",
+    "covering"
+  ],
+  "PLSV": [
+    "p",
+    "service",
+    "serv",
+    "place of sv",
+    "sv",
+    "p=practice",
+    "pos",
+    "primary practice",
+    "primary practice address",
+    "2nd practice address",
+    "3rd practice address",
+    "4th practice address",
+    "Primary/Practice",
+    "Primary/Practice/Non-Remit",
+    "Primary / Practice / Non-Remit",
+    "Secondary/Practice/Non-Remit",
+    "Non-Remit",
+    "Non Remit",
+    "Primary / Practice",
+    "Primary/ Practice",
+    "Primary /Practice",
+    "Primary / Practice/Non Remit",
+    "Primary / Practice/Non-Remit",
+    "Primary/Practice/Non Remit",
+    "Primary / Practice/Non Remit",
+    "Primary/Practice / Non Remit",
+    "Primary/Practice / Non-Remit",
+    "Secondary / Practice / Non Remit",
+    "Secondary / Practice/Non Remit",
+    "Secondary / Practice/Non-Remit",
+    "Secondary/Practice/ Non Remit",
+    "Secondary/Practice/ Non-Remit"
+  ],
+  "Bill": [
+    "bill",
+    "billing",
+    "b",
+    "bil",
+    "Billing"
+  ],
+  "Combo": [
+    "c",
+    "combo",
+    "both",
+    "com",
+    "co",
+    "c = billing and practice",
+    "Primary/Practice/Remit",
+    "Secondary/Practice/Remit",
+
+    "Primary / Practice / Remit",
+    "Primary/Practice / Remit",
+    "Secondary / Practice / Remit",
+    "Secondary/Practice / Remit",
+    "Secondary/ Practice/Remit"
+
+  ],
+  "Mail": [
+    "m",
+    "mail",
+    "ma",
+    "m = mail only",
+    "mailing",
+    "mailing address"
+],
+  "Cred": [
+    "d",
+      "cred",
+    "d = credentialing only"
+  ],
+  "Dir_Y": [
+    "1",
+    "yes",
+    "y",
+    "print in directory",
+    "y - on call only at this location",
+    "print"
+  ],
+  "Board_Y": [
+    "1",
+    "yes",
+    "y",
+    "board certified",
+    "",
+    "certified",
+    "Active"
+  ],
+  "Board_N": [
+    "0",
+    "no",
+    "n"
+  ],
+  "Board_Eligible":[
+    "Board Eligible"
+  ],
+  "Dir_N": [
+    "0",
+    "no",
+    "n",
+    "do not print in directory",
+    "suppress"
+  ],
+  "Blank": ["na", "none", "n/a", "pending", "Na", "NA"],
+  "BlankMedicaid": ["na", "none", "n/a", "pending", "Na", "NA", "'applicant"],
+  "BlankDates": ["x"],
+  "Blvd":["bulevard","bulvard","blvard","boulevard"],
+  "Rd":["Road","Rod","raod"],
+  "Ave":["Avenue"],
+  "Ste": ["suite"],
+  "Dr": ["drive"],
+  "Ln": ["lane"],
+  "Fl": ["floor"],
+  "Ct": ["court"],
+  "Trl": ["trail"],
+  "Mt": ["mount"],
+  "Board_exp": ["lifetime", "lifetime certification"],
+  "pcp_prov_type": ["pcp", "yes","primary care physician","primary care","primary provider"],
+  "hosp": ["hospitalist","hosp","hsp","hospital based provider"],
+  "pcp_special_case": ["allied health"],
+  "Pending":["pending"],
+  "ignore":["pending"],
+  "diWeekDays":{
+     "1": {"day": "MON", "words": ["mo", "mon", "monday","m"]},
+     "2": {"day": "TUE", "words": ["tu", "tue", "tues", "tuesday"]},
+     "3": {"day": "WED", "words": ["we", "wed", "wednes", "wednesday","w"]},
+     "4": {"day": "THU", "words": ["th", "thu", "thur", "thurs", "thr", "thursday"]},
+     "5": {"day": "FRI", "words": ["fr", "fri", "friday","f"]},
+     "6": {"day": "SAT", "words": ["sa", "sat", "satur", "saturday","s"]},
+    "7": {"day": "SUN", "words": ["su", "sun", "sunday"]}
+     },
+  "M":["m", "male"],
+  "F":["f", "female", "femaile"],
+  "blank_age_limit": ["no", "No"],
+  "blank_dea": ["waiver"],
+  "age_delim": ["to"],
+  "below": ["under"],
+  "above": ["older", "+"],
+  "Expire":["expires"],
+  "Effective":["issued"],
+  "PsblBoardCertVals": ["C","E","N", "X", "certified", "CERTIFIED"],
+  "cdsCsrPending": ["pending"],
+  "Y": [
+    "y",
+    "yes"
+  ],
+  "N": [
+    "n",
+    "no"
+  ],
+  "1":["first","1st"],"2":["second","2nd"],"3":["third","3rd"],"4":["fourth","4th"],"5":["fifth","5th"],
+  "HospAffMandDeg": ["MD", "DO", "DPM", "CNM", "NP", "DDS", "DMD", "PA"],
+  "ExceptionalStates": ["IA", "KY", "LA","MD", "NH", "NC", "TN", "TX"],
+  "gridConfigs": {
+    "NDB_Taxonomy": {
+      "headerStartIdx": 1,
+      "cols": [
+        {"stndrdOutCol": "prov_type_name", "psbInCols": ["prov_type_name"]},
+        {"stndrdOutCol": "ndb_deg", "psbInCols": ["ndb_deg"]},
+        {"stndrdOutCol": "ndb_spec", "psbInCols": ["ndb_spec"]},
+        {"stndrdOutCol": "cos_prov", "psbInCols": ["cos_prov"]},
+        {"stndrdOutCol": "cos_cred", "psbInCols": ["cos_cred"]},
+        {"stndrdOutCol": "ndb_rec", "psbInCols": ["ndb_rec"]},
+        {"stndrdOutCol": "ur_ind", "psbInCols": ["ur_ind"]}
+      ]
+    },
+    "NDB_Hospital_List": {
+      "headerStartIdx": 2,
+      "cols": [
+        {"stndrdOutCol": "lastname", "psbInCols": ["lastname2", "lastname"]},
+        {"stndrdOutCol": "taxid", "psbInCols": ["taxid2", "taxid"]},
+        {"stndrdOutCol": "mpin", "psbInCols": ["mpin2", "mpin"]},
+        {"stndrdOutCol": "provstatus", "psbInCols": ["provstatus2", "provstatus"]},
+        {"stndrdOutCol": "provtype", "psbInCols": ["provtype2", "provtype"]},
+        {"stndrdOutCol": "orgtypecd", "psbInCols": ["orgtypecd2", "orgtypecd"]},
+        {"stndrdOutCol": "state", "psbInCols": ["state2", "state"]}
+      ]
+    },
+    "RFP_Grid": {
+      "headerStartIdx": 0,
+      "cols": [
+        {"stndrdOutCol": "state", "psbInCols": ["State"]},
+        {"stndrdOutCol": "specialty", "psbInCols": ["Specialty"]},
+        {"stndrdOutCol": "ndb_spec", "psbInCols": ["NDB Spec"]},
+        {"stndrdOutCol": "credentialing_required", "psbInCols": ["Credentialing Required"]}
+      ]
+    },
+    "NUCC_NDB_Grid": {
+      "headerStartIdx": 1,
+      "cols": [
+        {"stndrdOutCol": "nucc_taxonomy_code", "psbInCols": ["NUCC Taxonomy Code"]},
+        {"stndrdOutCol": "nucc_description", "psbInCols": ["NUCC Description"]},
+        {"stndrdOutCol": "ndb_description", "psbInCols": ["NDB Description"]},
+        {"stndrdOutCol": "ndb_record_type", "psbInCols": ["NDB Record Type"]},
+        {"stndrdOutCol": "ndb_org_type", "psbInCols": ["NDB Org Type"]},
+        {"stndrdOutCol": "ndb_specialty_code", "psbInCols": ["NDB Specialty Code"]},
+        {"stndrdOutCol": "ndb_degree", "psbInCols": ["NDB Degree"]}
+      ]
+    }
+  },
+  "COMM_CONT_TYPE": {
+    "A": ["Administrator/Roster Contact"],
+    "B": ["Billing Contact"],
+    "C": ["Claims Contact"],
+    "D": ["Delegated Entity Contact"],
+    "E": ["Chief Executive Officer/CEO"],
+    "F": ["After Hours Contact"],
+    "G": ["Emergency Contact"],
+    "H": ["Health Plan Contact"],
+    "l": ["Other Contact"],
+    "J": ["Administrative Contact"],
+    "L": ["Clinical Contact"],
+    "M": ["Other"],
+    "N": ["National Contracting"],
+    "O": ["Office Manager"],
+    "P": ["Contract Negotiation"],
+    "R": ["Credentialing Contact"],
+    "S": ["Customer Service"],
+    "T": ["TDD Phone Contact"],
+    "V": ["Medical Director"],
+    "W": ["Secure Fax"],
+    "X": ["Signatory"],
+    "Y": ["Primary Organization Contact"],
+    "Z": ["Recredentialing Contact"]
+  },
+"COMM_EXT": ["ext"],
+
+  "baseClass_dict" : {"TERM": ["deactivate", "inactive", "inactivate" ,"term", "delete", "remove", "close", "resign", "termination"],
+                  "ADD": ["add", "load", "new", "addition", "newly", "initial"],
+                  "CHANGE": ["update", "match", "change", "switch", "move"]},
+
+  "subClass_dict" : {"TIN": ["tin", "tax", "provider", "physician", "practioner"],
+                 "ADDRESS": ["location", "address", "clinic", "plsv"],
+                 "DEMOGRAPHIC": ["demographic", "license", "phone", "fax", "category",
+                                 "directory", "affiliation", "school", "reapp"],
+                 "SPECIALTY": ["specialty"],
+                 "CONTRACTUAL": ["contract", "fee", "panel", "grole", "commercial", "product", "fs"],
+                 "PRACTITIONER PROFILE": ["medicare", "name"],
+                  "ADDRESS ADD": ["a"],
+                  "ADDRESS TERM": ["r"]
+                  },
+  "specialClass" : ["DEMOGRAPHIC", "CONTRACTUAL", "SPECIALTY", "PRACTITIONER PROFILE", "ADDRESS ADD", "ADDRESS TERM"],
+  "pcp":{"Y":["PCP", "P", "yes", "y", "primary care physician","Primary Care Provider","primary care","primary provider"],"N":["Specialist", "S", "spec", "spc", "no","Specialty Care Provider","Hospitalist", "H", "hbp", "hosp","hospital based provider"]},
+  "OUT_ADDRESS_TYPE" : {
+    "D": ["combo"],
+    "H": ["bill"],
+    "L": ["plsv"],
+    "P": ["cred"],
+    "T":["mail"]
+  },
+  "ADDRESS_PHONE_TYPE" : {
+    "A": ["appt"],
+    "B": ["bill"],
+    "C": ["combo"],
+    "E": ["emrg"],
+    "F": ["fax","f"],
+    "P": ["plsv"]
+  },
+  "ABBREVIATIONS" : {
+    "HLT": ["HEALTH"] ,
+    "NET": ["NETWORK"],
+    "HOSP": ["HOSPITAL"],
+    "PHYS": ["PHYSICIAN"],
+    "AND": ["&"],
+    "Agcy":["Agency"],
+    "Anes":["Anesthesia"],
+    "Assc":["Association"],
+    "Ctr":["Center"],
+    "Ctrs":["Centers"],
+    "Chrp":["Chiropractor"],
+    "Clin":["Clinic"],
+    "Dept":["Department"],
+    "Facl":["Facility"],
+    "Grp":["Group"],
+    "Hlth":["Health"],
+    "Hlthcar":["Healthcare"],
+    "Hspc":["Hospice"],
+    "Hosp":["Hospital"],
+    "Inc":["Incorporate", "Incorporated"],
+    "Lab":["Laboratory"],
+    "Med":["Medical"],
+    "Ofc":["Office"],
+    "Phys":["Physician"],
+    "Psych":["Psychology", "Psychologist", "Psychiatrist", "Psychologists"],
+    "Rhb":["Rehabilitation"],
+    "Unv":["University"],
+    "AL":["ALABAMA"],
+    "AK":["ALASKA"],
+    "AZ":["ARIZONA"],
+    "AR":["ARKANSAS"],
+    "CA":["CALIFORNIA"],
+    "CO":["COLORADO"],
+    "CT":["CONNECTICUT"],
+    "DE":["DELAWARE"],
+    "DC":["DISTRICT OF COLUMBIA"],
+    "FL":["FLORIDA"],
+    "GA":["GEORGIA"],
+    "HI":["HAWAII"],
+    "ID":["IDAHO"],
+    "IL":["ILLINOIS"],
+    "IN":["INDIANA"],
+    "IA":["IOWA"],
+    "KS":["KANSAS"],
+    "KY":["KENTUCKY"],
+    "LA":["LOUISIANA"],
+    "ME":["MAINE"],
+    "MD":["MARYLAND"],
+    "MA":["MASSACHUSETTS"],
+    "MI":["MICHIGAN"],
+    "MN":["MINNESOTA"],
+    "MS":["MISSISSIPPI"],
+    "MO":["MISSOURI"],
+    "MT":["MONTANA"],
+    "NE":["NEBRASKA"],
+    "NV":["NEVADA"],
+    "NH":["NEW HAMPSHIRE"],
+    "NJ":["NEW JERSEY"],
+    "NM":["NEW MEXICO"],
+    "NY":["NEW YORK"],
+    "NC":["NORTH CAROLINA"],
+    "ND":["NORTH DAKOTA"],
+    "OH":["OHIO"],
+    "OK":["OKLAHOMA"],
+    "OR":["OREGON"],
+    "PA":["PENNSYLVANIA"],
+    "RI":["RHODE ISLAND"],
+    "SC":["SOUTH CAROLINA"],
+    "SD":["SOUTH DAKOTA"],
+    "TN":["TENNESSEE"],
+    "TX":["TEXAS"],
+    "UT":["UTAH"],
+    "VT":["VERMONT"],
+    "VA":["VIRGINIA"],
+    "WA":["WASHINGTON"],
+    "WV":["WEST VIRGINIA"],
+    "WI":["WISCONSIN"],
+    "WY":["WYOMING"]
+  },
+  "LANGUAGES" : {
+    "PHYS": ["physician", "phys", "p", "provider", "prov"],
+    "Staff": ["staff", "stf", "s"],
+    "Both": ["both", "b", "bth"]
+  },
+  "PhoneFax":{"P":["phone","telephone","p"],"F":["fax","f"]},
+  "IGNORE_LANGUAGE" : ["ENG", "ENGLISH", "ENGLSH", "NOT AVAILABLE","UNKNOWN"],
+  "workHour":{"00-00":["closed","off","na","n/a","x"]},
+  "DIR_HEADER":["suppress"],
+  "DIR_NON_SUPPRESSED":["should address appear in the directory"],
+  "DIR":{
+    "N": ["0", "no", "n", "do not print in directory", "suppress"],
+    "Y": ["1", "yes", "y", "print in directory", "y - on call only at this location", "print"
+    ]
+  },
+    "YES_NO": {
+      "Y": ["y", "yes", "Accepting new patients","1", "open"],
+      "N": ["n", "no", "Not accepting new patients","0", "closed"]
+    },
+  "PCP_HOSP_SPEC": {
+    "pcp": ["pcp", "yes","primary care physician","primary care","primary provider"],
+    "hosp": ["hospitalist","hosp","hsp", "hbp","hospital based provider"],
+    "spec": ["spc","spec", "specialist"]
+  },
+  "BOARD_DATE": {
+    "": ["x"],
+    "2999": ["lifetime", "lifetime certification"]
+  },
+  "BOARD_CERTIIED":
+  {
+    "E":["Board Eligible", "E"],
+    "C": ["1", "yes", "y", "board certified", "", "certified", "Active", "c", "bc", "c= certified"],
+    "N": ["0", "no", "n", "not board certified"],
+    "X": ["x"]
+  },
+  "GENDER":
+  {
+    "M":["m", "male"],
+    "F":["f", "female", "femaile"],
+    "U":["Blank","U"]
+  },
+  "TTypeRemap":{
+    "DEMO PRAC ADD":["TIN ADD"]
+  },
+  "HANDICAP_ACCESS_TYPE_ABRV": {
+    "P" : ["Parking", "P"],
+    "EB" : ["Exterior Building", "EB"],
+    "IB" : ["Interior Building", "IB"],
+    "R" : ["Restroom", "R"],
+    "E" : ["Exam Room", "E"],
+    "T" : ["Exam Table/Scale/Chair", "T"],
+    "G" : ["Gurneys & Stretchers", "G"],
+    "PL" : ["Portable Lifts", "PL"],
+    "RE" : ["Radiologic Equipment", "RE"],
+    "S" : ["Signage & Documents", "S"]
+  },
+    "HBP_SOLELY":
+  {
+    "N":["Blank","N","PCP","Spec","no"],
+    "Y":["Y","Hosp","yes"]
+  },
+  "CANCEL_RSN_CODE":
+  {
+    "21": ["Voluntary Cancellation", "21","46","Left Group"],
+    "44": ["Deceased", "44"],
+    "45": ["Retired", "45"],
+    "59": ["MPIN Inactivate", "59"],
+    "99": ["Timeline Void", "99"]
+  }
+
+
+}

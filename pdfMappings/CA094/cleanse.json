@@ -1,0 +1,88 @@
+[
+  {
+    "LayerName": "CleanFinalDataframe",
+    "LayerType": "DF",
+    "ProcessStage": 0,
+    "Transformation": [
+      {
+        "name": "cleanString",
+        "type": "clean",
+        "input": {
+          "col": "SCHOOL_NAME",
+          "type": "mv",
+          "start": "",
+          "end": "",
+          "regex": "institution\\:"
+        }
+      },
+      {
+        "name": "cleanString",
+        "type": "clean",
+        "input": {
+          "col": "HOSPITAL_NAME",
+          "type": "mv",
+          "start": "",
+          "end": "",
+          "regex": "facility\\:"
+        }
+      },
+      {
+        "name": "cleanString",
+        "type": "clean",
+        "input": {
+          "col": "SPECIALITY",
+          "type": "mv",
+          "start": "",
+          "end": "",
+          "regex": "specialty\\:"
+        }
+      },
+      {
+        "name": "splitAndSelectVal",
+        "type": "clean",
+        "input": {
+          "inpCol": "DEGREE",
+          "outCol": "DEGREE",
+          "type": "mv",
+          "splitBy": " ",
+          "startIdx": -1
+        }
+      },
+      {
+        "name": "splitAndSelectVal",
+        "type": "clean",
+        "input": {
+          "inpCol": "GROUP_NAME",
+          "outCol": "GROUP_NAME",
+          "type": "sv",
+          "splitBy": "dba",
+          "startIdx": 1
+        }
+      },
+      {
+        "name": "splitAndSelectVal",
+        "type": "clean",
+        "input": {
+          "inpCol": "NAME_OF_LEGAL_TAX_ID_OWNER",
+          "outCol": "NAME_OF_LEGAL_TAX_ID_OWNER",
+          "type": "sv",
+          "splitBy": "dba",
+          "startIdx": 0,
+          "EndIdx": 1
+        }
+      },
+      {
+        "name": "splitAndSelectVal",
+        "type": "clean",
+        "input": {
+          "inpCol": "NAME_LAST",
+          "outCol": "NAME_LAST",
+          "type": "sv",
+          "splitBy": " ",
+          "startIdx": 0,
+          "EndIdx": -1
+        }
+      }
+    ]
+  }
+]

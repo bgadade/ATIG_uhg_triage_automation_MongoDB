@@ -1,0 +1,21 @@
+{
+    "Hospital" : [{"loopId":1,
+                "direction": "Y",
+                "delimiter": {"1": ["Category:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["Alternate Providers","Page"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Affiliations"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                },
+      {"loopId":2,
+                "direction": "Y",
+                "delimiter": {"1": ["Prov / Inst Type:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["Alternate Providers","Page"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Affiliations"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                }
+              ]
+}

@@ -1,0 +1,31 @@
+{"DEA_NUMBER": {
+  "PARENT_CATEGORY": "Dea",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["INSURANCE"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["DEA#"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["EXPIRATION"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["SCHEDULE"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "DEA_EXPIRY_DATE": {
+  "PARENT_CATEGORY": "Dea",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["INSURANCE"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["DEA#"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["EXPIRATION"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": ["RHB CERT/PERMIT"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

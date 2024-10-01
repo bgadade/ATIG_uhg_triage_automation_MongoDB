@@ -1,0 +1,953 @@
+nucc_taxonomy_code,nucc_description,ndb_description,ndb_record_type,ndb_org_type,ndb_specialty_code,ndb_degree
+101Y00000X,Counselor,Licensed Professional Counselor,P,,381,LPC
+101Y00000X,Counselor,"Counselor, Alcohol & Drug",P,,377,LPC
+101YA0400X ,"Counselor, Addiction (Substance Use Disorder)",Licensed Professional Counselor,P,,381,LPC
+101YA0400X ,"Counselor, Addiction (Substance Use Disorder)","Counselor, Alcohol & Drug",P,,377,LPC
+101YM0800X,"Counselor, Mental Health ",Licensed Professional Counselor,P,,381,LPC
+101YM0800X,"Counselor, Mental Health ","Counselor, Alcohol & Drug",P,,377,LPC
+101YP1600X ,"Counselor, Pastoral ",Pastoral Counselor,P,,388,DD
+101YP2500X ,"Counselor, Professional ",Licensed Professional Counselor,P,,381,LPC
+101YS0200X ,"Counselor, School",Licensed Professional Counselor,P,,381,LPC
+101YS0200X ,"Counselor, School","Counselor, Alcohol & Drug",P,,377,LPC
+102L00000X,Psychoanalyst,Psychoanalyst,P,,237,MS
+102X00000X,Poetry Therapist ,Other Mental Health,P,,244,CCC
+103G00000X,Clinical Neuropsychologist ,Neuropsychology,P,,397,PHD  
+103GC0700X,Clinical,Neuropsychology,P,,397,PHD  
+103K00000X,Behavioral Analyst ,Other Mental Health,P,,244,CCC
+103T00000X,Psychologist,"Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TA0400X,"Psychologist, Addiction (Substance Use Disorder) ","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TA0700X ,"Psychologist, Adult Development & Aging","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TB0200X,"Psychologist, Cognitive & Behavioral ","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TC0700X,"Psychologist, Clinical ","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TC1900X ,"Psychologist, Counseling","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TC2200X ,"Psychologist, Clinical Child & Adolescent ","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TC2200X ,"Psychologist, Clinical Child & Adolescent ",Child Psychology,P,,268,"PHD, PSY"
+103TE1000X,"Psychologist, Educational ","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TE1100X,"Psychologist, Exercise & Sports","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TF0000X,"Psychologist, Family","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TF0200X,"Psychologist, Forensic","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TH0004X ,"Psychologist, Health","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TH0100X,"Psychologist, Health Service ","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TM1700X,"Psychologist, Men & Masculinity ","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TM1800X,"Psychologist, Mental Retardation & Developmental Disabilities","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TP0016X ,"Psychologist, Prescribing (Medical) ","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TP0814X,"Psychologist, Psychoanalysis ",Psychoanalyst,P,,237,MS
+103TP2700X,"Psychologist, Psychotherapy ","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TP2700X,"Psychologist, Psychotherapy ",Psychoanalyst,P,,237,MS
+103TP2701X,"Psychologist, Group Psychotherapy","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TP2701X,"Psychologist, Group Psychotherapy",Psychoanalyst,P,,237,MS
+103TR0400X,"Psychologist, Rehabilitation ","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TS0200X,"Psychologist, School","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+103TW0100X,"Psychologist, Women ","Psychology, Clinical (Doctor of Psychology) ",P,,070,"PHD, PSY"
+104100000X,Social Worker ,Master of Social Work,P,,391,MSW
+104100000X,Social Worker ,"Social Worker, Licensed Clinical/Medical Group",P,,063,CSW
+104100000X,Social Worker ,Social Worker (Registered Social Worker),P,,390,RSW
+104100000X,Social Worker ,"Social Worker, Marriage & Family",P,,392,CSW
+1041C0700X,Clinical ,"Social Worker, Licensed Clinical/Medical Group",P,,063,CSW
+1041S0200X ,School ,"Social Worker, Licensed Clinical/Medical Group",P,,063,CSW
+106H00000X,Marriage & Family Therapist ,Marriage & Family Therapy ,P,,318,"LPC, MA"
+111N00000X,Chiropractor ,Chiropractic Medicine,P,,035,DC
+111NI0013X,"Chiropractor, Independent Medical Examiner",Chiropractic Medicine,P,,035,DC
+111NI0900X,"Chiropractor, Internist",Chiropractic Medicine,P,,035,DC
+111NN0400X ,"Chiropractor, Neurology",Chiropractic Medicine,P,,035,DC
+111NN1001X,"Chiropractor, Nutrition ",Chiropractic Medicine,P,,035,DC
+111NP0017X  ,"Chiropractor, Pediatric Chiropractor ",Chiropractic Medicine,P,,035,DC
+111NR0200X ,"Chiropractor, Radiology ",Chiropractic Medicine,P,,035,DC
+111NR0400X ,"Chiropractor, Rehabilitation",Chiropractic Medicine,P,,035,DC
+111NS0005X  ,"Chiropractor, Sports Physician",Chiropractic Medicine,P,,035,DC
+111NT0100X ,"Chiropractor, Thermography",Chiropractic Medicine,P,,035,DC
+111NX0100X,"Chiropractor, Occupational Medicine ",Chiropractic Medicine,P,,035,DC
+111NX0800X,"Chiropractor, Orthopedic",Chiropractic Medicine,P,,035,DC
+122300000X,Dentist,"Dentist, Oral Surgeon (Doctor of Dent Medicine)",P,,050,DMD
+122300000X,Dentist,"Dentist, Oral Surgeon (Doctor of Dent Surg)",P,,092,DDS
+1223D0001X,"Dentist, Dental Public Health","Dentist, Oral Surgeon (Doctor of Dent Medicine)",P,,050,DMD
+1223D0001X,"Dentist, Dental Public Health","Dentist, Oral Surgeon (Doctor of Dent Surg)",P,,092,DDS
+1223E0200X,"Dentist, Endodontics",Endodontics,P,,051,"DMD, DDS"
+1223G0001X,"Dentist, General Practice","Dentist, Oral Surgeon (Doctor of Dent Medicine)",P,,050,DMD
+1223G0001X,"Dentist, General Practice","Dentist, Oral Surgeon (Doctor of Dent Surg)",P,,092,DDS
+1223P0106X,"Dentist, Oral and Maxillofacial Pathology","Dentist, Oral Surgeon (Doctor of Dent Medicine)",P,,050,DMD
+1223P0106X,"Dentist, Oral and Maxillofacial Pathology","Dentist, Oral Surgeon (Doctor of Dent Surg)",P,,092,DDS
+1223P0106X,"Dentist, Oral and Maxillofacial Pathology",Oral Pathology,P,,232,MD
+1223X0008X,"Dentist, Oral and Maxillofacial Radiology","Dentist, Oral Surgeon (Doctor of Dent Medicine)",P,,050,DMD
+1223X0008X,"Dentist, Oral and Maxillofacial Radiology","Dentist, Oral Surgeon (Doctor of Dent Surg)",P,,092,DDS
+1223S0112X,"Dentist, Oral and Maxillofacial Surgery","Dentist, Oral Surgeon (Doctor of Dent Medicine)",P,,050,DMD
+1223S0112X,"Dentist, Oral and Maxillofacial Surgery","Dentist, Oral Surgeon (Doctor of Dent Surg)",P,,092,DDS
+1223X0400X,Orthodontics and Dentofacial Orthopedics ,Orthodontics,P,,052,"DMD, DDS"
+1223P0221X,"Dentist, Pediatric Dentistry","Dentist, Oral Surgeon (Doctor of Dent Medicine)",P,,050,DMD
+1223P0221X,"Dentist, Pediatric Dentistry","Dentist, Oral Surgeon (Doctor of Dent Surg)",P,,092,DDS
+1223P0221X,"Dentist, Pediatric Dentistry",Pedodontics,P,,053,"DMD, DDS"
+1223P0300X,"Dentist, Periodontics",Peridontics,P,,054,"DMD, DDS"
+1223P0700X,"Dentist, Prosthodontics",Prosthodontics,P,,055,"DMD, DDS"
+122400000X,"Dental, Denturist","Dentist, Oral Surgeon (Doctor of Dent Medicine)",P,,050,DMD
+122400000X,"Dental, Denturist","Dentist, Oral Surgeon (Doctor of Dent Surg)",P,,092,DDS
+124Q00000X,Dental Hygienist ,"Dentist, Oral Surgeon (Doctor of Dent Medicine)",P,,050,DMD
+124Q00000X,Dental Hygienist ,"Dentist, Oral Surgeon (Doctor of Dent Surg)",P,,092,DDS
+126800000X,Dental Assistant ,"Dentist, Oral Surgeon (Doctor of Dent Medicine)",P,,050,DMD
+126800000X,Dental Assistant ,"Dentist, Oral Surgeon (Doctor of Dent Surg)",P,,092,DDS
+126900000X,Dental Laboratory Technician ,"Dentist, Oral Surgeon (Doctor of Dent Medicine)",P,,050,DMD
+126900000X,Dental Laboratory Technician ,"Dentist, Oral Surgeon (Doctor of Dent Surg)",P,,092,DDS
+132700000X ,Dietary Manager,Nutritionist (Registered Dietician) ,P,,089,RD
+133N00000X ,Nutritionist ,Nutritionist (Registered Dietician) ,P,,089,RD
+133NN1002X,"Nutrician, Education",Nutritionist (Registered Dietician) ,P,,089,RD
+133V00000X  ,"Dietitian, Registered ",Nutritionist (Registered Dietician) ,P,,089,RD
+133VN1006X,"Nutrician, Metabolic",Nutritionist (Registered Dietician) ,P,,089,RD
+133VN1004X,"Nutrician, Pediatric",Pediatric Nutrician,P,,120,RD
+133VN1005X,"Nutrician, Renal",Nutritionist (Registered Dietician) ,P,,089,RD
+136A00000X ,"Dietetic Technician, Registered  ",Nutritionist (Registered Dietician) ,P,,089,RD
+146D00000X ,Personal Emergency Response Attendant  ,Unknown Non-Physician,P,,099,ANC
+146L00000X ,"Emergency Medical Technician, Paramedic ",Unknown Non-Physician,P,,099,ANC
+146M00000X ,"Emergency Medical Technician, Intermediate ",Unknown Non-Physician,P,,099,ANC
+146N00000X,"Emergency Medical Technician, Basic  ",Unknown Non-Physician,P,,099,ANC
+152W00000X,Optometrist ,Optometrist,P,,076,OD
+152WC0802X ,"Optometrist, Corneal and Contact Management ",Optometrist,P,,076,OD
+152WL0500X ,"Optometrist, Low Vision Rehabilitation ",Optometrist,P,,076,OD
+152WP0200X ,"Optometrist, Pediatrics  ",Optometrist,P,,076,OD
+152WS0006X ,"Optometrist, Sports Vision  ",Optometrist,P,,076,OD
+152WV0400X ,"Optometrist, Vision Therapy  ",Optometrist,P,,076,OD
+152WX0102X ,"Optometrist, Occupational Vision ",Optometrist,P,,076,OD
+156F00000X ,Vision Technician/Technologist ,Optician,P,,109,OPT
+156FC0800X ,Vision Tech Contact Lens ,Optician,P,,109,OPT
+156FC0801X  ,Vision Tech Contact Lens Fitter  ,Optician,P,,109,OPT
+156FX1100X  ,Vision Tech Ophthalmic ,Optician,P,,109,OPT
+156FX1101X ,Vision Tech Ophthalmic Assistant ,Optician,P,,109,OPT
+156FX1201X  ,Vision Tech Optometric Assistant ,Optician,P,,109,OPT
+156FX1202X  ,Vision Tech Optometric Technician ,Optician,P,,109,OPT
+156FX1700X  ,Vision Tech Ocularist  ,Optician,P,,109,OPT
+156FX1800X ,Vision Tech Optician ,Optician,P,,109,OPT
+156FX1900X,Vision Tech Orthoptist ,Optician,P,,109,OPT
+163W00000X,Registered Nurse ,"Nurse, Registered ",P,,064,RN
+163WA0400X ,"Registered Nurse, Addiction (Substance Use Disorder)","Nurse, Registered ",P,,064,RN
+163WA2000X ,"Registered Nurse, Administrator","Nurse, Registered ",P,,064,RN
+163WC0200X ,"Registered Nurse, Critical Care Medicine ","Nurse, Registered ",P,,064,RN
+163WC0400X ,"Registered Nurse, Case Management","Nurse, Registered ",P,,064,RN
+163WC1400X ,"Registered Nurse, College Health","Nurse, Registered ",P,,064,RN
+163WC1500X ,"Registered Nurse, Community Health","Nurse, Registered ",P,,064,RN
+163WC1600X ,"Registered Nurse, Continuing Education/Staff Development","Nurse, Registered ",P,,064,RN
+163WC2100X,"Registered Nurse, Continence Care","Nurse, Registered ",P,,064,RN
+163WC3500X ,"Registered Nurse, Cardiac Rehabilitation","Nurse, Registered ",P,,064,RN
+163WD0400X ,"Registered Nurse, Diabetes Educator","Nurse, Registered ",P,,064,RN
+163WD1100X,"Registered Nurse, Dialysis, Peritoneal","Nurse, Registered ",P,,064,RN
+163WE0003X,"Registered Nurse, Emergency ","Nurse, Registered ",P,,064,RN
+163WE0900X,"Registered Nurse, Enterostomal Therapy ","Nurse, Registered ",P,,064,RN
+163WF0300X ,"Registered Nurse, Flight","Nurse, Registered ",P,,064,RN
+163WG0000X ,"Registered Nurse, General Practice","Nurse, Registered ",P,,064,RN
+163WG0100X ,"Registered Nurse, Gastroenterology","Nurse, Registered ",P,,064,RN
+163WG0600X ,"Registered Nurse, Gerontology","Nurse, Registered ",P,,064,RN
+163WH0200X,"Registered Nurse, Home Health ","Nurse, Registered ",P,,064,RN
+163WH0500X ,"Registered Nurse, Hemodialysis ","Nurse, Registered ",P,,064,RN
+163WH1000X ,"Registered Nurse, Hospice","Nurse, Registered ",P,,064,RN
+163WI0500X ,"Registered Nurse, Infusion Therapy ","Nurse, Registered ",P,,064,RN
+163WI0600X ,"Registered Nurse, Infection Control","Nurse, Registered ",P,,064,RN
+163WL0100X,"Registered Nurse, Lactation Consultant ",Lactation Specialist (IBCLC),P,,380,CCC
+163WM0102X,"Registered Nurse, Maternal Newborn ","Nurse, Registered ",P,,064,RN
+163WM0705X ,"Registered Nurse, Medical-Surgical","Nurse, Registered ",P,,064,RN
+163WM1400X,"Registered Nurse, Nurse Massage Therapist (NMT)",Massage Therapy,P,,514,MTH
+163WN0002X,"Registered Nurse, Neonatal Intensive Care","Nurse, Registered ",P,,064,RN
+163WN0003X,"Registered Nurse, Neonatal, Low-Risk ","Nurse, Registered ",P,,064,RN
+163WN0300X ,"Registered Nurse, Nephrology","Nurse, Registered ",P,,064,RN
+163WN0800X ,"Registered Nurse, Neuroscience","Nurse, Registered ",P,,064,RN
+163WN1003X,"Registered Nurse, Nutrition Support","Nurse, Registered ",P,,064,RN
+163WP0000X,"Registered Nurse, Pain Management","Nurse, Registered ",P,,064,RN
+163WP0200X ,"Registered Nurse, Pediatrics","Nurse, Registered ",P,,064,RN
+163WP0218X,"Registered Nurse, Pediatric Oncology","Nurse, Registered ",P,,064,RN
+163WP0807X,"Registered Nurse, Psychiatric/Mental Health, Child & Adolescent","Nurse, Registered ",P,,064,RN
+163WP0807X,"Registered Nurse, Psychiatric/Mental Health, Child & Adolescent","Nurse, Clinical Specialist in Mental Health ",P,,385,MSN
+163WP0808X,"Registered Nurse, Psychiatric/Mental Health ","Nurse, Registered ",P,,064,RN
+163WP0808X,"Registered Nurse, Psychiatric/Mental Health ","Nurse, Clinical Specialist in Mental Health ",P,,385,MSN
+163WP0809X,"Registered Nurse, Psychiatric/Mental Health, Adult","Nurse, Registered ",P,,064,RN
+163WP0809X,"Registered Nurse, Psychiatric/Mental Health, Adult","Nurse, Clinical Specialist in Mental Health ",P,,385,MSN
+163WP1700X,"Registered Nurse, Perinatal ","Nurse, Registered ",P,,064,RN
+163WP2201X,"Registered Nurse, Ambulatory Care","Nurse, Registered ",P,,064,RN
+163WR0006X,Registered Nurse First Assistant ,"Nurse, Registered, First Assistant (RNFA)",P,,386,RN
+163WR0400X ,"Registered Nurse, Rehabilitation","Nurse, Registered ",P,,064,RN
+163WR1000X ,"Registered Nurse, Reproductive Endocrinology/Infertility","Nurse, Registered ",P,,064,RN
+163WS0121X,"Registered Nurse, Plastic Surgery","Nurse, Registered ",P,,064,RN
+163WS0200X ,"Registered Nurse, School ","Nurse, Registered ",P,,064,RN
+163WU0100X,"Registered Nurse, Urology","Nurse, Registered ",P,,064,RN
+163WW0000X,"Registered Nurse, Wound Care ","Nurse, Registered ",P,,064,RN
+163WW0101X,"Registered Nurse, Women's Health Care, Ambulatory","Nurse, Registered ",P,,064,RN
+163WX0002X,"Registered Nurse, Obstetric, High-Risk","Nurse, Registered ",P,,064,RN
+163WX0003X ,"Registered Nurse, Obstetric, Inpatient ","Nurse, Registered ",P,,064,RN
+163WX0106X,"Registered Nurse, Occupational Health","Nurse, Registered ",P,,064,RN
+163WX0200X,"Registered Nurse, Oncology ","Nurse, Registered ",P,,064,RN
+163WX0601X ,"Registered Nurse, Otorhinolaryngology & Head-Neck","Nurse, Registered ",P,,064,RN
+163WX0800X,"Registered Nurse, Orthopedic ","Nurse, Registered ",P,,064,RN
+163WX1100X,"Registered Nurse, Ophthalmic","Nurse, Registered ",P,,064,RN
+163WX1500X,"Registered Nurse, Ostomy Care","Nurse, Registered ",P,,064,RN
+164W00000X,Licensed Practical Nurse ,"Nurse, Licensed Practical",P,,065,LPN
+164X00000X,Licensed Vocational Nurse ,Licensed Vocational Nurse ,P,,382,LVN
+167G00000X,"Nursing, Licensed Psychiatric Technician ",Other Mental Health,P,,244,CCC
+170100000X ,"Other Service, Medical Genetics, Ph.D. Medical Genetics ",Medical Genetics,P,,309,MD
+170300000X ,"Other Service, Genetic Counselor, MS ",Clinical Genetics ,P,,308,MD
+171000000X ,"Other Service, Military Health Care Provider",Unknown Non-Physician,P,,099,ANC
+1710I1002X  ,"Other Service, Military, Independent Duty Corpsman",Unknown Non-Physician,P,,099,ANC
+1710I1003X ,"Other Service, Military, Independent Duty Medical Technicians",Unknown Non-Physician,P,,099,ANC
+171100000X ,"Other Service, Acupuncturist ",Acupuncture,P,,201,CA
+171M00000X ,"Other Service, Case Manager/Care Coordinator",Unknown Non-Physician,P,,099,ANC
+171R00000X ,"Other Service, Interpreter",Unknown Non-Physician,P,,099,ANC
+171W00000X ,"Other Service, Contractor ",Unknown Non-Physician,P,,099,ANC
+171WH0202X,"Other Service, Contractor, Home Modifications ",Unknown Non-Physician,P,,099,ANC
+171WV0202X ,"Other Service, Contractor, Vehicle Modifications ",Unknown Non-Physician,P,,099,ANC
+172A00000X,"Other Service, Driver",Unknown Non-Physician,P,,099,ANC
+172M00000X,"Other Service, Mechanotherapist",Unknown Non-Physician,P,,099,ANC
+172P00000X,"Other Service, Naprapath ","Napropathy, Doctor of",P,,383,DN
+172V00000X,"Other Service, Community Health Worker",Unknown Non-Physician,P,,099,ANC
+173000000X ,"Other Service, Legal Medicine",Legal Medicine ,P,,285,MD
+173C00000X ,"Other Service, Reflexologist ",Unknown Non-Physician,P,,099,ANC
+173F00000X ,"Other Service, Sleep Specialist, PhD",Unknown Non-Physician,P,,099,ANC
+174400000X ,"Other Service, Specialist ",Unknown Non-Physician,P,,099,ANC
+1744G0900X  ,"Other Service, Specialist, Graphics Designer ",Unknown Non-Physician,P,,099,ANC
+1744P3200X  ,"Other Service, Specialist, Prosthetics Case Management ",Unknown Non-Physician,P,,099,ANC
+1744R1102X ,"Other Service, Specialist, Research Study",Unknown Non-Physician,P,,099,ANC
+1744R1103X  ,"Other Service, Specialist, Research Data Abstracter/Coder",Unknown Non-Physician,P,,099,ANC
+174H00000X,"Other Service, Health Educator",Unknown Non-Physician,P,,099,ANC
+174M00000X,"Other Service, Veterinarian",Unknown Non-Physician,P,,099,ANC
+174MM1900X,"Other Service, Veterinarian, Medical Research ",Unknown Non-Physician,P,,099,ANC
+175F00000X,"Other Service, Naturopath","Naturopathy, Doctor of",P,,384,ND
+175L00000X,"Other Service, Homeopath",Homeopathic Medicine,P,,282,MS 
+175M00000X,"Other Service, Midwife, Lay ",Certified Midwife ,P,,069,CNM
+176B00000X ,"Other Service, Midwife ",Certified Midwife ,P,,069,CNM
+176P00000X,"Other Service, Funeral Director ",Unknown Non-Physician,P,,099,ANC
+177F00000X ,"Other Service, Lodging",Unknown Non-Physician,P,,099,ANC
+183500000X,Pharmacist,Pharmacist,P,,212,PHA
+1835G0303X,Geriatric ,Pharmacist,P,,212,PHA
+1835N0905X ,Nuclear,Pharmacist,P,,212,PHA
+1835N1003X,Nutrition Support ,Pharmacist,P,,212,PHA
+1835P0018X ,Pharmacist Clinician (PhC)/ Clinical Pharmacy Specialist ,Pharmacist,P,,212,PHA
+1835P1200X ,Pharmacotherapy ,Pharmacist,P,,212,PHA
+1835P1300X,Psychiatric,Pharmacist,P,,212,PHA
+1835X0200X ,Oncology,Pharmacist,P,,212,PHA
+183700000X,Pharmacy Technician ,Pharmacist,P,,212,PHA
+193200000X,Multi-Specialty  ,,,,,
+193400000X,Single Specialty  ,,,,,
+202C00000X,Independent Medical Examiner ,Unknown Special Physician,P,,097,MD
+202K00000X,Phlebology,Phlebology,P,,396,MD
+204C00000X,"Neuromusculoskeletal Medicine, Sports Medicine ",Neuromuscular Disease,P,,269,MD
+204C00000X,"Neuromusculoskeletal Medicine, Sports Medicine ",Sports Medicine ,P,,296,MD
+204D00000X,Neuromusculoskeletal Medicine & OMM ,Neuromuscular Disease,P,,269,MD
+204D00000X,Neuromusculoskeletal Medicine & OMM ,Osteopathic Manipulative Medicine,P,,330,MD
+204E00000X,Oral & Maxillofacial Surgery ,Oral & Maxillofacial Surgery ,P,,092,MD
+204F00000X,Transplant Surgery ,Surgery,P,,002,MD
+207K00000X,Allergy & Immunology ,Allergy & Immunology ,P,,003,MD
+207KA0200X,Allergy,Allergy,P,,252,MD
+207KI0005X,"Allergy, Clinical & Laboratory Immunology ",Immunology,P,,283,MD
+207L00000X ,Anesthesiology,Anesthesiology,P,,005,MD
+207LA0401X,"Anesthesia, Addiction Medicine ",Addiction Medicine ,P,,347,MD
+207LC0200X,"Anesthesia, Critical Care Medicine ",Critical Care Medicine ,P,,214,MD
+207LC0200X,"Anesthesia, Critical Care Medicine ",Anesthesiology,P,,005,MD
+207LH0002X,"Anesthesia, Hospice and Palliative Medicine ",Hospice and Palliative Medicine ,P,,019,MD
+207LP2900X,"Anesthesia, Pain Medicine ",Pain Management,P,,319,MD
+207LP3000X,Pediatric Anesthesiology ,Pediatric Anesthesiology ,P,,116,MD
+207N00000X,Dermatology,Dermatology,P,,007,MD
+207ND0101X,"Dermatology, MOHS-Micrographic Surgery ",MOHS Surgery,P,,357,MD
+207ND0900X ,"Dermatology, Dermatopathology",Dermatopathology,P,,218,MD
+207NI0002X ,"Dermatology, Clinical & Laboratory Dermatological Immunology ",Dermatology Immunology,P,,217,MD
+207NP0225X,Pediatric Dermatology ,Pediatric Dermatology ,P,,117,MD
+207NS0135X,Procedural Dermatology ,Dermatology,P,,007,MD
+207P00000X,Emergency Medicine ,Emergency Medicine ,P,,042,MD
+207PE0004X,Emergency Medical Services ,Emergency Medicine ,P,,042,MD
+207PE0005X,ER Undersea and Hyperbaric Medicine ,Undersea and Hyperbaric Medicine ,P,,327,MD
+207PE0005X,ER Undersea and Hyperbaric Medicine ,Undersea Medicine,P,,372,MD
+207PH0002X,ER Hospice and Palliative Medicine ,Hospice and Palliative Medicine ,P,,019,MD
+207PP0204X,Pediatric Emergency Medicine ,Pediatric Emergency Medicine ,P,,321,MD
+207PS0010X,ER Sports Medicine ,Sports Medicine ,P,,296,MD
+207PT0002X,ER Medical Toxicology ,Medical Toxicology ,P,,333,MD
+207Q00000X,Family Medicine ,Family Practice,P,,008,MD
+207Q00000X,Family Medicine ,Family Practice Specialist,P,,275,MD
+207QA0000X,"Family, Adolescent Medicine ",Adolescent Medicine ,P,,276,MD
+207QA0401X ,"Family, Addiction Medicine ",Addiction Medicine ,P,,347,MD
+207QA0505X,"Family, Adult Medicine ",Family Practice,P,,008,MD
+207QA0505X,"Family, Adult Medicine ",Family Practice Specialist,P,,275,MD
+207QB0002X,"Family, Bariatric Medicine ",Family Practice,P,,008,MD
+207QB0002X,"Family, Bariatric Medicine ",Family Practice Specialist,P,,275,MD
+207QG0300X ,"Family, Geriatric Medicine ",Geriatric Medicine ,P,,038,MD
+207QH0002X,"Family, Hospice and Palliative Medicine ",Hospice and Palliative Medicine ,P,,019,MD
+207QS0010X ,"Family, Sports Medicine ",Sports Medicine ,P,,296,MD
+207QS1201X,"Family, Sleep Medicine ",Sleep Study Medicine,P,,361,MD
+207R00000X,Internal Medicine ,Internal Medicine ,P,,011,MD
+207R00000X,Internal Medicine ,Internal Medicine Specialist,P,,273,MD
+207RA0000X,"Internal Med, Adolescent Medicine ",Adolescent Medicine ,P,,276,MD
+207RA0201X,"Internal Med, Allergy & Immunology ",Allergy & Immunology ,P,,003,MD
+207RA0401X ,"Internal Med, Addiction Medicine ",Addiction Medicine ,P,,347,MD
+207RB0002X,"Internal Med, Bariatric Medicine ",Internal Medicine ,P,,011,MD
+207RB0002X,"Internal Med, Bariatric Medicine ",Internal Medicine Specialist,P,,273,MD
+207RC0000X,"Internal Med, Cardiovascular Disease ",Cardiovascular Disease ,P,,006,MD
+207RC0001X,"Internal Med, Clinical Cardiac Electrophysiology ",Clinical Cardiac Electrophysiology ,P,,304,MD
+207RC0200X,"Internal Med, Critical Care Medicine ",Critical Care Medicine ,P,,214,MD
+207RE0101X,"Internal Med, Endocrinology, Diabetes & Metabolism ","Endocrinology, Diabetes & Metabolism ",P,,017,MD
+207RG0100X,"Internal Med, Gastroenterology",Gastroenterology,P,,010,MD
+207RG0300X,"Internal Med, Geriatric Medicine ",Geriatric Medicine ,P,,038,MD
+207RH0000X,"Internal Med, Hematology",Hematology,P,,093,MD
+207RH0002X,"Internal Med, Hospice and Palliative Medicine 
+",Hospice and Palliative Medicine ,P,,019,MD
+207RH0003X,"Internal Med, Hematology & Oncology
+","Hematology & Oncology
+",P,,504,MD
+207RI0001X,"Internal Med, Clinical & Laboratory Immunology ",Diagnostic Lab Immunology,P,,283,MD
+207RI0008X ,"Internal Med, Hepatology ",Hepatology-Liver Disease,P,,365,MD
+207RI0011X ,"Internal Med, Interventional Cardiology
+","Interventional Cardiology
+",P,,342,MD
+207RI0200X,"Internal Med, Infectious Disease ",Infectious Disease Medicine,P,,080,MD
+207RM1200X,"Internal Med, Magnetic Resonance Imaging (MRI)",MRI/Magnetic Resonance,P,,511,MD
+207RN0300X ,"Internal Med, Nephrology ",Nephrology ,P,,039,MD
+207RP1001X,"Internal Med, Pulmonary Disease
+",Pulmonary Medicine,P,,029,MD
+207RR0500X ,"Internal Med, Rheumatology",Rheumatology,P,,090,MD
+207RS0010X,"Internal Med, Sports Medicine ",Sports Medicine ,P,,296,MD
+207RS0012X,"Internal Med, Sleep Medicine 
+",Sleep Study Medicine,P,,361,MD
+207RT0003X,"Internal Med, Transplant Hepatology 
+",Gastroenterology,P,,010,MD
+207RT0003X,"Internal Med, Transplant Hepatology 
+",Internal Medicine ,P,,011,MD
+207RT0003X,"Internal Med, Transplant Hepatology 
+",Hepatology-Liver Disease,P,,365,MD
+207RX0202X,"Internal Med, Medical Oncology 
+",Medical Oncology,P,,059,MD
+207SC0300X,Clinical Cytogenetic ,Clinical Cytogenetic ,P,,307,MD
+207SG0201X ,Clinical Genetics (M.D.) ,Clinical Genetics ,P,,308,MD
+207SG0202X ,Clinical Biochemical Genetics,Clinical Biochemical Genetics,P,,305,MD
+207SG0203X ,Clinical Molecular Genetics ,Clinical Molecular Genetics ,P,,370,MD
+207SG0205X ,Ph.D. Medical Genetics,Medical Genetics,P,,209,MD
+207SM0001X ,Molecular Genetic Pathology ,Molecular Genetic Pathology ,P,,371,MD
+207T00000X,Neurological Surgery ,Neurological Surgery ,P,,014,MD
+207U00000X,Nuclear Medicine ,Nuclear Medicine,P,,036,MD
+207UN0901X,Nuclear Cardiology ,Nuclear Cardiology ,P,,016,MD
+207UN0902X ,Nuclear Imaging & Therapy ,Nuclear Radiology,P,,286,MD
+207UN0903X,In Vivo & In Vitro Nuclear Medicine,Nuclear Medicine,P,,036,MD
+207V00000X,Obstetrics & Gynecology ,Obstetrics & Gynecology ,P,,230,MD
+207VB0002X  ,OB/GYN Bariatric Medicine ,Obstetrics & Gynecology ,P,,230,MD
+207VC0200X  ,OB/GYN Critical Care Medicine ,Critical Care Medicine ,P,,230,MD
+207VE0102X ,OB/GYN Reproductive Endocrinology  ,Reproductive Endocrinology  ,P,,241,MD
+207VG0400X ,OB/GYN Gynecology  ,Gynecology  ,P,,251,MD
+207VH0002X  ,OB/GYN Hospice and Palliative Medicine,Hospice and Palliative Medicine ,P,,019,MD
+207VM0101X  ,OB/GYNMaternal & Fetal Medicine  ,Maternal And Fetal Medicine/Perinatology,P,,226,MD
+207VX0000X  ,OB/GYN Obstetrics  ,Obstetrics  ,P,,250,MD
+207VX0201X  ,OB/GYN Gynecologic Oncology ,Gynecologic Oncology ,P,,221,MD
+207W00000X,Ophthalmology ,Ophthalmology ,P,,018,MD
+207X00000X,Orthopaedic Surgery ,Orthopaedic Surgery ,P,,020,MD
+207XP3100X ,Pediatric Orthopaedic Surgery ,Pediatric Orthopaedic Surgery ,P,,264,MD
+207XS0106X ,Ortho Surg Hand Surgery ,Hand Surgery,P,,040,MD
+207XS0114X ,Adult Reconstructive Orthopaedic Surgery ,Orthopaedic Surgery ,P,,020,MD
+207XS0117X  ,Orthopaedic Surgery of the Spine ,Back & Spine Surgery,P,,348,MD
+207XS0117X  ,Orthopaedic Surgery of the Spine ,Orthopaedic Surgery ,P,,020,MD
+207XX0004X ,Ortho Surg Foot and Ankle Surgery ,Orthopaedic Surgery ,P,,020,MD
+207XX0005X ,Ortho Surg Sports Medicine  ,Sports Medicine ,P,,296,MD
+207XX0801X,Ortho Surg Orthopaedic Trauma  ,Orthopaedic Surgery ,P,,020,MD
+207Y00000X,Otolaryngology ,Otolaryngology ,P,,004,MD
+207YP0228X,Pediatric Otolaryngology ,Pediatric Otolaryngology ,P,,265,MD
+207YS0012X,Otolaryngology Sleep Medicine  ,Sleep Study Medicine,P,,361,MD
+207YS0123X,Otolaryngology Facial Plastic Surgery,Otolaryngology ,P,,004,MD
+207YS0123X,Otolaryngology Facial Plastic Surgery,Plastic Surgery,P,,024,MD
+207YX0007X  ,Otolaryngology Plastic Surgery within the Head & Neck ,Plastic Surgery within the Head & Neck ,P,,337,MD
+207YX0602X,"Otolaryngology, Otolaryngic Allergy ",Otolaryngology ,P,,004,MD
+207YX0901X ,"Otolaryngology, Otology & Neurotology ",Otology,P,,254,MD
+207YX0905X  ,Otolaryngology/Facial Plastic Surgery ,Otolaryngology ,P,,004,MD
+207YX0905X  ,Otolaryngology/Facial Plastic Surgery ,Plastic Surgery,P,,024,MD
+207ZB0001X,"Pathology, Blood Banking & Transfusion Medicine ",Blood Banking & Transfusion Medicine ,P,,334,MD
+207ZC0006X,"Pathology, Clinical Pathology",Clinical Pathology,P,,210,MD
+207ZC0500X,"Pathology, Cytopathology ",Cytopathology ,P,,312,MD
+207ZD0900X,"Pathology, Dermatopathology",Dermatopathology,P,,218,MD
+207ZF0201X ,"Pathology, Forensic Pathology",Forensic Pathology,P,,223,MD
+207ZH0000X ,"Patholofy, Hematology",Hematology,P,,093,MD
+207ZI0100X,"Pathology, Immunopathology",Immunopathology,P,,225,MD
+207ZM0300X,"Pathology, Medical Microbiology ",Medical Microbiology ,P,,227,MD
+207ZN0500X,"Pathology, Neuropathology ",Neuropathology,P,,229,MD
+207ZP0007X,"Pathology, Molecular Genetic Pathology",Molecular Genetic Pathology,P,,371,MD
+207ZP0101X,"Pathology, Anatomic Pathology",Anatomic Pathology,P,,202,MD
+207ZP0102X,"Pathology, Anatomic Pathology & Clinical Pathology",Anatomic & Clinical Pathology,P,,203,MD
+207ZP0104X,"Pathology, Chemical Pathology",Chemical Pathology,P,,207,MD
+207ZP0105X,"Pathology, Clinical Pathology/Laboratory Medicine ",Pathology,P,,022,MD
+207ZP0105X,"Pathology, Clinical Pathology/Laboratory Medicine ",Clinical Pathology,P,,210,MD
+207ZP0213X ,"Pathology, Pediatric Pathology",Pediatric Pathology,P,,322,MD
+208000000X,Pediatrics ,Pediatrics,P,,037,MD
+2080A0000X  ,"Pediatrics, Adolescent Medicine ",Adolescent Medicine ,P,,276,MD
+2080H0002X ,"Pediatrics, Hospice and Palliative Medicine  ",Hospice and Palliative Medicine ,P,,019,MD
+2080I0007X ,"Pediatrics, Clinical & Laboratory Immunology ",Immunology,P,,283,MD
+2080N0001X ,"Pediatrics, Neonatal-Perinatal Medicine  ",Perinatology (Maternal & Fetal Medicine),P,,226,MD
+2080N0001X ,"Pediatrics, Neonatal-Perinatal Medicine  ",Neonatology,P,,087,MD
+2080P0006X ,"Pediatrics, Developmental – Behavioral Pediatrics ",Developmental – Behavioral Pediatrics ,P,,255,MD
+2080P0006X ,"Pediatrics, Developmental – Behavioral Pediatrics ",Pediatric Behavioral,P,,363,MD
+2080P0008X ,"Pediatrics, Neurodevelopmental Disabilities ",Neurodevelopmental Disabilities ,P,,343,MD
+2080P0008X ,"Pediatrics, Neurodevelopmental Disabilities ",Pediatric Neurology,P,,262,MD
+2080P0201X ,Pediatric Allergy & Immunology ,Pediatric Allergy Immunology,P,,086,MD
+2080P0202X  ,Pediatric Cardiology ,Pediatric Cardiology ,P,,085,MD
+2080P0203X,Pediatric Critical Care Medicine ,Pediatric Critical Care Medicine ,P,,234,MD
+2080P0204X,Pediatric Emergency Medicine ,Pediatric Emergency Medicine ,P,,321,MD
+2080P0205X  ,Pediatric Endocrinology  ,Pediatric Endocrinology  ,P,,082,MD
+2080P0206X,Pediatric Gastroenterology ,Pediatric Gastroenterology ,P,,259,MD
+2080P0207X ,Pediatric Hematology-Oncology ,Pediatric Hematology-Oncology ,P,,088,MD
+2080P0208X,Pediatric Infectious Diseases ,Pediatric Infectious Diseases ,P,,078,MD
+2080P0210X,Pediatric Nephrology ,Pediatric Nephrology ,P,,031,MD
+2080P0214X,Pediatric Pulmonology ,Pediatric Pulmonary Medicine,P,,096,MD
+2080P0216X,Pediatric Rheumatology  ,Pediatric Rheumatology  ,P,,261,MD
+2080S0010X,"Pediatrics, Sports Medicine  ",Sports Medicine ,P,,323,MD
+2080S0012X ,"Pediatrics, Sleep Medicine  ",Sleep Study Medicine,P,,361,MD
+2080T0002X  ,"Pediatrics, Medical Toxicology ",Medical Toxicology ,P,,333,MD
+2080T0004X ,Pediatric Transplant Hepatology  ,Hepatology - Liver Disease,P,,365,MD
+208100000X,Physical Medicine & Rehabilitation ,Physical Medicine and Rehabilitation / Physiatry,P,,025,MD
+2081H0002X,"Physical Med & Rehab, Hospice and Palliative Medicine",Hospice and Palliative Medicine ,P,,019,MD
+2081N0008X ,"Physical Med & Rehab, Neuromuscular Medicine ",Neuromuscular Disease,P,,269,MD
+2081P0004X,"Physical Med & Rehab, Spinal Cord Injury Medicine",Spinal Cord Injury Medicine,P,,344,MD
+2081P0010X ,"Physical Med & Rehab, Pediatric Rehabilitation Medicine",Pediatric Rehabilitation Medicine,P,,341,MD
+2081P2900X ,"Physical Med & Rehab, Pain Medicine ",Pain Management,P,,319,MD
+2081S0010X ,"Physical Med & Rehab, Sports Medicine",Sports Medicine ,P,,296,MD
+208200000X,Plastic Surgery,Plastic Surgery,P,,024,MD
+2082S0099X ,Plastic Surgery Within the Head and Neck ,Plastic Surgery,P,,024,MD
+2082S0099X ,Plastic Surgery Within the Head and Neck ,Plastic Surgery Within the Head and Neck ,P,,337,MD
+2082S0105X ,"Plastic Surgery, Surgery of the Hand ",Hand Surgery,P,,024,MD
+2083A0100X  ,Preventive Med Aerospace Medicine ,Aerospace Medicine ,P,,041,MD
+2083P0011X ,Preventive Med Undersea and Hyperbaric Medicine  ,Undersea and Hyperbaric Medicine  ,P,,327,MD
+2083P0011X ,Preventive Med Undersea and Hyperbaric Medicine  ,Undersea Medicine,P,,372,MD
+2083P0500X ,Preventive Medicine/Occupational Environmental Medicine ,Preventive Medicine,P,,281,MD
+2083P0901X  ,Public Health & General Preventive Medicine  ,Public Health & General Preventive Medicine  ,P,,236,MD
+2083P0901X  ,Public Health & General Preventive Medicine  ,Preventive Medicine,P,,281,MD
+2083P0901X  ,Public Health & General Preventive Medicine  ,Public Health  ,P,,238,MD
+2083S0010X  ,Preventive Med Sports Medicine  ,Sports Medicine ,P,,296,MD
+2083T0002X  ,Preventive Med Medical Toxicology  ,Medical Toxicology ,P,,333,MD
+2083X0100X,Preventive Med Occupational Medicine ,Occupational Medicine,P,,231,MD
+2084A0401X,"Psychiatry & Neurology, Addiction Medicine ",Addiction Medicine ,P,,347,MD
+2084B0002X ,"Psychiatry & Neurology, Bariatric Medicine",Preventive Medicine,P,,281,MD
+2084D0003X,"Psychiatry & Neurology, Diagnostic Neuroimaging ",Neuroradiology,P,,332,MD
+2084F0202X,"Psychiatry & Neurology, Forensic Psychiatry",Forensic Psychiatry,P,,346,MD
+2084H0002X ,"Psychiatry & Neurology, Hospice and Palliative Medicine ",Hospice and Palliative Medicine ,P,,019,MD
+2084N0008X,"Psychiatry & Neurology, Neuromuscular Medicine ",Neuromuscular Disease,P,,269,MD
+2084N0400X,"Psychiatry & Neurology, Neurology ",Neurology ,P,,013,MD
+2084N0400X,"Psychiatry & Neurology, Neurology ",Neurology & Psychiatry,P,,228,MD
+2084N0402X,"Psychiatry & Neurology, Neurology with Special Qualifications in Child Neurology ",Pediatric Neurology,P,,262,MD
+2084N0600X ,"Psychiatry & Neurology, Clinical Neurophysiology ",Clinical Neurophysiology ,P,,310,MD
+2084P0005X,"Psychiatry & Neurology, Neurodevelopmental Disabilities",Neurodevelopmental Disabilities,P,,343,MD
+2084P0015X,"Psychiatry & Neurology, Psychosomatic Medicine",Psychosomatic Medicine,P,,291,MD
+2084P0800X,"Psychiatry & Neurology, Psychiatry",Psychiatry,P,,026,MD
+2084P0802X,"Psychiatry & Neurology, Addiction Psychiatry",Addiction Psychiatry,P,,301,MD
+2084P0804X ,"Psychiatry & Neurology, Child & Adolescent Psychiatry ",Child & Adolescent Psychiatry ,P,,257,MD
+2084P0805X ,"Psychiatry & Neurology, Geriatric Psychiatry",Geriatric Psychiatry,P,,314,MD
+2084P2900X,"Psychiatry & Neurology, Pain Medicine ",Pain Management,P,,319,MD
+2084P2900X,"Psychiatry & Neurology, Pain Medicine ",Psychiatry,P,,026,MD
+2084S0010X,"Psychiatry & Neurology, Sports Medicine ",Sports Medicine ,P,,296,MD
+2084S0012X,"Psychiatry & Neurology, Sleep Medicine",Sleep Study Medicine,P,,361,MD
+2084V0102X ,"Psychiatry & Neurology, Vascular Neurology ",Neurology,P,,013,MD
+2085B0100X,Radiology Body Imaging  ,Radiology,P,,030,MD
+2085D0003X,Radiology Diagnostic Neuroimaging ,Neuroradiology,P,,332,MD
+2085H0002X,"Radiology, Hospice and Palliative Medicine ",Hospice and Palliative Medicine ,P,,019,MD
+2085N0700X ,"Radiology, Neuroradiology ",Neuroradiology,P,,332,MD
+2085N0904X,"Radiology, Nuclear Radiology ",Nuclear Radiology ,P,,286,MD
+2085P0229X,"Radiology, Pediatric Radiology  ",Pediatric Radiology  ,P,,288,MD
+2085R0001X ,"Radiology, Radiation Oncology  ",Radiation Oncology  ,P,,032,MD
+2085R0202X,"Radiology, Diagnostic Radiology  ",Diagnostic Radiology  ,P,,220,MD
+2085R0203X,"Radiology, Therapeutic Radiology ",Therapeutic Radiology ,P,,239,MD
+2085R0204X ,"Radiology, Vascular & Interventional Radiology ",Vascular Intervention Radiology,P,,335,MD
+2085R0204X ,"Radiology, Vascular & Interventional Radiology ",Radiology,P,,030,MD
+2085R0205X,"Radiology, Radiological Physics  ",Radiological Physics  ,P,,324,MD
+2085R0205X,"Radiology, Radiological Physics  ",Radiology,P,,030,MD
+2085U0001X ,"Radiology, Diagnostic Ultrasound  ",Radiology,P,,030,MD
+208600000X,Surgery,Surgery,P,,002,MD
+2086H0002X,"Surgery, Hospice and Palliative Medicine",Hospice and Palliative Medicine,P,,019,MD
+2086S0102X ,Surgical Critical Care,Surgical Critical Care,P,,242,MD
+2086S0105X ,Surgery of the Hand,Hand Surgery,P,,040,MD
+2086S0120X,Pediatric Surgery,Pediatric Surgery,P,,114,MD
+2086S0122X,Plastic and Reconstructive Surgery,Plastic Surgery,P,,024,MD
+2086S0127X,Trauma Surgery,Trauma Surgery,P,,293,MD
+2086S0129X ,Vascular Surgery ,General Vascular Surgery,P,,095,MD
+2086X0206X ,Surgical Oncology,Surgical Oncologist,P,,508,MD
+208800000X,Urology,Urology,P,,034,MD
+2088P0231X,Pediatric Urology ,Pediatric Urology ,P,,267,MD
+208C00000X,Colon & Rectal Surgery ,Colon & Rectal Surgery ,P,,015,MD
+208D00000X,General Practice ,General Practice ,P,,001,MD
+208D00000X,General Practice ,General Practice Specialist,P,,272,MD
+208G00000X,Thoracic Surgery (Cardiothoracic Vascular Surgery) ,Thoracic Cardiovascular Surgery,P,,033,MD
+208M00000X ,Hospitalist  ,Hospitalist  ,P,,340,MD
+208U00000X,Clinical Pharmacology ,Clinical Pharmacology ,P,,211,MD
+208VP0000X,Pain Medicine ,Pain Management,P,,319,MD
+208VP0014X,Interventional Pain Medicine ,Pain Management,P,,319,MD
+209800000X,Legal Medicine ,Legal Medicine ,P,,285,MD
+211D00000X,"Assistant, Podiatric ",Podiatrist,P,,048,DPM
+213E00000X,Podiatrist ,Podiatrist,P,,048,DPM
+213EP0504X,"Podiatrist, Public Medicine  ",Podiatrist,P,,048,DPM
+213EP1101X ,Primary Podiatric Medicine  ,Podiatrist,P,,048,DPM
+213ER0200X ,"Podiatrist, Radiology  ",Podiatrist,P,,048,DPM
+213ES0000X ,"Podiatrist, Sports Medicine ",Sports Medicine ,P,,048,DPM
+213ES0103X  ,"Podiatrist, Foot & Ankle Surgery  ",Podiatrist,P,,048,DPM
+213ES0131X  ,"Podiatrist, Foot Surgery  ",Podiatrist,P,,048,DPM
+221700000X ,Art Therapist ,Unknown Non-Physician,P,,099,ANC
+222Q00000X ,Developmental Therapist,Unknown Non-Physician,P,,099,ANC
+222Z00000X  ,Orthotist  ,Unknown Non-Physician,P,,099,ANC
+224P00000X,Prosthetist ,Unknown Non-Physician,P,,099,ANC
+224Z00000X,Occupational Therapy Assistant ,Occupational Therapy,P,,061,OTR
+224ZE0001X  ,Environmental Modification  ,Occupational Therapy,P,,061,OTR
+224ZF0002X ,"Feeding, Eating & Swallowing ",Occupational Therapy,P,,061,OTR
+224ZL0004X,Low Vision ,Occupational Therapy,P,,061,OTR
+224ZR0403X ,Driving and Community Mobility ,Occupational Therapy,P,,061,OTR
+225000000X,Orthotics/Prosthetics Fitter  ,Unknown Non-Physician,P,,099,ANC
+225100000X ,Physical Therapist  ,Physical  Therapy,P,,073,PT
+2251C2600X,"Physical Therapy, Cardiopulmonary",Physical  Therapy,P,,073,PT
+2251E1200X ,"Physical Therapy, Ergonomics",Physical  Therapy,P,,073,PT
+2251E1300X ,"Physical Therapy, Electrophysiology, Clinical",Physical  Therapy,P,,073,PT
+2251G0304X,"Physical Therapy, Geriatrics",Physical  Therapy,P,,073,PT
+2251H1200X ,"Physical Therapy, Hand ",Physical Therapy - Hand,P,,368,PT
+2251H1200X ,"Physical Therapy, Hand ",Physical  Therapy,P,,073,PT
+2251H1200X ,"Physical Therapy, Hand ",Physical Therapy - Hand Splinting,P,,369,PT
+2251H1300X,"Physical Therapy, Human Factors ",Physical  Therapy,P,,073,PT
+2251N0400X,"Physical Therapy, Neurology ",Physical  Therapy,P,,073,PT
+2251P0200X ,"Physical Therapy, Pediatrics ",Physical Therapy - Pediatric,P,,367,PT
+2251P0200X ,"Physical Therapy, Pediatrics ",Physical  Therapy,P,,073,PT
+2251S0007X ,"Physical Therapy, Sports ",Physical  Therapy,P,,073,PT
+2251X0800X ,"Physical Therapy, Orthopedic ",Physical  Therapy,P,,073,PT
+225200000X,Physical Therapy Assistant ,Physical  Therapy,P,,073,PT
+225400000X,Rehabilitation Practitioner ,Unknown Non-Physician,P,,099,ANC
+225500000X,Rehab Specialist/Technologist ,Unknown Non-Physician,P,,099,ANC
+2255A2300X,Rehab Specialist Athletic Trainer ,Athletic Trainer ,P,,121,"BA, BS, MA, MS"
+2255R0406X,"Specialist Rehabilitation, Blind ",Unknown Non-Physician,P,,099,ANC
+225600000X,Dance Therapist ,Unknown Non-Physician,P,,099,ANC
+225700000X ,Massage Therapist ,Message Therapy,P,,514,MTH
+225800000X ,Recreation Therapist ,Unknown Non-Physician,P,,099,ANC
+225A00000X ,Music Therapist ,Unknown Non-Physician,P,,099,ANC
+225B00000X,Pulmonary Function Technologist ,Unknown Non-Physician,P,,099,ANC
+225C00000X ,Rehabilitation Counselor ,Licensed Professional Counselor,P,,381,LPC
+225CA2400X ,"Rehab Counselor, Assistive Technology Practitioner ",Unknown Non-Physician,P,,099,ANC
+225CA2500X,"Rehab Counselor, Assistive Technology Supplier",Unknown Non-Physician,P,,099,ANC
+225CX0006X ,"Rehab Counselor, Orientation and Mobility Training Provider",Unknown Non-Physician,P,,099,ANC
+225X00000X ,Occupational Therapist,Occupational Therapy,P,,061,OTR
+225XE0001X,"Occupational Therapy, Enviromental Modification",Occupational Therapy,P,,061,OTR
+225XE1200X ,"Occupational Therapy, Ergonomics  ",Occupational Therapy,P,,061,OTR
+225XF0002X,"Occupational Therapy, Feeding, Eating & Swallowing",Occupational Therapy,P,,061,OTR
+225XG0600X,"Occupational Therapy, Gerontology ",Occupational Therapy,P,,061,OTR
+225XH1200X,"Occupational Therapy, Hand ",Occupational Therapy,P,,061,OTR
+225XH1300X ,"Occupational Therapy, Human Factors ",Occupational Therapy,P,,061,OTR
+225XL0004X,"Occupational Therapy, Low Vision",Occupational Therapy,P,,061,OTR
+225XM0800X ,"Occupational Therapy, Mental Health",Occupational Therapy,P,,061,OTR
+225XN1300X,"Occupational Therapy, Neurorehabilitation",Occupational Therapy,P,,061,OTR
+225XP0019X ,"Occupational Therapy, Physical Rehabilitation",Occupational Therapy,P,,061,OTR
+225XP0200X ,"Occupational Therapy, Pediatrics",Pediatric Occupational Therapy,P,,119,OTR
+225XR0403X,"Occupational Therapy, Driving and Community Mobility",Occupational Therapy,P,,061,OTR
+226300000X ,Kinesiotherapist,Unknown Non-Physician,P,,099,ANC
+227800000X,"Respiratory Therapist, Certified ",Chest and Respiratory Therapy,P,,075,MD
+2278C0205X ,"Respiratory Certified, Critical Care ",Chest and Respiratory Therapy,P,,075,MD
+2278E0002X ,"Respiratory Certified,  Emergency Care ",Chest and Respiratory Therapy,P,,075,MD
+2278E1000X,"Respiratory Certified,  Educational ",Chest and Respiratory Therapy,P,,075,MD
+2278G0305X,"Respiratory Certified,  Geriatric Care",Chest and Respiratory Therapy,P,,075,MD
+2278G1100X,"Respiratory Certified,  General Care ",Chest and Respiratory Therapy,P,,075,MD
+2278H0200X ,"Respiratory Certified,  Home Health ",Chest and Respiratory Therapy,P,,075,MD
+2278P1004X,"Respiratory Certified,  Pulmonary Diagnostics",Chest and Respiratory Therapy,P,,075,MD
+2278P1005X,"Respiratory Certified,  Pulmonary Rehabilitation ",Chest and Respiratory Therapy,P,,075,MD
+2278P1006X,"Respiratory Certified,  Pulmonary Function Technologist",Chest and Respiratory Therapy,P,,075,MD
+2278P3800X ,"Respiratory Certified,  Palliative/Hospice",Chest and Respiratory Therapy,P,,075,MD
+2278P3900X ,"Respiratory Certified,  Neonatal/Pediatrics",Chest and Respiratory Therapy,P,,075,MD
+2278P4000X,"Respiratory Certified,  Patient Transport",Chest and Respiratory Therapy,P,,075,MD
+2278S1500X ,"Respiratory Certified,  SNF/Subacute Care",Chest and Respiratory Therapy,P,,075,MD
+227900000X,"Respiratory Therapist, Registered ",Chest and Respiratory Therapy,P,,075,MD
+2279C0205X ,"Respiratory Registered, Critical Care  ",Chest and Respiratory Therapy,P,,075,MD
+2279E0002X ,"Respiratory Registered, Emergency Care ",Chest and Respiratory Therapy,P,,075,MD
+2279E1000X ,"Respiratory Registered, Educational ",Chest and Respiratory Therapy,P,,075,MD
+2279G0305X ,"Respiratory Registered, Geriatric Care ",Chest and Respiratory Therapy,P,,075,MD
+2279G1100X,"Respiratory Registered, General Care ",Chest and Respiratory Therapy,P,,075,MD
+2279H0200X ,"Respiratory Registered, Home Health",Chest and Respiratory Therapy,P,,075,MD
+2279P1004X ,"Respiratory Registered, Pulmonary Diagnostics ",Chest and Respiratory Therapy,P,,075,MD
+2279P1005X ,"Respiratory Registered, Pulmonary Rehabilitation",Chest and Respiratory Therapy,P,,075,MD
+2279P1006X ,"Respiratory Registered, Pulmonary Function Technologist ",Chest and Respiratory Therapy,P,,075,MD
+2279P3800X ,"Respiratory Registered, Palliative/Hospice",Chest and Respiratory Therapy,P,,075,MD
+2279P3900X ,"Respiratory Registered, Neonatal/Pediatrics ",Chest and Respiratory Therapy,P,,075,MD
+2279P4000X,"Respiratory Registered, Patient Transport ",Chest and Respiratory Therapy,P,,075,MD
+2279S1500X ,"Respiratory Registered, SNF/Subacute Care ",Chest and Respiratory Therapy,P,,075,MD
+229N00000X ,Anaplastologist ,Unknown Non-Physician,P,,099,ANC
+231H00000X ,Audiologist  ,Audiology,P,,205,"MA, AUD"
+231HA2400X,"Audiology, Assistive Technology Practitioner ",Unknown Non-Physician,P,,099,ANC
+231HA2500X,"Audiology, Assistive Technology Supplier",Unknown Non-Physician,P,,099,ANC
+235500000X ,Specialist/Technologist  ,Unknown Non-Physician,P,,099,ANC
+235Z00000X ,Speech-Language Pathologist ,Speech Pathology,P,,246,LSP
+237600000X,Audiologist-Hearing Aid Fitter  ,Audiology,P,,205,"MA, AUD"
+237700000X,Hearing Instrument Specialist ,Unknown Non-Physician,P,,099,ANC
+242T00000X  ,"Other Technical, Perfusionist ",Unknown Non-Physician,P,,099,ANC
+243U00000X,Radiology Practitioner Assistant ,Unknown Non-Physician,P,,099,ANC
+246Q00000X,"Specialist/Technologist, Pathology ",Unknown Non-Physician,P,,099,ANC
+246QB0000X ,"Specialist Pathology, Blood Banking",Unknown Non-Physician,P,,099,ANC
+246QC1000X  ,"Specialist Pathology, Chemistry ",Unknown Non-Physician,P,,099,ANC
+246QC2700X ,"Specialist Pathology, Cytotechnology ",Unknown Non-Physician,P,,099,ANC
+246QH0000X ,"Specialist Pathology, Hematology ",Unknown Non-Physician,P,,099,ANC
+246QH0401X ,"Specialist Pathology, Hemapheresis Practitioner ",Unknown Non-Physician,P,,099,ANC
+246QH0600X,"Specialist Pathology, Histology ",Unknown Non-Physician,P,,099,ANC
+246QI0000X ,"Specialist Pathology, Immunology ",Unknown Non-Physician,P,,099,ANC
+246QL0900X,"Specialist Pathology, Laboratory Management",Unknown Non-Physician,P,,099,ANC
+246QL0901X,"Specialist Pathology, Laboratory Management, Diplomate",Unknown Non-Physician,P,,099,ANC
+246QM0706X,"Specialist Pathology, Medical Technologist ",Unknown Non-Physician,P,,099,ANC
+246QM0900X ,"Specialist Pathology, Microbiology",Unknown Non-Physician,P,,099,ANC
+246R00000X,"Technician, Pathology ",Unknown Non-Physician,P,,099,ANC
+246RH0600X ,"Technician Pathology, Histology  ",Unknown Non-Physician,P,,099,ANC
+246RM2200X,"Technician Pathology, Medical Laboratory",Unknown Non-Physician,P,,099,ANC
+246RP1900X ,"Technician Pathology, Phlebotomy ",Unknown Non-Physician,P,,099,ANC
+246W00000X,"Technician, Cardiology ",Unknown Non-Physician,P,,099,ANC
+246X00000X,Specialist/Technologist Cardiovascular ,Unknown Non-Physician,P,,099,ANC
+246XC2901X ,Cardiovascular Invasive Specialist ,Unknown Non-Physician,P,,099,ANC
+246XC2903X ,Vascular Specialist ,Unknown Non-Physician,P,,099,ANC
+246XS1301X  ,Sonography  ,Unknown Non-Physician,P,,099,ANC
+246Y00000X,"Specialist/Technologist, Health Information ",Unknown Non-Physician,P,,099,ANC
+246YC3301X  ,"Coding Specialist, Hospital Based  ",Unknown Non-Physician,P,,099,ANC
+246YC3302X ,"Coding Specialist, Physician Office Based ",Unknown Non-Physician,P,,099,ANC
+246YR1600X ,Registered Record Administrator ,Unknown Non-Physician,P,,099,ANC
+246Z00000X,"Specialist/Technologist, Other ",Unknown Non-Physician,P,,099,ANC
+246ZA2600X  ,"Specialist, Art, Medical ",Unknown Non-Physician,P,,099,ANC
+246ZB0301X  ,"Specialist, Biomedical Engineering ",Unknown Non-Physician,P,,099,ANC
+246ZB0302X  ,"Specialist, Biomedical Photographer",Unknown Non-Physician,P,,099,ANC
+246ZB0500X  ,"Specialist, Biochemist",Unknown Non-Physician,P,,099,ANC
+246ZB0600X  ,"Specialist, Biostatistician",Unknown Non-Physician,P,,099,ANC
+246ZC0007X  ,"Specialist, Certified First Assistant",Unknown Non-Physician,P,,099,ANC
+246ZE0500X  ,"Specialist, EEG ",Unknown Non-Physician,P,,099,ANC
+246ZE0600X  ,"Specialist, Electroneurodiagnostic",Unknown Non-Physician,P,,099,ANC
+246ZG0701X  ,"Specialist, Graphics Methods",Unknown Non-Physician,P,,099,ANC
+246ZG1000X  ,"Specialist, Geneticist, Medical (PhD) ",Unknown Non-Physician,P,,099,ANC
+246ZI1000X  ,"Specialist, Illustration, Medical ",Unknown Non-Physician,P,,099,ANC
+246ZN0300X  ,"Specialist, Nephrology",Unknown Non-Physician,P,,099,ANC
+246ZS0400X ,"Specialist, Surgical ",Unknown Non-Physician,P,,099,ANC
+247000000X,"Technician, Health Information ",Unknown Non-Physician,P,,099,ANC
+2470A2800X,Assistant Record Technician ,Unknown Non-Physician,P,,099,ANC
+247100000X ,Radiologic Technologist,Unknown Non-Physician,P,,099,ANC
+2471B0102X ,"Radiology Tech, Bone Densitometry  ",Unknown Non-Physician,P,,099,ANC
+2471C1101X ,"Radiology Tech, Cardiovascular-Interventional Technology  ",Unknown Non-Physician,P,,099,ANC
+2471C1106X ,"Radiology Tech, Cardiac-Interventional Technology  ",Unknown Non-Physician,P,,099,ANC
+2471C3401X,"Radiology Tech, Computed Tomography  ",Unknown Non-Physician,P,,099,ANC
+2471C3402X,"Radiology Tech, Radiography  ",Unknown Non-Physician,P,,099,ANC
+2471M1202X ,"Radiology Tech, Magnetic Resonance Imaging  ",Unknown Non-Physician,P,,099,ANC
+2471M2300X ,"Radiology Tech, Mammography  ",Unknown Non-Physician,P,,099,ANC
+2471N0900X ,"Radiology Tech, Nuclear Medicine Technology ",Unknown Non-Physician,P,,099,ANC
+2471Q0001X ,"Radiology Tech, Quality Management ",Unknown Non-Physician,P,,099,ANC
+2471R0002X ,"Radiology Tech, Radiation Therapy  ",Unknown Non-Physician,P,,099,ANC
+2471S1302X ,"Radiology Tech, Sonography  ",Unknown Non-Physician,P,,099,ANC
+2471V0105X,"Radiology Tech, Vascular Sonography ",Unknown Non-Physician,P,,099,ANC
+2471V0106X ,"Radiology Tech, Vascular-Interventional Technology ",Unknown Non-Physician,P,,099,ANC
+247200000X,"Technician, Other ",Unknown Non-Physician,P,,099,ANC
+2472B0301X ,"Technician, Biomedical Engineering ",Unknown Non-Physician,P,,099,ANC
+2472D0500X ,"Technician, Darkroom ",Unknown Non-Physician,P,,099,ANC
+2472E0500X,"Technician, EEG ",Unknown Non-Physician,P,,099,ANC
+2472R0900X,"Technician, Renal Dialysis",Unknown Non-Physician,P,,099,ANC
+2472V0600X ,"Technician, Veterinary",Unknown Non-Physician,P,,099,ANC
+247ZC0005X  ,"Technician, Clinical Laboratory Director, Non-physician  ",Unknown Non-Physician,P,,099,ANC
+251300000X,"Agencies, Local Education Agency (LEA) ",School / Custodial /Developmental Center,O,009,,
+251B00000X,"Agencies, Case Management ",Non Medical Group/Outpatient Facility,O,054,,
+251C00000X,"Agencies, Day Training, Developmentally Disabled Services ","Out-Patient Diagnostic or Treatment Centers (radiology, lab, chemo, etc.) ",O,043,,
+251E00000X ,"Agencies, Home Health ",Home Health Care Agency,O,014,,
+251F00000X ,"Agencies, Home Infusion ",Home Infusion/Home IV Therapy,O,024,,
+251F00000X ,"Agencies, Home Infusion ",Home Health/Home Infusion (Combined),O,041,,
+251G00000X,"Agencies, Hospice Care, Community Based ",Outpatient Hospice ,O,018,,
+251J00000X ,"Agencies, Nursing Care ",Skilled Nursing  Facility (Convalescent Facility),O,007,,
+251K00000X ,"Agencies, Public Health or Welfare",Non Medical Group/Outpatient Facility,O,054,,
+251S00000X ,"Agencies, Community/Behavioral Health ",MHSA Rehabilitation Facility,O,042,,
+251T00000X ,"Agencies, Program of All-Inclusive Care for the Elderly (PACE) Provider Organization ","Out-Patient Diagnostic or Treatment Centers (radiology, lab, chemo, etc.) ",O,043,,
+251V00000X ,"Agencies, Voluntary or Charitable",Non Medical Group/Outpatient Facility,O,054,,
+251X00000X,"Agencies, Supports Brokerage",Non Medical Group/Outpatient Facility,O,054,,
+252Y00000X ,"Agencies, Early Intervention Provider Agency ",Non Medical Group/Outpatient Facility,O,054,,
+253J00000X,"Agencies, Foster Care Agency ",Non Medical Group/Outpatient Facility,O,054,,
+253Z00000X ,"Agencies, In Home Supportive Care",Non Medical Group/Outpatient Facility,O,054,,
+261Q00000X,Clinic/Center,Clinic,O,039,,
+261QA0005X,"Clinic/Center, Ambulatory Family Planning Facility",Clinic,O,039,,
+261QA0006X,"Clinic/Center, Ambulatory Fertility Facility ",Infertility Center,O,035,,
+261QA0600X ,"Clinic/Center, Adult Day Care ",Adult Day Care ,O,036,,
+261QA0900X ,"Clinic/Center, Amputee ",Clinic,O,039,,
+261QA1903X ,"Clinic/Center, Ambulatory Surgical ",Ambulatory Surgery Center,O,012,,
+261QA3000X ,"Clinic/Center, Augmentative Communication ",Audiology/Hearing Center  ,O,037,,
+261QB0400X ,"Clinic/Center, Birthing ",Outpatient Birthing Center (Freestanding),O,019,,
+261QC0050X ,"Clinic/Center, Critical Access Hospital ",Critical Access Hospital,O,001,,
+261QC1500X ,"Clinic/Center, Community Health ",Department of Health Clinic,O,060,,
+261QC1800X ,"Clinic/Center, Corporate Health ",Clinic,O,039,,
+261QD0000X ,"Clinic/Center, Dental ","Dentist, Oral Surgeon (Doctor of Dent Medicine) ",O,050,050,
+261QD0000X ,"Clinic/Center, Dental ",Endodontics,O,050,051,
+261QD0000X ,"Clinic/Center, Dental ",Orthodontics,O,050,052,
+261QD0000X ,"Clinic/Center, Dental ",Pedodontics,O,050,053,
+261QD0000X ,"Clinic/Center, Dental ",Peridontics,O,050,054,
+261QD0000X ,"Clinic/Center, Dental ",Prosthodontics,O,050,055,
+261QD0000X ,"Clinic/Center, Dental ","Dentist, Oral Surgeon (Doctor of Dent Surg)",O,050,092,
+261QD1600X ,"Clinic/Center, Developmental Disabilities ",Neurodevelopmental Disabilities,O,033,343,
+261QE0002X,"Clinic/Center, Emergency Care  ",Emergency Medicine,O,033,042,
+261QE0700X ,"Clinic/Center, End-Stage Renal Disease (ESRD) Treatment  ",Urology,O,033,034,
+261QE0800X ,"Clinic/Center, Endoscopy ",Endoscopy,O,033,294,
+261QF0050X ,"Clinic/Center, Family Planning, Non-Surgical  ",Clinic,O,039,,
+261QF0400X,"Clinic/Center, Federally Qualified Health Center (FQHC)  ",Federally Qualified Health Care Agency,O,058,,
+261QG0250X ,"Clinic/Center, Genetics   ",Clinical Biochemical Genetics,O,033,305,
+261QG0250X ,"Clinic/Center, Genetics   ",Clinical Biochemical/Molecular Genetics,O,033,306,
+261QG0250X ,"Clinic/Center, Genetics   ",Clinical Cytogenetics,O,033,307,
+261QG0250X ,"Clinic/Center, Genetics   ",Clinical Genetics,O,033,308,
+261QG0250X ,"Clinic/Center, Genetics   ",Clinical Molecular Genetics,O,033,370,
+261QH0100X,"Clinic/Center, Health Service  ",Clinic,O,039,,
+261QH0700X ,"Clinic/Center, Hearing and Speech  ",Audiology/Hearing Center  ,O,037,,
+261QI0500X ,"Clinic/Center, Infusion Therapy ",Home Infusion/Home IV Therapy,O,024,,
+261QI0500X ,"Clinic/Center, Infusion Therapy ",Home Health/Home Infusion (Combined),O,041,,
+261QL0400X,"Clinic/Center, Lithotripsy  ",Lithotripsy,O,026,,
+261QM0801X ,"Clinic/Center, Mental Health (Including Community Mental Health Center) ",MHSA Rehabilitation Facility,O,042,,
+261QM0801X ,"Clinic/Center, Mental Health (Including Community Mental Health Center) ",Clinic,O,039,,
+261QM0850X ,"Clinic/Center, Adult Mental Health ",MHSA Rehabilitation Facility,O,042,,
+261QM0850X ,"Clinic/Center, Adult Mental Health ",Clinic,O,039,,
+261QM0855X ,"Clinic/Center, Adolescent and Children Mental Health ",MHSA Rehabilitation Facility,O,042,,
+261QM0855X ,"Clinic/Center, Adolescent and Children Mental Health ",Clinic,O,039,,
+261QM1000X ,"Clinic/Center, Migrant Health ",Clinic,O,039,,
+261QM1100X,"Clinic/Center, Military/U.S. Coast Guard Outpatient ",Military Hospital,O,046,,
+261QM1101X,"Clinic/Center, Military and U.S. Coast Guard Ambulatory Procedure  ",Military Hospital,O,046,,
+261QM1102X ,"Clinic/Center, Military Outpatient Operational (Transportable) Component  ",Military Hospital,O,046,,
+261QM1103X ,"Clinic/Center, Military Ambulatory Procedure Visits Operational (Transportable)  ",Military Hospital,O,046,,
+261QM1200X ,"Clinic/Center, Magnetic Resonance Imaging (MRI)  ",Magnetic Resonance Imaging Center (MRI)  ,O,027,,
+261QM1300X ,"Clinic/Center, Multi-Specialty  ",Clinic,O,039,,
+261QM2500X ,"Clinic/Center, Medical Specialty   ",Clinic,O,039,,
+261QM2800X ,"Clinic/Center, Methadone  ",Clinic,O,039,,
+261QM3000X ,"Clinic/Center, Medically Fragile Infants and Children Day Care  ",Non Medical Group/Outpatient Facility,O,054,,
+261QP0904X,"Clinic/Center, Public Health, Federal ",Department of Health Clinic,O,060,,
+261QP0904X,"Clinic/Center, Public Health, Federal ",Public Health & General Preventive Medicine,O,033,236,
+261QP0904X,"Clinic/Center, Public Health, Federal ",Public Health,O,033,238,
+261QP0905X,"Clinic/Center, Public Health, State or Local ",Department of Health Clinic,O,060,,
+261QP0905X,"Clinic/Center, Public Health, State or Local ",Public Health & General Preventive Medicine,O,033,236,
+261QP0905X,"Clinic/Center, Public Health, State or Local ",Public Health,O,033,238,
+261QP1100X,"Clinic/Center, Podiatric ",Podiatry,O,050,048,
+261QP2000X ,"Clinic/Center, Physical Therapy ",Physical Therapy,O,050,073,
+261QP2300X ,"Clinic/Center, Primary Care ",Clinic,O,039,,
+261QP2400X,"Clinic/Center, Prison Health ",Clinic,O,039,,
+261QP3300X,"Clinic/Center, Pain  ",Clinic,O,039,,
+261QR0200X ,"Clinic/Center, Radiology  ",Radiology,O,033,030,
+261QR0200X ,"Clinic/Center, Radiology  ",X-Ray/Radiology Center,O,031,,
+261QR0206X,"Clinic/Center, Radiology, Mammography ",Radiology,O,033,030,
+261QR0206X,"Clinic/Center, Radiology, Mammography ",X-Ray/Radiology Center,O,031,,
+261QR0207X ,"Clinic/Center, Radiology, Mobile Mammography",Radiology,O,033,030,
+261QR0207X ,"Clinic/Center, Radiology, Mobile Mammography",X-Ray/Radiology Center,O,031,,
+261QR0208X ,"Clinic/Center, Radiology, Mobile  ",Radiology,O,033,030,
+261QR0208X ,"Clinic/Center, Radiology, Mobile  ",X-Ray/Radiology Center,O,031,,
+261QR0400X ,"Clinic/Center, Rehabilitation ",Outpatient Medical Rehab Center,O,017,,
+261QR0401X ,"Clinic/Center, Rehabilitation, Comprehensive Outpatient Rehabilitation Facility (CORF) ",Outpatient Medical Rehab Center,O,017,,
+261QR0404X,"Clinic/Center, Rehabilitation, Cardiac Facilities ",Outpatient Medical Rehab Center,O,017,,
+261QR0404X,"Clinic/Center, Rehabilitation, Cardiac Facilities ",Cardiac Diagnostic Center ,O,032,,
+261QR0404X,"Clinic/Center, Rehabilitation, Cardiac Facilities ",Cardiac Diagnostic,O,033,513,
+261QR0404X,"Clinic/Center, Rehabilitation, Cardiac Facilities ",Cardiac Rehab Facility ,O,038,,
+261QR0405X,"Clinic/Center, Rehabilitation, Substance Use Disorder Unit - 276400000X ",MHSA Rehabilitation Facility,O,042,,
+261QR0405X,"Clinic/Center, Rehabilitation, Substance Use Disorder Unit - 276400000X ",Alcohol Treatment Center ,O,013,,
+261QR0800X ,"Clinic/Center, Recovery Care ",Clinic,O,039,,
+261QR1100X ,"Clinic/Center, Research  ",Non Medical Group/Outpatient Facility,O,054,,
+261QR1300X,"Clinic/Center, Rural Health  ",Rural Health Clinic,O,039,,
+261QS0112X ,"Clinic/Center, Oral and Maxillofacial Surgery ",Oral and Maxillofacial Surgery,O,033,092,
+261QS0132X,"Clinic/Center, Ophthalmologic Surgery ",Ophthalmology,O,033,018,
+261QS1000X,"Clinic/Center, Student Health ",Clinic,O,039,,
+261QS1200X ,"Clinic/Center,Sleep Disorder Diagnostic  ",Sleep Study Center,O,044,,
+261QU0200X ,"Clinic/Center, Urgent Care ",Urgent Care Center (Non Hosp),O,030,,
+261QU0200X ,"Clinic/Center, Urgent Care ",Urgent Care Medicine,O,033,328,
+261QV0200X,"Clinic/Center, VA  ",Veteran's Administration or other Gov'tal Facility,O,016,,
+261QX0100X ,"Clinic/Center, Occupational Medicine ",Occupational Medicine,O,033,231,
+261QX0200X,"Clinic/Center, Oncology  ",Medical Oncology,O,033,059,
+261QX0203X ,"Clinic/Center, Oncology, Radiation  ",Radiation Oncology,O,033,032,
+261QX0203X ,"Clinic/Center, Oncology, Radiation  ",Radiation Oncology Center,O,029,,
+273100000X  ,"Hospital Units, Epilepsy Unit ",General Acute Care Hospital ,O,001,,
+273R00000X,"Hospital Units, Psychiatric Unit ",Psychiatric Hosptial,O,003,,
+273Y00000X,"Hospital Units, Rehabilitation Unit ",In-Patient Physical Disability / Rehabilitation Facility,O,048,,
+275N00000X ,"Hospital Units, Medicare Defined Swing Bed Unit ",General Acute Care Hospital ,O,001,,
+276400000X ,"Hospital Units, Rehabilitation, Substance Use Disorder Unit ",Alcohol/Chemical Dependency Treatment Center ,O,045,,
+281P00000X ,"Hospitals, Chronic Disease Hospital ",General Acute Care Hospital ,O,001,,
+281PC2000X ,"Hospitals, Chronic Disease Hospital, Children",Pediatric Hospital,O,047,,
+282E00000X,"Hospitals, Long Term Care Hospital ",Skilled Nursing  Facility (Convalescent Facility),O,007,,
+282J00000X ,"Hospitals, Religious Nonmedical Health Care Institution ",Non Medical Inpatient Facility,O,055,,
+282J00000X ,"Hospitals, Religious Nonmedical Health Care Institution ",Christian Science Hospital,O,004,,
+282N00000X,"Hospitals, General Acute Care Hospital ",General Acute Care Hospital ,O,001,,
+282NC0060X ,"Hospitals, General Accute, Critical Access ",Critical Access Hospital,O,001,,
+282NC2000X ,"Hospitals, General Acute, Children ",Pediatric Hospital,O,047,,
+282NR1301X ,"Hospitals, General Acute, Rural",General Acute Care Hospital ,O,001,,
+282NW0100X ,"Hospitals, General Acute, Women ",General Acute Care Hospital ,O,001,,
+283Q00000X ,"Hospitals, Psychiatric Hospital",Psychiatric Hospital,O,033,,
+283X00000X ,"Hospitals, Rehabilitation Hospital ",In-Patient Physical Disability / Rehabilitation Facility,O,048,,
+283XC2000X ,"Hospitals, Rehabilitation Hospital, Children",Pediatric Hospital,O,047,,
+284300000X ,"Hospitals, Special Hospital ",General Acute Care Hospital ,O,001,,
+286500000X ,"Hospitals, Military Hospital ",Military Hospital,O,046,,
+2865M2000X  ,"Hospitals, Military General Acute Care Hospital ",Military Hospital,O,046,,
+2865X1600X ,"Hospitals, Military General Acute Care Hospital. Operational (Transportable)",Military Hospital,O,046,,
+291900000X ,"Laboratories, Military Clinical Medical Laboratory  ",Laboratory Center (Independent or Commercial) ,O,025,,
+291U00000X ,"Laboratories, Clinical Medical Laboratory ",Laboratory Center (Independent or Commercial) ,O,025,,
+292200000X,"Laboratories, Dental Laboratory ",Laboratory Center (Independent or Commercial) ,O,025,,
+293D00000X ,"Laboratories, Physiological Laboratory ",Laboratory Center (Independent or Commercial) ,O,025,,
+302F00000X ,"Managed Care Org, Exclusive Provider Organization ",Non Medical Group/Outpatient Facility,O,054,,
+302R00000X ,"Managed Care Org, Health Maintenance Organization ",Non Medical Group/Outpatient Facility,O,054,,
+305R00000X ,"Managed Care Org, Preferred Provider Organization ",Non Medical Group/Outpatient Facility,O,054,,
+305S00000X ,"Managed Care Org, Point of Service ",Non Medical Group/Outpatient Facility,O,054,,
+310400000X ,Assisted Living Facility ,Skilled Nursing Facility ,O,007,,
+3104A0625X ,"Assisted Living, Mental Illness ",Residential Treatment Center,O,020,,
+3104A0630X,"Assisted Living, Behavioral Disturbances ",Residential Treatment Center,O,020,,
+310500000X,"Intermediate Care Facility, Mental Illness ",Residential Treatment Center,O,020,,
+311500000X ,Alzheimer Center (Dementia Center) ,School / Custodial /Developmental Center,O,009,,
+311Z00000X ,Custodial Care Facility ,School / Custodial /Developmental Center,O,009,,
+311ZA0620X,Adult Care Home ,School / Custodial /Developmental Center,O,009,,
+313M00000X ,Nursing Facility/Intermediate Care Facility ,Skilled Nursing Facility ,O,007,,
+314000000X ,Skilled Nursing Facility ,Skilled Nursing Facility ,O,007,,
+3140N1450X,"Nursing Care, Pediatric ",Skilled Nursing Facility ,O,007,,
+315D00000X ,"Hospice, Inpatient",Inpatient Hospice,O,052,,
+315P00000X ,"Intermediate Care Facility, Mentally Retarded",Residential Treatment Center,O,020,,
+320600000X ,"Residential Treatment Facility, Mental Retardation and/or Developmental Disabilities ",Residential Treatment Center,O,020,,
+320700000X,"Residential Treatment Facility, Physical Disabilities",In-Patient Physical Disability / Rehabilitation Facility,O,048,,
+320800000X ,"Community Based Residential Treatment Facility, Mental Illness ",Residential Treatment Center,O,020,,
+320900000X,"Community Based Residential Treatment Facility, Mental Retardation and/or Developmental Disabilities",Residential Treatment Center,O,020,,
+322D00000X ,"Residential Treatment Facility, Emotionally Disturbed Children ",Residential Treatment Center,O,020,,
+323P00000X,Psychiatric Residential Treatment Facility,Residential Treatment Center,O,020,,
+324500000X ,Substance Abuse Rehabilitation Facility ,Alcohol/Chemical Dependency Treatment Center ,O,045,,
+3245S0500X,"Substance Abuse Treatment, Children ",Alcohol/Chemical Dependency Treatment Center ,O,045,,
+331L00000X,Suppliers Blood Bank ,Blood Services Center,O,034,,
+332000000X ,Military/U.S. Coast Guard Pharmacy ,Pharmacy,O,028,,
+332100000X ,Department of Veterans Affairs (VA) Pharmacy ,Pharmacy,O,028,,
+332800000X,Indian Health Service/Tribal/Urban Indian Health (I/T/U) Pharmacy,Pharmacy,O,028,,
+332900000X,Non-Pharmacy Dispensing Site ,Pharmacy,O,028,,
+332B00000X ,Durable Medical Equipment & Medical Supplies ,Durable Medical Equipment (Medical Supply Company),O,040,,
+332B00000X ,Durable Medical Equipment & Medical Supplies ,Durable Medical Equipment Orthotics/Prosthetics,O,023,,
+332BC3200X,Customized Equipment ,Durable Medical Equipment (Medical Supply Company),O,040,,
+332BC3200X,Customized Equipment ,Durable Medical Equipment Orthotics/Prosthetics,O,023,,
+332BD1200X ,Dialysis Equipment & Supplies ,Durable Medical Equipment (Medical Supply Company),O,040,,
+332BD1200X ,Dialysis Equipment & Supplies ,Durable Medical Equipment Orthotics/Prosthetics,O,023,,
+332BN1400X ,Nursing Facility Supplies,Durable Medical Equipment (Medical Supply Company),O,040,,
+332BN1400X ,Nursing Facility Supplies,Durable Medical Equipment Orthotics/Prosthetics,O,023,,
+332BP3500X ,Parenteral & Enteral Nutrition ,Durable Medical Equipment (Medical Supply Company),O,040,,
+332BP3500X ,Parenteral & Enteral Nutrition ,Durable Medical Equipment Orthotics/Prosthetics,O,023,,
+332BX2000X,Oxygen Equipment & Supplies,Durable Medical Equipment (Medical Supply Company),O,040,,
+332BX2000X,Oxygen Equipment & Supplies,Durable Medical Equipment Orthotics/Prosthetics,O,023,,
+332G00000X,Eye Bank ,Durable Medical Equipment (Medical Supply Company),O,040,,
+332G00000X,Eye Bank ,Durable Medical Equipment Orthotics/Prosthetics,O,023,,
+332H00000X ,"Eyewear Supplier (Equipment, not the service)",Durable Medical Equipment (Medical Supply Company),O,040,,
+332H00000X ,"Eyewear Supplier (Equipment, not the service)",Durable Medical Equipment Orthotics/Prosthetics,O,023,,
+332S00000X ,Hearing Aid Equipment ,Durable Medical Equipment (Medical Supply Company),O,040,,
+332S00000X ,Hearing Aid Equipment ,Durable Medical Equipment Orthotics/Prosthetics,O,023,,
+332S00000X ,Hearing Aid Equipment ,Audiology/Hearing Center  ,O,037,,
+332U00000X ,Home Delivered Meals,Non Medical Group/Outpatient Facility,O,054,,
+333300000X,Emergency Response System Companies,Non Medical Group/Outpatient Facility,O,054,,
+333600000X ,Pharmacy,Pharmacy,O,028,,
+3336C0002X,Clinic Pharmacy ,Pharmacy,O,028,,
+3336C0003X ,Community/Retail Pharmacy,Pharmacy,O,028,,
+3336C0004X ,Compounding Pharmacy,Pharmacy,O,028,,
+3336H0001X,Home Infusion Therapy Pharmacy,Pharmacy,O,028,,
+3336I0012X,Institutional Pharmacy,Pharmacy,O,028,,
+3336L0003X ,Long Term Care Pharmacy ,Pharmacy,O,028,,
+3336M0002X ,Mail Order Pharmacy,Pharmacy,O,028,,
+3336M0003X,Managed Care Organization Pharmacy,Pharmacy,O,028,,
+3336N0007X ,Nuclear Pharmacy ,Pharmacy,O,028,,
+3336S0011X ,Specialty Pharmacy,Pharmacy,O,028,,
+335E00000X ,Prosthetic/Orthotic Supplier ,Durable Medical Equipment Orthotics/Prosthetics,O,023,,
+335U00000X ,Organ Procurement Organization ,Non Medical Group/Outpatient Facility,O,054,,
+335V00000X ,Portable X-Ray Supplier ,X-Ray/Radiology Center,O,031,,
+341600000X,Ambulance,Ambulance Services,O,021,,
+3416A0800X ,Air Transport ,Ambulance Services,O,021,,
+3416L0300X ,Land Transport ,Ambulance Services,O,021,,
+3416S0300X ,Water Transport,Ambulance Services,O,021,,
+341800000X ,Military/U.S. Coast Guard Transport ,Ambulance Services,O,021,,
+3418M1110X  ,"Military or U.S. Coast Guard Ambulance, Ground Transport",Ambulance Services,O,021,,
+3418M1120X  ,"Military or U.S. Coast Guard Ambulance, Air Transport ",Ambulance Services,O,021,,
+3418M1130X ,"Military or U.S. Coast Guard Ambulance, Water Transport ",Ambulance Services,O,021,,
+343800000X  ,Secured Medical Transport (VAN) ,Non -Emergent Transportation,O,059,,
+343900000X  ,Non-emergency Medical Transport (VAN) ,Non -Emergent Transportation,O,059,,
+344600000X ,Taxi ,Non Medical Group/Outpatient Facility,O,054,,
+347B00000X ,Bus ,Non Medical Group/Outpatient Facility,O,054,,
+347C00000X  ,Private Vehicle,Non Medical Group/Outpatient Facility,O,054,,
+347D00000X ,Train ,Non Medical Group/Outpatient Facility,O,054,,
+347E00000X ,Transportation Broker ,Non Medical Group/Outpatient Facility,O,054,,
+363A00000X,Physician Assistant ,Physician Assistant,P,,338,PA
+363AM0700X ,Medical ,Physician Assistant,P,,338,PA
+363AS0400X ,Surgical,Surgical Assistant,P,,393,CCC
+363AS0400X ,Surgical,Physician Assistant,P,,338,PA
+363L00000X,Nurse Practitioner ,Nurse Practitioner,P,,077,NP
+363L00000X,Nurse Practitioner ,Family Nurse Practitioner,P,,339,FNP
+363LA2100X,"Nurse Practitioner, Acute Care ",Nurse Practitioner,P,,077,NP
+363LA2100X,"Nurse Practitioner, Acute Care ",Family Nurse Practitioner,P,,339,FNP
+363LA2200X ,"Nurse Practitioner, Adult Health",Nurse Practitioner,P,,077,NP
+363LA2200X ,"Nurse Practitioner, Adult Health",Family Nurse Practitioner,P,,339,FNP
+363LC0200X ,"Nurse Practitioner, Critical Care Medicine ",Nurse Practitioner,P,,077,NP
+363LC0200X ,"Nurse Practitioner, Critical Care Medicine ",Family Nurse Practitioner,P,,339,FNP
+363LC1500X ,"Nurse Practitioner, Community Health ",Nurse Practitioner,P,,077,NP
+363LC1500X ,"Nurse Practitioner, Community Health ",Family Nurse Practitioner,P,,339,FNP
+363LF0000X ,"Nurse Practitioner, Family ",Nurse Practitioner,P,,077,NP
+363LF0000X ,"Nurse Practitioner, Family ",Family Nurse Practitioner,P,,339,FNP
+363LG0600X ,"Nurse Practitioner, Gerontology ",Nurse Practitioner,P,,077,NP
+363LG0600X ,"Nurse Practitioner, Gerontology ",Family Nurse Practitioner,P,,339,FNP
+363LN0000X ,"Nurse Practitioner, Neonatal ",Nurse Practitioner,P,,077,NP
+363LN0000X ,"Nurse Practitioner, Neonatal ",Family Nurse Practitioner,P,,339,FNP
+363LN0000X ,"Nurse Practitioner, Neonatal ",Pediatric Nurse Practitioner,P,,389,NP
+363LN0005X ,"Nurse Practitioner, Neonatal, Critical Care",Nurse Practitioner,P,,077,NP
+363LN0005X ,"Nurse Practitioner, Neonatal, Critical Care",Family Nurse Practitioner,P,,339,FNP
+363LN0005X ,"Nurse Practitioner, Neonatal, Critical Care",Pediatric Nurse Practitioner,P,,389,NP
+363LP0200X,"Nurse Practitioner, Pediatrics ",Nurse Practitioner,P,,077,NP
+363LP0200X,"Nurse Practitioner, Pediatrics ",Family Nurse Practitioner,P,,339,FNP
+363LP0200X,"Nurse Practitioner, Pediatrics ",Pediatric Nurse Practitioner,P,,389,NP
+363LP0222X ,"Nurse Practitioner, Pediatrics, Critical Care",Nurse Practitioner,P,,077,NP
+363LP0222X ,"Nurse Practitioner, Pediatrics, Critical Care",Family Nurse Practitioner,P,,339,FNP
+363LP0222X ,"Nurse Practitioner, Pediatrics, Critical Care",Pediatric Nurse Practitioner,P,,389,NP
+363LP0808X ,"Nurse Practitioner, Psychiatric/Mental Health ",Psychiatric Nurse Specialist/Practitioner,,,329,
+363LP0808X ,"Nurse Practitioner, Psychiatric/Mental Health ",Advanced Practice Registered Psychiatric Nurse Practitioner,P,,374,"MA, MS"
+363LP0808X ,"Nurse Practitioner, Psychiatric/Mental Health ",Family Nurse Practitioner,P,,339,FNP
+363LP0808X ,"Nurse Practitioner, Psychiatric/Mental Health ","Nurse Practitioner, Clinical Specialist in Mental Health (NP)",P,,387,NP
+363LP1700X ,"Nurse Practitioner, Perinatal",Nurse Practitioner,P,,077,NP
+363LP1700X ,"Nurse Practitioner, Perinatal",Family Nurse Practitioner,P,,339,FNP
+363LP1700X ,"Nurse Practitioner, Perinatal",Pediatric Nurse Practitioner,P,,389,NP
+363LP2300X,"Nurse Practitioner, Primary Care ",Nurse Practitioner,P,,077,NP
+363LP2300X,"Nurse Practitioner, Primary Care ",Family Nurse Practitioner,P,,339,FNP
+363LS0200X ,"Nurse Practitioner, School ",Nurse Practitioner,P,,077,NP
+363LS0200X ,"Nurse Practitioner, School ",Family Nurse Practitioner,P,,339,FNP
+363LW0102X,"Nurse Practitioner, Women's Health",Nurse Practitioner,P,,077,NP
+363LW0102X,"Nurse Practitioner, Women's Health",Family Nurse Practitioner,P,,339,FNP
+363LX0001X,"Nurse Practitioner, Obstetrics & Gynecology",Nurse Practitioner,P,,077,NP
+363LX0001X,"Nurse Practitioner, Obstetrics & Gynecology",Family Nurse Practitioner,P,,339,FNP
+363LX0106X,"Nurse Practitioner, Occupational Health",Nurse Practitioner,P,,077,NP
+363LX0106X,"Nurse Practitioner, Occupational Health",Family Nurse Practitioner,P,,339,FNP
+364S00000X,Clinical Nurse Specialist ,"Nurse, Registered",P,,064,RN
+364SA2100X ,"Clinical Nurse Specialist, Acute Care ","Nurse, Registered",P,,064,RN
+364SA2200X,"Clinical Nurse Specialist, Adult Health ","Nurse, Registered",P,,064,RN
+364SC0200X,"Clinical Nurse Specialist, Critical Care Medicine ","Nurse, Registered",P,,064,RN
+364SC1501X ,"Clinical Nurse Specialist, Community Health/Public Health ","Nurse, Registered",P,,064,RN
+364SC2300X ,"Clinical Nurse Specialist, Chronic Care ","Nurse, Registered",P,,064,RN
+364SE0003X,"Clinical Nurse Specialist, Emergency ","Nurse, Registered",P,,064,RN
+364SE1400X ,"Clinical Nurse Specialist, Ethics","Nurse, Registered",P,,064,RN
+364SF0001X,"Clinical Nurse Specialist, Family Health ","Nurse, Registered",P,,064,RN
+364SG0600X ,"Clinical Nurse Specialist, Gerontology","Nurse, Registered",P,,064,RN
+364SH0200X ,"Clinical Nurse Specialist, Home Health ","Nurse, Registered",P,,064,RN
+364SH1100X ,"Clinical Nurse Specialist, Holistic","Nurse, Registered",P,,064,RN
+364SI0800X ,"Clinical Nurse Specialist, Informatics","Nurse, Registered",P,,064,RN
+364SL0600X,"Clinical Nurse Specialist, Long-Term Care","Nurse, Registered",P,,064,RN
+364SM0705X ,"Clinical Nurse Specialist, Medical-Surgical ","Nurse, Registered",P,,064,RN
+364SN0000X,"Clinical Nurse Specialist, Neonatal","Nurse, Registered",P,,064,RN
+364SN0800X ,"Clinical Nurse Specialist, Neuroscience","Nurse, Registered",P,,064,RN
+364SP0200X,"Clinical Nurse Specialist, Pediatrics ","Nurse, Registered",P,,064,RN
+364SP0807X,"Clinical Nurse Specialist, Psychiatric/Mental Health, Child & Adolescent","Nurse, Clinical Specialist in Mental Health",P,,385,MSN
+364SP0808X ,"Clinical Nurse Specialist, Psychiatric/Mental Health","Nurse, Clinical Specialist in Mental Health",P,,385,MSN
+364SP0809X ,"Clinical Nurse Specialist, Psychiatric/Mental Health, Adult ","Nurse, Clinical Specialist in Mental Health",P,,385,MSN
+364SP0810X ,"Clinical Nurse Specialist, Psychiatric/Mental Health, Child & Family","Nurse, Clinical Specialist in Mental Health",P,,385,MSN
+364SP0811X ,"Clinical Nurse Specialist, Psychiatric/Mental Health, Chronically Ill ","Nurse, Clinical Specialist in Mental Health",P,,385,MSN
+364SP0812X,"Clinical Nurse Specialist, Psychiatric/Mental Health, Community ","Nurse, Clinical Specialist in Mental Health",P,,385,MSN
+364SP0813X,"Clinical Nurse Specialist, Psychiatric/Mental Health, Geropsychiatric","Nurse, Clinical Specialist in Mental Health",P,,385,MSN
+364SP1700X,"Clinical Nurse Specialist, Perinatal ","Nurse, Registered",P,,064,RN
+364SP2800X ,"Clinical Nurse Specialist, Perioperative","Nurse, Registered",P,,064,RN
+364SR0400X ,"Clinical Nurse Specialist, Rehabilitation ","Nurse, Registered",P,,064,RN
+364SS0200X,"Clinical Nurse Specialist, School ","Nurse, Registered",P,,064,RN
+364ST0500X ,"Clinical Nurse Specialist, Transplantation","Nurse, Registered",P,,064,RN
+364SW0102X ,"Clinical Nurse Specialist, Women's Health","Nurse, Registered",P,,064,RN
+364SX0106X ,"Clinical Nurse Specialist, Occupational Health ","Nurse, Registered",P,,064,RN
+364SX0200X ,"Clinical Nurse Specialist, Oncology ","Nurse, Registered",P,,064,RN
+364SX0204X,"Clinical Nurse Specialist, Oncology, Pediatrics","Nurse, Registered",P,,064,RN
+367500000X,"Nurse Anesthetist, Certified Registered ",Certified Registered Nurse Anesthesist,P,,068,C.NA
+367500000X,"Nurse Anesthetist, Certified Registered ",Registered Nurse Anesthesist,P,,395,RNA
+367A00000X,Advanced Practice Midwife ,Certified Professional Midwife,P,,069,CNM
+367H00000X,Anesthesiologist Assistant ,Unknown Non-Physician,P,,099,ANC
+372500000X,"Nursing Related, Chore Provider",Home Health Aide,P,,067,CCC
+372600000X,"Nursing Related, Adult Companion",Home Health Aide,P,,067,CCC
+373H00000X,"Nursing Related, Day Training/Habilitation Specialist",Home Health Aide,P,,067,CCC
+374J00000X,"Nursing Related, Doula",Unknown Non-Physician,P,,099,ANC
+374K00000X,"Nursing Related, Religious Non Medical Practitioner",Christian Science Practitioner,P,,376,CS
+374T00000X,"Nursing Related, Religious Non Medical Nursing Personnel",Christian Science Practitioner,P,,376,CS
+374U00000X,"Nursing Related, Home Health Aide",Home Health Aide,P,,067,CCC
+374700000X,"Nursing Related, Technician",Home Health Aide,P,,067,CCC
+3747A0650X,"Nursing Related, Technician, Attendant Care Provider",Home Health Aide,P,,067,CCC
+3747P1801X,"Nursing Related, Technician, Personal Care Attendant",Home Health Aide,P,,067,CCC
+376G00000X,"Nursing Related, Nursing Home Administrator",Unknown Non-Physician,P,,099,ANC
+376J00000X,"Nursing Related, Homemaker",Home Health Aide,P,,067,CCC
+376K00000X,"Nursing Related, Nurse's Aide",Home Health Aide,P,,067,CCC
+385H00000X,Respite Care ,Respite Center,O,049,,
+385HR2050X ,Respite Care Camp  ,Respite Center,O,049,,
+385HR2055X ,"Respite Care, Mental Illness, Child ",Respite Center,O,049,,
+385HR2060X ,"Respite Care, Mental Retardation and/or Developmental Disabilities ",Respite Center,O,049,,
+385HR2065X ,"Respite Care, Physical Disabilities, Child ",Respite Center,O,049,,
+390200000X ,Student in an Organized Health Care Education/Training Program ,Unknown Non-Physician,P,,099,ANC
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+, ,,,,,

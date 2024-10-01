@@ -1,0 +1,86 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Transaction Type</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+    <div class="row tableBox" style="height: 506px;margin-left: 2px;width: 100%;margin-top: -10px;margin-bottom: 31px;">
+      <div id="mydiv">
+        <img  class="mappingSpinner" src="/static/images/page-loader.gif"/>
+      </div>
+      <!-- Your Page Content Here -->
+      <div class="container-fluid contentbody" style="padding-right:6%" data-ng-init="getTranstypes()">
+        <div class="row autoMargin">
+          <div class="col-md-12" style="margin-top: 12px;">
+            <div class="processContent">
+              <div class="row z">
+                <span style="font-size: 16px;margin-left:1%;color:#333333;">File Name:<strong>{{transData.filename}}</strong></span>
+                <button type="button" name="button" class="btn btndefault" style="float:right;width:10%;margin-right:7%;margin-right: 7%" ng-click="generateOutput()">Next>> </button>
+              </div>
+              <div class="row z">
+                <div class="col-md-9 scrollbar tabScroll" style="width:91%">
+                  <div class="col-md-2"  ng-repeat="(sheetName,sheetData) in transData.data" style="margin-right: -2.5%;">
+                    <button style="border-radius: 11px 11px 0px 0px;" type="button" class="btn btn-lg sheetBtn" data-toggle="popover" data-placement="top" data-trigger="hover" title="{{sheetName}}" ng-class="sheetName == selectedSheetName?'successBtn':'tabsBtn'" ng-click="showSheet(sheetName)">{{sheetName}}</button>
+                  </div>
+                </div>
+              </div>
+                <div class="row transDataDiv scale" style="margin-top:35px;">
+                  <div class="col-md-4 scrollbar typesDiv">
+                    <table class="table childgrid">
+                      <tr ui-on-Drop="onDrop($event,$data,types)" on-drop-success="dropSuccessHandler($event,$index,transData.AllTransactionTypes)" ng-repeat="types in transData.AllTransactionTypes track by $index">
+                        <td class="typeTd">
+                          {{types}}<span class="badge" style="float:right">{{allTypes[types]}}</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div  class="col-md-8">
+                    <div class="row" style="margin:5px">
+                      <input type="checkbox" ng-model="selectAll" value="selectAll" ng-click="toggleAll()" style="float:left;margin-top:3px;"> Select all
+                      <input class="typeSearch" type="text" placeholder="Search" ng-model="viewSearch" ng-change="applySearch()">
+                    </div>
+                    <table class="col-md-12 table table-hover table-fixed childgrid" ng-repeat="(sheetName, sheetData) in transData.data" ng-if="sheetName == selectedSheetName">
+                      <thead>
+                        <tr>
+                          <th class="col-md-2">Row Index</th>
+                          <th class="col-md-7">Row Values</th>
+                          <th class="col-md-3" style="margin-left: -5%;">Transaction Type</th>
+                        </tr>
+                      </thead>
+                      <tbody class="scrollbar">
+                        <tr class="col-md-12" ui-draggable="true" drag="data"
+                        on-drop-success="dropSuccessHandler($event,selectedArray,sheetData,data)"
+                        ng-repeat="data in ($parent.filteredItems[selectedSheetName] = (sheetData | filter:viewSearch)) track by $index"
+                        ng-click="highlightDragRow(data.rowIndex)"
+                        ng-class="selectedArray.indexOf(data.rowIndex)!=-1?'selectedRow':(checkType(data.TransactionType)?'warningRows':'')">
+                          <td class="col-md-2">{{data.rowIndex}}</td>
+                          <td class="col-md-7">
+                            <span ng-repeat="values in data.colValues" >{{values}} </span>
+                          </td>
+                          <td class="col-md-3" ng-if="!checkType(data.TransactionType)">{{data.TransactionType[0]}}</td>
+                          <td class="col-md-3" ng-if="checkType(data.TransactionType)">
+                            <span ng-repeat="colType in data.TransactionType track by $index">{{colType}}
+                              <span ng-if="!$last">,</span>
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+              <br>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

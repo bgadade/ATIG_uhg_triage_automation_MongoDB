@@ -1,0 +1,798 @@
+{
+  "fields": {
+    "master_degree": {
+      "mid_level_indicator": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "master_list_indicator": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "degree": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "master_degree_test": {
+      "mid_level_indicator": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "master_list_indicator": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "degree": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "mid_level_ndbSpec": {
+      "mid_level_ndbSpec": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "rfp_grid": {
+      "ndb_spec": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "state": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "specialty_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "specialty": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "credentialing_required": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "hbp_speciality": {
+      "specialty_name": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "specialty_name_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "specialty_code": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "sv_nlp": {
+      "sotColNameNlpBufferSubWord": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "outputCol": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "sotColNameNlpBufferWord": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "sotColNameBufferOriginal": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "custom_stem"
+          }
+        }
+      }
+    },
+    "sv_nlp_test": {
+      "sotColNameNlpBufferSubWord": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "outputCol": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "sotColNameNlpBufferWord": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "sotColNameBufferOriginal": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "custom_stem"
+          }
+        }
+      }
+    },
+    "mv_nlp": {
+      "sotColNameNlpBufferSubWord": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "sotColNameBufferOriginal": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "custom_stem"
+          }
+        }
+      },
+      "sotColNameNlpBufferWord": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "parentCat": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "mv_nlp_test": {
+      "sotColNameNlpBufferSubWord": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "sotColNameBufferOriginal": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "custom_stem"
+          }
+        }
+      },
+      "sotColNameNlpBufferWord": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "custom_nostem"
+          }
+        }
+      },
+      "parentCat": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "specialty_exceptions": {
+      "specialty_name_in_sot_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "specialty_name_in_sot": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "specialty_name_in_taxonomy_grid": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "degree": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "specialty_exceptions_test": {
+      "specialty_name_in_sot_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "specialty_name_in_sot": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "specialty_name_in_taxonomy_grid": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "degree": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "c_and_s": {
+      "code": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "individual_enrollment_limit": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "state": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "age_limit_of_patients": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "provider_specialty": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "provider_specialty_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "group_enrollment_limit": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "pcp_vs_specialist": {
+      "specialty_name": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "specialty_name_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_specialty_code": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "cosmos_provider_number": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "language_code": {
+      "code_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "code": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "language_description": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "language_description_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "ndb_taxonomy_test": {
+      "cos_prov": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_deg": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "prov_type_name": {
+        "index": "analyzed",
+        "type": "string"
+      },
+      "cos_cred": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ur_ind": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_spec": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_rec": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "prov_type_name_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "mid_specialty": {
+      "cos_cred": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_deg": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "prov_type_name": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "ndb_spec": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "prov_type_name_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "school_code": {
+      "school_code": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "school_description": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "school_description_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "nucc": {
+      "nucc_description_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "nucc_description": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "ndb_record_type": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_specialty_code": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_degree": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_org_type": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_description": {
+        "index": "analyzed",
+        "type": "string"
+      },
+      "nucc_taxonomy_code": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "ndb_taxonomy": {
+      "cos_prov": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_deg": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ur_ind": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "prov_type_name": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "cos_cred": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_spec": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_rec": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "prov_type_name_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "ndb_taxonomy_stem": {
+      "cos_prov": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_deg": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "prov_type_name": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      },
+      "cos_cred": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ur_ind": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_spec": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "ndb_rec": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "prov_type_name_token_count": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "hospital_list": {
+      "lastname": {
+        "index": "analyzed",
+        "type": "string"
+      },
+      "taxid": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "mpin": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "provstatus": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "provtype": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "orgtypecd": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "state": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "hosp_aff_status": {
+      "acronym": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "abb": {
+        "index": "analyzed",
+        "type": "string"
+      }
+    },
+    "comm_types": {
+      "comm_type_acrnm": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "comm_type_abb": {
+        "index": "analyzed",
+        "type": "string"
+      }
+    },
+    "medicaid_numbers": {
+      "state": {
+        "index": "analyzed",
+        "type": "string"
+      },
+      "state_code": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "provider_address_level": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "medicaid_states_per_state_guidelines": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "us_states": {
+      "us_state": {
+        "index": "analyzed",
+        "type": "string"
+      },
+      "abbreviation": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "ver_source": {
+      "ver_source": {
+        "index": "not_analyzed",
+        "type": "string"
+      },
+      "board_name": {
+        "index": "analyzed",
+        "type": "string",
+        "fields": {
+          "english": {
+            "type": "string",
+            "analyzer": "my_custom_analyzer"
+          }
+        }
+      }
+    },
+        "us_cities": {
+            "county": {
+                "index": "analyzed",
+                "type": "string"
+            },
+            "city": {
+                "index": "analyzed",
+                "type": "string"
+            },
+            "state_short": {
+                "index": "not_analyzed",
+                "type": "string"
+            },
+            "state_full": {
+                "index": "analyzed",
+                "type": "string"
+            }
+        },
+          "reason_desc_code": {
+            "rsn_description": {
+              "index": "analyzed",
+              "type": "string"
+            },
+            "primary_reason_code": {
+              "index": "not_analyzed",
+              "type": "string"
+            }
+          },
+    "spec_psi": {
+            "spec": {
+                "index": "analyzed",
+                "type": "string"
+            },
+            "is_mid_level": {
+                "index": "not_analyzed",
+                "type": "string"
+            }
+
+        },
+    "degree_psi": {
+            "code": {
+                "index": "not_analyzed",
+                "type": "string"
+            },
+      "description": {
+                "index": "analyzed",
+                "type": "string"
+            },
+      "is_mid_level": {
+                "index": "not_analyzed",
+                "type": "string"
+            }
+
+        },
+    "degree_exceptions": {
+      "degree_in_sot": {
+        "index": "analyzed",
+        "type": "string"
+      },
+      "degree_in_master_list": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    },
+    "contact_type_exceptions":{
+      "contact_type_input": {
+        "index": "analyzed",
+        "type": "string"
+      },
+      "contact_type_master": {
+        "index": "not_analyzed",
+        "type": "string"
+      }
+    }
+  },
+  "mappings": {
+    "my_type": {
+      "_all": {
+        "enabled": false
+      },
+      "properties": {}
+    }
+  },
+  "settings": {
+    "analysis": {
+      "filter": {
+        "my_snow": {
+          "type": "snowball",
+          "language": "english"
+        },
+        "my_stemmer": {
+          "type": "stemmer",
+          "name": "english"
+        }
+      },
+      "analyzer": {
+        "custom_nostem": {
+          "filter": [
+            "lowercase"
+          ],
+          "type": "custom",
+          "tokenizer": "standard"
+        },
+        "my_custom_analyzer": {
+          "filter": [
+            "lowercase",
+            "my_snow"
+          ],
+          "type": "custom",
+          "tokenizer": "standard"
+        }
+      }
+    }
+  },
+  "index_input_files":{"HBP_Speciality":"hbp_speciality","C&S_Excel_singlesheet":"c_and_s",
+       "Language_Code":"language_code","Master_Degree":"master_degree",
+       "NDB_Taxonomy":"ndb_taxonomy","PCP vs Specialist":"pcp_vs_specialist",
+       "School_Code":"school_code","RFP_Grid":"rfp_grid",
+                   "NUCC_NDB_Grid": "nucc",
+                   "mid_level_specialty":"mid_specialty",
+        "specialty_exceptions":"specialty_exceptions",
+    "NDB_Hospital_List":"hospital_list",
+    "hosp_aff_status": "hosp_aff_status",
+    "us_states" : "us_states",
+    "ver_source" : "ver_source",
+    "COMM_Types": "comm_types",
+    "Medicaid_Numbers": "medicaid_numbers",
+    "us_cities": "us_cities",
+    "Reason_Desc_Code": "reason_desc_code",
+    "spec_psi":"spec_psi",
+    "degree_psi":"degree_psi",
+    "degree_exceptions":"degree_exceptions",
+    "contact_type_exceptions":"contact_type_exceptions"
+},
+  "project_name":"triage"
+}

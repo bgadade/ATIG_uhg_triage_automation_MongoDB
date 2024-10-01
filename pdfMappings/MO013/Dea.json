@@ -1,0 +1,23 @@
+{"DEA_NUMBER": {
+  "PARENT_CATEGORY": "Dea",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 3, "columnIndex": 3}}]
+   }
+  ]
+ },
+ "DEA_EXPIRY_DATE": {
+  "PARENT_CATEGORY": "Dea",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 3, "columnIndex": "len(allTableCols)"}}]
+   }
+  ]
+ }
+}

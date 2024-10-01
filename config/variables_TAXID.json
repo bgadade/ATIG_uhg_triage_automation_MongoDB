@@ -1,0 +1,250 @@
+[
+
+  {"LayerName": "CleanseDataFrame","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"singleValue": {
+      "derivations": [
+        {"name": "applyRegex","type": "mv_cmn","input": {"inputCol":"EFFECTIVE_DATE", "regexKey":"EFFECTIVE_DATE"}},
+        {"name": "applyRegex","type": "mv_cmn","input": {"inputCol":"ORIGINAL_DEL_DATE", "regexKey":"EFFECTIVE_DATE"}}
+      ]
+    }},
+    {"CommCredCont": {
+      "derivations": [
+        {"name": "normalizeCCC","type": "mv_cmn","input": {"lvls": ["COMM_NAME", "DRV_COMM_TYPE", "COMM_EXTENSION_NUMBER", "CONT_TYPE", "DRV_COMM_NUMBER"], "phCol": "COMM_PHONE_NUMBER", "outCol": "DRV_COMM_NUMBER", "faxCol": "COMM_FAX_NUMBER","commTypCol":"COMM_TYPE","drvCommTypCol":"DRV_COMM_TYPE"}},
+        {"name": "getCommCredTypeHeader","type": "mv_cmn","input": "masterDict['diColMapping']"},
+        {"name": "standardiseCommunicationType","type": "mv_cmn","input": {"inputCol":"DRV_COMM_TYPE", "outputCol":"STD_COMM_TYPE","standardsKey":"PhoneFax"}},
+        {"name": "standardiseContactType","type": "mv_cmn","input": {"inputCol":"CONT_TYPE", "exceptionIdxName":"contact_type_exceptions","masterIdxName":"comm_types","outputColExc":"EXC_LKP_CONT_TYPE","outputColMaster":"STD_CONT_TYPE"}},
+        {"name": "getCommExtnFrmPhn","type": "mv_cmn","input": {"inputCol":"DRV_COMM_NUMBER","standardsKeys":"COMM_EXT","outputCol":"DRV_COMM_EXT"}},
+        {"name": "finalExtNum","type": "mv_cmn","input": {"extCol":"COMM_EXTENSION_NUMBER","drvExtCol":"DRV_COMM_EXT","outputCol":"OUT_COMM_EXT"}}
+      ]
+    }},
+    {"Medicaid": {
+      "derivations": [
+        {"name": "cleanSVDF","type": "mv_cmn","input": {"inputCol":"PROV_MEDICAID", "outputCol":"PROV_MEDICAID","standardsKeys":["BlankMedicaid"]}}
+      ]
+    }},
+    {"Address":{
+      "derivations":[
+        {"name": "standardizeColumn","type": "mv_cmn","input": {"inputCol":["ADDRESS_LINE_1","ADDRESS_LINE_2"],"standardsKeys":["Blvd","Rd","Ave"]}},
+        {"name": "processCombinedAddTypeInd","type": "mv_cmn","input": {"inputCol":"COMBINED_ADDRESS_TYPE_IND","outputCol":["ADDRESS_TYPE","ADDRESS_INDICATOR"],"standardsKeys":["Primary","Secondary"]}},
+        {"name": "getDiColMappingAdr","type": "wh","input": "masterDict['diColMapping']"},
+        {"name": "storeDefaultWhWd","type": "wh","input": {"inputCol":["WORKING_HOURS","diColMapping_Adr"],"outputCol":["DEFAULT_WD","DEFAULT_WH"]}},
+        {"name": "cleanWorkDay","type": "wh","input": {"inputCol":"WORKING_DAYS","regKeys":["DAY"],"outputCol":"CLEAN_WORKING_DAYS"}},
+        {"name": "cleanWorkHours","type": "wh","input": {"inputCol":"WORKING_HOURS","regKeys":["TIME","24BY7"],"outputCol":"CLEAN_WORKING_HOURS"}},
+        {"name": "deriveWdWh","type": "wh","input": {"inputCol":["CLEAN_WORKING_DAYS","CLEAN_WORKING_HOURS","DEFAULT_WD","DEFAULT_WH"],"outputCol":["WH_WD_DERIVED_THRU","DERIVED_CLEAN_WH_WD"]}},
+        {"name": "belowAgeLimit","type": "mv_cmn","input": {"inputCol":"AGE_LIMIT", "outputCol":"CLEAN_AGE_LIMIT","standardsKeys":["below"], "val": "0"}},
+        {"name": "aboveAgeLimit","type": "mv_cmn","input": {"inputCol":"AGE_LIMIT", "outputCol":"CLEAN_AGE_LIMIT","standardsKeys":["above"], "val": "999"}},
+        {"name": "nullAgeLimits","type": "mv_cmn","input": {"inputCol":"CLEAN_AGE_LIMIT","standardsKeys":["blank_age_limit"], "val": ""}}
+
+      ]
+    }},
+    {"ProviderEmail/WebAddr":{
+      "derivations":[
+        {"name": "providerEmailGetSubFrameWrapper", "type": "mv_cmn", "input": {"inputCol": ["PROVIDER_EMAIL/WEB_ADDR", "PROVIDER_COMM_TYPE"], "outputCol": "PROVIDER_EMAIL_SUB_FRAME"}}
+      ]
+    }},
+    {"ProviderLanguage":{
+      "derivations":[
+        {"name": "add_mapCols", "type": "mv_cmn", "input": {"mapCol":"{'PROVIDER_LANGUAGE':'LANGUAGE'}", "outputCol": ["LANGUAGE_SPOKEN_BY","LANGUAGE_WRITTEN_BY"], "defVal" :["",""]}},
+        {"name": "providerLangGetSubFrameWrapper", "type": "mv_cmn", "input": {"inputCol": ["LANGUAGE","LANGUAGE_SPOKEN_BY","LANGUAGE_WRITTEN_BY"], "outputCol": "PROVIDER_LANG_SUB_FRAME"}}
+      ]
+    }}
+  ]},
+
+  {"LayerName": "CleanseLayer1","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "var_parseDate","type": "mv_cmn","input": ["EFFECTIVE_DATE", "C"],"col": "PARSED_EFFECTIVE_DATE"},
+        {"name": "var_parseDate","type": "mv_cmn","input": ["ORIGINAL_DEL_DATE", "C"],"col": "PARSED_ORIGINAL_DEL_DATE"}
+
+      ]
+    }},
+    {"Address":{
+      "derivations":[
+        {"name": "var_mergeDerivedWithInput","type": "mv_cmn","input": ["ADDRESS_INDICATOR", "DERIVED_ADDRESS_INDICATOR"],"col": "MERGE_ADDRESS_INDICATOR"},
+        {"name": "var_addOrderInd","type": "mv_cmn","input": ["ADDRESS_ORDER", "MERGE_ADDRESS_INDICATOR"],"col": "ADDRESS_ORDER_INDICATOR"},
+        {"name": "var_mergeDerivedWithInput","type": "mv_cmn","input": ["ADDRESS_TYPE", "DERIVED_ADDRESS_TYPE"],"col": "MERGE_ADDRESS_TYPE"},
+        {"name": "standardisePSIndi","type": "mv_cmn","input": ["ADDRESS_ORDER_INDICATOR", ["Primary", "Secondary"]],"col": "CLEAN_ADDRESS_IND"},
+        {"name": "var_standardiseString","type": "mv_cmn","input": ["MERGE_ADDRESS_TYPE", ["PLSV", "Bill", "Combo", "Mail", "Cred"]],"col": "OUT_ADDRESS_TYPE"},
+        {"name": "var_ConcatAddress","type": "mv_cmn","input": [{"address1":"ADDRESS_LINE_1","address2":"ADDRESS_LINE_2","city": "ADDRESS_CITY", "state": "ADDRESS_STATE", "zip_code": "ADDRESS_ZIP"}],"col": "CONCAT_ADDRESS"},
+        {"name": "var_ParseAddress","type": "mv_cmn","input": ["'CONCAT_ADDRESS'"],"col": "PARSED_ADDRESS"},
+        {"name": "var_getZipCode","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "OUT_ADDRESS_ZIP"},
+        {"name": "var_getZipPlus4", "type":"mv_cmn", "input": ["PARSED_ADDRESS", "ADDRESS_ZIP4"], "col": "OUT_ADDRESS_ZIP4"},
+        {"name": "var_getAddress1","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "OUT_ADDRESS_LINE_1"},
+        {"name": "var_getAddress2","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "OUT_ADDRESS_LINE_2"},
+        {"name": "var_getCity","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "PAR_ADDRESS_CITY"},
+        {"name": "var_fnlCity","type": "mv_cmn","input": ["PAR_ADDRESS_CITY", "OUT_ADDRESS_LINE_1", "ADDRESS_CITY"],"col": "OUT_ADDRESS_CITY"},
+        {"name": "var_getState","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "PAR_ADDRESS_STATE"},
+        {"name": "var_fnlState","type": "mv_cmn","input": ["PAR_ADDRESS_STATE", "OUT_ADDRESS_LINE_1", "ADDRESS_CITY"],"col": "OUT_ADDRESS_STATE"}
+      ]
+    }}
+  ]},
+
+  {"LayerName": "multivaluedCols","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "placeHolder","type": "mv_cmn","input": [],"col": "placeHolder"},
+        {"name": "var_removeSpecialCharacters", "type":"mv_cmn", "input":["NAME_OF_LEGAL_TAX_ID_OWNER"], "col": "NAME_OF_LEGAL_TAX_ID_OWNER"}
+      ]
+    }},
+    {"ProviderEmail/WebAddr": {
+      "derivations":[
+      ]
+    }},
+    {"Medicaid": {
+      "derivations": [
+        {"name": "checkZeros", "type": "mv_cmn", "input": ["PROV_MEDICAID", "medicaid is zero", "c"], "col": "CLEANSED_MEDICAID"},
+        {"name": "var_validateLoc", "type": "mv_cmn", "input": ["LOC"], "col": "VALIDATE_MEDICAID_LOC"}
+      ]
+    }},
+    {"Address":{
+      "derivations":[
+        {"name": "var_deriveAddressIndicator", "type": "mv_cmn", "input": ["CLEAN_ADDRESS_IND", "OUT_ADDRESS_TYPE"], "col": "OUT_ADDRESS_IND"},
+
+
+        {"name": "combineProvLangAddrLang", "type": "mv_cmn", "input": ["masterDict['ProviderLanguage']", "PROVIDER_LANG_SUB_FRAME", "LANGUAGE_GROUP"], "col":"LANG_SUB_FRAME"},
+        {"name": "getSeparateLanguages", "type":"mv_cmn", "input": ["['LANGUAGE','LANGUAGE_SPOKEN_BY','LANGUAGE_WRITTEN_BY']", "LANG_SUB_FRAME"], "col":"LANG_SUB_FRAME"},
+
+        {"name": "updateClarifyPhone", "type": "mv_cmn", "input": ["ADDRESS_PHONE", "PHONE_GROUP"], "col":"PHONE_GROUP"},
+        {"name": "combinePhoneFax", "type": "mv_cmn", "input": ["['ADDRESS_PHONE', 'ADDRESS_PHONE_FAX', 'EXT_PHONE','ADDRESS_PHONE_INDICATOR', 'ADDRESS_PHONE_TYPE']", "PHONE_GROUP"], "col": "ADDRESS_PHONE_SUB_FRAME"},
+        {"name": "updateClarifyListOfDictionary", "type": "mv_cmn", "input": ["ADDRESS_PHONE_INDICATOR", "ADDRESS_PHONE_SUB_FRAME"], "col":"ADDRESS_PHONE_SUB_FRAME"},
+
+        {"name": "combineProvAddEmail", "type": "mv_cmn", "input": ["masterDict['ProviderEmail/WebAddr']", "PROVIDER_EMAIL_SUB_FRAME", "COMM_GROUP", "EMAIL_INDICATOR", "{'PROVIDER_EMAIL/WEB_ADDR':'ELECTRONIC_COMM', 'PROVIDER_COMM_TYPE':'COMMUNICATION_TYPE', 'EMAIL_INDICATOR':'EMAIL_INDICATOR'}"], "col":"EMAIL_SUB_FRAME"},
+
+
+        {"name": "combineSotDayWiseWorkHours", "type": "wh", "input": ["{'MON':('MONDAY_START_TIME','MONDAY_END_TIME'),'TUE':('TUESDAY_START_TIME','TUESDAY_END_TIME'),'WED':('WEDNESDAY_START_TIME','WEDNESDAY_END_TIME'),'THU':('THURSDAY_START_TIME','THURSDAY_END_TIME'),'FRI':('FRIDAY_START_TIME','FRIDAY_END_TIME'),'SAT':('SATURDAY_START_TIME','SATURDAY_END_TIME'),'SUN':('SUNDAY_START_TIME','SUNDAY_END_TIME')}"], "col": "combinedSotDayWiseWorkHours"},
+        {"name": "getLstClr", "type": "wh", "input": ["combinedSotDayWiseWorkHours","clarification"], "col": "combinedWHclr"},
+        {"name": "reinstateStructForWH", "type": "wh", "input": ["combinedSotDayWiseWorkHours","combinedString"], "col": "combinedWHString"},
+        {"name": "reinstateStructForWH", "type": "wh", "input": ["combinedSotDayWiseWorkHours","parsed"], "col": "combinedSotDayWiseWorkHours"},
+        {"name": "getWorkHours", "type": "wh", "input": ["DERIVED_CLEAN_WH_WD","masterDict['diColMapping']","CLEAN_WORKING_DAYS"], "col": "drvWorkingHours"},
+        {"name": "getLstClr", "type": "wh", "input": ["drvWorkingHours","clarification"], "col": "wHclr"},
+        {"name": "reinstateStructForWH", "type": "wh", "input": ["drvWorkingHours","parsed"], "col": "drvWorkingHours"},
+        {"name": "getBreakHours", "type": "wh", "input": ["BREAK_HOURS","masterDict['diColMapping']"], "col": "drvBreakHours"},
+        {"name": "subtractBreakHours", "type": "wh", "input": ["drvWorkingHours","drvBreakHours"], "col": "drvWorkingHours"},
+        {"name": "subtractBreakHours", "type": "wh", "input": ["combinedSotDayWiseWorkHours","drvBreakHours"], "col": "combinedSotDayWiseWorkHours"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'MON'","0","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_MON_START_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'MON'","1","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_MON_END_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'TUE'","0","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_TUE_START_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'TUE'","1","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_TUE_END_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'WED'","0","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_WED_START_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'WED'","1","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_WED_END_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'THU'","0","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_THU_START_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'THU'","1","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_THU_END_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'FRI'","0","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_FRI_START_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'FRI'","1","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_FRI_END_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'SAT'","0","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_SAT_START_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'SAT'","1","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_SAT_END_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'SUN'","0","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_SUN_START_TIME"},
+        {"name": "getWorkHoursDayWise", "type": "wh", "input": ["'SUN'","1","'drvWorkingHours'","'combinedSotDayWiseWorkHours'"], "col": "OUT_SUN_END_TIME"},
+        {"name": "apply_24_hours", "type": "wh", "input": ["['OUT_MON_START_TIME', 'OUT_TUE_START_TIME', 'OUT_WED_START_TIME', 'OUT_THU_START_TIME', 'OUT_FRI_START_TIME', 'OUT_SAT_START_TIME', 'OUT_SUN_START_TIME']","wHclr","WORKING_HOURS","combinedWHclr","combinedWHString"], "col":"APPLY_24HOURS"},
+        {"name": "apply_8_to_5", "type": "wh", "input": ["APPLY_24HOURS"], "col":"APPLY_8TO5"},
+        {"name": "getExtHrIndicator", "type": "wh", "input": ["masterDict['diColMapping']","APPLY_8TO5"], "col": "OUT_EXT_HR_IND"}
+
+      ]
+    }},
+    {"Address":{
+      "derivations":[
+        {"name": "replace_age_delim", "type": "mv_cmn", "input": ["'CLEAN_AGE_LIMIT'"], "col": "DELIM_AGE_LIMIT"},
+        {"name": "var_getAgeLimitTaxIDAdd", "type": "mv_cmn", "input": ["'DELIM_AGE_LIMIT'", "'MIN_AGE'" ,"'MAX_AGE'"], "col": "OUT_AGE_LIMIT"},
+        {"name": "var_getMinAgeTaxIDAdd", "type": "mv_cmn", "input": ["'OUT_AGE_LIMIT'","'MIN_AGE'"], "col": "OUT_MIN_AGE"},
+        {"name": "var_getMaxAgeTaxIDAdd", "type": "mv_cmn", "input": ["'OUT_AGE_LIMIT'","'MAX_AGE'"], "col": "OUT_MAX_AGE"},
+        {"name": "var_BothAgeLimitFlag", "type": "mv_cmn", "input": ["'OUT_MIN_AGE'","'OUT_MAX_AGE'"], "col": "FLAG_BOTH_AGE_PRESENT"},
+        {"name": "var_ClarifyAgeLimitTaxIDAdd", "type": "mv_cmn", "input": ["'OUT_MIN_AGE'", "'FLAG_BOTH_AGE_PRESENT'"], "col": "OUT_MIN_AGE"},
+        {"name": "var_ClarifyAgeLimitTaxIDAdd", "type": "mv_cmn", "input": ["'OUT_MAX_AGE'", "'FLAG_BOTH_AGE_PRESENT'"], "col": "OUT_MAX_AGE"},
+        {"name": "var_removeSpecialCharacters", "type":"mv_cmn", "input":["OUT_ADDRESS_LINE_1"], "col": "OUT_ADDRESS_LINE_1"},
+        {"name": "var_removeSpecialCharacters", "type":"mv_cmn", "input":["OUT_ADDRESS_LINE_2"], "col": "OUT_ADDRESS_LINE_2"}
+      ]
+    }}
+  ]},
+
+  {"LayerName": "FinalCleansingLayer","LayerType": "DF","ProcessStage": 0, "Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "abbreviateCol","type": "mv_cmn","input": {"inputCol":"NAME_OF_LEGAL_TAX_ID_OWNER","outputCol":"OUT_NAME_OF_LEGAL_TAX_ID_OWNER", "maxLength": "50"}},
+        {"name": "clarifyFields","type": "mv_cmn","input": ["OUT_NAME_OF_LEGAL_TAX_ID_OWNER"]},
+        {"name": "effectiveDatePsi","type": "mv_cmn","input": {"inputCol":["PARSED_EFFECTIVE_DATE", "PARSED_ORIGINAL_DEL_DATE"],"outputCol":"OUT_EFFECTIVE_DATE"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_EFFECTIVE_DATE", "10", "eql", "OUT_EFFECTIVE_DATE"]}},
+        {"name": "updateClarification","type": "mv_cmn","input": {"ignore":0,"updateFrom":"errDictDupValInSv","colMapping":{"EFFECTIVE_DATE":"OUT_EFFECTIVE_DATE"},"conditionMapping":{}}},
+        {"name": "createAndClarifyCol","type": "mv_cmn","input": {"clrMsg": "Mandatory field Missing Value", "outputCol": "DEF_BULK_RECOV_VAL"}},
+        {"name": "createAndClarifyCol","type": "mv_cmn","input": {"clrMsg": "Mandatory field Missing Value", "outputCol": "DEF_MPIN_TAXID_VAL"}},
+        {"name": "createAndClarifyCol","type": "mv_cmn","input": {"clrMsg": "Mandatory field Missing Value", "outputCol": "DEF_PTI_MPIN_VAL"}}
+      ]
+    }},
+    {"Address":{
+      "derivations":[
+        {"name": "concat_subframes", "type": "mv_cmn", "input": {"subFrames":["LANG_SUB_FRAME", "ADDRESS_PHONE_SUB_FRAME", "EMAIL_SUB_FRAME", "DBA_GROUP"]}},
+        {"name": "getThreeLetterLanguageCode", "type":"mv_cmn", "input": {"inputCol": "LANGUAGE", "outputCol" : "OUT_LANGUAGE"}},
+        {"name": "validatePhoneDf", "type":"mv_cmn", "input": {"inputCol": "ADDRESS_PHONE", "outputCol": "OUT_ADDRESS_PHONE"}},
+        {"name": "getPhoneType", "type":"mv_cmn", "input": ["OUT_ADDRESS_PHONE", "ADDRESS_PHONE_TYPE", "OUT_ADDRESS_TYPE"]},
+        {"name": "getStdType", "type": "mv_cmn", "input": {"inputCol": "OUT_ADDRESS_TYPE", "outputCol": "OUT_STD_ADDRESS_TYPE", "stdKey": "OUT_ADDRESS_TYPE"}},
+        {"name": "getStdType", "type":"mv_cmn", "input": {"inputCol": "ADDRESS_PHONE_TYPE", "outputCol": "OUT_STD_ADDRESS_PHONE_TYPE", "stdKey": "ADDRESS_PHONE_TYPE"}},
+        {"name": "drvElecCommType","type": "mv_cmn","input": {"inputCol": "ELECTRONIC_COMM", "outputColECTyp": "DRV_COMMUNICATION_TYPE","outputColEC":"OUT_ELECTRONIC_COMM"}},
+        {"name": "fnlElecCommType","type": "mv_cmn","input": {"inputCol": ["COMMUNICATION_TYPE","DRV_COMMUNICATION_TYPE"], "outputCol": "OUT_COMMUNICATION_TYPE"}},
+        {"name": "abbreviateCol","type": "mv_cmn","input": {"inputCol":"DBA_NAME","outputCol":"OUT_DBA_NAME", "maxLength": "32"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_ZIP", "5", "eql", "OUT_ADDRESS_ZIP"], "mandatory":"True"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_ZIP4", "4", "eql", "OUT_ADDRESS_ZIP4"], "mandatory":"False"}},
+        {"name": "clarifyFields","type": "mv_cmn","input": ["OUT_ADDRESS_ZIP"]},
+        {"name": "defaultAddressCorrespondence", "type":"mv_cmn", "input": {"inputCol": "ADDRESS_CORRESPONDENCE_IND", "outputCol": "OUT_ADDRESS_CORRESPONDENCE_IND"}},
+        {"name": "clarifyFields","type": "mv_cmn","input": ["DBA_NAME"]},
+        {"name": "clarifyFieldsLang","type": "mv_cmn","input": [["OUT_LANGUAGE", "LANGUAGE_WRITTEN_BY"], "LANGUAGE_SPOKEN_BY", "PHYS"]},
+        {"name": "clarifyFieldsLang","type": "mv_cmn","input": [["OUT_LANGUAGE", "LANGUAGE_SPOKEN_BY"], "LANGUAGE_WRITTEN_BY", "PHYS"]},
+        {"name": "getStdType", "type":"mv_cmn", "input": {"inputCol": "LANGUAGE_SPOKEN_BY", "outputCol": "OUT_STD_LANGUAGE_SPOKEN_BY", "stdKey": "LANGUAGES"}},
+        {"name": "getStdType", "type":"mv_cmn", "input": {"inputCol": "LANGUAGE_WRITTEN_BY", "outputCol": "OUT_STD_LANGUAGE_WRITTEN_BY", "stdKey": "LANGUAGES"}},
+        {"name": "clarifyFieldsLang","type": "mv_cmn","input": [["LANGUAGE_SPOKEN_BY", "LANGUAGE_WRITTEN_BY"], "OUT_LANGUAGE"]},
+        {"name": "combineAddressLine1n2", "type": "mv_cmn", "input": {"inputCol": ["OUT_ADDRESS_LINE_1", "OUT_ADDRESS_LINE_2"], "outputCol":"OUT_ADDRESS_LINES"}},
+        {"name": "addrCheck", "type": "mv_cmn", "input": {"inputCol": ["OUT_ADDRESS_LINES","OUT_ADDRESS_TYPE"], "outputCol":"OUT_ADDRESS_LINES"}},
+        {"name": "updateConditionally", "type": "mv_cmn", "input": [{"condition":"df['OUT_STD_ADDRESS_TYPE'].str.lower().isin(['general'])","inputCol":"OUT_STD_ADDRESS_TYPE","outputCol":"OUT_STD_ADDRESS_TYPE","errType":"C","updateValue":"Could Not Determine Address Type"},
+        {"condition":"df['OUT_STD_ADDRESS_PHONE_TYPE'].str.lower().isin(['general'])","inputCol":"OUT_STD_ADDRESS_PHONE_TYPE","outputCol":"OUT_STD_ADDRESS_PHONE_TYPE","errType":"C","updateValue":"Could Not Determine Phone Type"}]},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_CITY", "32", "max", "OUT_ADDRESS_CITY"]}, "mandatory":"True"},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_STATE", "2", "max", "OUT_ADDRESS_STATE"]}, "mandatory":"True"},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_LINES", "32", "max", "OUT_ADDRESS_LINES"], "mandatory":"True"}},
+        {"name": "updateConditionally", "type": "mv_cmn", "input": [{"condition":"~(df['OUT_ADDRESS_TYPE'].str.lower().isin(['general','plsv','combo']))","inputCol":"APPLY_8TO5","outputCol":"APPLY_8TO5","updateValue":"False"},
+        {"condition":"~(df['OUT_ADDRESS_TYPE'].str.lower().isin(['general','plsv','combo']))","inputCol":"OUT_EXT_HR_IND","outputCol":"OUT_EXT_HR_IND","updateValue":""}]}
+      ]
+    }},
+    {"Medicaid": {
+      "derivations": [
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["CLEANSED_MEDICAID", "20", "max", "OUT_MEDICAID"]}, "mandatory":"True"},
+        {"name": "clarifyMedicaid", "type":"mv_cmn", "input": ["VALIDATE_MEDICAID_LOC", "OUT_MEDICAID"]},
+        {"name": "clarifyMedicaid", "type":"mv_cmn", "input": ["OUT_MEDICAID", "VALIDATE_MEDICAID_LOC"]}
+      ]
+    }},
+    {"CommCredCont": {
+      "derivations": [
+        {"name": "grpMissingFlag", "type": "mv_cmn", "input": {"grpCols":["COMM_NAME", "STD_COMM_TYPE", "OUT_COMM_EXT", "STD_CONT_TYPE", "DRV_COMM_NUMBER"], "flagCol": "flagCCC"}},
+        {"name": "clarifyGrpMissings", "type": "mv_cmn", "input": {"grpCols":["COMM_NAME", "STD_COMM_TYPE", "STD_CONT_TYPE", "DRV_COMM_NUMBER"], "flagCol": "flagCCC"}},
+        {"name": "validatePhoneDf", "type":"mv_cmn", "input": {"inputCol": "DRV_COMM_NUMBER", "outputCol": "OUT_COMM_NUMBER"}}
+      ]
+    }}
+  ]},
+  {"LayerName": "conflictRemovalLayer","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"Medicaid": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}},
+    {"CommCredCont": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}},
+    {"singleValue": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}}
+  ,
+    {"Address": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": ["index", "ROW_COUNT", "ROW_NUM", "level_0"]}
+      ]
+    }}
+  ]},
+  {"LayerName": "MasterDictListLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]},
+  {"LayerName": "fdfLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [
+    {
+      "fdf": {
+        "derivations": [
+          {"name": "getBaidData", "type":"mv_cmn", "input": {"inputCol": {"OUT_ADDRESS_LINES":"OUT_TAXIDADDRBAID_ADR","OUT_ADDRESS_CITY":"OUT_ADDRBAID_CITY","OUT_ADDRESS_STATE":"OUT_ADDRBAID_STATE","OUT_ADDRESS_ZIP":"OUT_ADDRBAID_ZIP","OUT_ADDRESS_ZIP4":"OUT_ADDRBAID_PLUS4","OUT_STD_ADDRESS_TYPE":"OUT_ADDRBAID_TYPE"},"Addr_type":"OUT_STD_ADDRESS_TYPE","Addr_value":"OUT_ADDRESS_LINES"}}
+        ]
+      }
+    }
+  ]}
+
+]

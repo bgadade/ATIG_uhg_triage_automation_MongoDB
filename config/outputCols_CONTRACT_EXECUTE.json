@@ -1,0 +1,216 @@
+{
+    "order": 0,
+    "finalDfColNames": [
+      {
+        "outputColName": "Exec_RetroRsnCd",
+        "dfColName": "DEF_RETRO_RSN_CD",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_RetroApproval?",
+        "dfColName": "DEF_RETRO_APPROVAL",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_EffDt",
+        "dfColName": "OUT_EFFECTIVE_DATE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_MailType",
+        "dfColName": "DEF_MAIL_TYPE_VAL",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_Prac/GrpEmail",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_StreetAddr",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_City",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_State",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_Zip",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_Plus4",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_RosterAttached?",
+        "dfColName": "OUT_ROSTER_ATTACHED",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_PaperType",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_DocID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_ContrProds",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_OtherProd",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_FeeSched",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_ENWind",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_TF",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_TFapplyToAllProds?",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_Prods",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Exec_ProdSpecificTF",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NDBImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NDBEMPIREImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NICEImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      
+      {
+        "outputColName": "Import_CLMImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_EmptorisImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NDBCOSMOSImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NDBCSPFACETSImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NonDel_Segment_E&I",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NonDel_Segment_C&S",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+          {
+        "outputColName": "Import_NonDel_Product_IFP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_MEDICAID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_DSNP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+       {
+        "outputColName": "Import_NonDel_Segment_M&R",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NonDel_Segment_VA CCN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      }
+   ]
+}

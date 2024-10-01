@@ -1,0 +1,16 @@
+{"PROVIDER_EMAIL/WEB_ADDR": {
+  "PARENT_CATEGORY": "ProviderEmail/WebAddr",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                            "min_Y": { "text": ["ID NUMBERS"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_Y": { "text": ["LANGUAGES:"],"point": "BOTTOM_LEFT","occurence": 1},
+                            "min_X": { "text": ["EMAIL ADDRESS:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_X": { "text": ["SPECIALTY"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+  }
+  ]
+ }
+   }

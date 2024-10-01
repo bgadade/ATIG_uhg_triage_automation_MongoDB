@@ -1,0 +1,21 @@
+{
+  "Address" : [{"loopId":1,
+                "direction": "Y",
+                "delimiter": {"1":["Fax:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["Education"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Clinic Address"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": ["Group Tax ID:"],"point": "BOTTOM_LEFT","occurence": 1}}
+                },
+                {"loopId":2,
+                "direction": "Y",
+                "delimiter": {"1":["Fax:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["Education"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Clinic Address"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": ["See Patients"],"point": "BOTTOM_LEFT","occurence": 1}}
+                }
+              ]
+}

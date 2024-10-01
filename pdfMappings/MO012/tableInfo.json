@@ -1,0 +1,75 @@
+{
+  "Licence": [
+    {"type": "table2",
+              "xMargin": 4.5,
+              "tableId":7,
+              "parentBB":{
+                        "min_Y": {"text": ["MEDICAL LIABILITY CARRIER:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["LICENSE TYPE"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+              "tableHeader": "None"
+  }],
+  "Dea": [{"type": "table2",
+              "xMargin": 4.5,
+              "tableId":7,
+              "parentBB":{
+                        "min_Y": {"text": ["MEDICAL LIABILITY CARRIER:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["LICENSE TYPE"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+              "tableHeader": "None"
+  }],
+  "Medicare": [{"type": "table2",
+              "xMargin": 4.5,
+              "tableId":7,
+              "parentBB":{
+                        "min_Y": {"text": ["MEDICAL LIABILITY CARRIER:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["LICENSE TYPE"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+              "tableHeader": "None"
+  }],
+  "Board" : [{"type": "table2",
+              "xMargin": 4.5,
+              "tableId":9,
+              "parentBB":{
+                        "min_Y": {"text": ["HOSPITAL AFFILIATIONS"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["AND SUBSPECIALTIES"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+              "tableHeader":"None"
+  }],
+  "Address" : [
+    {"type": "table2",
+              "xMargin": 4.5,
+              "tableId":1,
+              "parentBB":{
+                        "min_Y": {"text": ["Specialties Practiced At This Location"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["STREET"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+              "tableHeader":"None"
+  },
+    {"type": "table2",
+              "xMargin": 4.5,
+              "tableId":2,
+              "parentBB":{
+                        "min_Y": {"text": ["Tax ID:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Associated Billing"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+              "tableHeader":"None"
+  }
+  ],
+  "SchoolDetails": [{"type": "table2",
+              "xMargin": 4.5,
+              "tableId":6,
+              "parentBB":{
+                        "min_Y": {"text": ["LICENSE TYPE"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["TRAINING TYPE"],"point": "BOTTOM_LEFT","occurence":1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+              "tableHeader": "None"
+  }]
+}

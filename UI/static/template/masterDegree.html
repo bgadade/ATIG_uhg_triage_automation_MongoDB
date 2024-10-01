@@ -1,0 +1,92 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Reference Data- <small>Degree</small></li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox">
+      <!-- Your Page Content Here -->
+      <div class="container-fluid contentbody" data-ng-init="getDataList('degree_psi.csv')">
+        <div ng-include="'static/template/refDataHeader.html'"></div>
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8">
+
+            <div class="row">
+              <div class="col-md-6">
+                <button type="button" class="btn btn-md pull-left btndefault addRowBtn" ng-click="addRow()">ADD Row</button>
+              </div>
+              <div class="col-md-6">
+                <input class="inputSearch" type="text" placeholder="Search" ng-model="viewSearch">
+              </div>
+            </div>
+            <div class="row">
+              <table class="col-md-12 table table-striped table-hover" cellspacing="0" width="100%" fixed-header height="327px;">
+                  <thead class="inputHead">
+                    <tr>
+                        <th></th>
+                        <th>Degree</th>
+                        <th>Description</th>
+                        <th>Is Mid Level</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-ng-repeat="newDegree in newDataList track by $index">
+                      <td>
+                        <span class="glyphicon glyphicon-remove removeRow" ng-click="removeNewData($index)"></span>
+                      </td>
+                      <td>
+                        <div class="form-group inputControl">
+                          <input type="text" class="form-control" ng-model="newDegree.code">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group inputControl">
+                          <input type="text" class="form-control" ng-model="newDegree.description">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group radioControl">
+                          <div class="radio radio-inline">
+                            <label><input type="radio" name="{{newDegree.id}}+0" ng-model="newDegree.is_mid_level" value="Y">Yes</label>
+                          </div>
+                          <div class="radio radio-inline" style="margin-top:5%">
+                            <label><input type="radio" name="{{newDegree.id}}+0" ng-model="newDegree.is_mid_level" value="N">No</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr ng-repeat="degrees in dataList | filter:viewSearch track by $index">
+                        <td>
+                          <span class="glyphicon glyphicon-remove removeRow" ng-click="removeData($index)"></span>
+                        </td>
+                        <td class="inputBodyData" style="padding-top: 9px;font-size: 12px;">{{degrees.code}}</td>
+                        <td class="inputBodyData" style="padding-top: 9px;font-size: 12px;">{{degrees.description}}</td>
+                        <td class="inputBodyData" style="padding-top: 9px;font-size: 12px;">{{degrees.is_mid_level}}</td>
+                    </tr>
+
+                  </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-2">
+          </div>
+        </div>
+        <div class="row pull-right">
+          <div class="saveDiv">
+            <span class="glyphicon glyphicon-floppy-saved saveIcon" ng-click="setDegreeList()"></span>
+          </div>
+        </div>
+      </div>
+     </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</div>

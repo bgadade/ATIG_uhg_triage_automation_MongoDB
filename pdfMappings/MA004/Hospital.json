@@ -1,0 +1,29 @@
+{"HOSPITAL_NAME": {
+  "PARENT_CATEGORY": "Hospital",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":"None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":["Department:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}} }
+                 }]
+   }
+  ]
+ },
+ "HOSPITAL_AFF_STATUS": {
+  "PARENT_CATEGORY": "Hospital",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Appt. Type:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":["Supervisor:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Specialty 2:"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 }]
+   }
+  ]
+ }
+}

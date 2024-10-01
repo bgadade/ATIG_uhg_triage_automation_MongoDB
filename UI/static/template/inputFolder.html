@@ -1,0 +1,38 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Upload Input Folder
+    </h1>
+  </section>
+  <!-- Main content -->
+  <section class="content">
+    <!-- Your Page Content Here -->
+    <div class="container-fluid contentbody" style="padding-right:6%">
+      <div class="row" class="autoMargin">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-7">
+          <div class="row inputrows">
+            <h4>Choose an Input Folder to Process</h4>
+          </div>
+          <div class="row input-group form-group">
+              <input type="text" class="files" ng-value="myFile"></input>
+              <label class="input-group-btn">
+                <span class="btn btndefault" name="Browse">
+                  Browse<input type="file"  webkitdirectory mozdirectory ngf-select="upload($files)" multiple="multiple"  file-model="myFile" name="xlfile" id="xlf" style="display:none;">
+                </span>
+              </label>
+              <button type="button" class="btn btn-lg btndefault uploadBtn" value="Upload" ng-click="uploadFile()">Upload</button>
+          </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

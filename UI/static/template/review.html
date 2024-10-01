@@ -1,0 +1,205 @@
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+<!-- <script>
+$(document).ready(function(){
+    $(".tableDiv table").each(function(){
+      var that = this;
+      var counter = 0;
+    $(this).find("thead tr th").each(function(){
+      var width = $(this).width();
+        debugger;
+        $(that).find("tr").each(function(){
+          var w = $(that).find('tr td:eq(' + counter + ')').width();
+          if (w > width) {
+            width = w;
+          }
+        });
+        // $(".NewHeader thead tr").append(this);
+        debugger;
+        this.width = width;
+        // $(".MyTable tr th").width(width);
+        // $(".NewHeader tr th").width(width);
+        // $('.MyTable tr:last td:eq(' + counter + ')').width(width);
+        counter++;
+    });});
+});
+</script> -->
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>  Review SOT Data</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+    <!-- Your Page Content Here -->
+    <div class="row tableBox" style="height:504px;margin-left: 1px;margin-top: -14px;height: 509px;width:100%;margin-bottom: 37px;">
+      <div class="container-fluid contentbody" data-ng-init="getOutputData()">
+        <center>
+          <div class="row" style="margin-top:-27px">
+              <div class="col-md-1 navbar">
+                <div class="navbar-inner">
+                   <div class="container">
+                      <a onclick="w3_open()" class="btn btn-navbar pull-left navAnchor">
+                         <span class="icon-bar navIcon"></span>
+                         <span class="icon-bar navIcon"></span>
+                         <span class="icon-bar navIcon"></span>
+                      </a>
+                      <div class="nav-collapse collapse navbar-responsive-collapse pull-left overlay" id="mySidebar">
+                        <span class="w3-button w3-display-topright" onclick="w3_close()">X</span>
+                        <ul class="collapsibleList" id="newList">
+                          <li>
+                            <span style="font-size: 16px;">VALID COLUMNS</span>
+                            <ul>
+                              <li ng-repeat="(sheetName,sheetData) in altJson" >
+                                <a data-toggle="popover" ng-click="showSheet(sheetName)" ng-class="sheetName == selectedSheet?'successAnchor':''"  onclick="w3_close()">{{sheetName}}</a>
+                                <ul>
+                                  <li ng-repeat="(rows,cols) in sheetData" ng-if="!errorColumns(rows)">
+                                    <a data-toggle="popover" ng-click="showSheet(sheetName,rows)" ng-class="rows == selectedColName?'successAnchor':''"  onclick="w3_close()">{{rows}}</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <span style="font-size: 16px;">INVALID COLUMNS</span>
+                            <ul>
+                              <li ng-repeat="(sheetName,sheetData) in altJson">
+                                <a ng-click="showSheet(sheetName)" onclick="w3_close()">{{sheetName}}</a>
+                                <ul>
+                                  <li ng-repeat="(rows,cols) in sheetData" ng-if="errorColumns(rows)">
+                                    <a ng-style="setColor(rows)" data-toggle="popover" ng-click="showSheet(sheetName,rows)" onclick="w3_close()">{{rows}}</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5" style="margin-top:6px;">
+                  <!-- <span style="font-size: 16px;font-weight: 600;">{{selectedColName}}</span> -->
+                </div>
+                <div class="col-md-4 pull-right">
+                  <div class="col-md-3 dwnldDiv" style="width:75%;">
+                    <a id ="dwnldAllFile" class="btn dwnldLink" href="/getDwnldAllfile/" target="_self" ng-click="downloadZipFile($event)">
+                      <span class="dwnldSpan" title="Download Zip">
+                        <!--<i class="fa fa-file-zip-o" style="font-size:22px"></i>-->
+                        <img  src="/static/images/zip-file_img.png" style="height:23px;margin-top:-9px" alt="">
+                      </span>
+                    </a>
+                    <a id ="dwnldFile" class="btn dwnldLink" href="/getDwnldfile/" target="_self" ng-click="setOutputData($event)">
+                      <span class="dwnldSpan" style="font-size:17px" title="Download Output">
+                        <span class="fa fa-fw fa-download fa-lg" aria-hidden="true"></span>
+                      </span>
+                    </a>
+                  </div>
+                  <!-- <div class="col-md-3 dwnldDiv">
+                    <a id ="dwnldFile" class="btn dwnldLink" href="/getDwnldfile/" target="_self" ng-click="setOutputData($event)">
+                      <span class="dwnldSpan" title="Download Output">
+                        <span class="fa fa-fw fa-download fa-lg" aria-hidden="true"></span>
+                      </span>
+                    </a>
+                    <a id ="dwnldFile2" class="btn dwnldLink" ng-hide="true" href="/getDwnldfile/" target="_self">
+                      <span class="dwnldSpan" title="Download Output">
+                        <span class="fa fa-fw fa-download fa-lg" aria-hidden="true"></span>
+                      </span>
+                    </a>
+                  </div> -->
+                  <!-- <button type="button" class="btn btndefault" name="button" ng-click="countErr();setOutputData()">Generate PSI File</button> -->
+                  <!-- Modal -->
+                   <div class="modal fade" id="generateModal" role="dialog">
+                     <div class="modal-dialog">
+
+                       <!-- Modal content-->
+                       <div class="modal-content">
+                         <div class="modal-header" style="background:#838282;color:white;height:50px">
+                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                           <h3 class="modal-title" style="float:left">Output Generated Successfully</h3>
+                         </div>
+                         <div class="modal-body">
+                           <h4>Clarify Count:{{clarifyCount}}</h4>
+                           <h4>Reject Count:{{rejectCount}}</h4>
+                           <h4>Error Count:{{errorCount}}</h4>
+                         </div>
+                         <div class="modal-footer">
+                           <!-- <a class="btn btndefault" style="width:22%" href="/getDwnldfile/{{token}}/" target="_self">
+                             <span class="dwnldSpan"style="cursor:pointer;" title="Download Output">
+                               <span class="fa fa-fw fa-download fa-lg" aria-hidden="true"></span>
+                               Download
+                             </span>
+                           </a> -->
+                           <button type="button" class="btn btndefault" style="width:20%" data-dismiss="modal">Close</button>
+                         </div>
+                       </div>
+
+                     </div>
+                   </div>
+                  <!-- End Modal -->
+                </div>
+                <div class="col-md-2 pull-right" ng-show="selectedSheet == 'Psi'">
+                  <button type="button" class="btn btndefault" name="button">Create GD</button>
+                </div>
+            <!-- <div class="col-md-3" ng-repeat="(rows,columns) in altJson">
+              <button type="button" class="btn btn-lg colBtn" ng-style="setColor(rows)" data-toggle="popover" data-placement="top" data-trigger="hover" title="{{rows}}" ng-class="rows == selectedColName?'successBtn':'tabsBtn'" ng-click="showSheet(rows)">{{rows}}</button>
+            </div> -->
+          </div>
+          <div class="col-sm-1 col-md-1 col-lg-1">
+          </div>
+          <div class="col-sm-10 col-md-10 col-lg-10" style="margin-top: -32px;">
+            <div class="row z review-data">
+              <div class="col-md-9 scrollbar tabScroll">
+                <div class="col-md-2"  ng-repeat="(sheetName, sheetData) in altJson" style="margin-right: -2.5%;">
+                  <button style="border-radius: 11px 11px 0px 0px;" type="button" class="btn btn-lg sheetBtn" data-toggle="popover" data-placement="top" data-trigger="hover" title="{{sheetName}}" ng-class="sheetName == selectedSheet?'successBtn':'tabsBtn'" ng-click="showSheet(sheetName)">{{sheetName}}</button>
+                </div>
+              </div>
+            </div>
+            <div class="row otptcontent scale tableDiv reviewtableDiv" style="margin-top:37px;margin-bottom:15px" key-navigation ng-repeat="(sheetName, sheetData) in altJson" ng-show="sheetName == selectedSheet">
+              <table class="table table-striped table-hover MyTable" ng-repeat="(rows,columns) in sheetData" ng-show="rows == selectedColName">
+                <thead class="inputHead" >
+                  <tr style="height:40px;">
+                    <td class="inputData" ng-repeat="cols in columns.colSet track by $index">{{cols}}</td>
+                  </tr>
+                </thead>
+                <tbody  id="scrollableContent" on-scroll-to-bottom="myPagingFunction(selectedColName)" style="overflow-y: scroll !important;overflow-x: scroll !important;">
+                  <tr ng-repeat="data in columns.dataSet | filter:userSearch">
+                    <td class="inputBodyData" ng-repeat="value in data track by $index" ng-class="errorOutput(value,rows)?'errField':''">
+                      <span ng-if="errorOutput(value)" ng-model="value">
+                        <div class="popover-wrapper">
+                          <a href="#" editable-text="value" onaftersave="updateOutput(value,$index,data,rows)" style="color:white">{{value || 'empty' }}</a>
+                        </div>
+                      </span>
+                      <span ng-if="!errorOutput(value)">{{value}}</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+          <div class="col-sm-1 col-md-1 col-lg-1">
+          </div>
+        </center>
+      </div>
+
+      </div>
+
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

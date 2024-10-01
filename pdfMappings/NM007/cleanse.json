@@ -1,0 +1,34 @@
+[
+  {"LayerName": "CleanFinalDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"NAME_LAST","outCol":"NAME_LAST","type":"sv","splitBy":",","startIdx":0,"EndIdx":-1}},
+    {"name": "cleanStringAddress","type": "clean","input": {"col":"ADDRESS_LINE_1","type":"mv","regex":"\\d{3,}.*"}},
+    {"name": "cleanStringAddress","type": "clean","input": {"col":"ADDRESS_COUNTY","type":"mv","regex":"\\D+"}},
+    {"name": "cleanStringAddress","type": "clean","input": {"col":"SCHOOL_COMP_DATE","type":"mv","regex":"\\d{3,}"}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_LINE_1","outCol":"ADDRESS_LINE_1","type":"mv","splitBy":" ","startIdx":0, "EndIdx":-3}},
+    {"name": "cleanStringAddress","type": "clean","input": {"col":"ADDRESS_PHONE","type":"mv","start":"","end":"","regex":"\\W\\d{3}\\W.\\d{3}-\\d{4}"}},
+    {"name": "cleanStringAddress","type": "clean","input": {"col":"ADDRESS_PHONE_FAX","type":"mv","start":"","end":"","regex":".\\d{2,}.+\\d{2,}-\\d{2,}"}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"DEGREE","outCol":"DEGREE","type":"mv","splitBy":",","startIdx":-1}},
+    {"name": "cleanStringAddress","type": "clean","input": {"col":"TAX_ID","type":"sv","regex":"\\d{2,}.*"}},
+    {"name": "cleanString","type": "clean","input": {"col":"HOSPITAL_NAME","type":"mv","start":"Start","end":"$","regex":"None"}},
+
+
+
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_ZIP","outCol":"ADDRESS_ZIP","type":"mv","splitBy":" ","startIdx":-1}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_STATE","outCol":"ADDRESS_STATE","type":"mv","splitBy":" ","startIdx":-2,"EndIdx":-1}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_CITY","outCol":"ADDRESS_CITY","type":"mv","splitBy":" ","startIdx":-3,"EndIdx":-2}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_CITY","outCol":"ADDRESS_CITY","type":"mv","splitBy":",","startIdx":0}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"PROVIDER_EMAIL/WEB_ADDR","outCol":"PROVIDER_EMAIL/WEB_ADDR","type":"mv","splitBy":" ","startIdx":0,"EndIdx":1}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"WORKING_HOURS","outCol":"WORKING_HOURS","type":"mv","splitBy":"Office Hours:","startIdx":1}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"WORKING_HOURS","outCol":"WORKING_HOURS","type":"mv","splitBy":"Has Provider","startIdx":0,"EndIdx":-1}},
+      {"name": "cleanLegOwn","type": "clean","input": {"col":"NAME_OF_LEGAL_TAX_ID_OWNER","type":"sv","regex":"\\d{3,}"}}
+
+
+
+
+    ]},
+  {"LayerName": "CleanTableDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"Licence":[
+          {"name": "chooseRows","type": "clean","input": {"refCol":1, "refVal":"State"}}
+      ]}
+  ]}
+  ]

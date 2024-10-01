@@ -1,0 +1,103 @@
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+</script>
+<div class="row" style="padding-left:10px;padding-right:10px">
+  <div class="col-sm-6 pull-left" style="margin-bottom:20px;">
+    <button type="button" class="btn btndefault" data-toggle="dropdown" ng-hide="outputMap">
+      <span>Select Type</span>
+      <span class="glyphicon glyphicon-chevron-down" style="float:right;padding-top:1%"></span>
+    </button>
+    <div ng-show="outputMap" class="btn btndefault">
+      <span>{{typeSelected}}</span>
+    </div>
+    <div class="dropdown-menu dropdownlist" style="width:92%;margin-left:4%">
+      <ul>
+        <li ng-repeat="types in fields.mapped | filter:{parentCategory:parentCategory} | unique:'type' track by $index" ng-if="types.type!='AsIs'" >
+          <a ng-click="collectType(types.type); makeItEnable($index)" ng-model="typeSelected">{{types.type}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-12" ng-show="outputMap" id="output">
+
+    <span class="glyphicon glyphicon-remove pull-left" style="cursor:pointer;" ng-click="remove(typeSelected,typeSelect,orderSelected);"></span>
+
+    <table class="table borderless" ng-repeat="(key,value) in typeSelect|groupBy:'groupName' track by $index" >
+      <tbody>
+        <tr ng-repeat="maps in value track by $index" ng-if="maps.type!='AsIs' && !maps.groupName && key == 'undefined'">
+          <td class="mvOtfield" >
+            <div class="row" style="margin-right:2%;width:250px;text-overflow:ellipsis;overflow:hidden" title="{{maps.outputField}}" data-toggle="popover" data-placement="bottom" data-trigger="hover">
+              <button type="button" ng-click="selectOutItem(maps)" ng-class="maps == selectedOutObject?'mvOtBtnSuccess':'mvOtBtn'">
+                {{maps.outputField}}
+              </button>
+            </div>
+          </td>
+          <td class="rightSpan" style="padding-top:2.5%;">
+            <span class="glyphicon glyphicon-arrow-right statusicon" style="color:green;"></span>
+          </td>
+          <td>
+            <div class="btn mvInfield" style="background-color:#EAF4F6" ng-if="maps.inputField" title="{{maps.inputField}}" data-toggle="popover" data-placement="bottom" data-trigger="hover">
+              <span class="glyphicon glyphicon-remove statusicon pull-left" ng-click="rejectMap(maps)" style="cursor:pointer;color:red;padding-right:0%;padding-top:2%"></span>
+              <span >{{maps.inputField}}</span>
+            </div>
+          </td>
+        </tr>
+        <tr style="background-color:white;" ng-if="key != 'undefined'">
+          <td>
+            <table class="table borderless" style="margin-top:0%;" ng-repeat="(order,groups) in value| groupBy:'groupOrder' track by $index" ng-if="key != 'undefined'">
+              <thead>
+                <tr ng-if="$first">
+                  <th colspan="3">
+                    <div class="row" style="margin-right:2%;text-overflow:ellipsis;overflow:hidden" title="{{maps.groupName}}" data-toggle="popover" data-placement="bottom" data-trigger="hover">
+                      <h4>
+                        <span>{{key}}</span>
+                      </h4>
+                    </div>
+                  </th>
+                </tr>
+                <tr ng-if="!$first">
+                  <td colspan="3" style="border:none">
+                    <span class="glyphicon glyphicon-remove pull-left" style="cursor:pointer;" ng-click="removeGroup(groups);"></span>
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="maps in groups|orderBy:['groupOrder','orderWithinGroup'] track by $index" >
+                  <td class="mvOtfield" >
+                    <div class="row" style="margin-right:2%;width:250px;text-overflow:ellipsis;overflow:hidden" title="{{maps.outputField}}" data-toggle="popover" data-placement="bottom" data-trigger="hover">
+                      <button type="button" ng-click="selectOutItem(maps)" ng-class="maps == selectedOutObject?'mvOtBtnSuccess':'mvOtGrpBtn'">
+                        {{maps.outputField}}
+                      </button>
+                    </div>
+                  </td>
+                  <td class="rightSpan" style="padding-top:2.5%;">
+                    <span class="glyphicon glyphicon-arrow-right statusicon" style="color:green;"></span>
+                  </td>
+                  <td>
+                    <div class="btn mvInfield" style="background-color:#EAF4F6" ng-if="maps.inputField" title="{{maps.inputField}}" data-toggle="popover" data-placement="bottom" data-trigger="hover">
+                      <span class="glyphicon glyphicon-remove statusicon pull-left" ng-click="rejectMap(maps)" style="cursor:pointer;color:red;padding-right:0%;padding-top:2%"></span>
+                      <span >{{maps.inputField}}</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr ng-if="$last">
+                  <td colspan="3">
+                    <div class="row" style="margin-right:2%;text-overflow:ellipsis;overflow:hidden" title="{{maps.groupName}}" data-toggle="popover" data-placement="bottom" data-trigger="hover">
+                      <h4>
+                        <button type="button" name="button" class="btn glyphicon glyphicon-plus addBtnRow"  ng-click="addGroup(groups)"></button>
+                      </h4>
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+state,state_code,provider_address_level,medicaid_states_per_state_guidelines
+Alabama,AL,P,N
+Alaska,AK,P,N
+Arizona,AZ,P,Y
+Arkansas,AR,P,N
+California,CA,A,Y
+Colorado,CO,P,N
+Connecticut,CT,P,Y
+Delaware,DE,P,Y
+District of Columbia,DC,P,N
+Florida,FL,A,Y
+Georgia,GA,P,Y
+Hawaii,HI,P,Y
+Idaho,ID,P,Y
+Illinois,IL,P,N
+Indiana,IN,P,N
+Iowa,IA,A,Y
+Kansas,KS,A,Y
+Kentucky,KY,P,N
+Louisiana,LA,P,Y
+Maine,ME,P,Y
+Maryland,MD,A,Y
+Massachusetts,MA,A,Y
+Michigan,MI,A,Y
+Minnesota,MN,P,N
+Mississippi,MS,P,Y
+Missouri,MO,P,Y
+Montana,MT,P,N
+Nebraska,NE,A,Y
+Nevada,NV,P,Y
+New Hampshire,NH,P,N
+New Jersey,NJ,A,Y
+New Mexico,NM,P,Y
+New York, NY ,A,Y
+North Carolina,NC,P,N
+North Dakota,ND,P,N
+Ohio,OH,P,Y
+Oklahoma,OK,P,N
+Oregon,OR,P,N
+Pennsylvania,PA,A,Y
+Rhode Island,RI,P,N
+South Carolina,SC,P,N
+South Dakota,SD,P,N
+Tennessee,TN,P,Y
+Texas,TX,P,Y
+Utah,UT,P,N
+Vermont,VT,P,N
+Virginia,VA,P,N
+Washington,WA,P,N
+West Virginia,WV,P,N
+Wisconsin,WI,P,Y
+Wyoming,WY,P,N

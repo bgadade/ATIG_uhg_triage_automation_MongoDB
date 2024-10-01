@@ -1,0 +1,115 @@
+<!-- Main Header -->
+<header class="main-header">
+
+  <!-- Logo -->
+  <a href="" class="logo">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini">
+      <div class="navbar-brand hidden-xs">
+        <!-- <img src="/static/images/logo_wipro.png"> -->
+        <img class="whiteBackgound" src="/static/images/logo_wiproholmes.png">
+      </div>
+    </span>
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg">
+      <div class="navbar-brand whiteBackgound hidden-xs">
+        <img src="/static/images/logo_wiproholmes.png">
+      </div>
+    </span>
+  </a>
+
+  <!-- Header Navbar -->
+  <nav class="navbar navbar-static-top" role="navigation">
+    <!-- Sidebar toggle button-->
+    <a class="sidebar-toggle" data-target="#navbarCollapse" data-toggle="offcanvas" role="button" ng-click="hideFooter()">
+      <span class="sr-only">Toggle navigation</span>
+    </a>
+    <ul class="nav navbar-nav navbar-left" style="height:20px">
+      <li><a href="#"><img src="/static/images/solutionname_KnowYourProvider_inside.png" class="img-responsive" style="height: 19px;"></a></li>
+    </ul>
+    <!-- Navbar Right Menu -->
+    <ul class="nav navbar-nav navbar-right">
+      <li><a>{{userName}}</a> </li>
+      <li><a ui-sref="{{userRole=='admin'?'adminMap':'home'}}"><span class="glyphicon glyphicon-home"></span></a></li>
+      <li><a ng-click="logout()"><span class="glyphicon glyphicon-log-in"></span></a></li>
+    </ul>
+  </nav>
+</header>
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar" id="navbarCollapse" >
+
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+
+        <!-- Sidebar user panel (optional) -->
+        <!-- <div class="user-panel">
+          <div class="pull-left image">
+            <img src="static/css/dist/img/avatar5.png" class="img-circle" alt="User Image">
+          </div>
+          <div class="pull-left info">
+            <p>{{userName}}</p>
+            <!-- Status -->
+            <!-- <a><i class="fa fa-circle text-success"></i> Online</a>
+          </div>
+        </div> -->
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu" ng-if="userRole=='admin'">
+          <!-- <li class="header">HEADER</li> -->
+          <!-- Optionally, you can add icons to the links -->
+          <li ui-sref-active="active"><a ui-sref="adminMap"><i class="fa fa-unlink"></i> <span>Unconfirmed Mapping</span></a></li>
+          <li ui-sref-active="active"><a ui-sref="providerMap"><i class="fa fa-share-alt"></i> <span>Provider Mapping</span></a></li>
+          <li class="treeview" ng-class="{active: (state.current.name === 'svAdminMap' || state.current.name === 'mvAdminMap')}">
+            <a><i class="fa fa-link"></i> <span>Confirmed Mapping</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu" ui-sref-active="active">
+              <li ui-sref-active="active"><a ui-sref="svAdminMap" style="margin-left:0px">Single Value</a></li>
+              <li ui-sref-active="active"><a ui-sref="mvAdminMap" style="margin-left:0px">Multi Value</a></li>
+            </ul>
+          </li>
+          <!-- <li ui-sref-active="active"><a ui-sref="adminInput"><i class="fa fa-files-o"></i> <span>Grid Files</span></a></li> -->
+          <li ui-sref-active="active"><a ui-sref="adminException"><i class="fa fa-th"></i> <span>Reference Data</span></a></li>
+          <li ui-sref-active="active"><a ui-sref="mngUsr"><i class="fa fa-users"></i> <span>Manage Users</span></a></li>
+          <li ui-sref-active="active"><a ui-sref="mngProvider"><i class="fa fa-user-md"></i> <span>Manage Providers</span></a></li>
+          <li ui-sref-active="active"><a ui-sref="logReport"><i class="fa fa-history" aria-hidden="true"></i> <span>Log Report</span></a></li>
+        </ul>
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu" ng-if="userRole=='user'">
+          <!-- <li class="header">HEADER</li> -->
+          <!-- Optionally, you can add icons to the links -->
+          <li ui-sref-active="active" ng-class="{active: state.current.name === 'input'}"><a ui-sref="home"><i class="glyphicon glyphicon-upload"></i> <span>Upload Input Files</span></a></li>
+          <li class="treeview" ng-class="{active: (state.current.name === 'email' || state.current.name === 'processInput')}">
+            <a><i class="fa fa-link"></i> <span>Extract Input Files</span>
+              <span class="pull-right-container">
+                <i class="glyphicon glyphicon-chevron-down"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <!-- <li ng-class="{active: state.current.name === 'email'}"><a style="margin-left:12%">Extract Email</a></li> -->
+              <li ng-class="{active: state.current.name === 'processInput'}"><a style="margin-left:0px">Extract Attachment</a></li>
+            </ul>
+          </li>
+          <li class="treeview" ng-class="{active: (state.current.name === 'mapping' || state.current.name === 'svMap' || state.current.name === 'mvMap' || state.current.name === 'review')}">
+            <a><i class="glyphicon glyphicon-file"></i> <span>File Processes SOT</span>
+              <span class="pull-right-container">
+                <i class="glyphicon glyphicon-chevron-down"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu" ui-sref-active="active">
+              <li ng-class="{active: state.current.name === 'mapping'}"><a style="margin-left:0px">Control Mapping</a></li>
+              <li ng-class="{active: state.current.name === 'svMap'}"><a style="margin-left:0px">Single Value</a></li>
+              <li ng-class="{active: state.current.name === 'mvMap'}"><a style="margin-left:0px">Multi Value</a></li>
+              <li ng-class="{active: state.current.name === 'transType'}"><a style="margin-left:0px">Transaction Type</a></li>
+              <li ng-class="{active: state.current.name === 'review'}"><a style="margin-left:0px">Review SOT Fields Mapping</a></li>
+            </ul>
+          </li>
+          <!-- <li ui-sref-active="active"><a ui-sref="dashboard"><i class="fa fa-bar-chart"></i> <span>Dashboard</span></a></li> -->
+          <li ui-sref-active="active"><a ui-sref="exception"><i class="fa fa-flag"></i> <span>Report Exception</span></a></li>
+          <!-- <li ui-sref-active="active" ng-class="{active: state.current.name === 'dummy'}"><a ui-sref="dummy"><i class="fa fa-link"></i> <span>Execute Action</span></a></li> -->
+        </ul>
+    <!-- /.sidebar-menu -->
+  </section>
+  <!-- /.sidebar -->
+</aside>

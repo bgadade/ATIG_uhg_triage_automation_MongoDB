@@ -1,0 +1,6 @@
+[
+  {"LayerName": "CleanFinalDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"name": "cleanString","type": "clean","input": {"col":"TAX_ID","type":"sv","start":"","end":"","regex":"\\:"}},
+      {"name": "cleanString","type": "clean","input": {"col":"BOARD_SPECIALITY","type":"mv","start":"/","end":"$","regex":""}}
+  ]}
+]

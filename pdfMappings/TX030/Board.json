@@ -1,0 +1,29 @@
+{"BOARD_SPECIALITY": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"tableDetails":{"tableId": 1, "columnIndex": 1}}]
+   }
+  ]
+ },
+ "BOARD_CERT_EXPIRATION_DATE": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"tableDetails":{"tableId": 1, "columnIndex": 3}}]
+   }
+  ]
+ },
+ "BOARD_NAME": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"tableDetails":{"tableId": 1, "columnIndex": 2}}]
+   }
+  ]
+ }
+
+}

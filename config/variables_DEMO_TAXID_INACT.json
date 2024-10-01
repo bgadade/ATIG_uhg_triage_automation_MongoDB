@@ -1,0 +1,46 @@
+[
+
+  {"LayerName": "CleanseDataFrame","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"singleValue": {
+      "derivations": [
+        {"name": "mapStdValues","type": "mv_cmn","input": {"inputCol":"RSN_CODE", "standardsKeys": ["CANCEL_RSN_CODE"], "outputCol": "STD_CANCEL_REASON_CODE"}}
+      ]
+    }}
+  ]},
+
+  {"LayerName": "CleanseLayer1","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "var_parseDate","type": "mv_cmn","input": ["CANCEL_DATE", "C"],"col": "PARSED_CANCEL_DATE"}
+      ]
+    }}
+  ]},
+
+  {"LayerName": "multivaluedCols","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "placeHolder","type": "mv_cmn","input": [],"col": "placeHolder"},
+        {"name": "setDefaultValue","type": "mv_cmn","input": ["STD_CANCEL_REASON_CODE", "'21'"],"col": "OUT_CANCEL_REASON_CODE"}
+      ]
+    }}
+  ]},
+
+  {"LayerName": "FinalCleansingLayer","LayerType": "DF","ProcessStage": 0, "Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["PARSED_CANCEL_DATE", "10", "max", "OUT_CANCEL_DATE" ], "mandatory":"True"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_CANCEL_REASON_CODE", "2", "max", "OUT_CANCEL_REASON_CODE"], "mandatory":"True"}},
+        {"name": "updateClarification","type": "mv_cmn","input": {"ignore":0,"updateFrom":"errDictDupValInSv","colMapping":{"CANCEL_DATE":"OUT_CANCEL_DATE","CANCEL_REASON_CODE":"OUT_CANCEL_REASON_CODE"}}}
+      ]
+    }}
+  ]},
+  {"LayerName": "conflictRemovalLayer","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"singleValue": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}}
+  ]},
+  {"LayerName": "MasterDictListLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]},
+  {"LayerName": "fdfLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]}
+
+]

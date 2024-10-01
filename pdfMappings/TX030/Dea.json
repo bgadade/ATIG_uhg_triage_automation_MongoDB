@@ -1,0 +1,31 @@
+{"DEA_NUMBER": {
+  "PARENT_CATEGORY": "Dea",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Liability Carrier:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["State License:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Federal DEA:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Exp. Date"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "DEA_EXPIRY_DATE": {
+  "PARENT_CATEGORY": "Dea",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Liability Carrier:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["State License:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Number"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

@@ -1,0 +1,31 @@
+{"LICENCE_NUMBER": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["DEA:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["ID NUMBERS"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["LICENSE:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["EXPIRES:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "LICENCE_EXPIRY_DATE": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["DEA:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["ID NUMBERS"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["EXPIRES:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["NPI:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

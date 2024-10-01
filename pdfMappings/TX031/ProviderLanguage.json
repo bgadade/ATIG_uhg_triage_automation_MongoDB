@@ -1,0 +1,16 @@
+{"PROVIDER_LANGUAGE": {
+  "PARENT_CATEGORY": "ProviderLanguage",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                            "min_Y": { "text": ["EMAIL ADDRESS:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_Y": { "text": ["DOB:"],"point": "BOTTOM_LEFT","occurence": 1},
+                            "min_X": { "text": ["LANGUAGES:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_X": { "text": ["SPECIALTY"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+  }
+  ]
+ }
+   }

@@ -1,0 +1,12 @@
+{"BOARD_CERT_DATE": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId":1, "columnIndex":2}}]
+   }
+  ]
+ }
+}

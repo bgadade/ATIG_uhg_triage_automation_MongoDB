@@ -1,0 +1,181 @@
+{
+  "BOARD_SPECIALITY": {
+    "PARENT_CATEGORY": "Board",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Date Issued:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Board Specialty:"
+                ]
+              },
+              "min_X": {
+                "occurence": "None",
+                "point": "BOTTOM_LEFT",
+                "text": "None"
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "State Medical License and DEA"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  },
+  "BOARD_NAME": {
+    "PARENT_CATEGORY": "Board",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Date Issued:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Date Issued:"
+                ]
+              },
+              "min_X": {
+                "occurence": "None",
+                "point": "BOTTOM_LEFT",
+                "text": "None"
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Board Specialty:",
+                  "State Medical License and DEA"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  },
+  "BOARD_CERT_DATE": {
+    "PARENT_CATEGORY": "Board",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Date Expired:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Date Issued:"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Date Issued:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "State Medical License and DEA"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  },
+  "BOARD_CERT_EXPIRATION_DATE": {
+    "PARENT_CATEGORY": "Board",
+    "Column_Type": [
+      {
+        "Tag": "PRIMARY",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": "None",
+                "point": "TOP_RIGHT",
+                "text": "None"
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Date Expired:"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Date Expired:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "State Medical License and DEA"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  }
+}

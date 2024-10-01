@@ -1,0 +1,19 @@
+{
+  "pdfSections": {
+    "footer": "None",
+    "header": "None"
+  },
+  "recordDelimitation": {
+    "extractDetails": {
+      "identifierLine": "None",
+      "identifierTextCheck": "None",
+      "location": "None",
+      "pageCount": "None"
+    },
+    "recordType": "single",
+    "ruleType": "None"
+  },
+  "svFlag": false,
+  "xMargin": 0,
+  "yMargin": 0
+}

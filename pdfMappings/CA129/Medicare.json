@@ -1,0 +1,16 @@
+{"MEDICARE": {
+  "PARENT_CATEGORY": "Medicare",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                            "min_Y": { "text": ["NPI:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_Y": { "text": ["ECFMG No.:"],"point": "BOTTOM_LEFT","occurence": 1},
+                            "min_X": { "text": ["Medicare UPIN:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+  }
+  ]
+ }
+   }

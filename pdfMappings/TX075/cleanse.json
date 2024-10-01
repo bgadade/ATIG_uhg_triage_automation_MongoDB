@@ -1,0 +1,11 @@
+[
+  {"LayerName": "CleanFinalDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"name": "cleanString","type": "clean","input": {"col":"SPECIALITY_INDICATOR","type":"mv","start":"Specialty","end":"$","regex":""}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"DEGREE","outCol":"DEGREE","type":"mv","splitBy":",","startIdx":-1}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"NAME_LAST","outCol":"NAME_LAST","type":"sv","splitBy":",","startIdx":0,"EndIdx":-1}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"GROUP_NAME","type":"sv"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"NAME_OF_LEGAL_TAX_ID_OWNER","type":"sv"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"TAX_ID","type":"sv", "errMsg":"Multiple Tax Id case", "errInput":"True"}}
+  ]}
+]
+

@@ -1,0 +1,428 @@
+{
+    "order": 0,
+    "finalDfColNames": [
+      {
+        "outputColName": "Addr_EffDt",
+        "dfColName": "OUT_ADDR_EFFECTIVE_DATE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_MAID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AddrAdd_Adr",
+        "dfColName": "ADDR_ADD",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_City",
+        "dfColName": "OUT_ADDRESS_CITY",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_State",
+        "dfColName": "OUT_ADDRESS_STATE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_Zip",
+        "dfColName": "OUT_ADDRESS_ZIP",
+        "dataType": "numeric",
+        "format": "00000"
+      },
+      {
+        "outputColName": "Addr_Plus4",
+        "dfColName": "OUT_ADDRESS_ZIP4",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_Type",
+        "dfColName": "OUT_STD_ADDRESS_TYPE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_BAID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AddrBAID_Adr",
+        "dfColName": "OUT_AddrBAID_Adr",
+        "dataType": "text",
+        "format": "None"
+      },
+	  {
+        "outputColName": "AddrBAID_City",
+        "dfColName": "OUT_AddrBAID_CITY",
+        "dataType": "text",
+        "format": "None"
+      },
+	  {
+        "outputColName": "AddrBAID_State",
+        "dfColName": "OUT_AddrBAID_STATE",
+        "dataType": "text",
+        "format": "None"
+      },
+	  {
+        "outputColName": "AddrBAID_Zip",
+        "dfColName": "OUT_AddrBAID_ZIP",
+        "dataType": "text",
+        "format": "None"
+      },
+	  {
+        "outputColName": "AddrBAID_Plus4",
+        "dfColName": "OUT_AddrBAID_Plus4",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_BAIDType",
+        "dfColName": "OUT_ADDRESS_BAID_TYPE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_P/SInd",
+        "dfColName": "OUT_ADDRESS_IND",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_CorrespInd",
+        "dfColName": "OUT_ADDRESS_CORRESPONDENCE_IND",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_DBANm",
+        "dfColName": "OUT_DBA_NAME",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_DirInd",
+        "dfColName": "OUT_DIR_IND",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "PhnFax_PhnNum",
+        "dfColName": "OUT_ADDRESS_PHONE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "PhnFax_Ext",
+        "dfColName": "EXT_PHONE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "PhnFax_P/SInd",
+        "dfColName": "ADDRESS_PHONE_INDICATOR",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "PhnFax_PhnType",
+        "dfColName": "OUT_STD_ADDRESS_PHONE_TYPE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "PhnFax_PhnDirInd",
+        "dfColName": "OUT_PHONE_DIR_IND",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_Lang",
+        "dfColName": "OUT_LANGUAGE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_SpokenBy",
+        "dfColName": "OUT_STD_LANGUAGE_SPOKEN_BY",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_WrittenBy",
+        "dfColName": "OUT_STD_LANGUAGE_WRITTEN_BY",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_8to5",
+        "dfColName": "APPLY_8TO5",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AddrAdd_24hours",
+        "dfColName": "APPLY_24HOURS",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_ExtHrs",
+        "dfColName": "OUT_EXT_HR_IND",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_AgeMin",
+        "dfColName": "OUT_MIN_AGE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_AgeMax",
+        "dfColName": "OUT_MAX_AGE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_Gender",
+        "dfColName": "GENDER_LIMITATION",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_Email/WebAddr",
+        "dfColName": "ELECTRONIC_COMM",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_Email/WebType",
+        "dfColName": "OUT_COMMUNICATION_TYPE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_Prov/Addr",
+        "dfColName": "EMAIL_INDICATOR",
+        "dataType": "text",
+        "format": "None"
+      },
+       {
+        "outputColName": "OfcLim_McaidNum",
+        "dfColName": "OUT_MEDICAID",
+        "dataType": "text",
+        "format": "None"
+      },
+       {
+        "outputColName": "OfcLim_McaidLoc",
+        "dfColName": "VALIDATE_MEDICAID_LOC",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_ContNm",
+        "dfColName": "COMM_NAME",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_ContType",
+        "dfColName": "STD_CONT_TYPE",
+        "dataType": "text",
+        "format": "None"
+      },
+       {
+        "outputColName": "OfcLim_CommType",
+        "dfColName": "STD_COMM_TYPE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_ContPhn",
+        "dfColName": "OUT_COMM_NUMBER",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_ContPhnExt",
+        "dfColName": "OUT_COMM_EXT",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AddrAdd_HA_HandiAccess",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+       {
+        "outputColName": "AddrAdd_HandiAccessType",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+       {
+        "outputColName": "AddrAdd_HandiAccessTypeYN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+      "outputColName": "Import_NDBImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NDBEMPIREImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NICEImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      
+      {
+      "outputColName": "Import_NDBCOSMOSImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NDBCSPFACETSImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NonDel_Segment_E&I",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NonDel_Segment_C&S",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+          {
+        "outputColName": "Import_NonDel_Product_IFP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_MEDICAID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_DSNP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+      {
+      "outputColName": "Import_NonDel_Segment_M&R",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NonDel_Segment_VA CCN",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_E&I",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_C&S",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+        "outputColName": "Import_Del_Product_IFP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_Del_Product_MEDICAID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_Del_Product_DSNP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+      {
+      "outputColName": "Import_Del_Segment_M&R",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_VA CCN",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_EmpireCSP",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_ndbZline",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_ndbYline",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_ndbFacetsHline",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_Del_Segment_ndbFacetsYline",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      }
+
+
+   ]
+}

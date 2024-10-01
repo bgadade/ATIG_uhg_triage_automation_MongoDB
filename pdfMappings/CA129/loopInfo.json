@@ -1,0 +1,41 @@
+{
+  "Address" : [{"loopId":1,
+                "direction": "Y",
+                "delimiter": {"1": ["Practice Status:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["BILLING ADDRESS:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["FACILITY ADDRESS:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                },
+                {"loopId":2,
+                "direction": "Y",
+                "delimiter": {"1":["Federal Tax ID No.:"], "type":"blockStart"},
+                "parentBB":{
+                        "min_Y": {"text": ["INSURANCE:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["BILLING ADDRESS:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["BILLING ADDRESS:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                }
+              ],
+  "Board" : [{"loopId":1,
+                "direction": "Y",
+                "delimiter": {"1": ["Year"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["PROVIDER IDENTIFICATION:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["CERTIFICATION:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["PROVIDER IDENTIFICATION:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                }
+              ],
+  "Hospital" : [{"loopId":1,
+                "direction": "Y",
+                "delimiter": {"1": ["Medical Staff Affiliation"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["FACILITY ADDRESS:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["MEDICAL STAFF AFFILIATIONS:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                }
+              ]
+}

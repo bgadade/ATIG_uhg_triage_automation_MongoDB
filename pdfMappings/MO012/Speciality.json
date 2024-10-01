@@ -1,0 +1,16 @@
+{"SPECIALITY": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["OFFICE ADDRESS"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["DIRECTORY LISTING PREFERENCE"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Primary Specialty"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+]
+}
+}

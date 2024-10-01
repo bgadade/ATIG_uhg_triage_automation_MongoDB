@@ -1,0 +1,29 @@
+{"DEA_NUMBER": {
+  "PARENT_CATEGORY": "Dea",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["Exp:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["LICENSURE INFORMATION"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["DEA:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["BNDD"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   }
+  ]
+ },
+ "DEA_EXPIRY_DATE": {
+  "PARENT_CATEGORY": "Dea",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["EDUCATION INFORMATION"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["DEA:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Exp:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_X": {"text": ["BNDD"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   }
+  ]
+ }
+}

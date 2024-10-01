@@ -1,0 +1,311 @@
+{"ADDRESS_LINE_1": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Monday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["P:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["PRIMARY LOCATION"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["P:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Monday"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["P:"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["SECONDARY"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["P:"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["BOARD CERTIFICATION"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["F:"],"point": "BOTTOM_LEFT","occurence": 3},
+                        "min_X": {"text": ["BILLING"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["P:"],"point": "BOTTOM_LEFT","occurence": 3}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["BOARD CERTIFICATION"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["P:"],"point": "BOTTOM_LEFT","occurence": 4},
+                        "min_X": {"text": ["OTHER"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["P:"],"point": "BOTTOM_LEFT","occurence": 4}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "ADDRESS_PHONE": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["F:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["PRIMARY LOCATION"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["P:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["SECONDARY"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["F:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["SECONDARY"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["P:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["F:"],"point": "TOP_RIGHT","occurence": 3},
+                        "max_Y": {"text": ["BILLING"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["P:"],"point": "TOP_RIGHT","occurence": 3},
+                        "max_X": {"text": ["OTHER"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["F:"],"point": "TOP_RIGHT","occurence": 4},
+                        "max_Y": {"text": ["OTHER"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["P:"],"point": "TOP_RIGHT","occurence": 4},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "ADDRESS_PHONE_FAX": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["TIN:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["P:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["F:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["SECONDARY"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Monday"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["P:"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["F:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["TIN"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["P:"],"point": "BOTTOM_LEFT","occurence": 3},
+                        "min_X": {"text": ["F:"],"point": "TOP_RIGHT","occurence": 3},
+                        "max_X": {"text": ["OTHER"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["BOARD CERTIFICATION"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["P:"],"point": "BOTTOM_LEFT","occurence": 4},
+                        "min_X": {"text": ["F:"],"point": "TOP_RIGHT","occurence": 4},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "MONDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["BILLING"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Monday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Monday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Tuesday"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["OTHER"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Monday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Monday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": ["Tuesday"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "TUESDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["BILLING"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Tuesday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Monday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Wednesday"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["OTHER"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Tuesday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Tuesday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": ["Wednesday"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "WEDNESDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["BILLING"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Wednesday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Wednesday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Thursday"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["OTHER"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Wednesday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Wednesday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": ["Thursday"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "THURSDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["BILLING"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Thursday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Thursday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Friday"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["OTHER"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Thursday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Thursday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": ["Friday"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "FRIDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["BILLING"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Friday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Thursday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Saturday"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["OTHER"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Friday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Friday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": ["Saturday"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "SATURDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["BILLING"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Saturday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Saturday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Sunday"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["OTHER"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Saturday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Saturday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": ["Sunday"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "SUNDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["BILLING"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Sunday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Sunday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["SECONDARY"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["OTHER"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Sunday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Sunday"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

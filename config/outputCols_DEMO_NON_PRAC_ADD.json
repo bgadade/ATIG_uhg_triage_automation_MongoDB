@@ -1,0 +1,547 @@
+{
+    "order": 0,
+    "finalDfColNames": [
+      {
+        "outputColName": "NpPrac_EffDt",
+        "dfColName": "OUT_EFFECTIVE_DATE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AltNm_Last",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AltNm_Suffix",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AltNm_First",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AltNm_Mid",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AltNm_Type",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_Gender",
+        "dfColName": "CLEAN_GENDER",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_DOB",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_SSN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_MedicareNum",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_NPINum",
+        "dfColName": "OUT_NPI",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_NPINum_EffDt",
+        "dfColName": "NON_PRAC_EFFECTIVE_DATE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_HCFA/UB",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "TIN_Type",
+        "dfColName": "OUT_TIN_TYPE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "TIN_Tier",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "TIN_Incorp",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "TIN_BulkRecov",
+        "dfColName": "OUT_TIN_BULKRECOV",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "TIN_ContractPaper",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "PTI_Ind",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_HBPsOnly",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_OnlyMPINUnderTaxID",
+        "dfColName": "MPIN_UNDER_TAXID",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "PTI_MPIN",
+        "dfColName": "PTI_MPIN",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_M-AID",
+        "dfColName": "STD_M_AID_VAL",
+        "dataType": "text",
+        "format": "None",
+        "outputScreen":"nonDelegate"
+      },
+      {
+        "outputColName": "Addr_StreetAddr",
+        "dfColName": "ADDR_ADD",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_City",
+        "dfColName": "OUT_ADDRESS_CITY",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_State",
+        "dfColName": "OUT_ADDRESS_STATE",
+        "dataType": "text",
+      "format": "None"
+      },
+      {
+        "outputColName": "Addr_Zip",
+        "dfColName": "OUT_ADDRESS_ZIP",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_Plus4",
+        "dfColName": "OUT_ADDRESS_ZIP4",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_Addr_HandiAccess",
+        "dfColName": "OUT_HANDICAP_ACCESS",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_Type",
+        "dfColName": "OUT_STD_ADDRESS_TYPE",
+        "dataType": "numeric",
+        "format": "00000"
+      },
+      {
+        "outputColName": "Addr_P/SInd",
+        "dfColName": "OUT_ADDRESS_IND",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_B-AID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AddrBAID_StreetAddr",
+        "dfColName": "OUT_ADDRBAID_STREETADDR",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AddrBAID_City",
+        "dfColName": "OUT_ADDRBAID_CITY",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AddrBAID_State",
+        "dfColName": "OUT_ADDRBAID_STATE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AddrBAID_Zip",
+        "dfColName": "OUT_ADDRBAID_ZIP",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AddrBAID_Plus4",
+        "dfColName": "OUT_ADDRBAID_PLUS4",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "AddrBAID_Type",
+        "dfColName": "OUT_ADDRBAID_TYPE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_CorrespInd",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Addr_DBANm",
+        "dfColName": "OUT_DBA_NAME",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "PhnFax_PhnNum",
+        "dfColName": "OUT_ADDRESS_PHONE",
+        "dataType": "text",
+        "format": "None"
+      },
+       {
+        "outputColName": "PhnFax_Ext",
+        "dfColName": "EXT_PHONE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "PhnFax_P/Sind",
+        "dfColName": "ADDRESS_PHONE_INDICATOR",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "PhnFax_PhnType",
+        "dfColName": "OUT_STD_ADDRESS_PHONE_TYPE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_24hours",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Lic_Num",
+        "dfColName": "LICENCE_NUMBER",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Lic_State",
+        "dfColName": "LICENCE_STATE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Lic_EffDt",
+        "dfColName": "PARSED_STATE_LICENCE_EFFECTIVE_DATE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Lic_ExpDt",
+        "dfColName": "PARSED_LICENCE_EXPIRY_DATE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "OfcLim_McaidNum",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_BSARInstance",
+        "dfColName": "OUT_BSARINSTANCE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "DEA_Num",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "DEA_ExpDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Cert_Num",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Cert_ExpDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "HospAffil_HospNm",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "HospAffil_P/SInd",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "HospAffil_AdmitPriv",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "MedSchl_CompDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "MedSchl_SchlNm",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Training_Type",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Training_StartDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Training_EndDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Malprac_CarrierNm",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Malprac_PolicyNum",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Malprac_MinAmt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Malprac_MaxAmt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Malprac_EffDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Malprac_ExpDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_HA_HandiAccess",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_HandiAccessType",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NpPrac_HandiAccessTypeYN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NPPrac_AOECd",
+        "dfColName": "OUT_AOE_CD",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NPPrac_AOEDirInd",
+        "dfColName": "OUT_AOE_DIR_IND",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NPPrac_AOEActCd",
+        "dfColName": "OUT_AOE_ACT_CD",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NPPrac_AOEBusSeg",
+        "dfColName": "OUT_AOE_BUS_SEG",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "NPPrac_AOEContrOrg",
+        "dfColName": "OUT_AOE_CONTR_ORG",
+        "dataType": "text",
+        "format": "None"
+      },
+       {
+        "outputColName": "Import_NDBImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+        {
+        "outputColName": "Import_NDBEMPIREImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NICEImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NDBCOSMOSImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NDBCSPFACETSImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "Import_NonDel_Segment_E&I",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "outputScreen":"nonDelegate"
+      },
+      {
+        "outputColName": "Import_NonDel_Segment_C&S",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "outputScreen":"nonDelegate"
+      },
+          {
+        "outputColName": "Import_NonDel_Product_IFP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "outputScreen":"nonDelegate"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_MEDICAID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "outputScreen":"nonDelegate"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_DSNP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "outputScreen":"nonDelegate"
+     },
+      {
+        "outputColName": "Import_NonDel_Segment_M&R",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "outputScreen":"nonDelegate"
+      },
+      {
+        "outputColName": "Import_NonDel_Segment_VA CCN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None",
+        "outputScreen":"nonDelegate"
+      }
+   ]
+}

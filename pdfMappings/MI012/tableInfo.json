@@ -1,0 +1,44 @@
+{
+  "Speciality": [{"type": "table2",
+                 "xMargin": 4.5,
+                 "tableId":1,
+                 "parentBB":{
+                        "min_Y": {"text": ["Taxonomy"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Provider Specialties"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableHeader": 1
+  }],
+  "Licence": [{"type": "table2",
+                 "xMargin": 4.5,
+                 "tableId":1,
+                 "parentBB":{
+                        "start": {"text": ["License Information"]},
+                        "min_Y": {"text": ["State License"],"point": "BOTTOM_LEFT","occurence": "last"},
+                        "max_Y": {"text": ["License Information"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableHeader": 1
+  }],
+  "Dea": [{"type": "table2",
+                 "xMargin": 4.5,
+                 "tableId":1,
+                 "parentBB":{
+                        "start": {"text": ["License Information"]},
+                        "min_Y": {"text": ["DEA Certificate"],"point": "BOTTOM_LEFT","occurence": "last"},
+                        "max_Y": {"text": ["License Information"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableHeader": "None"
+  }],
+  "SchoolDetails": [{"type": "table2",
+                     "xMargin": 4.5,
+                     "tableId":1,
+                     "parentBB":{
+                        "min_Y": {"text": ["Licenses"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Education Information"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                    "tableHeader": 1
+  }]
+}

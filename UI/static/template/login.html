@@ -1,0 +1,23 @@
+<div class="container-fluid loginContent">
+  <div id="login">
+    <form  name="loginForm" class="loginForm" ng-submit="login()">
+      <center>
+          <div class="input-group input-group-lg login col-lg-4 col-md-6 col-sm-11 col-xs-11" >
+            <span class="glyphicon glyphicon-user"></span><input type="text" class="form-control" placeholder="Username" name="name" ng-model="user.name" required>
+          </div><br>
+          <div class="input-group input-group-lg login col-lg-4 col-md-6 col-sm-11 col-xs-11" >
+            <span class="glyphicon glyphicon-lock"></span><input type="password" class="form-control" name="password" ng-model="user.password" type="password" placeholder="Password" ng-required="true" minlength="5" maxlength="100">
+          </div><br>
+          <div class="input-group input-group-lg login col-lg-4 col-md-6 col-sm-11 col-xs-11" >
+            <input type="submit" class="btn btn-lg" value="SIGN IN">
+          </div>
+          <div class="input-group input-group-lg login col-lg-4 col-md-6 col-sm-11 col-xs-11" >
+            <h4><a href="#" class="frgtPass">Forgot Password?</h4></a>
+          </div>
+          <div class="input-group input-group-lg login col-lg-4 col-md-6 col-sm-11 col-xs-11" >
+            <div layout="row" style="font-size:20px;color:red;margin-top:20px;" class="loginerror" layout-align="center right">{{error}}</div>
+          </div>
+      </center>
+    </form>
+  </div>
+</div>

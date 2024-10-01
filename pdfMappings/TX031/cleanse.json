@@ -1,0 +1,7 @@
+[
+  {"LayerName": "CleanFinalDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"GROUP_NAME","type":"sv"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"NAME_OF_LEGAL_TAX_ID_OWNER","type":"sv"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"TAX_ID","type":"sv", "errMsg":"Multiple Tax Id case", "errInput":"True"}}
+  ]}
+]

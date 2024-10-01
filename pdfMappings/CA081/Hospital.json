@@ -1,0 +1,34 @@
+{
+  "HOSPITAL_NAME": {
+    "PARENT_CATEGORY": "Hospital",
+    "Column_Type": [
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "tableDetails": {
+              "columnIndex": 1,
+              "tableId": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "HOSPITAL_AFF_STATUS": {
+    "PARENT_CATEGORY": "Hospital",
+    "Column_Type": [
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "tableDetails": {
+              "columnIndex": 2,
+              "tableId": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

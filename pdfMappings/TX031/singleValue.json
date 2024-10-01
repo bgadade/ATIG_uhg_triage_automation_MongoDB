@@ -1,0 +1,63 @@
+{
+  "NAME_LAST": {
+    "min_Y": {"text": ["PHYSICIAN SERVICES"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["ORGANIZATIONAL INFORMATION"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+    "max_X": { "text": ["PRACTITIONER ID"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "DOB": {
+    "min_Y": {"text": ["LANGUAGES:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["PERSONAL INFORMATION"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["DOB:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["GENDER:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "GENDER": {
+    "min_Y": {"text": ["LANGUAGES:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["PERSONAL INFORMATION"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["GENDER:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["SPECIALTY"],"point": "BOTTOM_LEFT","occurence": 2}
+  },
+  "INDIVIDUAL_NPI": {
+    "min_Y": {"text": ["INDIVIDUAL"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["ID NUMBERS"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["NPI:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["GROUP NPI #s:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "GROUP_NPI": {
+    "min_Y": {"text": ["INDIVIDUAL"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["ID NUMBERS"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["GROUP NPI #s:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "PROVIDER_TYPE": {
+    "min_Y": {"text": ["PHYSICIAN SERVICES"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["PRACTITIONER TYPE"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["PRACTITIONER TYPE"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "ORIGINAL_DEL_DATE": {
+    "min_Y": {"text": ["PERSONAL INFORMATION"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["LAST CREDENTIALED DATE"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["LAST CREDENTIALED DATE"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_X": { "text": ["RECREDENTIAL"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "CURRENT_DEL_DATE": {
+    "min_Y": {"text": ["PERSONAL INFORMATION"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["REPRESENTATIVE"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["LAST CREDENTIALED DATE"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "TAX_ID": {
+    "min_Y": {"text": ["TIN:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_Y": { "text": ["FAX:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["TIN:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "EFFECTIVE_DATE": {
+    "min_Y": {"text": ["PERSONAL INFORMATION"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["JOIN DATE"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["STATUS"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["PHYSICIAN SERVICES"],"point": "BOTTOM_LEFT","occurence": 1}
+  }
+
+}

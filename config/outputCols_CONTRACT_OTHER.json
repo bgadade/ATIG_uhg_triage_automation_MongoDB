@@ -1,0 +1,126 @@
+{
+  "order": 0,
+  "finalDfColNames":[
+    {
+        "outputColName": "ContrOther_EffDt",
+        "dfColName": "OUT_EFFECTIVE_DATE",
+        "dataType": "text",
+        "format": "None"
+    },
+     {
+        "outputColName": "ContrOther_RetroRsnCd",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None"
+    },
+    {
+        "outputColName": "ContrOther_RetroApproval?",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None"
+    },
+     {
+        "outputColName": "ContrOther_Subject",
+        "dfColName": "DEFAULT_SUBJECT_VAL",
+        "dataType": "text",
+        "format": "None"
+    },
+     {
+        "outputColName": "ContrOther_PaperType",
+        "dfColName": "DEFAULT_PAPER_TYPE_VAL",
+        "dataType": "text",
+        "format": "None"
+    },
+    {
+        "outputColName": "ContrOther_Comments",
+        "dfColName": "DEFAULT_COMMENTS",
+        "dataType": "text",
+        "format": "None"
+    },
+    {
+        "outputColName": "Import_NDBImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NDBEMPIREImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NICEImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    
+    {
+        "outputColName": "Import_CLMImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+    {
+        "outputColName": "Import_EmptorisImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NDBCOSMOSImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NDBCSPFACETSImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Segment_E&I",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Segment_C&S",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+        {
+        "outputColName": "Import_NonDel_Product_IFP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_MEDICAID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_DSNP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Segment_M&R",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Segment_VA CCN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "pdfSections":
+      {"header": {"lineCount":1},
+       "footer":{"lineCount":1}
+      },
+  "recordDelimitation":
+      {"recordType":"multiple",
+       "ruleType":"textlineRule",
+       "extractDetails":{"pageCount":0, "identifierTextCheck":"CREDENTIALING INFORMATION SHEET FOR:", "identifierLine":1, "location":"top"}
+      },
+  "yMargin":0.9,
+  "xMargin":0
+}

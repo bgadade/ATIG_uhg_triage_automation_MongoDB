@@ -1,0 +1,366 @@
+{"ADDRESS_LINE_1": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "start": {"text":["Practice Addresses"]},
+                        "min_Y": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Primary"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Primary"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["County:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["Billing"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Billing"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": ["County:"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":"None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                               "max_X": {"text":["From Date:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Phone:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}}}
+                }]
+   }
+  ]
+ },
+ "ADDRESS_COUNTY": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Contact:","Practice Addresses"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["County:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["Tax ID:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["County:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["County:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y": {"text":["From Date:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Tax ID:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                 }]
+   }
+  ]
+ },
+ "ADDRESS_PHONE": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Office Hours:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["County:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Fax:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["TaxID Address"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["County:"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_X": {"text": ["Fax:"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Phone:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["Fax:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y": {"text":"None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                               "max_Y": {"text":["County:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                 }]
+   }
+  ]
+ },
+ "ADDRESS_PHONE_FAX": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Office Hours:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["County:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Fax:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["AM Hours"],"point": "TOP_RIGHT","occurence": 1}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["TaxID Address"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["County:"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Fax:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_X": {"text": ["County:"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Fax:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["From Date:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y": {"text":"None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                               "max_Y":{"text":["County:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                 }]
+   }
+  ]
+ },
+ "HANDICAP_ACCESS": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Office Hours:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["County:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Handicapped"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "MONDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Tuesday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Monday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "TUESDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Wednesday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Monday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Tuesday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "WEDNESDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Thursday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Tuesday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Wednesday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "THURSDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Friday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Wednesday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Thursday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "FRIDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Saturday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Thursday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Friday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "SATURDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Sunday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Friday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Saturday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "SUNDAY_START_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Billing Information"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Saturday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Sunday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "MONDAY_END_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Tuesday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "TUESDAY_END_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Wednesday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Monday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "WEDNESDAY_END_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Thursday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Tuesday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "THURSDAY_END_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Friday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Wednesday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "FRIDAY_END_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Saturday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Thursday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "SATURDAY_END_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Sunday"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Friday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "SUNDAY_END_TIME": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Billing Information"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Saturday"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Open Closed"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+
+
+
+}

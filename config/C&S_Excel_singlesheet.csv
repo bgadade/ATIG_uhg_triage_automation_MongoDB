@@ -1,0 +1,259 @@
+code,state,individual_enrollment_limit,group_enrollment_limit,provider_specialty,age_limit_of_patients
+AZ,Arizona,"1,500","1,500",Family Practice/General Practice ,0-150
+AZ,Arizona,"1,500","1,500",Pediatrics,0-18
+AZ,Arizona,"1,500","1,500",Internal Med,0-150
+AZ,Arizona,"1,500","1,500",OBGYN,12-99
+AZ,Arizona,"1,500",1500,Certified Nurse Practitioners ,18-99
+AZ,Arizona,"1,500","1,500",Certified Nurse Midwives,12-18
+AZ,Arizona,"1,500",1500,Physician Assistant - Family Practice,0-150
+AZ,Arizona,"1,500","1,500",Physician Assistant - Peds,0-18
+AZ,Arizona,1500,1500,Family Practice,0-150
+AZ,Arizona,1500,1500,General Practice,0-150
+AZ,Arizona,1500,1500,Pediatrics,0-18
+AZ,Arizona,1500,1500,Pediatric Adolescent,0-21
+AZ,Arizona,1500,1500,Internal Medicine,0-150
+AZ,Arizona,1500,1500,OBGYN,12-99
+AZ,Arizona,1500,1500,Physician Assistant - Family Practice,0-150
+AZ,Arizona,1500,1500,Physician Assistant - Peds,0-18
+AZ,Arizona,1500,1500,Certified Nurse Practitioner,18-99
+AZ,Arizona,1500,1500,Family Nurse Practitioner ,0-99
+AZ,Arizona,1500,1500,Geriatric Medicine ,65-150
+AZ,Arizona,1500,1500,Hospitalist,0-99
+CA,California,2000,2000,General Practice ,0-99
+CA,California,2000,2000,Family Practice ,0-99
+CA,California,2000,2000,Pediatrics,0-20
+CA,California,2000,2000,Internal Medicine,0-99
+CA,California,1000,1000,Nurse Practitioner ,0-99
+CA,California,1000,1000,Family Nurse Practitioner,0-99
+CA,California,1000,1000,Certified Nurse Midwife,0-99
+CA,California,1000,1000,Physician Assistant,0-99
+CA,California,2000,2000,Obstetrics And Gynecology (OBGYN),12-99
+CA,California,25000,25000,Federally Qualified Health Center (FQHC),0-99
+CA,California,25000,25000,Rural Health Clinic (RHC),0-99
+DE,Delaware,1500,1500,Family Practice/General Practice ,0-99
+DE,Delaware,1500,1500,Pediatrics,0-18
+DE,Delaware,1500,1500,Internal Med,19-99
+DE,Delaware,1500,1500,OBG,12-99
+FA,Florida,1500,1500,Family Practice/General Practice ,0-99
+FA,Florida,1500,1500,Pediatrics,0-21
+FA,Florida,1500,1500,Internal Med,19-99
+FA,Florida,1500,1500,OBG,12-99
+FA,Florida,1500,1500,Family Practice ,0-99
+FA,Florida,1500,1500,Pediatrics,0-21
+HI,Hawaii,1000,1000,Family Practice ,0-150
+HI,Hawaii,1000,1000,General Practice,0-150
+HI,Hawaii,1000,1000,Pediatrics,0-18
+HI,Hawaii,1000,1000,Internal Med,19-150
+HI,Hawaii,1000,1000,Geriatric Medicine,65-150
+HI,Hawaii,1000,1000,Obstetrics and Gynocology,0-150
+HI,Hawaii,1000,1000,Physician Assistant,0-150
+HI,Hawaii,1000,1000,Advanced Practice RN w/Prescriptive Authority,0-150
+HI,Hawaii,9999,9999,FQHC,
+HI,Hawaii,9999,9999,RHC,0-150
+IA,IOWA,1500,1500,Family Practice,00 - 99
+IA,IOWA,1500,1500,General Practice,00 - 99
+IA,IOWA,1500,1500,Pediatrics,00 - 19
+IA,IOWA,1500,1500,Internal Medicine,00 - 99
+IA,IOWA,1500,1500,Adolecent Medicine,00 - 21
+IA,IOWA,1500,1500,Federally Qualified Health Center ( FQHC),00-99
+IA,IOWA,1500,1500,Rural Health Clinic (RHC),00-99
+IA,IOWA,1500,1500,OBGYN,12-99
+IA,IOWA,1500,1500,Mid Level Providers,00-99
+IA,IOWA,1500,1500,Geriatrics ,00-99
+KA,KANSAS,2500,2500,Family Practice ,0-150
+KA,KANSAS,2500,2500,General Practice ,0-150
+KA,KANSAS,2500,2500,Geriatric Medicine ,0-150
+KA,KANSAS,2500,2500,Internal Medicine ,0-150
+KA,KANSAS,2500,2500,Pediatrics,0-21
+KA,KANSAS,2500,2500,Pediatric Adolescent,0-21
+KA,KANSAS,1250,1250,"Mid-levels (FNP/NP/PA), when practicing in an PCP designated specialty practice ",0-150
+KA,KANSAS,2500,2500,"OB/GYN, when specifically requested ",0-150
+KA,KANSAS,1250,1250,Certified Nurse MidWife,0-150
+KA,KANSAS,2500,2500,Indian Health Clinic ,0-150
+KA,KANSAS,9999,9999,FQHC,0-150
+KA,KANSAS,9999,9999,RHC,0-150
+LA,Louisiana,2500,2500,GENERAL PRACTICE,0-150
+LA,Louisiana,2500,2500,FAMILY PRACTICE,0-150
+LA,Louisiana,2500,2500,INTERNAL MEDICINE,21-150
+LA,Louisiana,2500,2500,PEDIATRICS,0-21
+LA,Louisiana,2500,2500,Community/Public Health Clinic,0-150
+LA,Louisiana,1000,1000,NURSE PRACTITIONER,0-150
+LA,Louisiana,1000,1000,FAMILY NURSE PRACTITIONER ,0-150
+LA,Louisiana,1000,1000,ADVANCED REGISTERED NURSE ,0-150
+LA,Louisiana,1000,1000,PEDIATRIC NURSE PRACTITIONER,0-150
+LA,Louisiana,0,0,Physician Assistant,0-150
+LA,Louisiana,2500,2500,FQHC,0-150
+LA,Louisiana,2500,2500,RHC,0-150
+LA,Louisiana,2500,2500,Medical Group,0-150
+LA,Louisiana,2500,2500,Medical Group,0-150
+LA,Louisiana,2500,2500,OB/GYN,13-150
+LA,Louisiana,2500,2500,Geriatrics,55-150
+LA,Louisiana,2500,2500,Infectious Disease,0-150
+MA,Massachusetts,1500,1500,General Practice ,0-150
+MA,Massachusetts,1500,1500,Family Practice,0-150
+MA,Massachusetts,1500,1500,Internal Medicine,19-150
+MA,Massachusetts,1500,1500,Geriatric Medicine,65-150
+MA,Massachusetts,1500,1500,Gynecologic Oncology,0-150
+MA,Massachusetts,1500,1500,Obstetrics and Gynecology,0-150
+MA,Massachusetts,1500,1500,Gynecology,0-150
+MA,Massachusetts,1500,1500,Nurse Practitioner,0-150
+MA,Massachusetts,1500,1500,Family Nurse Practitioner,0-150
+MA,Massachusetts,1500,1500,Physician Assistant,0-150
+MA,Massachusetts,1500,1500,Advanced Registered Nurse Practitioner,0-150
+MD,Maryland,500,500,Family Practice/General Practice ,0-99
+MD,Maryland,500,500,Pediatrics,0-18
+MD,Maryland,500,500,Internal Med,19-99
+MI,Michigan,1500,1500,Family Practice,0-99
+MI,Michigan,1500,1500,Pediatrics,0-21
+MI,Michigan,1500,1500,Internal Med,13-99
+MI,Michigan,1500,1500,General Practice,0-99
+MI,Michigan,1500,1500,Internal Med/Peds,0-99
+MI,Michigan,1500,1500,Nurse Practitioner,0-99
+MI,Michigan,1500,1500,Physician Assistant,0-99
+MI,Michigan,4999,4999,All Non-PCP,0-99
+MO,Missouri,1500,1500,Family Practice,00 - 99
+MO,Missouri,1500,1500,General Practice,00 - 99
+MO,Missouri,1500,1500,Pediatrics,00 - 19
+MO,Missouri,1500,1500,Internal Medicine,00 - 99
+MO,Missouri,1500,1500,Adolecent Medicine,00 - 21
+MO,Missouri,1500,1500,OBGYN,12-99
+MO,Missouri,1500,1500,Mid Level Providers,00-99
+MS,Mississippi,2000,2000,Family Practice/General Practice ,0-150
+MS,Mississippi,2000,2000,Peds (EPSDT services up to age 21),0-21
+MS,Mississippi,2000,2000,Internal Med,19-150
+MS,Mississippi,2000,2000,Obstetricians/Gynecologists,12-150
+MS,Mississippi,2000,2000,Physician Assistants,0-99
+MS,Mississippi,2000,2000,Nurse Practitioners,0-99
+NE,Nebraska,1500,1500,Family Practice/General Practice ,0-100
+NE,Nebraska,1500,1500,Pediatrics,0-18
+NE,Nebraska,1500,1500,Internal Med,18-100
+NE,Nebraska,1500,1500,Nurse Practitioners,0-100
+NE,Nebraska,1500,1500,Advanced Registered Nurse Practioners ,0-101
+NE,Nebraska,1500,1500,Advanced Practice Nurses ,0-102
+NE,Nebraska,1500,1500,Physician Assistant,0-103
+NJ New Jersey,,2000,2000,Family Practice/General Practice ,2-150
+NJ New Jersey,,2000,2000,Pediatrics,0-21
+NJ New Jersey,,2000,2000,Internal Med,19-150
+NJ New Jersey,,1000,1000,Nurse Practitioners,0-150
+NJ New Jersey,,1000,1000,Physician Assistants,0-150
+NM,New Mexico,2000,2000,Adolescent Medicine,0-21
+NM,New Mexico,2000,2000,Family Nurse Practitioner,0-150
+NM,New Mexico,2000,2000,Family Practice,0-150
+NM,New Mexico,2000,2000,General Practice,0-150
+NM,New Mexico,2000,2000,Geriatric Medicine,65-150
+NM,New Mexico,2000,2000,Internal Medicine,19-150
+NM,New Mexico,2000,2000,Pediatric Adolescent,0-21
+NM,New Mexico,2000,2000,Pediatric Nurse Practitioner,0-18
+NM,New Mexico,2000,2000,Pediatrics,0-18
+NM,New Mexico,2000,2000,FQHC,0-150
+NM,New Mexico,2000,2000,IHS Clinic,0-150
+NM,New Mexico,2000,2000,RHC,0-150
+NM,New Mexico,2000,2000,Family Practice Specialist,0-150
+NM,New Mexico,2000,2000,Physician Assistant,0-150
+NY,New York,1500,1500,Pediatrics,0-21
+NY,New York,1500,1500,Internal Med,18-150
+NY,New York,1500,1500,Geriatric Medicine,50-150
+NY,New York,1000,1000,NP,0-150
+NY,New York,1500,1500,All Others,0-150
+OH,OHIO,2000,5000,Advanced Registered Nurse Practitioner,0 - 150
+OH,OHIO,2000,5000,Certified Midwife,0 - 150
+OH,OHIO,2000,5000,Family Nurse Practitioner,0 - 150
+OH,OHIO,2000,5000,Family Practice,0 - 150
+OH,OHIO,2000,5000,Federally Qualified Health Center (FQHC),0 - 150
+OH,OHIO,2000,5000,General Practice,0 - 150
+OH,OHIO,2000,5000,Geriatric Medicine,18 - 150
+OH,OHIO,2000,5000,Internal Medicine,18 - 150
+OH,OHIO,2000,5000,Nurse Practitioner,0 - 150
+OH,OHIO,2000,5000,Obstetrics,18 - 150
+OH,OHIO,2000,5000,Obstetrics And Gynecology,18 - 150
+OH,OHIO,2000,5000,Pediatric Nurse Practitioner,0 - 17
+OH,OHIO,2000,5000,Pediatrics,0 - 17
+OH,OHIO,2000,5000,Physician Assistant,0 - 150
+OH,OHIO,2000,5000,Rural Health Clinic (RHC),0 - 150
+OH,OHIO,2000,2000,Advanced Registered Nurse Practitioner,18 - 150
+OH,OHIO,2000,2000,Certified Midwife,18 - 150
+OH,OHIO,2000,2000,Family Nurse Practitioner,18 - 150
+OH,OHIO,2000,2000,Family Practice,18 - 150
+OH,OHIO,2000,2000,Federally Qualified Health Center (FQHC),18 - 150
+OH,OHIO,2000,2000,General Practice,18 - 150
+OH,OHIO,2000,2000,Geriatric Medicine,18 - 150
+OH,OHIO,2000,2000,Internal Medicine,18 - 150
+OH,OHIO,2000,2000,Nurse Practitioner,18 - 150
+OH,OHIO,2000,2000,Obstetrics,18 - 150
+OH,OHIO,2000,2000,Obstetrics And Gynecology,18 - 150
+OH,OHIO,2000,2000,Pediatric Nurse Practitioner,0 - 17
+OH,OHIO,2000,2000,Pediatrics,0 - 17
+OH,OHIO,2000,2000,Physician Assistant,18 - 150
+OH,OHIO,2000,2000,Rural Health Clinic (RHC),18 - 150
+OK,Oklahoma,1000,1000,General Practice ,0-150
+OK,Oklahoma,1000,1000,Family Practice ,0-150
+OK,Oklahoma,1000,1000,Internal Medicine ,0-150
+OK,Oklahoma,1000,1000,OB/GYN,0-150
+OK,Oklahoma,1000,1000,Geriatrics,0-150
+OK,Oklahoma,1000,1000,Nurse Practitioners ,0-150
+OK,Oklahoma,1000,1000,Physician Assisstants,0-150
+OK,Oklahoma,1000,1000,Pediatrics,0-21
+OK,Oklahoma,1000,1000,Mid-Levels ,0-150
+OK,Oklahoma,1000,1000,"Specialists, Per Load request only",0-150
+OK,Oklahoma,2500,2500,FQHC / RHC,0-150
+PA,Pennsylvania,1000,1000,Family Practice/General Practice ,0-150
+PA,Pennsylvania,1000,1000,Pediatrics,0-18
+PA,Pennsylvania,1000,1000,Internal Med,19-150
+RE,Rhode Island,950,950,Family Practice/General Practice ,0-99
+RE,Rhode Island,950,950,Pediatrics,0-18
+RE,Rhode Island,950,950,Internal Med,19-99
+RE,Rhode Island,950,950,OBG,12-99
+TN,Tennesse,2500,2500,Family Practice/General Practice ,0-99
+TN,Tennesse,2500,2500,Pediatrics,0-18
+TN,Tennesse,2500,2500,Internal Med,19-99
+TN,Tennesse,2500,2500,OBG,122500-99
+TN,Tennesse,2500,2500,Geriatric Practice,65-99
+TX,Texas,1000,1000,Adolescent Medicine,0 - 21
+TX,Texas,1000,1000,Advanced Registered Nurse Practitioner,0 - 150
+TX,Texas,1000,1000,Family Nurse Practitioner,0 - 150
+TX,Texas,1000,1000,Family Practice,0 - 150
+TX,Texas,1000,1000,Federally Qualified Health Center (FQHC),0 - 150
+TX,Texas,1000,1000,Ge1000neral Practice,0 - 150
+TX,Texas,1000,1000,Geriatric Medicine,50 - 150
+TX,Texas,1000,1000,Gynecology,0 - 150
+TX,Texas,1000,1000,Internal Medicine,0 - 150
+TX,Texas,1000,1000,Nurse Practitioner,0 - 150
+TX,Texas,1000,1000,Obstetrics,0 - 150
+TX,Texas,1000,1000,Obstetrics And Gynecology,0 - 150
+TX,Texas,1000,1000,Pediatric Nurse Practitioner,0 - 21
+TX,Texas,1000,1000,Pediatrics,0 - 21
+TX,Texas,1000,1000,Physician Assistant,0 - 150
+TX,Texas,1000,1000,Rural Health Clinic (RHC),0 - 150
+TX,Texas,1500,1500,Family Practice,21 - 150
+TX,Texas,5000,5000,Federally Qualified Health Center (FQHC),21 - 150
+TX,Texas,1500,1500,Geriatric Medicine,50 - 150
+TX,Texas,1500,1500,General Practice,21 - 150
+TX,Texas,1500,1500,Internal Medicine,21 - 150
+TX,Texas,1500,1500,Physician Assistant,21 - 150
+TX,Texas,5000,5000,Rural Health Clinic (RHC),21 - 150
+TX,Texas,1500,1500,Pediatrics,0 - 21
+WA,Washington State,1200,1200,GENERAL PRACTICE,0-150
+WA,Washington State,1200,1200,FAMILY PRACTICE,0-150
+WA,Washington State,1200,1200,INTERNAL MEDICINE,13-150
+WA,Washington State,1200,1200,PEDIATRICS,0-20
+WA,Washington State,1200,1200,NURSE PRACTITIONER,0-150
+WA,Washington State,1200,1200,PEDIATRIC ADOLESCENT ,0-20
+WA,Washington State,1200,1200,GENERAL PRACTICE SPECIALIST,0-150
+WA,Washington State,1200,1200,INTERNAL MEDICINE SPECIAL ,13-150
+WA,Washington State,1200,1200,PEDIATRICS SPECIALIST ,0-20
+WA,Washington State,1200,1200,FAMILY PRACTICE SPECIALIST,0-150
+WA,Washington State,1200,1200,PHYSICIAN ASSISTANT,0-150
+WA,Washington State,1200,1200,FAMILY NURSE PRACTITIONER ,0-150
+WA,Washington State,1200,1200,ADVANCED REGISTERED NURSE ,0-150
+WA,Washington State,1200,1200,PEDIATRIC NURSE PRACTITIONER,0-20
+WA,Washington State,1200,1200,GERIATRIC PRACTITIONER,62-150
+WA,Washington State,1200,1200,NATUROPATHIC PRACTITIONER ,0-150
+WA,Washington State,1200,1200,OBGYN,13-150
+WI,Wisconsin,"Medicaid, Childless adult, Complex care",500,Family Practice/General Practice ,0-99
+WI,Wisconsin,"Medicaid, Childless adult, Complex care",500,Pediatrics,0-18
+WI,Wisconsin,"Medicaid, Childless adult, Complex care",500,Internal Med,0-99
+WI,Wisconsin,"Medicaid, Childless adult, Complex care",500,OBG,12-99
+WI,Wisconsin,"Medicaid, Childless adult, Complex care",500,Physician Assistant,0-99
+WI,Wisconsin,"Medicaid, Childless adult, Complex care",500,Nurse Practioner,0-99
+WI,Wisconsin,"Medicaid, Childless adult, Complex care",500,Adolescent Practice,0-99
+WI,Wisconsin,"Medicaid, Childless adult, Complex care",500,Geriatric Practice,65-99

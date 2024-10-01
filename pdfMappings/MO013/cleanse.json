@@ -1,0 +1,39 @@
+[
+  {"LayerName": "CleanFinalDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_PHONE","outCol":"ADDRESS_PHONE","type":"mv","splitBy":",","startIdx":-1}},
+    {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_PHONE","type":"mv","start":"","end":"$","regex":"\\D{2}\\s\\d{4,}|\\D{2}\\s\\d{4,}\\s\\d{3}\\s"}},
+    {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_PHONE","type":"mv","start":"","end":"$","regex":"\\D{3,}\\s"}},
+    {"name": "cleanPhone","type": "clean","input": {"col":"ADDRESS_PHONE","type":"mv","start":"","end":"","splitting": 0,"regex":"\\(\\d{3}\\)\\s?\\d{3}\\-\\d{4}"}},
+    {"name": "cleanPhone","type": "clean","input": {"col":"ADDRESS_PHONE_FAX","type":"mv","start":"","end":"","splitting":-1,"regex":"\\(\\d{3}\\)\\s?\\d{3}\\-\\d{4}"}},
+
+    {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_COUNTY","type":"mv","start":"","end":"$","regex":"\\d{3,}"}},
+
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_CITY","outCol":"ADDRESS_CITY","type":"mv","splitBy":",","startIdx":0,"EndIdx": -1}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_CITY","outCol":"ADDRESS_CITY","type":"mv","splitBy":" ","startIdx":-1}},
+
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_STATE","outCol":"ADDRESS_STATE","type":"mv","splitBy":",","startIdx":-1}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_STATE","outCol":"ADDRESS_STATE","type":"mv","splitBy":" ","startIdx":0 , "EndIdx": 1}},
+
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_ZIP","outCol":"ADDRESS_ZIP","type":"mv","splitBy":",","startIdx":-1}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_ZIP","outCol":"ADDRESS_ZIP","type":"mv","splitBy":" ","startIdx":1 , "EndIdx": 2}},
+    {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_ZIP","type":"mv","start":"","end":"$","regex":"\\D{2,}"}},
+
+    {"name": "cleanStringAddress","type": "clean","input": {"col":"TAX_ID","type":"sv","start":"","end":"","regex":"\\d{2}-\\d{7,}"}},
+    {"name": "cleanString","type": "clean","input": {"col":"HOSPITAL_AFF_STATUS","type":"mv","start":"","end":"","regex":"Category|category"}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"INDIVIDUAL_NPI","outCol":"INDIVIDUAL_NPI","type":"sv","splitBy":" ","startIdx":0, "EndIdx":1}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"MEDICARE","outCol":"MEDICARE","type":"mv","splitBy":" ","startIdx":1, "EndIdx":2}},
+    {"name": "medicaid","type": "clean","input": {"col":"GENERAL@PROV_MEDICAID@0","regex": "\\d+.","type":"mv"}},
+    {"name": "medicaid","type": "clean","input": {"col":"GENERAL@LOC@0","regex": "\\D{2,}","type":"mv"}},
+    {"name": "cleanStringAddress","type": "clean","input": {"col":"ADDRESS_LINE_1","type":"mv","regex":"\\d{3,}.*"}},
+    {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"ADDRESS_LINE_1","outCol":"ADDRESS_LINE_1","type":"mv","splitBy":" ","startIdx":0, "EndIdx":-3}},
+      {"name": "cleanString","type": "clean","input": {"col":"SPECIALITY_INDICATOR","type":"mv","start":"Specialty","end":"$","regex":""}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"DEGREE","outCol":"DEGREE","type":"mv","splitBy":",","startIdx":-1}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"NAME_LAST","outCol":"NAME_LAST","type":"sv","splitBy":",","startIdx":0,"EndIdx":-1}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"TAX_ID","type":"sv", "errMsg":"Multiple Tax Id case", "errInput":"True"}},
+    {"name": "cleanString","type": "clean","input": {"col":"HOSPITAL_NAME","type":"mv","start":"Start","end":"$","regex":"None"}}
+
+
+
+  ]}
+]
+

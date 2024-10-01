@@ -1,0 +1,67 @@
+[
+  {
+    "LayerName": "CleanTableDataframe",
+    "LayerType": "DF",
+    "ProcessStage": 0,
+    "Transformation": [
+      {
+        "Address": [
+          {
+            "name": "splitAndSelectTable",
+            "type": "clean",
+            "input": {
+              "col": 1,
+              "splitBy": ":",
+              "startIdx": 0,
+              "endIdx": 1
+            }
+          },
+          {
+            "name": "splitAndSelectTable",
+            "type": "clean",
+            "input": {
+              "col": 2,
+              "splitBy": ":",
+              "startIdx": -1
+            }
+          },
+          {
+            "name": "splitRows",
+            "type": "clean",
+            "input": {
+              "refCol": 1,
+              "refVal": "&"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "LayerName": "CleanFinalDataframe",
+    "LayerType": "DF",
+    "ProcessStage": 0,
+    "Transformation": [
+      {
+        "name": "splitAndSelectVal",
+        "type": "clean",
+        "input": {
+          "inpCol": "DEGREE",
+          "outCol": "DEGREE",
+          "type": "mv",
+          "splitBy": ",",
+          "startIdx": -1
+        }
+      },
+      {
+        "name": "addClarifyColumn",
+        "type": "clean",
+        "input": {
+          "col": "DIR_IND",
+          "type": "mv",
+          "mvColRef": "ADDRESS_LINE_1"
+        }
+      }
+    ]
+  }
+]

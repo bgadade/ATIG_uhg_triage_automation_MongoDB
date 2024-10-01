@@ -1,0 +1,300 @@
+{
+    "order": 0,
+    "finalDfColNames": [
+      {
+      "outputColName": "ModInact_CancelDt",
+      "dfColName": "OUT_CANCEL_DATE",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+        "outputColName": "ModInact_CancelRsnCd",
+        "dfColName": "OUT_CANCEL_REASON_CODE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_OriginalPR",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_RetroRsnCd",
+        "dfColName": "REQ_FIELD_CLAR",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_RetroApproval?",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_ModReason",
+        "dfColName": "DEF_MOD_RSN",
+        "dataType": "numeric",
+        "format": "00000"
+      },
+      {
+        "outputColName": "ModInact_Comments",
+        "dfColName": "DEF_MOD_INACT_COMM",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_PaperType",
+        "dfColName": "DEF_PAPER_TYPE",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_DocID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+      "outputColName": "ModInact_ContrProds",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "ModInact_FeeSched",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+        "outputColName": "ModInact_ContrProdAddInact",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_OtherProd",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_Market",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_IPA",
+        "dfColName": "placeHolder",
+        "dataType": "numeric",
+        "format": "00000"
+      },
+      {
+        "outputColName": "ModInact_PRD_ARR",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_PayMth",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_OtherAddInact",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+      "outputColName": "ModInact_TF",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "ModInact_TFapplyToAllProds",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "ModInact_Prods",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+        "outputColName": "ModInact_ProdSpecificTF",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_ChgMedNec",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_SameEffDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_MedNecEffDt",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_MedNecCanDt",
+        "dfColName": "placeHolder",
+        "dataType": "numeric",
+        "format": "00000"
+      },
+      {
+        "outputColName": "ModInact_MedNecCancelRsn",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_PCPReassign_TIN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_PCPReassign_MPIN",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+      "outputColName": "ModInact_PCPReassign_LastNm",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+        "outputColName": "ModInact_PCPReassign_FirstNm",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_PCPReassign_AdrLoc",
+        "dfColName": "placeHolder",
+        "dataType": "numeric",
+        "format": "00000"
+      },
+      {
+        "outputColName": "ModInact_PCPReassign_LOB",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_PCPReassign_IPA",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+        "outputColName": "ModInact_PCPReassign_MNReq",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+      "outputColName": "Import_NDBImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NDBEMPIREImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NICEImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+     
+      {
+        "outputColName": "Import_CLMImpacted",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+      },
+      {
+      "outputColName": "Import_EmptorisImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NDBCOSMOSImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NDBCSPFACETSImpacted",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NonDel_Segment_E&I",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NonDel_Segment_C&S",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+        "outputColName": "Import_NonDel_Product_IFP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_MEDICAID",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+    {
+        "outputColName": "Import_NonDel_Product_DSNP",
+        "dfColName": "placeHolder",
+        "dataType": "text",
+        "format": "None"
+     },
+      {
+      "outputColName": "Import_NonDel_Segment_M&R",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      },
+      {
+      "outputColName": "Import_NonDel_Segment_VA CCN",
+      "dfColName": "placeHolder",
+      "dataType": "text",
+      "format": "None"
+      }
+   ]
+}

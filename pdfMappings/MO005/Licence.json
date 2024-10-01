@@ -1,0 +1,46 @@
+{"LICENCE_NUMBER": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Exp:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["LICENSURE INFORMATION"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["State:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["DEA:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "LICENCE_EXPIRY_DATE": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["EDUCATION INFORMATION"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["MO State:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Exp:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["DEA:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "LICENCE_STATE": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Exp:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["LICENSURE INFORMATION"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["EDUCATION"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["State:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

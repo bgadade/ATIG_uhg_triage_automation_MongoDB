@@ -1,0 +1,388 @@
+{
+  "GROUP_NAME": {
+    "max_X": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Tax ID:"
+      ]
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Billing:"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "dba. Foundation Name:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Medical Group Name:"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "NAME_OF_LEGAL_TAX_ID_OWNER": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "dba. Foundation Name:"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Medical Group Name:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "UPDATE Effective Date:"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "TAX_ID": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Billing:"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Tax ID:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Medical Group Name:"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "EFFECTIVE_DATE": {
+    "max_X": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "GROUP NPI:",
+        "Group NPI:"
+      ]
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Medical Group Name:"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "UPDATE Effective Date:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "REQUEST SUBMITTED BY:"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "GROUP_NPI": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Medical Group Name:"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "GROUP NPI:",
+        "Group NPI:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "REQUEST SUBMITTED BY:"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "NAME_LAST": {
+    "max_X": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Social Security Number:"
+      ]
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Provider Information"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Provider Name:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Birth Date:"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "SSN": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Provider Information"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Social Security Number:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Birth Date:"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "DOB": {
+    "max_X": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Gender:"
+      ]
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Provider Name:"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Birth Date:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Practicing Specialty:"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "GENDER": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Social Security Number:"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Gender:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "NPI Number:"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "INDIVIDUAL_NPI": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Gender:"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "NPI Number:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Provider Status/Type:"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "PROVIDER_TYPE": {
+    "max_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "PCP / SCP / HOSP"
+      ]
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "PCP / SCP / HOSP"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "PCP / SCP / HOSP"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Provider Demographics"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "HBP_SOLELY_IN_HOSPITAL": {
+    "max_X": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Office Phone:"
+      ]
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Only:"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Only:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Only:"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  }
+}

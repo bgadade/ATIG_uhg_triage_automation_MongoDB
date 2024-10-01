@@ -1,0 +1,143 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>File Processes SOT > Singlevalue Mapping</li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox" style="height:512px;">
+      <!-- Your Page Content Here -->
+      <div id="mydiv">
+        <img  class="mappingSpinner" src="/static/images/page-loader.gif"/>
+      </div>
+      <div class="container-fluid contentbody" data-ng-init="getFields()">
+        <div class="row pull-right" style="margin-top: -2%;width: 25.5%;">
+          <button type="button" class="btn btndefault" name="button" ui-sref="mapping" ng-click="clearMappings()" style="width: 45%">Exit</button>
+          <button type="button" class="btn btndefault" name="button" data-toggle="modal" data-target="#commitModal" ng-click="countUnmapOtpt()" style="width: 45%;margin-left: 8%">Next</button>
+        </div>
+        <div class="row" ng-repeat="mapFields in mappingJson" style="margin-top:2%">
+          <div class="col-sm-3 ">
+            <div class="row mappingheading">
+              Unmapped Output Fields
+            </div>
+            <div class="row unmapOtptDiv scrollbar">
+              <div class="row unmapOtpt" ng-repeat="unmapOtField in mapFields.unmapOtFields" ng-if="!unmapOtField.bestMatch || unmapOtField.original_map == true" data-toggle="popover" data-placement="top" data-trigger="hover" title="{{unmapOtField.outputField}}">
+                <button type="button" class="btn button-shadow" ng-class="unmapOtField == selectedOutObject?'dropdownSuccess':'dropdownBtn'" ng-click="selectOutItem(unmapOtField)">
+                  {{unmapOtField.outputField}}
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6" >
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-10 ">
+              <div class="row mappingheading">
+                Mapped Fields
+              </div>
+              <div class="row mapped scrollbar">
+                <ul class="statuslist">
+                  <!-- <table>
+                    <tr class="matcheslist" ng-repeat="mapField in mapFields.mappedOtFields">
+                      <td><span class="glyphicon glyphicon-remove statusicon" style="cursor:pointer;" ng-click="rejectMap(mapField)" ng-class="{red: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false"></span></td>
+                      <td class="pull-right">{{mapField.outputField}}</td>
+                      <td><span class="glyphicon glyphicon-arrow-right statusicon" style="color:green;"></span></td>
+                      <td>{{mapField.inputField}}</td>
+                    </tr>
+                  </table> -->
+                  <li class="matcheslist" ng-repeat="mapField in mapFields.mappedOtFields">
+                    <span class="glyphicon glyphicon-remove statusicon" style="cursor:pointer;" ng-click="rejectMap(mapField)" ng-class="{red: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false"></span>
+                    {{mapField.outputField}}
+                    <span class="glyphicon glyphicon-arrow-right statusicon" style="color:green;"></span>
+                    {{mapField.inputField}}
+                  </li>
+                </ul>
+              </div>
+            <div class="row mappingheading">
+              Suggested Mappings
+            </div>
+            <div class="row mapped scrollbar">
+              <ul class="statuslist">
+                <li class="matcheslist" ng-repeat="sugField in mapFields.unmapOtFields" ng-if="sugField.bestMatch && sugField.original_map=='nlp'" ng-class="{weight : sugField == selectedSugObject}">
+                  {{sugField.outputField}}
+                  <span class="glyphicon glyphicon-arrow-right statusicon" style="color:green;"></span>
+                  {{sugField.bestMatch}}
+                  <span class="glyphicon glyphicon-chevron-right" style="float:right" data-toggle="dropdown" ng-click="selectSugItem(sugField)"></span>
+                    <div class="dropdown-menu dropdownlist pull-left sugDropdown" ng-repeat="sampleField in mapFields.inFields" ng-if="sugField.bestMatch==sampleField.inputField">
+                      <ul>
+                        <li ng-repeat="sampleValue in sampleField.sampleInput track by $index">{{sampleValue}}</li>
+                        <li><div class="col-sm-6 rejectBtn">
+                          <a ng-click="rejectSugMap(sugField)" class="btn btndefault">Reject</a>
+                        </div>
+                        <div class="col-sm-6 createBtn">
+                          <a ng-click="sugCreateMap(sugField)" class="btn btndefault">Confirm Map</a>
+                        </div>
+                          </li>
+                      </ul>
+                    </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+            <div class="col-sm-1">
+            </div>
+          </div>
+          <div class="col-sm-3 ">
+            <div class="row mappingheading">
+              Unmapped Input Fields
+            </div>
+            <div class="row unmapInpt">
+              <input class="unmapInptSearch" type="text" placeholder="Search" ng-model="userSearch">
+            </div>
+            <div class="row unmapInptDiv scrollbar">
+              <div class="row unmapInpt" ng-repeat="unmapInField in mapFields.inFields | filter:userSearch" ng-if="unmapInField.mapped==false">
+                <div class="btn-group" style="width:90%">
+                  <button type="button" class="btn button-shadow"  ng-class="unmapInField == selectedInObject?'dropdownSuccess':'dropdownBtn'" ng-click="selectInItem(unmapInField)" data-toggle="dropdown" data-toggle="popover" data-placement="top" data-trigger="hover" title="{{unmapInField.inputField}}">
+                      <span class="glyphicon glyphicon-chevron-down" style="float:left;display:inline-block"></span>
+                      <span class="unmapSpanData">{{unmapInField.inputField}}</span>
+                  </button>
+                  <div class="dropdown-menu dropdownlist pull-right umapDropdown" style="left: 2%;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)">
+                    <ul>
+                      <li ng-repeat="sampleValue in unmapInField.sampleInput track by $index">{{sampleValue}}</li>
+                      <li><a ng-click="createMap()" class="btn btndefault">Confirm Map</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row pull-right svMapBtn">
+              <button type="button" class="btn btndefault" name="button" data-toggle="modal" data-target="#commitModal" ng-click="countUnmapOtpt()">Next > Map MultiValue</button>
+          </div> -->
+          <!-- Modal -->
+           <div class="modal fade" id="commitModal" role="dialog">
+             <div class="modal-dialog">
+
+               <!-- Modal content-->
+               <div class="modal-content">
+                 <div class="modal-header" style="background:#838282;color:white;height:50px">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title" style="floatt:left">SingleValue Mapping</h4>
+                 </div>
+                 <div class="modal-body">
+                   <h4>Mappings saved with {{unmappedCount}} Unmapped Output Fields</h4>
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="btn btndefault" style="width:15%" data-dismiss="modal" ng-click="setMappingFields()">Save</button>
+                   <button type="button" class="btn btndefault" style="width:15%" data-dismiss="modal">Cancel</button>
+                 </div>
+               </div>
+
+             </div>
+           </div>
+          <!-- End Modal -->
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->

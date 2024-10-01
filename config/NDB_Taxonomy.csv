@@ -1,0 +1,407 @@
+prov_type_name,ndb_deg,ndb_spec,cos_prov,cos_cred,ndb_rec,ur_ind
+Abdominal Surgery,MD/DO,270,0017,MD/DO,P,
+Acupuncture,CA,201,0023,OTR,P,AC
+Addiction Medicine,MD/DO,347,0015,MD/DO,P,CD
+Addiction Medicine Specialist,LPC,331,0062,MSW,P,CD
+Addiction Psychiatry,MD/DO,301,0015,MD/DO,P,CD
+Adolescent Medicine,MD/DO,276,0012,MD/DO,P,
+Advanced Practice Registered Psychiatric Nurse Practitioner,PSY,374,0062,ANP,P,
+Advanced Practice Registered Psychiatric Nurse Practitioner,MS,374,0062,ANP,P,
+Advanced Practice Registered Psychiatric Nurse Practitioner,MA,374,0062,ANP,P,
+Advanced Practice Registered Psychiatric Nurse Practitioner,EdS,374,0062,ANP,P,
+Advanced Practice Registered Psychiatric Nurse Practitioner,EDD,374,0062,ANP,P,
+Advanced Practice Registered Psychiatric Nurse Practitioner,DNP,374,0062,ANP,P,
+Advanced Practice Registered Psychiatric Nurse Practitioner,BS,374,0062,ANP,P,
+Advanced Practice Registered Psychiatric Nurse Practitioner,BA,374,0062,ANP,P,
+Advanced Practice Registered Psychiatric Nurse Practitioner,PHD,374,0062,ANP,P,
+Advanced Registered Nurse Practitioner,NP,375,XXXX,"RNP
+NP
+
+",P,
+Allergy,MD/DO,252,0002,MD/DO,P,
+Allergy and Immunology,MD/DO,003,0002,MD/DO,P,IY
+Anatomic & Clinical Pathology,MD/DO,203,0011,MD/DO,P,
+Anatomic Pathology,MD/DO,202,0011,MD/DO,P,
+Anesthesia Assistant,MS,058,0020,MS,P,OS
+Anesthesiology,MD/DO,005,0020,MD/DO,P,
+Athletic Trainer,MS,121,0049,MS,P,SM
+Athletic Trainer,MA,121,0049,MA,P,SM
+Athletic Trainer,BS,121,0049,BS,P,SM
+Athletic Trainer,BA,121,0049,BA,P,SM
+Audiology,MA,205,0045,MS,P,
+Audiology,AUD,205,0045,MS,P,
+Back & Spine Surgery,MD/DO,348,0017,MD/DO,P,
+Behavioral Analyst ,EdS,300,0062,MSW,P,
+Behavioral Analyst ,BA,300,0062,BA,P,BA
+Blood Banking/Transfusion Medicine,MD/DO,334,0004,MD/DO,P,
+Bone Marrow Transplant,MD/DO,366,0017,MD/DO,P,
+Breast Reconstruction,MD/DO,359,0013,MD/DO,P,
+Breast Surgery,MD/DO,358,0017,MD/DO,P,
+Bronco Esophagology,MD/DO,277,0048,MD/DO,P,
+Cardiac Diagnostic,MD/DO,513,0025,MD/DO,P,DX
+Cardiology,MD/DO,012,0025,MD/DO,P,
+Cardiovascular Disease,MD/DO,006,0025,MD/DO,P,
+Cardiovascular Surgery,MD/DO,500,0037,MD/DO,P,CS
+Certified Asthma Educator,CCC,043,0091,EDUC,P,
+Certified Diabetic Educator,CCC,027,0091,EDUC,P,
+Certified Midwife,CM,111,XXXX,CPM,P,
+Certified Nurse Midwife,CNM,069,XXXX,CNM,P,MW
+Certified Registered Nurse Anesthetist,CNA,068,0020,CRNA,P,
+Chemical Pathology,MD/DO,207,0011,MD/DO,P,
+Chest and Respiratory Therapy,MD/DO,075,0048,MD/DO,P,
+Child & Adolescent Psychiatry,MD/DO,257,0015,MD/DO,P,AD
+Child Neurology,MD/DO,208,0005,MD/DO,P,PE
+Child Psychology,PSY,268,0061,PHD ,P,PE
+Child Psychology,PHD,268,0061,PHD ,P,PE
+Chiropractic Medicine,DC,035,0044,DC,P,
+Christian Science Practitioner,CS,376,0049,ALT,P,
+Clin Nurse Specialist (non Behavioral),MS,110,XXXX,CNS,p,
+Clinic, ,00 ,0001,HOSP,O,CL
+Clinic, ,00 ,0050,HOSP,O,CL
+Clinical Biochemical Genetics,MD/DO,305,0049,MD/DO,P,MG
+Clinical Biochemical Genetics Group, ,305,0049,MD/DO,O,MG
+Clinical Biochemical/Molecular Genetics,MD/DO,306,0049,MD/DO,P,MG
+Clinical Biochemical/Molecular Genetics Group, ,306,0049,MD/DO,O,MG
+Clinical Cardiac Electrophysiology,MD/DO,304,0025,MD/DO,P,
+Clinical Cytogenetics,MD/DO,307,0049,MD/DO,P,MG
+Clinical Genetics,MD/DO,308,0049,MD/DO,P,MG
+Clinical Molecular Genetics,MD/DO,370,0049,MD/DO,P,MG
+Clinical Neurophysiology,MD/DO,310,0005,MD/DO,P,
+Clinical Pathology,MD/DO,210,0011,MD/DO,P,
+Clinical Pharmacology,MD/DO,211,0011,MD/DO,P,PO
+Colon and Rectal Surgery,MD/DO,015,0014,MD/DO,P,
+Conversion of Inactive Group/Organization Type Records, ,00 ,000 , ,O, 
+Counselor - MH/SA/School,MSW,377,0062,MSW,P,
+Counselor - MH/SA/School,MS,377,0062,"MSW, MS",P,
+Counselor - MH/SA/School,MA,377,0062,"MSW, MA, ",P,
+Counselor - MH/SA/School,LPC,377,0062,MSW,P,
+Counselor - MH/SA/School,BS,377,0062,"MSW, BS",P,
+Counselor - MH/SA/School,BA,377,0062,"MSW, BA",P,
+Counselor - MH/SA/School,PHD,377,0062,"MSW, PHD",P,
+Crisis Diversion,PHD,378,0062,PHD ,P,PG
+Critical Care Medicine,MD/DO,214,0076,MD/DO,P,CC
+Cytopathology,MD/DO,312,0011,MD/DO,P,
+Dentist,DMD,050,0080,DMD,P,
+Dentist,DDS,050,0080,DDS,P,
+"Dentist, Oral Surgeon",DMD,092,0080,DMD,P,
+"Dentist, Oral Surgeon",DDS,092,0080,DDS,P,
+Dermatology,MD/DO,007,0003,MD/DO,P,
+Dermatology Immunology,MD/DO,217,0003,MD/DO,P,IY
+Dermatopathology,MD/DO,218,0011,MD/DO,P,
+Diabetes,MD/DO,278,0076,MD/DO,P,DI
+Diag Rad with Special Competence in Nuclear Rad,MD/DO,345,0016,DIAG,P,DX
+Diagnostic Lab Immunology,MD/DO,107,0034,LAB,P,IY
+Diagnostic Radiology,MD/DO,220,0016,DIAG,P,DX
+Digestive Diseases,MD/DO,509,0029,MD/DO,P,
+Early Intervention,MD/DO,122,0075,EDUC,P,GD
+Emergency Medicine,MD/DO,042,0039,MD/DO,P,
+Employee Assistance Program (EAP) Counselor,MS,379,0062,MS,P,
+Employee Assistance Program (EAP) Counselor,MA,379,0062,MA,P,
+Employee Assistance Program (EAP) Counselor,BS,379,0062,BS,P,
+Employee Assistance Program (EAP) Counselor,BA,379,0062,BA,P,
+Empowerment Coach ,MS,118,00MS,DEG,P,
+Empowerment Coach ,MA,118,00MA,DEG,P,
+Empowerment Coach Group, ,118,00MS,DEG,O,
+"Endocrinology, Diabetes and Metabolism",MD/DO,017,0033,MD/DO,P,
+Endodontics,DMD,051,0077,DMD,P,
+Endodontics,DDS,051,0077,DDS ,P,
+Endoscopy,MD/DO,294,0029,MD/DO,P,
+Family Nurse Practitioner,FNP,339,XXXX,"FNP
+NP",P,"NS
+"
+Family Planning,MD/DO,123,XXXX,,P,
+Family Practice,MD/DO,008,0001,MD/DO,P,
+Family Practice Specialist,MD/DO,275,0073,MD/DO,P,
+Female Pelvic and Recon Surgery,MD/DO,094,0007,MD,P,GY
+Forensic Pathology,MD/DO,223,0011,MD/DO,P,
+Forensic Psychiatry,MD/DO,346,0015,MD/DO,P,
+Gastroenterology,MD/DO,010,0029,MD/DO,P,
+General Practice,MD/DO,001,0001,MD/DO,P,
+General Practice Specialist,MD/DO,272,0073,MD/DO,P,
+General Vascular Surgery,MD/DO,095,0037,MD/DO,P,
+Genetic Counselor ,MS,320,0049,MS,P,GN
+Genetic Counselor ,MA,320,0049,MA,P,GN
+Geriatric Medicine,MD/DO,038,0004,MD/DO,P,GE
+Geriatric Psychiatry,MD/DO,314,0015,MD/DO,P,GE
+Gynecologic Oncology,MD/DO,221,0036,MD/DO,P,GO
+Gynecology,MD/DO,251,0007,OBGYN,P,GY
+Hand Surgery,MD/DO,040,0009,MD/DO,P,HM
+Head & Neck Surgery,MD/DO,271,0017,MD/DO,P,HN
+Headache Treatment,MD/DO,356,0001,MD/DO,P,
+Hearing Instrument Specialist,HIS,298,0045,HRS,P,
+Hematology,MD/DO,093,0030,MD/DO,P,
+Hematology/Oncology,MD/DO,504,0036,MD/DO,P,OH
+Hepatology - Liver Disease,MD/DO,365,0076,MD/DO,P,
+High-Risk Pregnancy,MD/DO,353,0007,MD/DO,P,
+HIV-AIDS,MD/DO,360,0092,MD/DO,P,
+Home Health  / Private Duty Nurse,LPN,243,0083,LPN,P,
+Home Health Aide,CCC,067,0060,HOME,P,
+Homemaker ,NON,021,0060,NON,P,
+Homeopathic Medicine,MS,282,0062,MS,P,
+Hospice & Palliative Medicine,MD/DO,019,0049,MD/DO,P,
+Hospitalist,MD/DO,340,0089,MD/DO,P,
+Hyperbaric Medicine/Wound Care,MD/DO,373,0049,MD/DO,P,OS
+Hyperbaric Oxygen Chamber, ,00 ,0072,OP,O,
+Hyperbaric Oxygen Chamber, ,00 ,0060,OP,O,
+Immunology,MD/DO,283,0002,MD/DO,P,IY
+Immunopathology,MD/DO,225,0011,MD/DO,P,IY
+Infectious Disease Medicine,MD/DO,080,0092,MD/DO,P,
+Infertility Medicine,MD/DO,352,0007,MD/DO,P,
+Internal Medicine,MD/DO,011,0004,MD/DO,P,
+Internal Medicine Group, ,011,0004,MD/DO,O, 
+Internal Medicine Pediatrics (MEDS-PEDS),MD/DO,079,0004,MD/DO,P,PE
+Internal Medicine Specialist,MD/DO,273,0076,MD/DO,P,
+Interventional Cardiology,MD/DO,342,0025,MD/DO,P,
+Interventional Radiology,MD/DO,124,0016,MD/DO,P,
+Knee Surgery,MD/DO,349,0009,MD/DO,P,
+Lactation Specialist ,CCC,380,0049,CCC,P,
+Laryngology,MD/DO,284,0010,MD/DO,P,FA
+Legal Medicine,MD/DO,285,0049,MD/DO,P,OS
+Licensed Professional Counselor,PSY,381,0062,PHD ,P,
+Licensed Professional Counselor,MSW,381,0062,MSW,P,
+Licensed Professional Counselor,MS,381,0062,MS,P,
+Licensed Professional Counselor,MA,381,0062,MA,P,
+Licensed Professional Counselor,LPC,381,0062,MSW,P,
+Licensed Professional Counselor,EdS,381,0062,MSW,P,
+Licensed Professional Counselor,EDD,381,0062,EDD,P,
+Licensed Professional Counselor,CCC,381,0062,CCC,P,
+Licensed Professional Counselor,BS,381,0062,BS,P,
+Licensed Professional Counselor,BA,381,0062,BA,P,
+Licensed Professional Counselor,PHD,381,0062,PHD ,P,
+Licensed Vocational Nurse,LVN,382,0028,LVN,P,
+Marriage & Family Therapy,PSY,318,0062,MSW,P,
+Marriage & Family Therapy,MSW,318,0062,MSW,P,
+Marriage & Family Therapy,MS,318,0062,MSW,P,
+Marriage & Family Therapy,MA ,318,0062,MSW,P,
+Marriage & Family Therapy,LPC,318,0062,MSW,P,
+Marriage & Family Therapy,EdS,318,0062,MSW,P,
+Marriage & Family Therapy,EDD,318,0062,MSW,P,
+Marriage & Family Therapy,PHD,318,0062,MSW,P,
+Massage Therapy,MTH,514,0049,MTH,P,
+Master of Social Work,MSW,391,0062,MSW,P,
+Medical Director,MD/DO,999,0049,MD/DO,P,OS
+Medical Genetics,MD/DO,309,0049,MD/DO,P,MG
+Medical Microbiology,MD/DO,227,0011,MD/DO,P,
+Medical Oncology,MD/DO,059,0036,MD/DO,P,MO
+Medical Tattoo Specialist,Non,106,0049,NON,P,OS
+Medical Tattoo Specialist Group,Non,106,0049,NON,O,OS
+Medical Toxicology,MD/DO,333,0011,MD/DO,P,
+Military Treatment Facility / TRICARE USE ONLY, ,nan,0nan, ,O,
+MOHS Surgery,MD/DO,357,0003,MD/DO,P,
+Molecular Genetic Pathology,MD/DO,371,0011,MD/DO,P,
+Movement Disorders,MD/DO,249,0005,MD/DO,P,
+MRI/Magnetic Resonance,MD/DO,511,0016,MD/DO,P,
+"Naprapathy, Doctor of ",DN,383,0049,ALT,P,
+"Naturopathy, Doctor of",ND,384,0049,ALT,P,
+Neonatology,MD/DO,087,0047,MD/DO,P,
+Neoplastics Diseases,MD/DO,502,0036,MD/DO,P,OH
+Nephrology,MD/DO,039,0031,MD/DO,P,
+Neurodevelopmental Disabilities,MD/DO,343,0005,MD/DO,P,
+Neurological Surgery,MD/DO,014,0006,MD/DO,P,
+Neurology ,MD/DO,013,0005,MD/DO,P,
+Neurology & Psychiatry,MD/DO,228,0005,MD/DO,P,
+Neuromuscular Disease,MD/DO,269,0005,MD/DO,P,
+Neuropathology,MD/DO,229,0011,MD/DO,P,NE
+Neuropsychology , ,397,0061,PHD ,P,
+Neuroradiology,MD/DO,332,0016,MD/DO,P,NE
+Non-Indep Licensed MH Provider,CCC,244,0062,CCC,P,
+Nuclear Cardiology,MD/DO,016,0025,MD/DO,P,
+Nuclear Medicine,MD/DO,036,0038,MD/DO,P,
+Nuclear Radiology,MD/DO,286,0038,DIAG,P,DX
+Nurse Practitioner,NP,077,XXXX,"RNP
+NP",P,NP
+"Nurse Practitioner, Clinical Specialist in Mental Health (NP)",NP,387,0062,RNP,P,
+"Nurse, Clinical Specialist in Mental Health ",MSN ,385,0062,RN,P,
+"Nurse, Licensed Practical",LPN,065,0028,LPN,P,
+"Nurse, Registered",RN,064,0083,RN,P,
+"Nurse, Registered, First Assistant (RNFA)",RN,386,0083,RN,P,
+Nutritionist (Registered Dietician),RD,089,0063,RD,P,
+Obstetrics,MD/DO,250,0007,OBGYN,P,OB
+Obstetrics And Gynecology,MD/DO,230,0007,OBGYN,P,
+Occupational Medicine,MD/DO,231,0023,MD/DO,P,OM
+Occupational Therapy,OTR,061,0064,OTR,P,OT
+Ophthalmic Plastic Surgery,MD/DO,364,0008,MD/DO,P,
+Ophthalmology,MD/DO,018,0008,MD/DO,P,
+Ophthalmology Cornea Surgery,MD/DO,355,0008,MD/DO,P,
+Ophthalmology Retina Surgery,MD/DO,354,0008,MD/DO,P,
+Optician,OPT,109,0021,OPT,P,
+Optometry,OD,076,0022,OD,P,
+Oral and Maxillofacial Surgery,MD/DO,092,0080,MD/DO,P,
+Oral Pathology,MD/DO,232,0011,MD/DO,P,
+Orofacial Plastic Surgery,MD/DO,233,0013,MD/DO,P,FA
+Orthodontics,DMD,052,0041,DMD,P,
+Orthodontics,DDS ,052,0041,DDS,P,
+Orthopedic Surgery,MD/DO,020,0009,MD/DO,P,
+Orthotics Prosthetics,CPO,108,0049,OP ,P,OS
+Orthotics Prosthetics,CP,108,0049,OP ,P,OS
+Orthotics Prosthetics,CO,108,0049,OP ,P,OS
+Osteopathic Hospital, ,00 ,0050,HOSP,O,
+Osteopathic Manipulative Medicine,MD/DO,330,0073,MD/DO,P,DO 
+Otolaryngology (ENT),MD/DO,004,0010,MD/DO,P,
+Otology,MD/DO,254,0010,MD/DO,P,AU
+Otology Group, ,254,0010,MD/DO,O,AU
+Pain Management,MD/DO,319,0020,MD/DO,P,AP
+Pastoral Counselor,MS,388,0049,PC,P,
+Pastoral Counselor,MA,388,0049,PC,P,
+Pastoral Counselor,EdS,388,0062,pc,P,
+Pastoral Counselor,DD,388,0049,"PC, BA, BS",P,
+Pastoral Counselor,PHD,388,0049,PC,P,
+Pathology,MD/DO,022,0011,MD/DO,P,
+Pediatric Adolescent,MD/DO,258,0012,MD/DO,P,
+Pediatric Allergy Immunology,MD/DO,086,0002,MD/DO,P,PA
+Pediatric Anesthesiology,MD/DO,116,0020,MD/DO,P,
+Pediatric Behavioral,MD/DO,363,0012,MD/DO,P,
+Pediatric Cardiology,MD/DO,085,0025,MD/DO,P,PC
+Pediatric Cardiothoracic Surgery,MD/DO,505,0018,MD/DO,P,PE
+Pediatric Critical Care Medicine,MD/DO,234,0076,MD/DO,P,CC
+Pediatric Dermatology,MD/DO,117,0003,MD/DO,P,
+Pediatric Developmental & Behavioral,MD/DO,255,0012,MD/DO,P,GD
+Pediatric Emergency Medicine,MD/DO,321,0039,MD/DO,P,PE
+Pediatric Endocrinology,MD/DO,082,0033,MD/DO,P,PY
+Pediatric Gastroenterology,MD/DO,259,0029,MD/DO,P,PE
+Pediatric Genetics,MD/DO,260,0049,MD/DO,P,GN
+Pediatric Hematology Oncology,MD/DO,088,0036,MD/DO,P,PH
+Pediatric Infectious Disease Medicine,MD/DO,078,0092,MD/DO,P,PE
+Pediatric Nephrology,MD/DO,031,0031,MD/DO,P,PI
+Pediatric Neurology,MD/DO,262,0005,MD/DO,P,CN
+Pediatric Neurosurgery,MD/DO,081,0006,MD/DO,P,PE
+Pediatric Nurse Practitioner,NP,389,XXXX,"RNP
+NP",P,"NS
+"
+Pediatric Nutrition,RD,120,0063,RD,P,PE
+Pediatric Occupational Therapy,OTR,119,0064,OTR,P,OT
+Pediatric Ophthalmology,MD/DO,263,0008,MD/DO,P,PE
+Pediatric Orthopedic Surgery,MD/DO,264,0009,MD/DO,P,PE
+Pediatric Otolaryngology (ENT),MD/DO,265,0010,MD/DO,P,PE
+Pediatric Pathology,MD/DO,322,0011,MD/DO,P,PE
+Pediatric Pathology Group, ,322,0011,MD/DO,O,PE
+Pediatric Plastic Surgery,MD/DO,266,0013,MD/DO,P,PE
+Pediatric Pulmonary Medicine,MD/DO,096,0048,MD/DO,P,PP
+Pediatric Radiology,MD/DO,288,0016,DIAG,P,PR
+Pediatric Rehabilitation Medicine,MD/DO,341,0023,MD/DO,P,PE
+Pediatric Rheumatology,MD/DO,261,0032,MD/DO,P,PE
+Pediatric Specialist,MD/DO,274,0075,MD/DO,P,
+Pediatric Speech Pathologist ,LSP,115,0046,ST,P,PE
+Pediatric Sports Medicine,MD/DO,323,0023,MD/DO,P,PE
+Pediatric Surgery,MD/DO,114,0017,MD/DO,P,PS
+Pediatric Urology,MD/DO,267,0019,MD/DO,P,PE
+Pediatrics,MD/DO,037,0012,MD/DO,P,
+Pedodontics,DMD,053,0078,DMD,P,
+Pedodontics,DDS,053,0078,DDS,P,
+Peridontics,DMD,054,0042,DMD,P,
+Peridontics,DDS,054,0042,DDS,P,
+Perinatology (Maternal & Fetal Medicine),MD/DO,226,0074,MD/DO,P,MF
+Personal Care Aide,CCC,104,0060,PCA,P,
+Pest Control Company, ,00 ,0060,PCC,O,OS
+Pharmacist  ,PHA,212,0070,PHARM,P,OS
+Phlebology,MD/DO,396,0037,MD/DO,P,
+Physical Medicine and Rehabilitation / Physiatry,MD/DO,025,0023,MD/DO,P,PM
+Physical Therapy,PT,073,0064,PT,P,
+Physical Therapy - Hand,PT,368,0064,PT,P,
+Physical Therapy - Hand Splinting,PT,369,0064,PT,P,
+Physical Therapy - Pediatric,PT,367,0064,PT,P,
+Physician Assistant,PA,338,XXXX,PA,P,
+Physician Assistant BEHAVIORAL Group,AS,112,0062,PA,P,PB
+Physician Assistant BEHAVIORAL Group,BS,112,0062,PA,P,PB
+Physician Assistant BEHAVIORAL Group,MA,112,0062,PA,P,PB
+Physician Assistant BEHAVIORAL Group,MS,112,0062,PA,P,PB
+Physician Assistant BEHAVIORAL ONLY,BA,112,0062,PA,P,PB
+Physician Assistant BEHAVIORAL ONLY,DNP,112,0062,PA,P,PB
+Physician Assistant BEHAVIORAL ONLY,MED,112,0062,PA,P,PB
+Physician Assistant BEHAVIORAL ONLY,MSN,112,0062,PA,P,PB
+Physician Assistant BEHAVIORAL ONLY,PA,112,0062,PA,P,PB
+Physician Assistant BEHAVIORAL ONLY,PHD,112,0062,PA,P,PB
+Physician Nutrition Specialist,MD/DO,103,0063,MD/DO,P,
+Plastic Surgery,MD/DO,024,0013,MD/DO,P,
+Plastic Surgery within the Head & Neck,MD/DO,337,0013,MD/DO,P,HN
+Podiatry,DPM,048,0027,DPM,P,
+Preventative Medicine Aerospace,MD/DO,041,0049,MD/DO,P,AE
+Preventive Medicine,MD/DO,281,0073,MD/DO,P,
+Proctology ,MD/DO,028,0076,MD/DO,P,PL
+Prosthodontics,DDS,055,0079,DDS ,P,
+Prosthodontics,DDS,055,0079,DMD,P,
+Psychiatric Nurse Specialist/Practitioner,MSN,329,0062,MSN,P,SN
+Psychiatric Nurse Specialist/Practitioner,MS,329,0062,MSN,P,SN
+Psychiatric Nurse Specialist/Practitioner,MA,329,0062,MSN,P,SN
+Psychiatric Nurse Specialist/Practitioner,EdS,329,0062,MSN,P,
+Psychiatric Nurse Specialist/Practitioner,EDD,329,0062,MSN,P,SN
+Psychiatric Nurse Specialist/Practitioner,DNP,329,0062,MSN,P,
+Psychiatric Nurse Specialist/Practitioner,PHD,329,0062,MSN,P,SN
+Psychiatric Social Work,CSW,009,0062,MSW,P,
+Psychiatric Social Work Group, ,009,0062,MSW,O,
+Psychiatry,MD/DO,026,0015,MD/DO,P,
+Psychoanalyst,EDD,237,0062,PHD,P,
+Psychoanalyst,MA,237,0062,MA,P,
+Psychoanalyst,MS,237,0062,MS,P,
+Psychoanalyst,PHD,237,0062,PHD,P,
+Psychoanalyst,PSY,237,0062,PHD,P,
+Psychologist Psychoanalys,EDD,237,0062,PHD,P,
+Psychologist Psychoanalys,MA,237,0062,MA,P,
+Psychologist Psychoanalys,MS,237,0062,MS,P,
+Psychologist Psychoanalys,PHD,237,0062,PHD,P,
+Psychologist Psychoanalys,PSY,237,0062,PHD,P,
+"Psychology, Clinical (Doctorate Level)",PSY,070,0061,PHD ,P,
+"Psychology, Clinical (Doctorate Level)",EdS,070,0061,PHD ,P,
+"Psychology, Clinical (Doctorate Level)",EDD,070,0061,PHD ,P,
+"Psychology, Clinical (Doctorate Level)",PHD,070,0061,PHD ,P,
+"Psychology, Clinical (Masters Level)",MS,070,0062,MS,P,
+"Psychology, Clinical (Masters Level)",MA,070,0062,MA,P,
+Psychosomatic Medicine,MD/DO,291,0062,MD/DO,P,MD
+Public Health,MD/DO,238,0073,HLTDP,P,HA
+Public Health & General Preventive Medicine,MD/DO,236,0073,HLTDP,P,HA
+Pulmonary Medicine,MD/DO,029,0048,MD/DO,P,
+Radiation Oncology,MD/DO,032,0024,RADIA,P,
+Radioisotopic Pathology,MD/DO,240,0038,DIAG,P,
+Radioisotopic Radiology,MD/DO,503,0038,DIAG,P,
+Radiological Physics,MD/DO,324,0024,RADIA,P,
+Radiology,MD/DO,030,0016,MD/DO,P,
+Registered Nurse Anesthetist,RNA,395,XXXX,CRNA,P,
+Rehabilitative Medicine,MD/DO,253,0023,MD/DO,P,PM
+Reproductive Endocrinology,MD/DO,241,0033,MD/DO,P,RY
+Reproductive Endocrinology Group, ,241,0033,MD/DO,O,RY
+Rheumatology,MD/DO,090,0032,MD/DO,P,
+Rhinology,MD/DO,292,0010,MD/DO,P,
+Shoulder Surgery,MD/DO,350,0009,MD/DO,P,
+Sleep Study Medicine,MD/DO,361,0076,MD/DO,P,
+Social Worker (Registered Social Worker),RSW,390,0062,MSW,P,
+"Social Worker, Licensed Clinical/Medical",PSY,063,0062,LICSW,P,
+"Social Worker, Licensed Clinical/Medical",MSW,063,0062,LICSW,P,
+"Social Worker, Licensed Clinical/Medical",MS,063,0062,LICSW,P,
+"Social Worker, Licensed Clinical/Medical",MA,063,0062,LICSW,P,
+"Social Worker, Licensed Clinical/Medical",EdS,063,0062,LICSW,P,
+"Social Worker, Licensed Clinical/Medical",EDD,063,0062,LICSW,P,
+"Social Worker, Licensed Clinical/Medical",CSW,063,0062,LICSW,P,
+"Social Worker, Licensed Clinical/Medical",PHD,063,0062,LICSW,P,
+"Social Worker, Marriage & Family",CSW,392,0062,MSW,P,
+Speech Pathology,LSP,246,0046,ST,P,
+Speech Pathology Group, ,246,0046,ST,O,
+Speech Therapy See Special Loading Instructions,LSP,074,0046,ST,P,
+Spinal Cord Injury Medicine,MD/DO,344,0006,MD/DO,P,
+Sports Medicine,MD/DO,296,0023,MD/DO,P,SM
+"Substance Abuse Services, Alcohol & Drug",LPC,507,0062,"MSW, BA, BS",P,CD
+"Substance Abuse Services, Alcohol & Drug Group", ,507,0062,"MSW, BA, BS",O,CD
+Surgery,MD/DO,002,0017,MD/DO,P,
+Surgical Critical Care,MD/DO,242,0076,MD/DO,P,CC
+Surgical Oncologist,MD/DO,508,0036,MD/DO,P,
+Surgical Technician,CCC,393,XXXX,PA,P,SA
+Therapeutic Radiology,MD/DO,239,0024,RADIA,P,
+Thoracic Cardiovascular Surgery,MD/DO,033,0018,MD/DO,P,CS
+Thoracic Surgery,MD/DO,101,0018,MD/DO,P,
+Transition Service Agency , ,00 ,0060,TSA,O,
+Transplant Hepatology,MD/DO,105,0076,MD/DO,P,HP
+Traumatic Surgery,MD/DO,293,0017,MD/DO,P,
+Undersea and Hyperbaric Medicine,MD/DO,327,0049,MD/DO,P,OS
+Undersea Medicine,MD/DO,372,0049,MD/DO,P,OS
+Unknown Non-Physician,"NON
+EDD",099,0049,"NON
+EDD",P,
+Unknown Special Physician,MD/DO,097,0049,MD/DO,P,OS
+Urgent Care Medicine,MD/DO,328,0066,URGI,P,
+Urology,MD/DO,034,0019,MD/DO,P,
+Vascular Intervention Radiology,MD/DO,335,0016,DIAG,P,
+Visiting Nurse,VNA,394,0083,"RN, LPN, LVN, or HLDTP",P,
+Waiver Nursing,RN,100,0083,RN,P,OS
+Waiver Nursing,LPN,100,0028,LPN ,P,OS
+Wellness Service Provider , ,nan,0001,WELLP,O,WP
+Maternal Infant Health Program,"NON
+",nan,0074,CM,O,

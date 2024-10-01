@@ -1,0 +1,203 @@
+{
+  "ADDRESS_LINE_1": {
+    "PARENT_CATEGORY": "Address",
+    "Column_Type": [
+      {
+        "Tag": "BILL",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "P:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Billing:"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Billing:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "dba. Foundation Name:"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      },
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "tableDetails": {
+              "columnIndex": 2,
+              "tableId": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ADDRESS_PHONE": {
+    "PARENT_CATEGORY": "Address",
+    "Column_Type": [
+      {
+        "Tag": "BILL",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "F:"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "PROVIDER PROFILE"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "P:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "dba. Foundation Name:"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      },
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "tableDetails": {
+              "columnIndex": 3,
+              "tableId": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ADDRESS_PHONE_FAX": {
+    "PARENT_CATEGORY": "Address",
+    "Column_Type": [
+      {
+        "Tag": "BILL",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": "None",
+                "point": "TOP_RIGHT",
+                "text": "None"
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "PROVIDER PROFILE"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "F:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "dba. Foundation Name:"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      },
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "tableDetails": {
+              "columnIndex": 4,
+              "tableId": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ADDRESS_TYPE": {
+    "PARENT_CATEGORY": "Address",
+    "Column_Type": [
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "tableDetails": {
+              "columnIndex": 1,
+              "tableId": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ADDRESS_INDICATOR": {
+    "PARENT_CATEGORY": "Address",
+    "Column_Type": [
+      {
+        "Tag": "GENERAL",
+        "Location": [
+          {
+            "tableDetails": {
+              "columnIndex": 1,
+              "tableId": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

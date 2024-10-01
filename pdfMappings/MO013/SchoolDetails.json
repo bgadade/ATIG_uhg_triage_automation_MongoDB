@@ -1,0 +1,31 @@
+{"SCHOOL_NAME": {
+  "PARENT_CATEGORY": "SchoolDetails",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Start Date"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Education"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": ["Program"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "SCHOOL_COMP_DATE": {
+  "PARENT_CATEGORY": "SchoolDetails",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Degree"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["End Date:"],"point": "TOP_RIGHT","occurence": 1},
+                        "min_X": {"text": ["End Date:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

@@ -1,0 +1,20 @@
+[
+  {"LayerName": "CleanTableDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"Board":[
+          {"name": "mergeRows","type": "clean","input": {"refCol":2}}
+      ]}
+  ]},
+  {"LayerName": "CleanFinalDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"name": "createMvColumn","type": "clean","input": {"inpCol":"BOARD_CERT_DATE","outCol":"BOARD_CERT_EXPIRATION_DATE","start":"Exp\\:","end":"$","regex":"None"}},
+      {"name": "cleanString","type": "clean","input": {"col":"BOARD_CERT_DATE","type":"mv","start":"Exp\\:","end":"$","regex":"None"}},
+      {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_LINE_1","type":"mv","start":"Phone\\:","end":"$","regex":"None"}},
+      {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_PHONE_FAX","type":"mv","start":"Group","end":"$","regex":"None"}},
+      {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_PHONE","type":"mv","start":"Fax","end":"$","regex":"None"}},
+      {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_PHONE_FAX","type":"mv","start":"","end":"","regex":"[,.;]+"}},
+      {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_PHONE","type":"mv","start":"","end":"","regex":"[,.;]+"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"GROUP_NAME","type":"sv"}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"DEGREE","outCol":"DEGREE","type":"mv","splitBy":",","startIdx":-1}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"NAME_LAST","outCol":"NAME_LAST","type":"sv","splitBy":",","joinByVal":",","startIdx":0,"EndIdx":-1}}
+
+  ]}
+]

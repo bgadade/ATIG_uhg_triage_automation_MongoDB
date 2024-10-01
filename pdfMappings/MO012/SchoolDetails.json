@@ -1,0 +1,24 @@
+{
+  "SCHOOL_NAME": {
+  "PARENT_CATEGORY": "SchoolDetails",
+  "Column_Type": [
+    {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 6, "columnIndex": 2}}]
+   }
+  ]
+ },
+  "SCHOOL_COMP_DATE": {
+  "PARENT_CATEGORY": "SchoolDetails",
+  "Column_Type": [
+    {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 6, "columnIndex": 3}}]
+   }
+  ]
+ }
+}

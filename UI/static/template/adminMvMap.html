@@ -1,0 +1,122 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Confirmed- <small>MultiValue Mapping</small></li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox">
+      <!-- Your Page Content Here -->
+        <!-- <div id="mydiv">
+          <img  class="mappingSpinner" src="/static/images/page-loader.gif"/>
+        </div> -->
+        <div class="container-fluid contentbody" data-ng-init="getMvAdminMap()">
+            <div class="row">
+              <div class="col-md-11">
+                <div class="row">
+                  <nav class="navbar navbar-default" style="margin-top:-20px">
+                    <ul class="nav navbar-nav" ng-repeat="multivalue in multiValueMap">
+                      <li ui-sref-active="active" ng-repeat="(parent,tags) in multivalue" class="dropdown" uib-dropdown dropdown-hover>
+                        <a href="#" class="dropdown-toggle" uib-dropdown-toggle data-toggle="dropdown">
+                          {{parent}} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" uib-dropdown-menu ng-repeat="tag in tags">
+                          <li ng-repeat="(child, childTag) in tags"><a href="" class="{{parent}} {{child}}" ng-click="setActiveTagData(parent,child,childTag)">{{child}}</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="row row-centered" ng-if="selectedParent">
+                    <div class="content">
+                      <h4 style="margin-bottom: 9px;margin-top: -11px;color: #003366;">{{selectedChild}}</h4>
+                        <div class="col-md-3 col-centered">
+                            <p class="strngHreadings">
+                                <strong>Categories</strong>
+                            </p>
+                            <div class="list-group">
+                                <button type="button" class="list-group-item lstBtn" style="padding:5%" ng-repeat="(cat, mappings) in activeTagData" ng-click="setActiveMapData(mappings); editTag(activeTagData);">
+                                    <span class="badge">{{mappings.length}}</span>
+                                    {{cat}}
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-centered">
+                            <p class="hider strngHreadings">
+                                <strong>Mappings</strong>
+                            </p>
+                            <div class="list-group" style="overflow-y:scroll;height:240px;">
+                                <span class="list-group-item lstBtn" ng-repeat="mappings in activeMapData">
+                                  <span class="glyphicon glyphicon-remove statusicon pull-left" ng-click="rmMvOutField(mappings)" style="cursor:pointer;color:red;width: 5%;font-size: 16px;"></span>
+                                  <span ng-repeat="(cat,map) in mappings">{{map}}
+                                    <form data-editable-form name="uiSelectForm" style="display:inline;float:right;margin-right: 2px;width: 30%;margin-top:-7px">
+                                      <div class="col-md-10" style="width:90%" editable-ui-select="cat" data-e-form="uiSelectForm" data-e-name="tag" name="tag" theme="bootstrap" data-e-ng-model="map" data-e-style="min-width:75px;">
+                                        <!-- {{cat}} -->
+                                          <editable-ui-select-match placeholder="Tag" style="width:140px;margin-right:100px;">
+                                            {{$select.selected}}
+                                          </editable-ui-select-match>
+                                          <editable-ui-select-choices repeat="tags in tagFields">
+                                            {{tags}}
+                                          </editable-ui-select-choices>
+                                        </div>
+                                        <div class="buttons">
+                                          <span class="glyphicon glyphicon-pencil" ng-click="uiSelectForm.$show();" ng-show="!uiSelectForm.$visible" style="margin-top:10px;"></span>
+                                          <span ng-show="uiSelectForm.$visible">
+                                            <!-- <button type="submit" class="btn btn-primary" ng-disabled="uiSelectForm.$waiting" ng-click="onEdit(uiSelectForm.$data.tag,mappings)" >
+                                              Save
+                                            </button> -->
+                                            <span class="glyphicon glyphicon-ok" ng-disabled="uiSelectForm.$waiting" ng-click="onEdit(uiSelectForm.$data.tag,mappings)" style="color:green;cursor:pointer;margin-left: 32px;margin-top:10px"></span>
+
+                                            <span class="glyphicon glyphicon-remove" ng-disabled="uiSelectForm.$waiting" ng-click="uiSelectForm.$cancel()" style="color:red;cursor:pointer;margin-left: 10px;"></span>
+                                          </span>
+                                        </div>
+                                      </form>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          <div class="row pull-right">
+            <div class="saveDiv">
+              <span class="glyphicon glyphicon-floppy-saved saveIcon" data-toggle="modal" data-target="#setMvMapModal" ></span>
+            </div>
+            <!-- Modal -->
+             <div class="modal fade" id="setMvMapModal" role="dialog">
+               <div class="modal-dialog">
+
+                 <!-- Modal content-->
+                 <div class="modal-content">
+                   <div class="modal-header" style="background:#838282;color:white;height:50px">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title">Success</h4>
+                   </div>
+                   <div class="modal-body">
+                     <h4><span>Mappings Saved Successfully</span></h4>
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" class="btn btndefault" style="width:15%" data-dismiss="modal" ng-click="setMvAdminMap()">Save</button>
+                     <button type="button" class="btn btndefault" style="width:15%" data-dismiss="modal">Cancel</button>
+                   </div>
+                   <!-- <div class="modal-footer">
+                     <button type="button" class="btn btndefault" style="width:20%" data-dismiss="modal">Close</button>
+                   </div> -->
+                 </div>
+
+               </div>
+             </div>
+            <!-- End Modal -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</div>

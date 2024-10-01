@@ -1,0 +1,260 @@
+[
+  {"LayerName": "CleanseDataFrame","LayerType": "DF","ProcessStage": 0,"Transformation": [
+
+        {"singleValue": {
+        "derivations": [
+          {"name": "mapStdValues","type": "mv_cmn","input": {"inputCol":"RSN_CODE", "standardsKeys": ["CANCEL_RSN_CODE"], "outputCol": "STD_CANCEL_REASON_CODE"}}
+          
+          ]
+        }},
+    {"CommCredCont": {
+      "derivations": [
+        {"name": "normalizeCCC","type": "mv_cmn","input": {"lvls": ["COMM_NAME", "DRV_COMM_TYPE", "COMM_EXTENSION_NUMBER", "CONT_TYPE", "DRV_COMM_NUMBER"], "phCol": "COMM_PHONE_NUMBER", "outCol": "DRV_COMM_NUMBER", "faxCol": "COMM_FAX_NUMBER","commTypCol":"COMM_TYPE","drvCommTypCol":"DRV_COMM_TYPE"}},
+        {"name": "getCommCredTypeHeader","type": "mv_cmn","input": "masterDict['diColMapping']"},
+        {"name": "standardiseCommunicationType","type": "mv_cmn","input": {"inputCol":"DRV_COMM_TYPE", "outputCol":"STD_COMM_TYPE","standardsKey":"PhoneFax"}},
+        {"name": "standardiseContactType","type": "mv_cmn","input": {"inputCol":"CONT_TYPE", "exceptionIdxName":"contact_type_exceptions","masterIdxName":"comm_types","outputColExc":"EXC_LKP_CONT_TYPE","outputColMaster":"STD_CONT_TYPE"}},
+        {"name": "getCommExtnFrmPhn","type": "mv_cmn","input": {"inputCol":"DRV_COMM_NUMBER","standardsKeys":"COMM_EXT","outputCol":"DRV_COMM_EXT"}},
+        {"name": "finalExtNum","type": "mv_cmn","input": {"extCol":"COMM_EXTENSION_NUMBER","drvExtCol":"DRV_COMM_EXT","outputCol":"OUT_COMM_EXT"}}
+      ]
+    }},
+
+    {"Address":{
+      "derivations":[
+        {"name": "applyRegex","type": "mv_cmn","input": {"inputCol":"ADDR_EFFECTIVE_DATE", "regexKey":"EFFECTIVE_DATE"}},
+        {"name": "standardizeColumn","type": "mv_cmn","input": {"inputCol":["ADDRESS_LINE_1","ADDRESS_LINE_2"],"standardsKeys":["Blvd","Rd","Ave","Ste", "Trl", "Ln", "Fl", "Mt", "Dr", "Ct"]}},
+        {"name": "processCombinedAddTypeInd","type": "mv_cmn","input": {"inputCol":"COMBINED_ADDRESS_TYPE_IND","outputCol":["ADDRESS_TYPE","ADDRESS_INDICATOR"],"standardsKeys":["Primary","Secondary"]}},
+        {"name": "getDiColMappingAdr","type": "wh","input": "masterDict['diColMapping']"},
+        {"name": "standardizeColumn","type": "mv_cmn","input": {"inputCol":["HANDICAP_ACCESS"],"outputCol": "OUT_HANDICAP_ACCESS","standardsKeys":["Y", "N"]}},
+        {"name": "mapStdValues","type": "mv_cmn","input": {"inputCol":"DIR_IND", "standardsKeys": ["DIR"], "outputCol": "CLEAN_DIR_IND"}},
+        {"name": "negateDirInd","type": "mv_cmn","input": {"inputCol":"diColMapping_Adr","orderCol":"order","searchKey":"@DIR_IND@","outputCol": "NEGATE_DIR_IND","standardsKeys":["DIR_HEADER","DIR_NON_SUPPRESSED"]}}
+        ]}},
+    {"ProviderEmail/WebAddr":{
+      "derivations":[
+        {"name": "providerEmailGetSubFrameWrapper", "type": "mv_cmn", "input": {"inputCol": ["PROVIDER_EMAIL/WEB_ADDR", "PROVIDER_COMM_TYPE"], "outputCol": "PROVIDER_EMAIL_SUB_FRAME"}}
+      ]
+    }},
+    {"ProviderLanguage":{
+      "derivations":[
+        {"name": "add_mapCols", "type": "mv_cmn", "input": {"mapCol":"{'PROVIDER_LANGUAGE':'LANGUAGE'}", "outputCol": ["LANGUAGE_SPOKEN_BY","LANGUAGE_WRITTEN_BY"], "defVal" :["",""]}},
+        {"name": "providerLangGetSubFrameWrapper", "type": "mv_cmn", "input": {"inputCol": ["LANGUAGE","LANGUAGE_SPOKEN_BY","LANGUAGE_WRITTEN_BY"], "outputCol": "PROVIDER_LANG_SUB_FRAME"}}
+      ]
+    }}
+
+
+    ]},
+
+
+  {"LayerName": "CleanseLayer1","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+
+      ]}},
+    {"Address":{
+      "derivations":[
+        {"name": "var_mergeDerivedWithInput","type": "mv_cmn","input": ["ADDRESS_INDICATOR", "DERIVED_ADDRESS_INDICATOR"],"col": "MERGE_ADDRESS_INDICATOR"},
+        {"name": "var_addOrderInd","type": "mv_cmn","input": ["ADDRESS_ORDER", "MERGE_ADDRESS_INDICATOR"],"col": "ADDRESS_ORDER_INDICATOR"},
+        {"name": "var_mergeDerivedWithInput","type": "mv_cmn","input": ["ADDRESS_TYPE", "DERIVED_ADDRESS_TYPE"],"col": "MERGE_ADDRESS_TYPE"},
+        {"name": "standardisePSIndi","type": "mv_cmn","input": ["ADDRESS_ORDER_INDICATOR", ["Primary", "Secondary"]],"col": "CLEAN_ADDRESS_IND"},
+        {"name": "var_standardiseString","type": "mv_cmn","input": ["MERGE_ADDRESS_TYPE", ["PLSV", "Bill", "Combo", "Mail", "Cred"]],"col": "OUT_ADDRESS_TYPE"},
+        {"name": "var_ConcatAddress","type": "mv_cmn","input": [{"address1":"ADDRESS_LINE_1","address2":"ADDRESS_LINE_2","city": "ADDRESS_CITY", "state": "ADDRESS_STATE", "zip_code": "ADDRESS_ZIP"}],"col": "CONCAT_ADDRESS"},
+        {"name": "var_ParseAddress","type": "mv_cmn","input": ["'CONCAT_ADDRESS'"],"col": "PARSED_ADDRESS"},
+        {"name": "var_getZipCode","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "OUT_ADDRESS_ZIP"},
+        {"name": "var_getZipPlus4", "type":"mv_cmn", "input": ["PARSED_ADDRESS", "ADDRESS_ZIP4"], "col": "OUT_ADDRESS_ZIP4"},
+        {"name": "var_getAddress1","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "OUT_ADDRESS_LINE_1"},
+        {"name": "var_getAddress2","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "OUT_ADDRESS_LINE_2"},
+        {"name": "var_getCity","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "PAR_ADDRESS_CITY"},
+        {"name": "var_fnlCity","type": "mv_cmn","input": ["PAR_ADDRESS_CITY", "OUT_ADDRESS_LINE_1", "ADDRESS_CITY"],"col": "OUT_ADDRESS_CITY"},
+        {"name": "var_getState","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "PAR_ADDRESS_STATE"},
+        {"name": "var_parseDate","type": "mv_cmn","input": ["ADDR_EFFECTIVE_DATE", "C"],"col": "PARSED_ADDR_EFFECTIVE_DATE"},
+        {"name": "setDefaultValInRow","type": "mv_cmn","input": ["'TRUE'"],"col":"ADDR_LOCATION_CHNG"}
+    ]}
+    }
+  ]
+  },
+
+  {"LayerName": "multivaluedCols","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "placeHolder","type": "mv_cmn","input": [],"col": "placeHolder"},
+         {"name": "setDefaultValue","type": "mv_cmn","input": ["STD_CANCEL_REASON_CODE", "'21'"],"col": "OUT_CANCEL_REASON_CODE"}
+      ]
+      }},
+    {"Address":{
+      "derivations":[
+        {"name": "var_deriveAddressIndicator", "type": "mv_cmn", "input": ["CLEAN_ADDRESS_IND", "OUT_ADDRESS_TYPE"], "col": "OUT_ADDRESS_IND"},
+        {"name": "combineProvLangAddrLang", "type": "mv_cmn", "input": ["masterDict['ProviderLanguage']", "PROVIDER_LANG_SUB_FRAME", "LANGUAGE_GROUP"], "col":"LANG_SUB_FRAME"},
+        {"name": "getSeparateLanguages", "type":"mv_cmn", "input": ["['LANGUAGE','LANGUAGE_SPOKEN_BY','LANGUAGE_WRITTEN_BY']", "LANG_SUB_FRAME"], "col":"LANG_SUB_FRAME"},
+        {"name": "updateClarifyPhone", "type": "mv_cmn", "input": ["ADDRESS_PHONE", "PHONE_GROUP"], "col":"PHONE_GROUP"},
+        {"name": "combinePhoneFax", "type": "mv_cmn", "input": ["['ADDRESS_PHONE', 'ADDRESS_PHONE_FAX', 'EXT_PHONE','ADDRESS_PHONE_INDICATOR', 'ADDRESS_PHONE_TYPE']", "PHONE_GROUP"], "col": "ADDRESS_PHONE_SUB_FRAME"},
+        {"name": "updateClarifyListOfDictionary", "type": "mv_cmn", "input": ["ADDRESS_PHONE_INDICATOR", "ADDRESS_PHONE_SUB_FRAME"], "col":"ADDRESS_PHONE_SUB_FRAME"},
+        {"name": "combineProvAddEmail", "type": "mv_cmn", "input": ["masterDict['ProviderEmail/WebAddr']", "PROVIDER_EMAIL_SUB_FRAME", "COMM_GROUP", "EMAIL_INDICATOR", "{'PROVIDER_EMAIL/WEB_ADDR':'ELECTRONIC_COMM', 'PROVIDER_COMM_TYPE':'COMMUNICATION_TYPE', 'EMAIL_INDICATOR':'EMAIL_INDICATOR'}"], "col":"EMAIL_SUB_FRAME"},
+        {"name": "combineOldAddress", "type": "var", "input": ["[('OLD_ADDRESS_PHONE_NUM_1','OLD_ADDRESS_PHONE_EXT_1',''),('OLD_ADDRESS_PHONE_FAX_1','','F')]", "['OLD_ADDRESS_CITY', 'OLD_ADDRESS_DIR_IND', 'OLD_ADDRESS_HANDICAP_ACCESS', 'OLD_ADDRESS_IND', 'OLD_ADDRESS_LINE_1', 'OLD_ADDRESS_LINE_2', 'OLD_ADDRESS_STATE','OLD_ADDRESS_TYPE', 'OLD_ADDRESS_ZIP', 'OLD_ADDRESS_ZIP4', 'OLD_ADDRESS_IND', 'COMBINED_OLD_ADDRESS_TYPE_IND']", "['OLD_ADDRESS_PHONE_NUM', 'OLD_ADDRESS_PHONE_EXT', 'OLD_ADDRESS_PHONE_TYPE']", "OLD_ADDRESS_GROUP"], "col": "OLD_ADDRESS_SUB_FRAME"}
+    ]
+      }},
+
+    {"Address":{
+      "derivations":[
+        {"name": "var_removeSpecialCharacters", "type":"mv_cmn", "input":["OUT_ADDRESS_LINE_1"], "col": "OUT_ADDRESS_LINE_1"},
+        {"name": "var_removeSpecialCharacters", "type":"mv_cmn", "input":["OUT_ADDRESS_LINE_2"], "col": "OUT_ADDRESS_LINE_2"}
+      ]
+    }}
+  ]},
+
+
+  {"LayerName": "FinalCleansingLayer","LayerType": "DF","ProcessStage": 0, "Transformation": [
+    {"singleValue":{
+      "derivations":[
+
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_CANCEL_REASON_CODE", "2", "max", "OUT_CANCEL_REASON_CODE"], "mandatory":"True"}},
+        {"name": "updateClarification","type": "mv_cmn","input": {"ignore":0,"updateFrom":"errDictDupValInSv","colMapping":{"CANCEL_DATE":"OUT_CANCEL_DATE","CANCEL_REASON_CODE":"OUT_CANCEL_REASON_CODE"}}}
+      ]
+    }},
+
+    {"Address":{
+      "derivations":[
+        {"name": "concat_subframes", "type": "mv_cmn", "input": {"subFrames": ["LANG_SUB_FRAME", "ADDRESS_PHONE_SUB_FRAME", "EMAIL_SUB_FRAME", "DBA_GROUP", "HANDICAP_GROUP", "OLD_ADDRESS_SUB_FRAME"], "ExceptionColsForReplication": {"OLD_ADDRESS_SUB_FRAME":["OLD_ADDRESS_PHONE_NUM","OLD_ADDRESS_PHONE_EXT","OLD_ADDRESS_PHONE_TYPE"],"ADDRESS_PHONE_SUB_FRAME":["ADDRESS_PHONE", "ADDRESS_PHONE_INDICATOR", "ADDRESS_PHONE_TYPE", "EXT_PHONE"]}}},
+        {"name": "standardizeColumn","type": "mv_cmn","input": {"inputCol":["OLD_ADDRESS_LINE_1","OLD_ADDRESS_LINE_2"],"standardsKeys":["Blvd","Rd","Ave","Ste", "Trl", "Ln", "Fl", "Mt", "Dr", "Ct"]}},
+        {"name": "processCombinedAddTypeInd","type": "mv_cmn","input": {"inputCol":"COMBINED_ADDRESS_TYPE_IND","outputCol":["OLD_ADDRESS_TYPE","OLD_ADDRESS_IND"],"standardsKeys":["Primary","Secondary"]}},
+        {"name": "standardizeColumn","type": "mv_cmn","input": {"inputCol":["OLD_ADDRESS_HANDICAP_ACCESS"],"outputCol": "OUT_OLD_ADDRESS_HANDICAP_ACCESS","standardsKeys":["Y", "N"]}},
+        {"name": "mapStdValues","type": "mv_cmn","input": {"inputCol":"OLD_ADDRESS_DIR_IND", "standardsKeys": ["DIR"], "outputCol": "CLEAN_OLD_ADDRESS_DIR_IND"}},
+        {"name": "negateDirInd","type": "mv_cmn","input": {"inputCol":"diColMapping_Adr","orderCol":"order","searchKey":"@OLD_ADDRESS_DIR_IND@","outputCol": "NEGATE_OLD_ADDRESS_DIR_IND","standardsKeys":["DIR_HEADER","DIR_NON_SUPPRESSED"]}}
+        ]
+    }}
+    ]},
+  {"LayerName": "CleanseLayer1","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"Address":{
+      "derivations":[
+
+        {"name": "var_mergeDerivedWithInput","type": "mv_cmn","input": ["OLD_ADDRESS_IND", "MERGE_ADDRESS_INDICATOR"],"col": "MERGE_OLD_ADDRESS_INDICATOR"},
+        {"name": "var_addOrderInd","type": "mv_cmn","input": ["OLD_ADDRESS_ORDER", "MERGE_OLD_ADDRESS_INDICATOR"],"col": "OLD_ADDRESS_ORDER_INDICATOR"},
+        {"name": "var_mergeDerivedWithInput","type": "mv_cmn","input": ["OLD_ADDRESS_TYPE", "MERGE_ADDRESS_TYPE"],"col": "MERGE_OLD_ADDRESS_TYPE"},
+        {"name": "standardisePSIndi","type": "mv_cmn","input": ["OLD_ADDRESS_ORDER_INDICATOR", ["Primary", "Secondary"]],"col": "CLEAN_OLD_ADDRESS_IND"},
+        {"name": "var_standardiseString","type": "mv_cmn","input": ["MERGE_OLD_ADDRESS_TYPE", ["PLSV", "Bill", "Combo", "Mail", "Cred"]],"col": "OUT_OLD_ADDRESS_TYPE"},
+        {"name": "var_ConcatAddress","type": "mv_cmn","input": [{"address1":"OLD_ADDRESS_LINE_1","address2":"OLD_ADDRESS_LINE_2","city": "OLD_ADDRESS_CITY", "state": "OLD_ADDRESS_STATE", "zip_code": "OLD_ADDRESS_ZIP"}],"col": "CONCAT_OLD_ADDRESS"},
+        {"name": "var_ParseAddress","type": "mv_cmn","input": ["'CONCAT_OLD_ADDRESS'"],"col": "PARSED_OLD_ADDRESS"},
+        {"name": "var_getZipCode","type": "mv_cmn","input": ["'PARSED_OLD_ADDRESS'"],"col": "OUT_OLD_ADDRESS_ZIP"},
+        {"name": "var_getZipPlus4", "type":"mv_cmn", "input": ["PARSED_OLD_ADDRESS", "OLD_ADDRESS_ZIP4"], "col": "OUT_OLD_ADDRESS_ZIP4"},
+        {"name": "var_getAddress1","type": "mv_cmn","input": ["'PARSED_OLD_ADDRESS'"],"col": "OUT_OLD_ADDRESS_LINE_1"},
+        {"name": "var_getAddress2","type": "mv_cmn","input": ["'PARSED_OLD_ADDRESS'"],"col": "OUT_OLD_ADDRESS_LINE_2"},
+        {"name": "var_getCity","type": "mv_cmn","input": ["'PARSED_OLD_ADDRESS'"],"col": "PAR_OLD_ADDRESS_CITY"},
+        {"name": "var_fnlCity","type": "mv_cmn","input": ["PAR_OLD_ADDRESS_CITY", "OUT_OLD_ADDRESS_LINE_1", "OLD_ADDRESS_CITY"],"col": "OUT_OLD_ADDRESS_CITY"},
+        {"name": "var_getState","type": "mv_cmn","input": ["'PARSED_OLD_ADDRESS'"],"col": "PAR_OLD_ADDRESS_STATE"},
+        {"name": "var_deriveAddressIndicator", "type": "mv_cmn", "input": ["CLEAN_OLD_ADDRESS_IND", "OUT_OLD_ADDRESS_TYPE"], "col": "OUT_OLD_ADDRESS_IND"}
+    ]}
+    }
+  ]
+  },
+  {"LayerName": "FinalCleansingLayer","LayerType": "DF","ProcessStage": 0, "Transformation": [
+    {"Address":{
+      "derivations":[
+        {"name": "mapStdValues","type": "mv_cmn","input": {"inputCol":"HANDICAP_ACCESS_TYPE", "standardsKeys": ["HANDICAP_ACCESS_TYPE_ABRV"], "outputCol": "CLEAN_HANDICAP_ACCESS_TYPE"}},
+        {"name": "getHandicapAccessType","type": "mv_cmn","input": {"inputCol":["OUT_HANDICAP_ACCESS", "CLEAN_HANDICAP_ACCESS_TYPE"],"outputCol": "OUT_HANDICAP_ACCESS_TYPE"}},
+        {"name": "getHandicapAccessTypeInd","type": "mv_cmn","input": {"inputCol":["OUT_HANDICAP_ACCESS", "CLEAN_HANDICAP_ACCESS_TYPE", "HANDICAP_ACCESS_TYPE_IND"],"outputCol": "OUT_HANDICAP_ACCESS_TYPE_IND"}},
+        {"name": "removePunctDf", "type":"mv_cmn", "input": {"inputCol": "ADDRESS_PHONE", "lstOfPuncs":[".", "-","(",")"], "outputCol": "OUT_ADDRESS_PHONE","compressionLvl":2}},
+        {"name": "removePunctDf", "type":"mv_cmn", "input": {"inputCol": "EXT_PHONE", "lstOfPuncs":[".", "-","(",")"], "outputCol": "OUT_EXT_PHONE","compressionLvl":2}},
+        {"name": "getPhoneType", "type":"mv_cmn", "input": ["OUT_ADDRESS_PHONE", "ADDRESS_PHONE_TYPE", "OUT_ADDRESS_TYPE"]},
+        {"name": "mapStdValues","type": "mv_cmn","input": {"inputCol":"OUT_ADDRESS_TYPE", "standardsKeys": ["OUT_ADDRESS_TYPE"], "outputCol": "OUT_STD_ADDRESS_TYPE", "isMandatory":true}},
+        {"name": "mapStdValues","type": "mv_cmn","input": {"inputCol":"ADDRESS_PHONE_TYPE", "standardsKeys": ["ADDRESS_PHONE_TYPE"], "outputCol": "OUT_STD_ADDRESS_PHONE_TYPE", "isMandatory":true}},
+        {"name": "abbreviateCol","type": "mv_cmn","input": {"inputCol":"DBA_NAME","outputCol":"DBA_NAME_SV", "maxLength": "50"}},
+        {"name": "dbaNameDemoPrac","type": "mv_cmn","input": {"diDf":{"singleValue":""},"svDF":"singleValue", "dba_name":"DBA_NAME_SV", "grp_name": "GROUP_NAME", "outputCol":"OUT_DBA_NAME"}},
+
+        {"name":"copyOldNewAddress","type":"var","input":{"oldAddressCols":["OUT_OLD_ADDRESS_LINE_1","OUT_OLD_ADDRESS_LINE_2","OUT_OLD_ADDRESS_CITY","PAR_OLD_ADDRESS_STATE","OUT_OLD_ADDRESS_ZIP"],"newAddressCols":["OUT_ADDRESS_LINE_1","OUT_ADDRESS_LINE_2","OUT_ADDRESS_CITY","PAR_ADDRESS_STATE","OUT_ADDRESS_ZIP"]}},
+
+        {"name": "get_fnlState","type": "var","input": {"inputCol":["PAR_ADDRESS_STATE", "OUT_ADDRESS_LINE_1", "ADDRESS_CITY"],"outputCol": "OUT_ADDRESS_STATE"}},
+        {"name": "get_fnlState","type": "var","input": {"inputCol":["PAR_OLD_ADDRESS_STATE", "OUT_OLD_ADDRESS_LINE_1", "OLD_ADDRESS_CITY"],"outputCol": "OUT_OLD_ADDRESS_STATE"}},
+
+        {"name": "setPhoneIndicator", "type": "mv_cmn", "input": {"PHONE_TYPE": "OUT_STD_ADDRESS_PHONE_TYPE","ADDRESS_LINE_1":"OUT_ADDRESS_LINE_1","ADDRESS_LINE_2":"OUT_ADDRESS_LINE_2","ADDRESS_CITY":"OUT_ADDRESS_CITY","ADDRESS_STATE":"OUT_ADDRESS_STATE","ADDRESS_ZIP":"OUT_ADDRESS_ZIP","ADDRESS_TYPE":"OUT_STD_ADDRESS_TYPE","ADDRESS_PHONE":"OUT_ADDRESS_PHONE","outputCol": "ADDRESS_PHONE_INDICATOR"}},
+
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_ZIP", "5", "eql", "OUT_ADDRESS_ZIP"], "mandatory":"True"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_ZIP4", "4", "eql", "OUT_ADDRESS_ZIP4"], "mandatory":"True"}},
+        {"name": "clarifyFields","type": "mv_cmn","input": ["OUT_ADDRESS_ZIP"]},
+        {"name": "defaultAddressCorrespondence", "type":"mv_cmn", "input": {"inputCol": "ADDRESS_CORRESPONDENCE_IND", "outputCol": "OUT_ADDRESS_CORRESPONDENCE_IND"}},
+        {"name": "clarifyFields","type": "mv_cmn","input": ["DBA_NAME"]},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_CITY", "32", "max", "OUT_ADDRESS_CITY"]}, "mandatory":"True"},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_STATE", "2", "max", "OUT_ADDRESS_STATE"]}, "mandatory":"True"},
+
+        {"name": "negateCleanDirInd","type": "mv_cmn","input": {"inputCol":["CLEAN_DIR_IND","NEGATE_DIR_IND"],"outputCol":"NEGATE_CLEAN_DIR_IND"}},
+
+        {"name": "getDirInd","type": "mv_cmn","input": {"inputCol":["NEGATE_CLEAN_DIR_IND","OUT_STD_ADDRESS_TYPE"],"outputCol":"OUT_DIR_IND"}},
+
+        {"name": "getPhoneDirInd","type": "mv_cmn","input": {"inputCol":["NEGATE_CLEAN_DIR_IND","OUT_STD_ADDRESS_TYPE","OUT_STD_ADDRESS_PHONE_TYPE"],"mandatory":"True","outputCol":"OUT_PHONE_DIR_IND"}},
+
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_DIR_IND", "3", "max", "OUT_DIR_IND"], "mandatory":"False"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_PHONE_DIR_IND", "1", "max", "OUT_PHONE_DIR_IND"], "mandatory":"False"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_HANDICAP_ACCESS", "1", "eql", "OUT_HANDICAP_ACCESS"], "mandatory":"False"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDRESS_PHONE", "10", "eql", "OUT_ADDRESS_PHONE"], "mandatory":"False"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["EXT_PHONE", "4", "eql", "EXT_PHONE"], "mandatory":"True"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_STD_ADDRESS_PHONE_TYPE", "1", "eql", "OUT_STD_ADDRESS_PHONE_TYPE"], "mandatory":"True"}},
+
+        {"name": "clarifyPhoneDirInd","type": "var","input": {"inputCol":["OUT_STD_ADDRESS_PHONE_TYPE"],"outputCol":["ADDRESS_PHONE_INDICATOR","OUT_PHONE_DIR_IND"]}},
+
+        {"name": "combineAddressLine1n2", "type": "mv_cmn", "input": {"inputCol": ["OUT_ADDRESS_LINE_1", "OUT_ADDRESS_LINE_2"], "outputCol":"ADDR_ADD"}},
+        {"name": "addrCheck", "type": "mv_cmn", "input": {"inputCol": ["ADDR_ADD","OUT_ADDRESS_TYPE"], "outputCol":"ADDR_ADD"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["ADDR_ADD", "32", "max", "ADDR_ADD"], "mandatory":"True"}},
+        {"name": "effectiveDatePsi","type": "mv_cmn","input": {"inputCol":["PARSED_ADDR_EFFECTIVE_DATE","PARSED_ADDR_EFFECTIVE_DATE"],"outputCol":"OUT_ADDR_EFFECTIVE_DATE"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_ADDR_EFFECTIVE_DATE", "10", "max", "OUT_ADDR_EFFECTIVE_DATE"]}},
+        {"name": "createCol","type": "mv_cmn","input": {"defVal": "999999999", "outputCol": "STD_M_AID_VAL"}},
+        {"name": "createCol","type": "mv_cmn","input": {"defVal": "ADD", "outputCol": "STD_CHANGE_TYPE_VAL"}}
+        ]
+    }},
+
+    {"Address":{
+      "derivations":[
+        {"name": "removePunctDf", "type":"mv_cmn", "input": {"inputCol": "OLD_ADDRESS_PHONE_NUM", "lstOfPuncs":[".", "-","(",")"], "outputCol": "OUT_OLD_ADDRESS_PHONE_NUM","compressionLvl":2}},
+        {"name": "removePunctDf", "type":"mv_cmn", "input": {"inputCol": "OLD_ADDRESS_PHONE_EXT", "lstOfPuncs":[".", "-","(",")"], "outputCol": "OUT_OLD_ADDRESS_PHONE_EXT","compressionLvl":2}},
+
+        {"name": "copyPhnType", "type":"var", "input": ["OLD_ADDRESS_PHONE_TYPE","OUT_OLD_ADDRESS_TYPE","ADDRESS_PHONE_TYPE"]},
+
+        {"name": "getPhoneType", "type":"mv_cmn", "input": ["OUT_OLD_ADDRESS_PHONE_NUM", "OLD_ADDRESS_PHONE_TYPE", "OUT_OLD_ADDRESS_TYPE"]},
+        {"name": "mapStdValues","type": "mv_cmn","input": {"inputCol":"OUT_OLD_ADDRESS_TYPE", "standardsKeys": ["OUT_ADDRESS_TYPE"], "outputCol": "OUT_STD_OLD_ADDRESS_TYPE", "isMandatory":true}},
+        {"name": "mapStdValues","type": "mv_cmn","input": {"inputCol":"OLD_ADDRESS_PHONE_TYPE", "standardsKeys": ["ADDRESS_PHONE_TYPE"], "outputCol": "OUT_STD_OLD_ADDRESS_PHONE_TYPE", "isMandatory":true}},
+        {"name": "setPhoneIndicator", "type": "mv_cmn", "input": {"PHONE_TYPE": "OUT_STD_OLD_ADDRESS_PHONE_TYPE","ADDRESS_LINE_1":"OUT_OLD_ADDRESS_LINE_1","ADDRESS_LINE_2":"OUT_OLD_ADDRESS_LINE_2","ADDRESS_CITY":"OUT_OLD_ADDRESS_CITY","ADDRESS_STATE":"OUT_OLD_ADDRESS_STATE","ADDRESS_ZIP":"OUT_OLD_ADDRESS_ZIP","ADDRESS_TYPE":"OUT_STD_OLD_ADDRESS_TYPE","ADDRESS_PHONE":"OUT_OLD_ADDRESS_PHONE_NUM","outputCol": "OLD_ADDRESS_PHONE_INDICATOR"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_OLD_ADDRESS_ZIP", "5", "eql", "OUT_OLD_ADDRESS_ZIP"], "mandatory":"True"}},
+        {"name": "clarifyFields","type": "mv_cmn","input": ["OUT_OLD_ADDRESS_ZIP"]},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_OLD_ADDRESS_CITY", "32", "max", "OUT_OLD_ADDRESS_CITY"]}, "mandatory":"True"},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_OLD_ADDRESS_STATE", "2", "max", "OUT_OLD_ADDRESS_STATE"]}, "mandatory":"True"},
+
+        {"name": "negateCleanDirInd","type": "mv_cmn","input": {"inputCol":["CLEAN_OLD_ADDRESS_DIR_IND","NEGATE_OLD_ADDRESS_DIR_IND"],"outputCol":"NEGATE_OLD_CLEAN_DIR_IND"}},
+
+        {"name": "getDirInd","type": "mv_cmn","input": {"inputCol":["NEGATE_OLD_CLEAN_DIR_IND","OUT_STD_OLD_ADDRESS_TYPE","NEGATE_OLD_ADDRESS_DIR_IND"],"outputCol":"OUT_OLD_ADDRESS_DIR_IND"}},
+        {"name": "getPhoneDirInd","type": "mv_cmn","input": {"inputCol":["NEGATE_OLD_CLEAN_DIR_IND","OUT_STD_ADDRESS_TYPE","OUT_STD_OLD_ADDRESS_PHONE_TYPE"],"mandatory":"True","outputCol":"OUT_OLD_ADDRESS_PHONE_DIR_IND"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_OLD_ADDRESS_PHONE_DIR_IND", "1", "max", "OUT_OLD_ADDRESS_PHONE_DIR_IND"], "mandatory":"False"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_OLD_ADDRESS_HANDICAP_ACCESS", "1", "eql", "OUT_OLD_ADDRESS_HANDICAP_ACCESS"], "mandatory":"False"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_OLD_ADDRESS_PHONE_NUM", "10", "eql", "OUT_OLD_ADDRESS_PHONE_NUM"], "mandatory":"True"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_OLD_ADDRESS_PHONE_EXT", "4", "eql", "OUT_OLD_ADDRESS_PHONE_EXT"], "mandatory":"False"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_STD_OLD_ADDRESS_PHONE_TYPE", "1", "eql", "OUT_STD_OLD_ADDRESS_PHONE_TYPE"], "mandatory":"True"}},
+        {"name": "combineAddressLine1n2", "type": "mv_cmn", "input": {"inputCol": ["OUT_OLD_ADDRESS_LINE_1", "OUT_OLD_ADDRESS_LINE_2"], "outputCol":"OLD_ADDR_ADD"}},
+
+        {"name": "clarifyPhoneDirInd","type": "var","input": {"inputCol":["OUT_STD_OLD_ADDRESS_PHONE_TYPE"],"outputCol":["OLD_ADDRESS_PHONE_INDICATOR","OUT_OLD_ADDRESS_PHONE_DIR_IND"]}},
+
+        {"name": "addrCheck", "type": "mv_cmn", "input": {"inputCol": ["OLD_ADDR_ADD","OUT_OLD_ADDRESS_TYPE"], "outputCol":"OLD_ADDR_ADD"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OLD_ADDR_ADD", "32", "max", "OLD_ADDR_ADD"], "mandatory":"True"}}
+        ]
+    }}
+    ]},
+  {"LayerName": "conflictRemovalLayer","LayerType": "DF","ProcessStage": 0,"Transformation": [
+
+    {"singleValue": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}},
+
+    {"Address": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": ["index", "ROW_COUNT", "ROW_NUM", "level_0"]}
+      ]
+    }}
+  ]},
+  {"LayerName": "MasterDictListLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]},
+
+  {"LayerName": "fdfLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [
+    {
+      "fdf": {
+        "derivations": [
+          {"name": "getBaidData", "type":"mv_cmn", "input": {"inputCol": {"OLD_ADDR_ADD": "OUT_ADDRBAID_OLD_ADR","OUT_OLD_ADDRESS_CITY": "OUT_ADDRBAID_OLD_CITY","OUT_OLD_ADDRESS_STATE": "OUT_ADDRBAID_OLD_STATE","OUT_OLD_ADDRESS_ZIP": "OUT_ADDRBAID_OLD_ZIP","OUT_OLD_ADDRESS_ZIP4": "OUT_ADDRBAID_OLD_PLUS4","OUT_STD_OLD_ADDRESS_TYPE": "OUT_ADDR_OLD_BAIDTYPE"},"Addr_type":"OUT_STD_OLD_ADDRESS_TYPE","Addr_value":"OLD_ADDR_ADD"}},
+          {"name": "getBaidData", "type":"mv_cmn", "input": {"inputCol": {"ADDR_ADD": "OUT_ADDRBAID_NEW_ADR","OUT_ADDRESS_CITY": "OUT_ADDRBAID_NEW_CITY","OUT_ADDRESS_STATE": "OUT_ADDRBAID_NEW_STATE","OUT_ADDRESS_ZIP": "OUT_ADDRBAID_NEW_ZIP","OUT_ADDRESS_ZIP4": "OUT_ADDRBAID_NEW_PLUS4","OUT_STD_ADDRESS_TYPE": "OUT_ADDR_NEW_BAIDTYPE"},"Addr_type":"OUT_STD_ADDRESS_TYPE","Addr_value":"ADDR_ADD"}}
+        ]
+      }
+    }
+  ]}
+]

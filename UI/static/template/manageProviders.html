@@ -1,0 +1,102 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Manage Providers</li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox">
+      <!-- Your Page Content Here -->
+      <form name="myForm">
+      <div class="container-fluid contentbody" data-ng-init="getProviderList()">
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8">
+            <button type="button" class="btn btn-md pull-left btndefault addRowBtn" ng-click="addProviders()" style="margin-left:0px;width:18%;">ADD</button>
+          </div>
+          <div class="col-md-2">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8">
+            <table class="table table-striped table-hover" cellspacing="0" width="100%" fixed-header height="350px">
+                <thead class="inputHead">
+                  <tr>
+                      <th></th>
+                      <th>Code</th>
+                      <th>Delegate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="newProvider in newProviders track by $index">
+                      <td>
+                        <span class="glyphicon glyphicon-remove removeRow" ng-click="removeNewProvider($index)"></span>
+                      </td>
+                      <td>
+                        <div class="form-group inputControl" style="display:inline-flex;width:100%">
+                          <input style="width:75%" type="text" name="{{newProvider.id}}" id="{{newProvider.id}}" class="form-control" ng-model="newProvider.provider" ng-maxlength=64 ng-pattern="/^[a-zA-Z0-9\s]*$/" autocomplete="off">
+                          <span class="errSpan" ng-show="myForm.{{newProvider.id}}.$error.pattern">Only Alphabets and Numbers</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group inputControl" style="display:inline-flex;width:100%">
+                          <input style="width:75%" type="text" name="{{newProvider.id}}" id="{{newProvider.id}}" class="form-control" ng-model="newProvider.name" ng-maxlength=64 ng-pattern="/^[a-zA-Z\s]*$/" autocomplete="off">
+                          <span class="errSpan" ng-show="myForm.{{newProvider.id}}.$error.pattern">Only Alphabets</span>
+                        </div>
+                      </td>
+                    </tr>
+                  <tr ng-repeat="(code,provider) in providerList">
+                      <td class="inputBodyData">
+                        <span class="glyphicon glyphicon-remove red" ng-if="provider.status != 'deleted'" ng-click="removeProvider(code)"></span>
+                        <span class="glyphicon glyphicon-repeat" ng-if="provider.status == 'deleted'" ng-click="changeStatus(code)"></span>
+                      </td>
+                      <td class="inputBodyData" ng-if="provider.status != 'deleted'">{{code}}</td>
+                      <td class="inputBodyData" ng-if="provider.status != 'deleted'">{{provider.name}}</td>
+                      <td class="inputBodyData" style="text-decoration: line-through;" ng-if="provider.status == 'deleted'">{{code}}</td>
+                      <td class="inputBodyData" style="text-decoration: line-through;" ng-if="provider.status == 'deleted'">{{provider.name}}</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="col-md-2">
+          </div>
+        </div>
+        <div class="row pull-right">
+          <div class="saveDiv">
+            <span class="glyphicon glyphicon-floppy-saved saveIcon" ng-disabled="disableFlag" ng-click="setProvidersList()"></span>
+          </div>
+          <!-- Modal -->
+           <div class="modal fade" id="setProviderModal" role="dialog">
+             <div class="modal-dialog">
+               <!-- Modal content-->
+               <div class="modal-content">
+                 <div class="modal-header" style="background:#838282;color:white;height:50px">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Success</h4>
+                 </div>
+                 <div class="modal-body">
+                   <h4><span>Providers Updated Successfully</span></h4>
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="btn btndefault" style="width:15%" data-dismiss="modal">Close</button>
+                 </div>
+               </div>
+             </div>
+           </div>
+          <!-- End Modal -->
+        </div>
+      </div>
+    </form>
+  </div>
+  </section>
+    <!-- /.content -->
+  <!-- </div> -->
+  <!-- /.content-wrapper -->
+
+</div>

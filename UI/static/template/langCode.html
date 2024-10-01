@@ -1,0 +1,78 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Reference Data- <small>Language Code</small></li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox">
+      <!-- Your Page Content Here -->
+      <div class="container-fluid contentbody" data-ng-init="getDataList('Language_Code.csv')">
+        <div ng-include="'static/template/refDataHeader.html'"></div>
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6">
+                <button type="button" class="btn btn-md pull-left btndefault addRowBtn" ng-click="addRow()">ADD Row</button>
+              </div>
+              <div class="col-md-6">
+                <input class="inputSearch" type="text" placeholder="Search" ng-model="viewSearch">
+              </div>
+            </div>
+            <div class="row">
+              <table class="col-md-12 table table-striped table-hover" cellspacing="0" width="100%" fixed-header height="327px;">
+                  <thead class="inputHead">
+                    <tr>
+                        <th></th>
+                        <th>Code</th>
+                        <th>Language Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-ng-repeat="lgCode in newDataList track by $index">
+                      <td>
+                        <span class="glyphicon glyphicon-remove removeRow" ng-click="removeNewData($index)"></span>
+                      </td>
+                      <td>
+                        <div class="form-group inputControl">
+                          <input type="text" class="form-control" ng-model="lgCode.code">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group inputControl">
+                          <input type="text" class="form-control" ng-model="lgCode.language_description">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr ng-repeat="lgCode in dataList | filter:viewSearch track by $index">
+                        <td>
+                          <span class="glyphicon glyphicon-remove removeRow" ng-click="removeData($index)"></span>
+                        </td>
+                        <td class="inputBodyData" style="font-size:12px;">{{lgCode.code}}</td>
+                        <td class="inputBodyData" style="font-size:12px;">{{lgCode.language_description}}</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-2">
+          </div>
+        </div>
+        <div class="row pull-right">
+          <div class="saveDiv">
+            <span class="glyphicon glyphicon-floppy-saved saveIcon" ng-click="setLangCodeList()"></span>
+          </div>
+        </div>
+      </div>
+     </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</div>

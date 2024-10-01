@@ -1,0 +1,161 @@
+{"ADDRESS_LINE_1": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                  "locationX": {"min_X":{"text":["ADDRESS:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["PHONE:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                  "locationY": {"min_Y":{"text":["CITY, STATE, ZIP:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["PRACTICE GROUP NAME:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                }]
+
+   },
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                  "locationX": {"min_X":{"text":["ADDRESS:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["PHONE:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                  "locationY": {"min_Y":{"text":["CITY, STATE, ZIP:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["DESIGNATION:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                }]
+
+   }
+  ]
+ },
+ "ADDRESS_LINE_2": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                  "locationX": {"min_X":{"text":["CITY, STATE, ZIP:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["PHONE:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                  "locationY": {"min_Y":{"text":["LEGAL NAME:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["ADDRESS:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                }]
+
+   },
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                  "locationX": {"min_X":{"text":["CITY, STATE, ZIP:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["OFFICE NAME:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                  "locationY": {"min_Y":{"text":["CITY, STATE, ZIP:"], "point":"BOTTOM_LEFT", "occurence":1},
+                                               "max_Y": {"text":["ADDRESS:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                }]
+
+   }
+  ]
+ },
+ "ADDRESS_PHONE": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                  "locationX": {"min_X":{"text":["PHONE:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                  "locationY": {"min_Y":{"text":["FAX:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["PRACTICE GROUP NAME:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                }]
+
+   },
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                  "locationX": {"min_X":{"text":["PHONE:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                  "locationY": {"min_Y":{"text":["FAX:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["PHONE:"], "point":"TOP_RIGHT", "occurence":1}}}
+                }]
+
+   }
+  ]
+ },
+ "ADDRESS_PHONE_FAX": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                  "locationX": {"min_X":{"text":["FAX:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                  "locationY": {"min_Y":{"text":["TIN:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["PHONE:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                }]
+
+   },
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                  "locationX": {"min_X":{"text":["FAX:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                  "locationY": {"min_Y":{"text":["OFFICE NAME:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["PHONE:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                }]
+
+   }
+  ]
+ },
+ "COMBINED_ADDRESS_TYPE_IND": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                  "locationX": {"min_X":{"text":["DESIGNATION:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["OFFICE NAME:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                  "locationY": {"min_Y":{"text":["ADDRESS:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["DESIGNATION:"], "point":"TOP_RIGHT", "occurence":1}}}
+                }]
+
+   }
+  ]
+ },
+ "WORKING_HOURS": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                  "locationX": {"min_X":{"text":["HOURS:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["OFFICE NAME:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                  "locationY": {"min_Y":{"text":["GROUP MEDICAID:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["CITY, STATE, ZIP:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                }]
+
+   }
+  ]
+ },
+ "HANDICAP_ACCESS": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                  "locationX": {"min_X":{"text":["Handicapped Accessibility:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["OFFICE NAME:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                  "locationY": {"min_Y":{"text":["Public Transportation Accessibility:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Disabled Accessibility:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                }]
+
+   }
+  ]
+ },
+ "AGE_LIMIT": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                  "locationX": {"min_X":{"text":["Age Limitation:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                  "locationY": {"min_Y":{"text":["Gender Limitation:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["GROUP MEDICARE:"], "point":"BOTTOM_LEFT", "occurence":1}}}
+                }]
+
+   }
+  ]
+ }
+}

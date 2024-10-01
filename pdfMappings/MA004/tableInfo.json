@@ -1,0 +1,12 @@
+{
+  "Board": [{"type": "table2",
+             "xMargin": 4.5,
+             "tableId":1,
+             "parentBB":{
+                        "min_Y": {"text": ["Hospital Appointments"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Most Recent Cred Date:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Most Recent Cred Date"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+              "tableHeader": 1
+  }]
+}

@@ -1,0 +1,21 @@
+{
+  "Address" : [{"loopId":2,
+                "direction": "Y",
+                "delimiter": {"1": ["DESIGNATION:"], "2": ["TAXID:"], "type": "blockStart"},
+                "parentBB":{
+                        "min_Y": {"text": ["HOSPITAL PRIVILEGES"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["OFFICE ADDRESS"],"point": "TOP_RIGHT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                },
+                {"loopId":1,
+                "direction": "Y",
+                "delimiter": {"1": ["PRACTICE GROUP NAME:"], "type": "blockStart"},
+                "parentBB":{
+                        "min_Y": {"text": ["OFFICE ADDRESS"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["PRACTICE GROUP INFORMATION"],"point": "TOP_RIGHT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                }
+              ]
+}

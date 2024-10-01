@@ -1,0 +1,69 @@
+{
+  "NAME_LAST": {
+    "min_Y": {"text": ["DOB:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Printed"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "DOB": {
+    "min_Y": {"text": ["OFFICE ADDRESS"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["DOB:"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["DOB:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Sex:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "GENDER": {
+    "min_Y": {"text": ["OFFICE ADDRESS"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Sex:"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["Sex:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "INDIVIDUAL_NPI": {
+    "min_Y": {"text": ["CAQH:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Mass Controlled Subst. Issued:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["NPI:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "PROVIDER_TYPE": {
+    "min_Y": {"text": ["New Pat. Comments:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Provider Enrollment Type:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["PCP/Specialist:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Accepting New Patients?"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "ORIGINAL_DEL_DATE": {
+    "min_Y": {"text": ["Board Certified In"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["OFFICE ADDRESS"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Most Recent Cred Date:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "TAX_ID": {
+    "start": {"text": ["BILLING INFORMATION"]},
+    "min_Y": {"text": ["Tax ID:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_Y": { "text": ["Tax ID:"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["Tax ID:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Brigham", "Phone:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "SSN": {
+    "min_Y": {"text": ["OFFICE ADDRESS"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["SS#:"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["SS#:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["DOB"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "NEW_PATIENTS": {
+    "min_Y": {"text": ["New Pat. Comments:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Provider Enrollment Type:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Accepting New Patients?"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "EFFECTIVE_DATE": {
+    "min_Y": { "text": ["Tax ID:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Hospital Affiliation(s):"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["BWPO Start:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "NAME_OF_LEGAL_TAX_ID_OWNER": {
+    "min_Y": { "text": ["Tax ID:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_Y": { "text": ["Tax ID:"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["Hospital Affiliation(s):"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  }
+}

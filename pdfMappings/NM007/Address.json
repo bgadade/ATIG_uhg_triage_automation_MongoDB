@@ -1,0 +1,174 @@
+{
+  "ADDRESS_LINE_1": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "BILL",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["Phone:","Group NPI:","County","Silent Phone:", "See Patients Phone:", "Accept New Patients Phone:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Primary Billing Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Primary Billing Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Group NPI:", "Group Tax ID"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   },
+    {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["Phone:","Group Address NPI","County","Silent Phone:", "See Patients Phone:", "Accept New Patients Phone:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["Primary Physical Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Primary Physical Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Group Address NPI", "Group Tax ID"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   }
+]},
+  "ADDRESS_COUNTY": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "BILL",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["On-Site Reviews"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Group NPI:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["County:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Accept New Patients"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   },
+    {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["On-Site Reviews"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["Group NPI:"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["County:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_X": {"text": ["Accept New Patients"],"point": "BOTTOM_LEFT","occurence": 2}}
+                 }]
+   }
+  ]},
+  "ADDRESS_PHONE": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "BILL",
+    "Location": [{
+                 "parentBB": {
+                        "min_Y": {"text": ["Fax:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 1},
+                        "min_X": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Group NPI:"],"point": "BOTTOM_LEFT","occurence": 1}}
+                }]
+   },
+
+{
+    "Tag": "PRIM_PLSV",
+    "Location": [{
+                 "parentBB": {
+                        "min_Y": {"text": ["Fax:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 2},
+                        "min_X": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_X": {"text": ["Group Address NPI:"],"point": "BOTTOM_LEFT","occurence": 1}}
+                }]
+   }
+]},
+  "ADDRESS_PHONE_FAX": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "BILL",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["Primary Physical Address"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Phone:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Fax:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["County"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   },
+    {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["On-Site Reviews"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["Phone:"],"point": "BOTTOM_LEFT","occurence": 2},
+                        "min_X": {"text": ["Fax:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_X": {"text": ["County"],"point": "BOTTOM_LEFT","occurence": 2}}
+                 }]
+   }
+]},
+  "ADDRESS_CITY": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "BILL",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["Phone:","Group NPI:","County","Silent Phone:", "See Patients Phone:", "Accept New Patients Phone:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Primary Billing Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Primary Billing Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Group NPI:", "Group Tax ID"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   },
+    {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["Phone:","Group Address NPI","County","Silent Phone:", "See Patients Phone:", "Accept New Patients Phone:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["Primary Physical Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Primary Physical Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Group Address NPI", "Group Tax ID"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   }
+]},
+  "ADDRESS_STATE": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "BILL",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["Phone:","Group NPI:","County","Silent Phone:", "See Patients Phone:", "Accept New Patients Phone:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Primary Billing Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Primary Billing Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Group NPI:", "Group Tax ID"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   },
+    {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["Phone:","Group Address NPI","County","Silent Phone:", "See Patients Phone:", "Accept New Patients Phone:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["Primary Physical Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Primary Physical Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Group Address NPI", "Group Tax ID"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   }
+]},
+  "ADDRESS_ZIP": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "BILL",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["Phone:","Group NPI:","County","Silent Phone:", "See Patients Phone:", "Accept New Patients Phone:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Primary Billing Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Primary Billing Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Group NPI:", "Group Tax ID"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   },
+    {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["Phone:","Group Address NPI","County","Silent Phone:", "See Patients Phone:", "Accept New Patients Phone:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["Primary Physical Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Primary Physical Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Group Address NPI", "Group Tax ID"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   }
+]},
+  "WORKING_HOURS": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                            "min_Y": { "text": ["Education"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_Y": { "text": ["Fax:"],"point": "BOTTOM_LEFT","occurence": 2},
+                            "min_X": { "text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                            "max_X": { "text": ["Languages:","County:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+  }
+  ]
+ }
+}

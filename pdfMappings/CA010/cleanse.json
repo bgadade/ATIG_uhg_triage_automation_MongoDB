@@ -1,0 +1,27 @@
+[
+  {"LayerName": "CleanFinalDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"name": "removeDuplicateAddress","type": "clean","input": {"newAddressCols":["ADDRESS_LINE_1"],"oldAddressCols":["OLD_ADDRESS_LINE_1"]}},
+      {"name": "createMvColumn","type": "clean","input": {"inpCol":"ADDRESS_LINE_1","outCol":"ADDRESS_PHONE","start":"","end":"","regex":"\\(\\d{3}\\)\\s?\\d{3}\\-\\d{4}"}},
+      {"name": "createMvColumn","type": "clean","input": {"inpCol":"OLD_ADDRESS_LINE_1","outCol":"OLD_ADDRESS_PHONE_NUM_1","start":"","end":"","regex":"\\(\\d{3}\\)\\s?\\d{3}\\-\\d{4}"}},
+      {"name": "cleanString","type": "clean","input": {"col":"ADDRESS_LINE_1","type":"mv","start":"","end":"","regex":"(?:phone\\:)?\\s?\\(\\d{3}\\)\\s?\\d{3}\\-\\d{4}"}},
+      {"name": "cleanString","type": "clean","input": {"col":"OLD_ADDRESS_LINE_1","type":"mv","start":"","end":"","regex":"(?:phone\\:)?\\s?\\(\\d{3}\\)\\s?\\d{3}\\-\\d{4}"}},
+      {"name": "cleanString","type": "clean","input": {"col":"GENDER","type":"sv","start":"","end":"","regex":"\\:"}},
+      {"name": "cleanString","type": "clean","input": {"col":"PROVIDER_TYPE","type":"sv","start":"","end":"","regex":"\\:"}},
+      {"name": "cleanString","type": "clean","input": {"col":"EFFECTIVE_DATE","type":"sv","start":"","end":"","regex":"\\:"}},
+      {"name": "cleanString","type": "clean","input": {"col":"CANCEL_DATE","type":"sv","start":"","end":"","regex":"\\:"}},
+      {"name": "cleanString","type": "clean","input": {"col":"ADDR_EFFECTIVE_DATE","type":"mv","start":"","end":"","regex":"\\:"}},
+      {"name": "cleanString","type": "clean","input": {"col":"NAME_LAST","type":"sv","start":"","end":"","regex":"\\:"}},
+      {"name": "cleanString","type": "clean","input": {"col":"SCHOOL_COMP_DATE","type":"mv","start":"","end":"","regex":"\\:"}},
+      {"name": "cleanString","type": "clean","input": {"col":"BOARD_CERTIFIED_SPEC","type":"mv","start":"","end":"","regex":"\\:"}},
+      {"name": "cleanString","type": "clean","input": {"col":"NAME_LAST","type":"sv","start":"","end":"","regex":"\\s"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"GROUP_NAME","type":"sv"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"NAME_OF_LEGAL_TAX_ID_OWNER","type":"sv"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"TAX_ID","type":"sv", "errMsg":"Multiple Tax Id case", "errInput":"True"}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"DEGREE","outCol":"DEGREE","type":"mv","splitBy":" ","startIdx":-1}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"NAME_LAST","outCol":"NAME_LAST","type":"sv","splitBy":" ","startIdx":0,"EndIdx":-1}}
+
+
+
+  ]}
+]
+

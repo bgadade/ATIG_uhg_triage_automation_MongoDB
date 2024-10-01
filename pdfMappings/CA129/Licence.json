@@ -1,0 +1,61 @@
+{"LICENCE_NUMBER": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["DEA No:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["PROVIDER IDENTIFICATION:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["State License No.:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Issued:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "LICENCE_EXPIRY_DATE": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["DEA No:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["PROVIDER IDENTIFICATION:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["DEA Expiration date:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "STATE_LICENCE_EFFECTIVE_DATE": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["DEA No:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["PROVIDER IDENTIFICATION:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Issued:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["DEA Expiration date:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "LICENCE_STATE": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["DEA No:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["PROVIDER IDENTIFICATION:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": ["State License No.:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

@@ -1,0 +1,53 @@
+{"BOARD_SPECIALITY": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Board:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["("], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y": {"text":["Board:"], "point":"BOTTOM_LEFT", "occurence":1},
+                                                 "max_Y":{"text":["CertificationDate:"], "point":"BOTTOM_LEFT", "occurence":1}} }}]
+   }
+  ]
+ },
+ "BOARD_CERTIFIED": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["BoardStatus:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["VerifiedDate:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y": {"text":["ExpirationDate:"], "point":"TOP_RIGHT", "occurence":1},
+                                                 "max_Y":{"text":["Verified:"], "point":"BOTTOM_LEFT", "occurence":1}} }}]
+   }
+  ]
+ },
+ "BOARD_CERT_DATE": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["CertificationDate:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X":{"text":["VerifiedDate:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Board:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y":{"text":["ExpirationDate:"], "point":"BOTTOM_LEFT", "occurence":1}} }}]
+   }
+  ]
+ },
+ "BOARD_CERT_EXPIRATION_DATE": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["ExpirationDate:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X":{"text":["VerifiedDate:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["CertificationDate:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y":{"text":["ExpirationDate:"], "point":"TOP_RIGHT", "occurence":1}} }}]
+   }
+  ]
+ }
+}

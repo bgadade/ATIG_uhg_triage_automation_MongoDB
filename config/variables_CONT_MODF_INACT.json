@@ -1,0 +1,57 @@
+[
+  {"LayerName": "CleanseDataFrame","LayerType": "DF","ProcessStage": 0,"Transformation": [
+
+        {"singleValue": {
+        "derivations": [
+          {"name": "mapStdValues","type": "mv_cmn","input": {"inputCol":"RSN_CODE", "standardsKeys": ["CANCEL_RSN_CODE"], "outputCol": "STD_CANCEL_REASON_CODE"}},
+          {"name": "createAndClarifyCol","type": "mv_cmn","input": {"clrMsg": "Field not given", "outputCol": "REQ_FIELD_CLAR"}}
+          ]
+        }}
+
+
+    ]},
+
+
+  {"LayerName": "CleanseLayer1","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "var_parseDate","type": "mv_cmn","input": ["CANCEL_DATE", "C"],"col": "PARSED_CANCEL_DATE"}
+      ]}}
+  ]
+  },
+
+  {"LayerName": "multivaluedCols","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "placeHolder","type": "mv_cmn","input": [],"col": "placeHolder"},
+         {"name": "setDefaultValue","type": "mv_cmn","input": ["STD_CANCEL_REASON_CODE", "'21'"],"col": "OUT_CANCEL_REASON_CODE"}
+      ]
+      }}
+  ]},
+
+
+  {"LayerName": "FinalCleansingLayer","LayerType": "DF","ProcessStage": 0, "Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["PARSED_CANCEL_DATE", "10", "max", "OUT_CANCEL_DATE" ], "mandatory":"False"}},
+        {"name": "updateClarification","type": "mv_cmn","input": {"ignore":0,"updateFrom":"errDictDupValInSv","colMapping":{"CANCEL_DATE":"OUT_CANCEL_DATE","CANCEL_REASON_CODE":"OUT_CANCEL_REASON_CODE"}}},
+        {"name": "updateRowsPsi","type": "mv_cmn","input": {"cols":["OUT_CANCEL_REASON_CODE"], "filterCondition":"df['CANCEL_DATE']=='' ","replaceWithCol":"STD_CANCEL_REASON_CODE"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_CANCEL_REASON_CODE", "2", "max", "OUT_CANCEL_REASON_CODE"], "mandatory":"False"}},
+        {"name": "createCol","type": "mv_cmn","input": {"defVal": "Data entry error", "outputCol": "DEF_MOD_RSN"}},
+        {"name": "createCol","type": "mv_cmn","input": {"defVal": "See SOT", "outputCol": "DEF_MOD_INACT_COMM"}},
+        {"name": "createAndClarifyCol","type": "mv_cmn","input": {"clrMsg": "Check ITZ Screen in NDB", "outputCol": "DEF_PAPER_TYPE"}}
+      ]
+    }}
+  ]},
+
+  {"LayerName": "conflictRemovalLayer","LayerType": "DF","ProcessStage": 0,"Transformation": [
+
+    {"singleValue": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}}
+  ]},
+  {"LayerName": "MasterDictListLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]},
+  {"LayerName": "fdfLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]}
+
+]

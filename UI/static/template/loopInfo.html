@@ -1,0 +1,158 @@
+ <div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+        <div class="main">
+            <div class="alpha">
+                <ul class="pageHeader">
+                    <li>Configure Loop Info</li>
+                </ul>
+            </div>
+        </div>
+        <section class="contentSection" >
+                <div class="row tableBox">
+                    <form name="loopForm">
+                        <div class="container-fluid contentbody" data-ng-init="getLoopInfo()">
+                        <div class="row" style="margin-top: -17px;">
+                         <div class="col-md-2">
+                            <button type="button" class="btn btndefault" ui-sref="tableInfo"> < Back</button>
+                         </div>
+                          <div class="col-md-5 ">
+                          </div>
+                          <div class="col-md-2" style="margin-left: 8%;">
+                              <button type="button" class="btn btndefault" name="button" ng-click="openPDFFile()">Open PDF</button>
+                          </div>
+                          <div class="col-md-2">
+                            <button type="button" class="btn btndefault" name="button"  ng-click="saveLoopMapJson()" >Next</button>
+                          </div>
+                        </div>
+                        <div class="row" style="margin-top: -29px;">
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Select Parent Category </label>
+                                    <select style="margin-top:10px;" class="pdfSelect" ng-model="loopParentCat" ng-options="parCategory for parCategory in parentCategory" ng-change="resetLoopDetails();reset();getLoopIdDetails(loopParentCat)">
+                                        <option value="">Select Parent Category</option>
+                                    </select>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                            <div>
+                                                  <ul style="list-style: none;" ng-repeat="lId in loopIDs track by $index">
+                                                    <li>
+                                                        <a href="" ng-click="fillLoopDetails(lId,loopParentCat)">loop ID : {{lId}}</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                    </div>
+                                    <div class="col-sm-8" style="margin-top: 13px;" ng-show="showLoopFlag">
+                                            <p>
+                                                <label>Loop ID</label>
+                                                <input  type="text" ng-model="loopId" style="margin-left: 68px;">
+                                            </p>
+                                            <p>
+                                                <label>Select Direction </label>
+                                                <select style="margin-left: 14px;" class="pdfSelect" ng-model="loopDirection" ng-options="loopDirection for loopDirection in ['X','Y']" required>
+                                                    <option value="">Select Direction</option>
+                                                </select>
+                                            </p>
+                                            <p>
+                                                <label>Type </label>
+                                                <select style="margin-left: 88px;"  class="pdfSelect" ng-model="loopType" ng-options="loopType for loopType in ['blockStart','blockEnd']" required>
+                                                    <option value="">Select Type</option>
+                                                </select>
+                                            </p>
+
+                                            <p >
+                                                <label >Delimter</label>
+                                                <div class="input-group" style="margin-left: 123px;margin-top: -32px;">
+                                                        <input class="form-control pdfInput" ng-repeat="val in delInputfields_1" placeholder="Text" type="text" ng-model="delTextVal_1[$index]">
+                                                        <button class="form-control addButton" style="width: 35px;margin-left: -69px;" ng-click="removeDelimter1($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                        <button class="form-control" ng-click="addDelText_1()" style="width: 35px;height: 34px;margin-left: -35px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                </div>
+
+                                            </p>
+                                            <div class="input-group" ng-show="showDelFlag || showFillLoopFlag"style="margin-left: 123px;margin-top: 5px;">
+                                                <input class="form-control pdfInput" ng-repeat="val in delInputfields_2" placeholder="Text" type="text" ng-model="delTextVal_2[$index]">
+                                                <button class="form-control addButton" style="width: 35px;margin-left: -69px;" ng-click="removeDelimter2($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                <button class="form-control" ng-click="addDelText_2()" style="width: 35px;height: 34px;margin-left: -35px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                            </div>
+                                            <button  class="form-control" ng-click="addDelGrp()" style="width: 144px;height: 34px;margin-left: 158px;margin-top:1%;" ng-if="!delimiterFlag">Add Delimiter<i style="margin-left: 10%;" class="fa fa-plus" aria-hidden="true"></i></button>
+                                            <button  class="form-control" ng-click="removeDel()" style="width: 157px;height: 34px;margin-left: 145px;margin-top:1%" ng-if="delimiterFlag">Remove Delimiter<i style="margin-left: 6%;" class="fa fa-minus" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <button class = "btn btndefault" style="margin-top: 9px;margin-bottom: 4px;width: 30%" ng-click= "resetLoopDetails();createLoopId(loopParentCat);" >Add New</button>
+                                <div ng-show="showLoopFlag" style="margin-top: 8px;" >
+                                    <div class="input-group" style="margn-top:10px;">
+                                        <label style="width: 25%;" class="input-group-addon">Start</label>
+                                        <input style="width: 224%;" type="text" class="form-control" ng-model="startText">
+                                    </div>
+                                    <div class="input-group" style="margn-top:10px;">
+                                                    <label class="input-group-addon" ng-init="min_X='min_X'">min_X</label>
+
+                                                    <p ng-repeat="val in minXInputFields track by $index">
+                                                        <input class="form-control" placeholder="Text" type="text" ng-model="minXTextVal[$index]" required>
+                                                        <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeMinX($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                        <button class="form-control addButton" ng-click="minXaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                    </p>
+                                                    <input type="text" class="form-control" placeholder="Occurence" ng-model="minXOccurence" required />
+                                                    <select class="form-control" ng-model="minXPoint" ng-options="minXPoint for minXPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                                        <option value="">Select Point </option>
+                                                    </select>
+                                                </div>
+                                    <div class="input-group">
+                                        <label class="input-group-addon" ng-init="max_X='max_X'">max_X</label>
+                                        <p class="setLeftMargin" ng-repeat="val in maxXInputFields track by $index">
+                                            <input class="form-control" placeholder="Text" type="text" ng-model="maxXTextVal[$index]"  required />
+                                            <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeMaxX($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                            <button class="form-control addButton" ng-click="maxXaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        </p>
+                                        <input type="text" class="form-control setLeftMargin" placeholder="Occurence" ng-model="maxXOccurence" required />
+                                        <select class="form-control setLeftMargin" ng-model="maxXPoint" ng-options="maxXPoint for maxXPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                            <option value="">Select Point </option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="input-group-addon" ng-init="min_Y='min_Y'">min_Y</label>
+
+                                        <p ng-repeat="val in minYInputFields track by $index">
+                                            <input class="form-control" placeholder="Text" type="text" ng-model="minYTextVal[$index]" required>
+                                            <button class="form-control addButton" style="width: 35px;margin-left:-70px;" ng-click="removeMinY($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                            <button class="form-control addButton" ng-click="minYaddText()" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        </p>
+                                        <input type="text" class="form-control " placeholder="Occurence" ng-model="minYOccurence" required/>
+                                        <select class="form-control" ng-model="minYPoint" ng-options="minYPoint for minYPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                            <option value="">Select Point </option>
+                                        </select>
+                                    </div>
+                                   <div class="input-group">
+                                    <label class="input-group-addon" ng-init="max_Y='max_Y'">max_Y</label>
+
+                                    <p class="setLeftMargin" ng-repeat="val in maxYInputFields track by $index">
+                                        <input class="form-control" placeholder="Text" type="text" ng-model="maxYTextVal[$index]" required>
+                                       <button class="form-control addButton" style="width: 35px;margin-left: -72px;" ng-click="removeMaxY($index)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                    <button class="form-control addButton" ng-click="maxYaddText()" style="width: 36px;margin-left: -37px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                    </p>
+                                    <input type="text" class="form-control setLeftMargin" placeholder="Occurence" ng-model="maxYOccurence" required  />
+                                    <select class="form-control setLeftMargin" ng-model="maxYPoint" ng-options="maxYPoint for maxYPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                        <option value="">Select Point </option>
+                                    </select>
+                                    </div>
+                                    <div>
+                                    <div>
+                                        <button type="submit" class="btn btndefault" style="width:27%;margin-top: 6px;" ng-click="addLoopMappings(loopParentCat)">Save</button>
+                                        <button type="submit" class="btn btndefault" style="width:27%;margin-top: 6px;margin-left: 2%;" ng-click="deleteLoopMap(loopParentCat)">Remove</button>
+                                    </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    </form>
+
+                </div>
+            </section>
+        </div>

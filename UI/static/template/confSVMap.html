@@ -1,0 +1,164 @@
+ <div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+        <div class="main">
+            <div class="alpha">
+                <ul class="pageHeader">
+                    <li>File Processes SOT > Singlevalue Mapping</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main content -->
+        <section class="contentSection">
+            <div class="row tableBox" >
+                <div class="container-fluid contentbody" data-ng-init="getSvMappedData()">
+                <div class="row" style="margin-top: -17px;">
+                    <div class="col-md-2">
+                        <button type="button" class="btn btndefault" ui-sref="pdfInfoJson"> < Back</button>
+                    </div>
+                  <div class="col-md-5 ">
+                  </div>
+                  <div class="col-md-2" style="margin-left: 8%;">
+                      <button type="button" class="btn btndefault" name="button" ng-click="openPDFFile()">Open PDF</button>
+                  </div>
+
+                  <div class="col-md-2">
+                    <button type="button" class="btn btndefault" ng-click="saveSingleValueJson()" name="button" >Next</button>
+                  </div>
+                </div>
+                    <div class="row" style="margin-top:2%">
+                        <div class="col-sm-3 ">
+                            <div class="row mappingheading">
+                                Unmapped Output Fields
+                            </div>
+                            <div class="row unmapOtptDiv scrollbar">
+                                <div class="row unmapOtpt" ng-repeat="unmapOtField in svMapData.unmappedCols" data-toggle="popover" data-placement="top" data-trigger="hover">
+                                   <button type="button" class="btn button-shadow dropdownBtn" ng-class="unmapOtField==selectOutItem?'dropdownSuccess':'dropdownBtn'" ng-click="selectOutField(unmapOtField);reset()">
+                                        {{unmapOtField}}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-11">
+                                <div class="row mappingheading">
+                                    Mapping
+                                </div>
+                                <div class="row mapped scrollbar" style="height:383px">
+                                    <ul class="statuslist">
+                                        <li class="matcheslist pdfMatchList">
+                                            <div  ng-repeat="map in svMapObj" ng-init="parentIdx=$index">
+                                                <div class="input-group">
+                                                    <label style="width:25%" class="input-group-addon" ng-init="start='start'">Start</label>
+                                                    <input style="width: 190%;" type="text" class="form-control" placeholder="start text" ng-model="map.startText">
+                                                </div>
+                                                <div class="input-group" style="margn-top:10px;">
+                                                <label class="input-group-addon" ng-init="min_X='min_X'">min_X</label>
+
+                                                <span ng-repeat="val in map.minXInputFields" ng-init="minXInputIdx=$index">
+                                                    <input class="form-control" placeholder="Text" type="text" ng-model="map.minXTextVal[minXInputIdx]" required>
+                                                    <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeSvMinX(minXInputIdx,parentIdx)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                    <button class="form-control addButton" ng-click="minXaddSvText(parentIdx)" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="Occurence" ng-model="map.minXOccurence" required/>
+                                                <select class="form-control" ng-model="map.minXPoint" ng-options="minXPoint for minXPoint in ['TOP_RIGHT','BOTTOM_LEFT']">
+                                                    <option value="">Select Point </option>
+                                                </select>
+                                            </div>
+                                                <div class="input-group">
+                                                    <label class="input-group-addon" ng-init="max_X='max_X'">max_X</label>
+                                                    <span ng-repeat="val in map.maxXInputFields" ng-init="maxXInputIdx=$index">
+                                                        <input style="margin-left: -4px;width: 101%;" class="form-control" placeholder="Text" type="text" ng-model="map.maxXTextVal[maxXInputIdx]" required>
+                                                        <button class="form-control addButton" style="width: 35px;margin-left:-70px" ng-click="removeSvMaxX(maxXInputIdx,parentIdx)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                        <button class="form-control addButton" ng-click="maxXaddSvText(parentIdx)" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                    </span>
+                                                    <input style="margin-left: -4px;width: 101%;" type="text" class="form-control" placeholder="Occurence" ng-model="map.maxXOccurence" required/>
+                                                    <select style="margin-left: -4px;width: 101%;" class="form-control" ng-model="map.maxXPoint" ng-options="maxXPoint for maxXPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                                        <option value="">Select Point </option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-group">
+                                                    <label class="input-group-addon" ng-init="min_Y='min_Y'">min_Y</label>
+                                                    <span ng-repeat="val in map.minYInputFields" ng-init="minYInputIdx=$index">
+                                                        <input class="form-control" placeholder="Text" type="text" ng-model="map.minYTextVal[minYInputIdx]" required>
+                                                        <button class="form-control addButton" style="width: 35px;margin-left:-70px;" ng-click="removeSvMinY(minYInputIdx,parentIdx)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                        <button class="form-control addButton" ng-click="minYaddSvText(parentIdx)" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                    </span>
+                                                    <input type="text" class="form-control " placeholder="Occurence" ng-model="map.minYOccurence" required/>
+                                                    <select class="form-control" ng-model="map.minYPoint" ng-options="minYPoint for minYPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                                        <option value="">Select Point </option>
+                                                    </select>
+                                                </div>
+                                                <div class="input-group">
+                                                    <label class="input-group-addon" ng-init="max_Y='max_Y'">max_Y</label>
+                                                    <span  ng-repeat="val in map.maxYInputFields" ng-init="maxYInputIdx=$index">
+                                                        <input style="margin-left: -4px;width: 101%;" class="form-control" placeholder="Text" type="text" ng-model="map.maxYTextVal[maxYInputIdx]" required>
+                                                        <button class="form-control addButton" style="width: 35px;margin-left:-70px;" ng-click="removeSvMaxY(maxYInputIdx,parentIdx)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                        <button class="form-control addButton" ng-click="maxYaddSvText(parentIdx)" style="width: 35px;height: 34px;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                    </span>
+                                                    <input style="margin-left: -4px;width: 101%;" type="text" class="form-control" placeholder="Occurence" ng-model="map.maxYOccurence" required/>
+                                                    <select style="margin-left: -4px;width: 101%;" class="form-control" ng-model="map.maxYPoint" ng-options="maxYPoint for maxYPoint in ['TOP_RIGHT','BOTTOM_LEFT']" required>
+                                                        <option value="">Select Point </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div style="margin-left:52%;margin-top: 2%;">
+                                                <button class="btn btndefault" ng-click="addSvMap()" style="margin-left: -47%;width: 50%;">Add</i></button>
+                                                <button class="btn btndefault"   style="width:50%" ng-click="saveSingleValueMap();reset();">Save </button>
+                                                <button class="btn btndefault "  style="width:42%" ng-click="deleteMap();">Remove </button>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-3 " style="margin-left: -41px;">
+                                <div class="row mappingheading"style="width:123%">
+                                    Mapped Output Fields
+                                </div>
+                                <div class="row unmapOtptDiv scrollbar" style="width:123%;">
+                                    <div class="row unmapOtpt" ng-repeat="mappedOutField in svMapData.mapped" data-toggle="popover" data-placement="top" data-trigger="hover">
+                                        <!--<div class="col-sm-5" >-->
+                                        <button type="button" class="btn button-shadow dropdownBtn" ng-class="mappedOutField.outField==selectOutItem?'dropdownSuccess':'dropdownBtn'" ng-click="selectOutField(mappedOutField.outField);fillSingleValueData(mappedOutField.outField)">
+                                                {{mappedOutField.outField}}
+                                        </button>
+                                        <!--</div>-->
+                                        <!--<div class="col-sm-7" style="margin-left: -60px;margin-top: 10px;" ng-show="svRunSampleRes">-->
+                                            <!--<input type="text" style="width: 79%;" ng-readonly="isReadonly" ng-model="svRunSampleData[mappedOutField.outField]" ng-value="value">-->
+                                            <!--<button ng-click="updateVal()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>-->
+                                            <!--<button style="margin-right: -72px;" ng-click="saveData(mappedOutField.outField,svRunSampleData[mappedOutField.outField])"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-sm-5" ng-if="svRunSampleData" style="margin-left: -43px;">-->
+
+
+                                        <!--</div>-->
+                                        <!--<div class="col-sm-1">-->
+
+                                        <!--</div>-->
+
+                                        </div>
+                                        <!--<div class="col-sm-3" >-->
+                                             <!--<table>-->
+                                              <!--<tr ng-repeat="(key, value) in svRunSampleData">-->
+                                                <!--<div ng-click="isReadonly==true">-->
+                                                    <!--<td ng-model="key[$index]"> {{key}} </td>-->
+                                                    <!--<td ><input type="text" ng-readonly="isReadonly" ng-model="svRunSampleData[key]" ng-value="value">  </td><td><button ng-click="updateVal()">EDIT</button></td>-->
+                                                    <!--<td><button class="btn btn-lg btndefault" ng-click="saveData(key,svRunSampleData[key])">Save</button></td>-->
+                                                <!--</div>-->
+                                              <!--</tr>-->
+                                            <!--</table>-->
+                                        <!--</div>-->
+                                    </div>
+                            <!--<div ng-show="svRunSampleRes">-->
+                                <!--<button class="btn btndefault" style="margin-right: -72px;width:30%" ng-click="saveData(mappedOutField.outField,svRunSampleData[mappedOutField.outField])">Save</button>-->
+                            <!--</div>-->
+                                </div>
+                            </div>
+                    </div>
+<!--                </form>-->
+                </div>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>

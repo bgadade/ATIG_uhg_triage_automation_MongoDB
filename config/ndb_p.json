@@ -1,0 +1,1983 @@
+{
+  "Pediatric Pulmonary Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 96,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 48,
+    "Cos Cred": "MD/DO"
+  },
+  "Orthodontics": {
+    "NDB REC": "P",
+    "Ndb_spec": 52,
+    "Ndb Deg": "DDS ",
+    "Cos Prov": 41,
+    "Cos Cred": "DDS"
+  },
+  "Clinical Cytogenetics": {
+    "NDB REC": "P",
+    "Ndb_spec": 307,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Behavioral": {
+    "NDB REC": "P",
+    "Ndb_spec": 363,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 12,
+    "Cos Cred": "MD/DO"
+  },
+  "Reproductive Endocrinology": {
+    "NDB REC": "P",
+    "Ndb_spec": 241,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 33,
+    "Cos Cred": "MD/DO"
+  },
+  "Obstetrics And Gynecology": {
+    "NDB REC": "P",
+    "Ndb_spec": 230,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 7,
+    "Cos Cred": "OBGYN"
+  },
+  "Medical Director": {
+    "NDB REC": "P",
+    "Ndb_spec": 999,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Early Intervention": {
+    "NDB REC": "P",
+    "Ndb_spec": 122,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 75,
+    "Cos Cred": "EDUC"
+  },
+  "Child & Adolescent Psychiatry": {
+    "NDB REC": "P",
+    "Ndb_spec": 257,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 15,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Rehabilitation Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 341,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 23,
+    "Cos Cred": "MD/DO"
+  },
+  "Chiropractic Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 35,
+    "Ndb Deg": "DC",
+    "Cos Prov": 44,
+    "Cos Cred": "DC"
+  },
+  "Home Health  / Private Duty Nurse": {
+    "NDB REC": "P",
+    "Ndb_spec": 243,
+    "Ndb Deg": "LPN",
+    "Cos Prov": 83,
+    "Cos Cred": "LPN"
+  },
+  "Shoulder Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 350,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 9,
+    "Cos Cred": "MD/DO"
+  },
+  "Sports Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 296,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 23,
+    "Cos Cred": "MD/DO"
+  },
+  "Hearing Instrument Specialist": {
+    "NDB REC": "P",
+    "Ndb_spec": 298,
+    "Ndb Deg": "HIS",
+    "Cos Prov": 45,
+    "Cos Cred": "HRS"
+  },
+  "Visiting Nurse": {
+    "NDB REC": "P",
+    "Ndb_spec": 394,
+    "Ndb Deg": "VNA",
+    "Cos Prov": 83,
+    "Cos Cred": "RN, LPN, LVN, or HLDTP"
+  },
+  "Certified Asthma Educator": {
+    "NDB REC": "P",
+    "Ndb_spec": 43,
+    "Ndb Deg": "CCC",
+    "Cos Prov": 91,
+    "Cos Cred": "EDUC"
+  },
+  "Clinical Cardiac Electrophysiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 304,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 25,
+    "Cos Cred": "MD/DO"
+  },
+  "Nuclear Cardiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 16,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 25,
+    "Cos Cred": "MD/DO"
+  },
+  "Naprapathy, Doctor of ": {
+    "NDB REC": "P",
+    "Ndb_spec": 383,
+    "Ndb Deg": "DN",
+    "Cos Prov": 49,
+    "Cos Cred": "ALT"
+  },
+  "Anesthesiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 5,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 20,
+    "Cos Cred": "MD/DO"
+  },
+  "Hyperbaric Medicine/Wound Care": {
+    "NDB REC": "P",
+    "Ndb_spec": 373,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Headache Treatment": {
+    "NDB REC": "P",
+    "Ndb_spec": 356,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 1,
+    "Cos Cred": "MD/DO"
+  },
+  "Certified Nurse Midwife": {
+    "NDB REC": "P",
+    "Ndb_spec": 69,
+    "Ndb Deg": "CNM",
+    "Cos Prov": "XXXX",
+    "Cos Cred": "CNM"
+  },
+  "Hepatology - Liver Disease": {
+    "NDB REC": "P",
+    "Ndb_spec": 365,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 76,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Rheumatology": {
+    "NDB REC": "P",
+    "Ndb_spec": 261,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 32,
+    "Cos Cred": "MD/DO"
+  },
+  "Physician Assistant BEHAVIORAL Group": {
+    "NDB REC": "P",
+    "Ndb_spec": 112,
+    "Ndb Deg": "MS",
+    "Cos Prov": "0062",
+    "Cos Cred": "PA"
+  },
+  "Endocrinology, Diabetes and Metabolism": {
+    "NDB REC": "P",
+    "Ndb_spec": 17,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 33,
+    "Cos Cred": "MD/DO"
+  },
+  "Neuroradiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 332,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 16,
+    "Cos Cred": "MD/DO"
+  },
+  "Pharmacist  ": {
+    "NDB REC": "P",
+    "Ndb_spec": 212,
+    "Ndb Deg": "PHA",
+    "Cos Prov": 70,
+    "Cos Cred": "PHARM"
+  },
+  "Massage Therapy": {
+    "NDB REC": "P",
+    "Ndb_spec": 514,
+    "Ndb Deg": "MTH",
+    "Cos Prov": 49,
+    "Cos Cred": "MTH"
+  },
+  "Pain Management": {
+    "NDB REC": "P",
+    "Ndb_spec": 319,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 20,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Specialist": {
+    "NDB REC": "P",
+    "Ndb_spec": 274,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 75,
+    "Cos Cred": "MD/DO"
+  },
+  "Surgical Critical Care": {
+    "NDB REC": "P",
+    "Ndb_spec": 242,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 76,
+    "Cos Cred": "MD/DO"
+  },
+  "MRI/Magnetic Resonance": {
+    "NDB REC": "P",
+    "Ndb_spec": 511,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 16,
+    "Cos Cred": "MD/DO"
+  },
+  "Rhinology": {
+    "NDB REC": "P",
+    "Ndb_spec": 292,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 10,
+    "Cos Cred": "MD/DO"
+  },
+  "Physician Nutrition Specialist": {
+    "NDB REC": "P",
+    "Ndb_spec": 103,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 63,
+    "Cos Cred": "MD/DO"
+  },
+  "Nuclear Radiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 286,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 38,
+    "Cos Cred": "DIAG"
+  },
+  "Orofacial Plastic Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 233,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 13,
+    "Cos Cred": "MD/DO"
+  },
+  "Psychoanalyst": {
+    "NDB REC": "P",
+    "Ndb_spec": "237",
+    "Ndb Deg": "PSY",
+    "Cos Prov": "0062",
+    "Cos Cred": "PHD"
+  },
+  "Pediatric Orthopedic Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 264,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 9,
+    "Cos Cred": "MD/DO"
+  },
+  "Ophthalmology Cornea Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 355,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 8,
+    "Cos Cred": "MD/DO"
+  },
+  "Laryngology": {
+    "NDB REC": "P",
+    "Ndb_spec": 284,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 10,
+    "Cos Cred": "MD/DO"
+  },
+  "Hand Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 40,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 9,
+    "Cos Cred": "MD/DO"
+  },
+  "Nurse, Clinical Specialist in Mental Health ": {
+    "NDB REC": "P",
+    "Ndb_spec": 385,
+    "Ndb Deg": "MSN ",
+    "Cos Prov": 62,
+    "Cos Cred": "RN"
+  },
+  "Gynecology": {
+    "NDB REC": "P",
+    "Ndb_spec": 251,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 7,
+    "Cos Cred": "OBGYN"
+  },
+  "Pediatric Hematology Oncology": {
+    "NDB REC": "P",
+    "Ndb_spec": 88,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 36,
+    "Cos Cred": "MD/DO"
+  },
+  "Christian Science Practitioner": {
+    "NDB REC": "P",
+    "Ndb_spec": 376,
+    "Ndb Deg": "CS",
+    "Cos Prov": 49,
+    "Cos Cred": "ALT"
+  },
+  "Immunopathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 225,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Spinal Cord Injury Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 344,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 6,
+    "Cos Cred": "MD/DO"
+  },
+  "General Practice Specialist": {
+    "NDB REC": "P",
+    "Ndb_spec": 272,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": "0001\n0073",
+    "Cos Cred": "MD/DO"
+  },
+  "Clinical Biochemical Genetics": {
+    "NDB REC": "P",
+    "Ndb_spec": 305,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Pathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 322,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Family Planning": {
+    "NDB REC": "P",
+    "Ndb_spec": 123,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": "XXXX",
+    "Cos Cred": " "
+  },
+  "Medical Tattoo Specialist": {
+    "NDB REC": "P",
+    "Ndb_spec": 106,
+    "Ndb Deg": "Non",
+    "Cos Prov": 49,
+    "Cos Cred": "NON"
+  },
+  "Obstetrics": {
+    "NDB REC": "P",
+    "Ndb_spec": 250,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 7,
+    "Cos Cred": "OBGYN"
+  },
+  "Nurse Practitioner": {
+    "NDB REC": "P",
+    "Ndb_spec": 77,
+    "Ndb Deg": "NP",
+    "Cos Prov": "XXXX",
+    "Cos Cred": "RNP\nNP"
+  },
+  "Dermatology": {
+    "NDB REC": "P",
+    "Ndb_spec": 7,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 3,
+    "Cos Cred": "MD/DO"
+  },
+  "Undersea and Hyperbaric Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 327,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Pathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 22,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Addiction Psychiatry": {
+    "NDB REC": "P",
+    "Ndb_spec": 301,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 15,
+    "Cos Cred": "MD/DO"
+  },
+  "Transplant Hepatology": {
+    "NDB REC": "P",
+    "Ndb_spec": 105,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": "0076",
+    "Cos Cred": "MD/DO"
+  },
+  "Adolescent Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 276,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 12,
+    "Cos Cred": "MD/DO"
+  },
+  "Physical Therapy - Hand": {
+    "NDB REC": "P",
+    "Ndb_spec": 368,
+    "Ndb Deg": "PT",
+    "Cos Prov": "0064",
+    "Cos Cred": "PT"
+  },
+  "Osteopathic Manipulative Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 330,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 73,
+    "Cos Cred": "MD/DO"
+  },
+  "Neurology ": {
+    "NDB REC": "P",
+    "Ndb_spec": 13,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 5,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Occupational Therapy": {
+    "NDB REC": "P",
+    "Ndb_spec": 119,
+    "Ndb Deg": "OTR",
+    "Cos Prov": 64,
+    "Cos Cred": "OTR"
+  },
+  "Public Health": {
+    "NDB REC": "P",
+    "Ndb_spec": 238,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 73,
+    "Cos Cred": "HLTDP"
+  },
+  "Master of Social Work": {
+    "NDB REC": "P",
+    "Ndb_spec": 391,
+    "Ndb Deg": "MSW",
+    "Cos Prov": 62,
+    "Cos Cred": "MSW"
+  },
+  "Endoscopy": {
+    "NDB REC": "P",
+    "Ndb_spec": 294,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 29,
+    "Cos Cred": "MD/DO"
+  },
+  "Home Health Aide": {
+    "NDB REC": "P",
+    "Ndb_spec": 67,
+    "Ndb Deg": "CCC",
+    "Cos Prov": 60,
+    "Cos Cred": "HOME"
+  },
+  "Pediatric Radiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 288,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 16,
+    "Cos Cred": "DIAG"
+  },
+  "Pediatric Neurosurgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 81,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 6,
+    "Cos Cred": "MD/DO"
+  },
+  "Breast Reconstruction": {
+    "NDB REC": "P",
+    "Ndb_spec": 359,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 13,
+    "Cos Cred": "MD/DO"
+  },
+  "Movement Disorders": {
+    "NDB REC": "P",
+    "Ndb_spec": 249,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 5,
+    "Cos Cred": "MD/DO"
+  },
+  "Physical Medicine and Rehabilitation / Physiatry": {
+    "NDB REC": "P",
+    "Ndb_spec": 25,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 23,
+    "Cos Cred": "MD/DO"
+  },
+  "Cardiovascular Disease": {
+    "NDB REC": "P",
+    "Ndb_spec": 6,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 25,
+    "Cos Cred": "MD/DO"
+  },
+  "Thoracic Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 101,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 18,
+    "Cos Cred": "MD/DO"
+  },
+  "Waiver Nursing": {
+    "NDB REC": "P",
+    "Ndb_spec": 100,
+    "Ndb Deg": "LPN",
+    "Cos Prov": 28,
+    "Cos Cred": "LPN "
+  },
+  "Diag Rad with Special Competence in Nuclear Rad": {
+    "NDB REC": "P",
+    "Ndb_spec": 345,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 16,
+    "Cos Cred": "DIAG"
+  },
+  "Dermatopathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 218,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Clinical Neurophysiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 310,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 5,
+    "Cos Cred": "MD/DO"
+  },
+  "Colon and Rectal Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 15,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 14,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Dermatology": {
+    "NDB REC": "P",
+    "Ndb_spec": 117,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 3,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Urology": {
+    "NDB REC": "P",
+    "Ndb_spec": 267,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 19,
+    "Cos Cred": "MD/DO"
+  },
+  "Addiction Medicine Specialist": {
+    "NDB REC": "P",
+    "Ndb_spec": 331,
+    "Ndb Deg": "LPC",
+    "Cos Prov": 62,
+    "Cos Cred": "MSW"
+  },
+  "Female Pelvic and Recon Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 94,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 7,
+    "Cos Cred": "MD"
+  },
+  "High-Risk Pregnancy": {
+    "NDB REC": "P",
+    "Ndb_spec": 353,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 7,
+    "Cos Cred": "MD/DO"
+  },
+  "HIV-AIDS": {
+    "NDB REC": "P",
+    "Ndb_spec": 360,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 92,
+    "Cos Cred": "MD/DO"
+  },
+  "Family Practice": {
+    "NDB REC": "P",
+    "Ndb_spec": 8,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 1,
+    "Cos Cred": "MD/DO"
+  },
+  "Hematology": {
+    "NDB REC": "P",
+    "Ndb_spec": 93,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 30,
+    "Cos Cred": "MD/DO"
+  },
+  "Neuropsychology ": {
+    "NDB REC": "P",
+    "Ndb_spec": 397,
+    "Ndb Deg": " ",
+    "Cos Prov": 61,
+    "Cos Cred": "PHD "
+  },
+  "Empowerment Coach ": {
+    "NDB REC": "P",
+    "Ndb_spec": 118,
+    "Ndb Deg": "MA",
+    "Cos Prov": "MA",
+    "Cos Cred": "DEG"
+  },
+  "Occupational Therapy": {
+    "NDB REC": "P",
+    "Ndb_spec": 61,
+    "Ndb Deg": "OTR",
+    "Cos Prov": 64,
+    "Cos Cred": "OTR"
+  },
+  "Preventive Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 281,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 73,
+    "Cos Cred": "MD/DO"
+  },
+  "Perinatology (Maternal & Fetal Medicine)": {
+    "NDB REC": "P",
+    "Ndb_spec": 226,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 74,
+    "Cos Cred": "MD/DO"
+  },
+  "Oral Pathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 232,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Ophthalmology": {
+    "NDB REC": "P",
+    "Ndb_spec": 18,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 8,
+    "Cos Cred": "MD/DO"
+  },
+  "Certified Midwife": {
+    "NDB REC": "P",
+    "Ndb_spec": 111,
+    "Ndb Deg": "CM",
+    "Cos Prov": "XXXX",
+    "Cos Cred": "CPM"
+  },
+  "Anatomic & Clinical Pathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 203,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "General Vascular Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 95,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 37,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Cardiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 85,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 25,
+    "Cos Cred": "MD/DO"
+  },
+  "Advanced Registered Nurse Practitioner": {
+    "NDB REC": "P",
+    "Ndb_spec": 375,
+    "Ndb Deg": "NP",
+    "Cos Prov": "XXXX",
+    "Cos Cred": "RNP\nNP\n\n"
+  },
+  "Undersea Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 372,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Otology": {
+    "NDB REC": "P",
+    "Ndb_spec": 254,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 10,
+    "Cos Cred": "MD/DO"
+  },
+  "Nuclear Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 36,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 38,
+    "Cos Cred": "MD/DO"
+  },
+  "Immunology": {
+    "NDB REC": "P",
+    "Ndb_spec": 283,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 2,
+    "Cos Cred": "MD/DO"
+  },
+  "Medical Microbiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 227,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Genetics": {
+    "NDB REC": "P",
+    "Ndb_spec": 260,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Adolescent": {
+    "NDB REC": "P",
+    "Ndb_spec": 258,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 12,
+    "Cos Cred": "MD/DO"
+  },
+  "Critical Care Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 214,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 76,
+    "Cos Cred": "MD/DO"
+  },
+  "Bone Marrow Transplant": {
+    "NDB REC": "P",
+    "Ndb_spec": 366,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 17,
+    "Cos Cred": "MD/DO"
+  },
+  "Ophthalmic Plastic Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 364,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 8,
+    "Cos Cred": "MD/DO"
+  },
+  "Homemaker ": {
+    "NDB REC": "P",
+    "Ndb_spec": 21,
+    "Ndb Deg": "NON",
+    "Cos Prov": 60,
+    "Cos Cred": "NON"
+  },
+  "Clinical Genetics": {
+    "NDB REC": "P",
+    "Ndb_spec": 308,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Diagnostic Lab Immunology": {
+    "NDB REC": "P",
+    "Ndb_spec": 107,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 34,
+    "Cos Cred": "LAB"
+  },
+  "Clinical Pathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 210,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Infectious Disease Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 78,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 92,
+    "Cos Cred": "MD/DO"
+  },
+  "Certified Diabetic Educator": {
+    "NDB REC": "P",
+    "Ndb_spec": 27,
+    "Ndb Deg": "CCC",
+    "Cos Prov": 91,
+    "Cos Cred": "EDUC"
+  },
+  "Neurodevelopmental Disabilities": {
+    "NDB REC": "P",
+    "Ndb_spec": 343,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 5,
+    "Cos Cred": "MD/DO"
+  },
+  "Pedodontics": {
+    "NDB REC": "P",
+    "Ndb_spec": 53,
+    "Ndb Deg": "DDS",
+    "Cos Prov": 78,
+    "Cos Cred": "DDS"
+  },
+  "Non-Indep Licensed MH Provider": {
+    "NDB REC": "P",
+    "Ndb_spec": 244,
+    "Ndb Deg": "CCC",
+    "Cos Prov": "0062",
+    "Cos Cred": "CCC"
+  },
+  "Pediatric Otolaryngology (ENT)": {
+    "NDB REC": "P",
+    "Ndb_spec": 265,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 10,
+    "Cos Cred": "MD/DO"
+  },
+  "Physician Assistant": {
+    "NDB REC": "P",
+    "Ndb_spec": 338,
+    "Ndb Deg": "PA",
+    "Cos Prov": "XXXX",
+    "Cos Cred": "PA"
+  },
+  "Licensed Professional Counselor": {
+    "NDB REC": "P",
+    "Ndb_spec": 381,
+    "Ndb Deg": "PHD",
+    "Cos Prov": 62,
+    "Cos Cred": "PHD "
+  },
+  "Psychosomatic Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 291,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 62,
+    "Cos Cred": "MD/DO"
+  },
+  "Chemical Pathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 207,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Rheumatology": {
+    "NDB REC": "P",
+    "Ndb_spec": 90,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 32,
+    "Cos Cred": "MD/DO"
+  },
+  "Internal Medicine Specialist": {
+    "NDB REC": "P",
+    "Ndb_spec": 273,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 76,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Gastroenterology": {
+    "NDB REC": "P",
+    "Ndb_spec": 259,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 29,
+    "Cos Cred": "MD/DO"
+  },
+  "Neurology & Psychiatry": {
+    "NDB REC": "P",
+    "Ndb_spec": 228,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 5,
+    "Cos Cred": "MD/DO"
+  },
+  "Audiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 205,
+    "Ndb Deg": "AUD",
+    "Cos Prov": 45,
+    "Cos Cred": "MS"
+  },
+  "Unknown Special Physician": {
+    "NDB REC": "P",
+    "Ndb_spec": 97,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Urology": {
+    "NDB REC": "P",
+    "Ndb_spec": 34,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 19,
+    "Cos Cred": "MD/DO"
+  },
+  "Rehabilitative Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 253,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 23,
+    "Cos Cred": "MD/DO"
+  },
+  "Infertility Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 352,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 7,
+    "Cos Cred": "MD/DO"
+  },
+  "Interventional Radiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 124,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 16,
+    "Cos Cred": "MD/DO"
+  },
+  "Prosthodontics": {
+    "NDB REC": "P",
+    "Ndb_spec": 55,
+    "Ndb Deg": "DDS",
+    "Cos Prov": 79,
+    "Cos Cred": "DMD"
+  },
+  "Ophthalmology Retina Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 354,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 8,
+    "Cos Cred": "MD/DO"
+  },
+  "Pulmonary Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 29,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 48,
+    "Cos Cred": "MD/DO"
+  },
+  "Geriatric Psychiatry": {
+    "NDB REC": "P",
+    "Ndb_spec": 314,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 15,
+    "Cos Cred": "MD/DO"
+  },
+  "Internal Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 11,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 4,
+    "Cos Cred": "MD/DO"
+  },
+  "Blood Banking/Transfusion Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 334,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 4,
+    "Cos Cred": "MD/DO"
+  },
+  "Personal Care Aide": {
+    "NDB REC": "P",
+    "Ndb_spec": 104,
+    "Ndb Deg": "CCC",
+    "Cos Prov": "0060",
+    "Cos Cred": "PCA"
+  },
+  "Radiation Oncology": {
+    "NDB REC": "P",
+    "Ndb_spec": 32,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 24,
+    "Cos Cred": "RADIA"
+  },
+  "Peridontics": {
+    "NDB REC": "P",
+    "Ndb_spec": 54,
+    "Ndb Deg": "DDS",
+    "Cos Prov": 42,
+    "Cos Cred": "DDS"
+  },
+  "Clinical Pharmacology": {
+    "NDB REC": "P",
+    "Ndb_spec": 211,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Advanced Practice Registered Psychiatric Nurse Practitioner": {
+    "NDB REC": "P",
+    "Ndb_spec": 374,
+    "Ndb Deg": "PHD",
+    "Cos Prov": 62,
+    "Cos Cred": "ANP"
+  },
+  "Physician Assistant BEHAVIORAL ONLY": {
+    "NDB REC": "P",
+    "Ndb_spec": 112,
+    "Ndb Deg": "PHD",
+    "Cos Prov": "0062",
+    "Cos Cred": "PA"
+  },
+  "Acupuncture": {
+    "NDB REC": "P",
+    "Ndb_spec": 201,
+    "Ndb Deg": "CA",
+    "Cos Prov": 23,
+    "Cos Cred": "OTR"
+  },
+  "Pediatric Developmental & Behavioral": {
+    "NDB REC": "P",
+    "Ndb_spec": 255,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 12,
+    "Cos Cred": "MD/DO"
+  },
+  "Surgical Technician": {
+    "NDB REC": "P",
+    "Ndb_spec": 393,
+    "Ndb Deg": "CCC",
+    "Cos Prov": "XXXX",
+    "Cos Cred": "PA"
+  },
+  "Gynecologic Oncology": {
+    "NDB REC": "P",
+    "Ndb_spec": 221,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 36,
+    "Cos Cred": "MD/DO"
+  },
+  "Hospitalist": {
+    "NDB REC": "P",
+    "Ndb_spec": 340,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 89,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Plastic Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 266,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 13,
+    "Cos Cred": "MD/DO"
+  },
+  "Infectious Disease Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 80,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 92,
+    "Cos Cred": "MD/DO"
+  },
+  "Behavioral Analyst ": {
+    "NDB REC": "P",
+    "Ndb_spec": 300,
+    "Ndb Deg": "BA",
+    "Cos Prov": 62,
+    "Cos Cred": "BA"
+  },
+  "Pediatrics": {
+    "NDB REC": "P",
+    "Ndb_spec": 37,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 12,
+    "Cos Cred": "MD/DO"
+  },
+  "Phlebology": {
+    "NDB REC": "P",
+    "Ndb_spec": 396,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 37,
+    "Cos Cred": "MD/DO"
+  },
+  "Gastroenterology": {
+    "NDB REC": "P",
+    "Ndb_spec": 10,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 29,
+    "Cos Cred": "MD/DO"
+  },
+  "MOHS Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 357,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 3,
+    "Cos Cred": "MD/DO"
+  },
+  "Head & Neck Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 271,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 17,
+    "Cos Cred": "MD/DO"
+  },
+  "Bronco Esophagology": {
+    "NDB REC": "P",
+    "Ndb_spec": 277,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 48,
+    "Cos Cred": "MD/DO"
+  },
+  "Child Neurology": {
+    "NDB REC": "P",
+    "Ndb_spec": 208,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 5,
+    "Cos Cred": "MD/DO"
+  },
+  "Endodontics": {
+    "NDB REC": "P",
+    "Ndb_spec": 51,
+    "Ndb Deg": "DDS",
+    "Cos Prov": 77,
+    "Cos Cred": "DDS "
+  },
+  "Dentist": {
+    "NDB REC": "P",
+    "Ndb_spec": 50,
+    "Ndb Deg": "DDS",
+    "Cos Prov": 80,
+    "Cos Cred": "DDS"
+  },
+  "Cytopathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 312,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Emergency Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 321,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 39,
+    "Cos Cred": "MD/DO"
+  },
+  "Physical Therapy - Pediatric": {
+    "NDB REC": "P",
+    "Ndb_spec": 367,
+    "Ndb Deg": "PT",
+    "Cos Prov": 64,
+    "Cos Cred": "PT"
+  },
+  "Neurological Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 14,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 6,
+    "Cos Cred": "MD/DO"
+  },
+  "Plastic Surgery within the Head & Neck": {
+    "NDB REC": "P",
+    "Ndb_spec": 337,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 13,
+    "Cos Cred": "MD/DO"
+  },
+  "Neuropathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 229,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Clinical Molecular Genetics": {
+    "NDB REC": "P",
+    "Ndb_spec": 370,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Surgical Oncologist": {
+    "NDB REC": "P",
+    "Ndb_spec": 508,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 36,
+    "Cos Cred": "MD/DO"
+  },
+  "Diabetes": {
+    "NDB REC": "P",
+    "Ndb_spec": 278,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 76,
+    "Cos Cred": "MD/DO"
+  },
+  "Radiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 30,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 16,
+    "Cos Cred": "MD/DO"
+  },
+  "Allergy and Immunology": {
+    "NDB REC": "P",
+    "Ndb_spec": 3,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 2,
+    "Cos Cred": "MD/DO"
+  },
+  "Speech Therapy See Special Loading Instructions": {
+    "NDB REC": "P",
+    "Ndb_spec": 74,
+    "Ndb Deg": "LSP",
+    "Cos Prov": 46,
+    "Cos Cred": "ST"
+  },
+  "Counselor - MH/SA/School": {
+    "NDB REC": "P",
+    "Ndb_spec": 377,
+    "Ndb Deg": "PHD",
+    "Cos Prov": 62,
+    "Cos Cred": "MSW, PHD"
+  },
+  "Pediatric Anesthesiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 116,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 20,
+    "Cos Cred": "MD/DO"
+  },
+  "Cardiac Diagnostic": {
+    "NDB REC": "P",
+    "Ndb_spec": 513,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 25,
+    "Cos Cred": "MD/DO"
+  },
+  "Social Worker, Marriage & Family": {
+    "NDB REC": "P",
+    "Ndb_spec": 392,
+    "Ndb Deg": "CSW",
+    "Cos Prov": 62,
+    "Cos Cred": "MSW"
+  },
+  "Physical Therapy": {
+    "NDB REC": "P",
+    "Ndb_spec": 73,
+    "Ndb Deg": "PT",
+    "Cos Prov": 64,
+    "Cos Cred": "PT"
+  },
+  "Pastoral Counselor": {
+    "NDB REC": "P",
+    "Ndb_spec": 388,
+    "Ndb Deg": "PHD",
+    "Cos Prov": 49,
+    "Cos Cred": "PC"
+  },
+  "Substance Abuse Services, Alcohol & Drug": {
+    "NDB REC": "P",
+    "Ndb_spec": 507,
+    "Ndb Deg": "LPC",
+    "Cos Prov": 62,
+    "Cos Cred": "MSW, BA, BS"
+  },
+  "Addiction Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 347,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 15,
+    "Cos Cred": "MD/DO"
+  },
+  "Podiatry": {
+    "NDB REC": "P",
+    "Ndb_spec": 48,
+    "Ndb Deg": "DPM",
+    "Cos Prov": 27,
+    "Cos Cred": "DPM"
+  },
+  "Medical Toxicology": {
+    "NDB REC": "P",
+    "Ndb_spec": 333,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Nephrology": {
+    "NDB REC": "P",
+    "Ndb_spec": 39,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 31,
+    "Cos Cred": "MD/DO"
+  },
+  "Marriage & Family Therapy": {
+    "NDB REC": "P",
+    "Ndb_spec": 318,
+    "Ndb Deg": "PHD",
+    "Cos Prov": 62,
+    "Cos Cred": "MSW"
+  },
+  "Hospice & Palliative Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 19,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Knee Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 349,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 9,
+    "Cos Cred": "MD/DO"
+  },
+  "Otolaryngology (ENT)": {
+    "NDB REC": "P",
+    "Ndb_spec": 4,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 10,
+    "Cos Cred": "MD/DO"
+  },
+  "Psychiatry": {
+    "NDB REC": "P",
+    "Ndb_spec": 26,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 15,
+    "Cos Cred": "MD/DO"
+  },
+  "Child Psychology": {
+    "NDB REC": "P",
+    "Ndb_spec": 268,
+    "Ndb Deg": "PHD",
+    "Cos Prov": 61,
+    "Cos Cred": "PHD "
+  },
+  "Plastic Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 24,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 13,
+    "Cos Cred": "MD/DO"
+  },
+  "General Practice": {
+    "NDB REC": "P",
+    "Ndb_spec": 1,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 1,
+    "Cos Cred": "MD/DO"
+  },
+  "Orthotics Prosthetics": {
+    "NDB REC": "P",
+    "Ndb_spec": 108,
+    "Ndb Deg": "CO",
+    "Cos Prov": 49,
+    "Cos Cred": "OP "
+  },
+  "Hematology/Oncology": {
+    "NDB REC": "P",
+    "Ndb_spec": 504,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 36,
+    "Cos Cred": "MD/DO"
+  },
+  "Public Health & General Preventive Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 236,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 73,
+    "Cos Cred": "HLTDP"
+  },
+  "Therapeutic Radiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 239,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 24,
+    "Cos Cred": "RADIA"
+  },
+  "Nurse, Registered, First Assistant (RNFA)": {
+    "NDB REC": "P",
+    "Ndb_spec": 386,
+    "Ndb Deg": "RN",
+    "Cos Prov": 83,
+    "Cos Cred": "RN"
+  },
+  "Clinical Biochemical/Molecular Genetics": {
+    "NDB REC": "P",
+    "Ndb_spec": 306,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Employee Assistance Program (EAP) Counselor": {
+    "NDB REC": "P",
+    "Ndb_spec": 379,
+    "Ndb Deg": "BA",
+    "Cos Prov": 62,
+    "Cos Cred": "BA"
+  },
+  "Emergency Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 42,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 39,
+    "Cos Cred": "MD/DO"
+  },
+  "Dentist, Oral Surgeon": {
+    "NDB REC": "P",
+    "Ndb_spec": 92,
+    "Ndb Deg": "DDS",
+    "Cos Prov": 80,
+    "Cos Cred": "DDS"
+  },
+  "Pediatric Cardiothoracic Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 505,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 18,
+    "Cos Cred": "MD/DO"
+  },
+  "Forensic Pathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 223,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Nurse Practitioner, Clinical Specialist in Mental Health (NP)": {
+    "NDB REC": "P",
+    "Ndb_spec": 387,
+    "Ndb Deg": "NP",
+    "Cos Prov": 62,
+    "Cos Cred": "RNP"
+  },
+  "Naturopathy, Doctor of": {
+    "NDB REC": "P",
+    "Ndb_spec": 384,
+    "Ndb Deg": "ND",
+    "Cos Prov": 49,
+    "Cos Cred": "ALT"
+  },
+  "Social Worker, Licensed Clinical/Medical": {
+    "NDB REC": "P",
+    "Ndb_spec": 63,
+    "Ndb Deg": "PHD",
+    "Cos Prov": 62,
+    "Cos Cred": "LICSW"
+  },
+  "Certified Registered Nurse Anesthetist": {
+    "NDB REC": "P",
+    "Ndb_spec": 68,
+    "Ndb Deg": "CNA",
+    "Cos Prov": "0020",
+    "Cos Cred": "CRNA"
+  },
+  "Breast Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 358,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 17,
+    "Cos Cred": "MD/DO"
+  },
+  "Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 2,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 17,
+    "Cos Cred": "MD/DO"
+  },
+  "Family Nurse Practitioner": {
+    "NDB REC": "P",
+    "Ndb_spec": 339,
+    "Ndb Deg": "FNP",
+    "Cos Prov": "XXXX",
+    "Cos Cred": "FNP\nNP"
+  },
+  "Neonatology": {
+    "NDB REC": "P",
+    "Ndb_spec": 87,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 47,
+    "Cos Cred": "MD/DO"
+  },
+  "Occupational Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 231,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 23,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Allergy Immunology": {
+    "NDB REC": "P",
+    "Ndb_spec": 86,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 2,
+    "Cos Cred": "MD/DO"
+  },
+  "Dermatology Immunology": {
+    "NDB REC": "P",
+    "Ndb_spec": 217,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 3,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Speech Pathologist ": {
+    "NDB REC": "P",
+    "Ndb_spec": 115,
+    "Ndb Deg": "LSP",
+    "Cos Prov": 46,
+    "Cos Cred": "ST"
+  },
+  "Anatomic Pathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 202,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Crisis Diversion": {
+    "NDB REC": "P",
+    "Ndb_spec": 378,
+    "Ndb Deg": "PHD",
+    "Cos Prov": 62,
+    "Cos Cred": "PHD "
+  },
+  "Homeopathic Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 282,
+    "Ndb Deg": "MS",
+    "Cos Prov": 62,
+    "Cos Cred": "MS"
+  },
+  "Pediatric Sports Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 323,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 23,
+    "Cos Cred": "MD/DO"
+  },
+  "Physical Therapy - Hand Splinting": {
+    "NDB REC": "P",
+    "Ndb_spec": 369,
+    "Ndb Deg": "PT",
+    "Cos Prov": 64,
+    "Cos Cred": "PT"
+  },
+  "Urgent Care Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 328,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 66,
+    "Cos Cred": "URGI"
+  },
+  "Psychiatric Social Work": {
+    "NDB REC": "P",
+    "Ndb_spec": 9,
+    "Ndb Deg": "CSW",
+    "Cos Prov": 62,
+    "Cos Cred": "MSW"
+  },
+  "Psychology, Clinical (Masters Level)": {
+    "NDB REC": "P",
+    "Ndb_spec": 70,
+    "Ndb Deg": "MA",
+    "Cos Prov": 62,
+    "Cos Cred": "MA"
+  },
+  "Genetic Counselor ": {
+    "NDB REC": "P",
+    "Ndb_spec": 320,
+    "Ndb Deg": "MA",
+    "Cos Prov": 49,
+    "Cos Cred": "MA"
+  },
+  "Internal Medicine Pediatrics (MEDS-PEDS)": {
+    "NDB REC": "P",
+    "Ndb_spec": 79,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 4,
+    "Cos Cred": "MD/DO"
+  },
+  "Social Worker (Registered Social Worker)": {
+    "NDB REC": "P",
+    "Ndb_spec": 390,
+    "Ndb Deg": "RSW",
+    "Cos Prov": 62,
+    "Cos Cred": "MSW"
+  },
+  "Pediatric Critical Care Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 234,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 76,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Nutrition": {
+    "NDB REC": "P",
+    "Ndb_spec": 120,
+    "Ndb Deg": "RD",
+    "Cos Prov": 63,
+    "Cos Cred": "RD"
+  },
+  "Orthopedic Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 20,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 9,
+    "Cos Cred": "MD/DO"
+  },
+  "Optometry": {
+    "NDB REC": "P",
+    "Ndb_spec": 76,
+    "Ndb Deg": "OD",
+    "Cos Prov": 22,
+    "Cos Cred": "OD"
+  },
+  "Radioisotopic Pathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 240,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 38,
+    "Cos Cred": "DIAG"
+  },
+  "Cardiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 12,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 25,
+    "Cos Cred": "MD/DO"
+  },
+  "Abdominal Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 270,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 17,
+    "Cos Cred": "MD/DO"
+  },
+  "Forensic Psychiatry": {
+    "NDB REC": "P",
+    "Ndb_spec": 346,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 15,
+    "Cos Cred": "MD/DO"
+  },
+  "Chest and Respiratory Therapy": {
+    "NDB REC": "P",
+    "Ndb_spec": 75,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 48,
+    "Cos Cred": "MD/DO"
+  },
+  "Lactation Specialist ": {
+    "NDB REC": "P",
+    "Ndb_spec": 380,
+    "Ndb Deg": "CCC",
+    "Cos Prov": 49,
+    "Cos Cred": "CCC"
+  },
+  "Proctology ": {
+    "NDB REC": "P",
+    "Ndb_spec": 28,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 76,
+    "Cos Cred": "MD/DO"
+  },
+  "Vascular Intervention Radiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 335,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 16,
+    "Cos Cred": "DIAG"
+  },
+  "Sleep Study Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 361,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 76,
+    "Cos Cred": "MD/DO"
+  },
+  "Neoplastics Diseases": {
+    "NDB REC": "P",
+    "Ndb_spec": 502,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 36,
+    "Cos Cred": "MD/DO"
+  },
+  "Unknown Non-Physician": {
+    "NDB REC": "P",
+    "Ndb_spec": 99,
+    "Ndb Deg": "NON\nEDD",
+    "Cos Prov": 49,
+    "Cos Cred": "NON\nEDD"
+  },
+  "Oral and Maxillofacial Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 92,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 80,
+    "Cos Cred": "MD/DO"
+  },
+  "Anesthesia Assistant": {
+    "NDB REC": "P",
+    "Ndb_spec": 58,
+    "Ndb Deg": "MS",
+    "Cos Prov": "0020",
+    "Cos Cred": "MS"
+  },
+  "Molecular Genetic Pathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 371,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 11,
+    "Cos Cred": "MD/DO"
+  },
+  "Psychiatric Nurse Specialist/Practitioner": {
+    "NDB REC": "P",
+    "Ndb_spec": 329,
+    "Ndb Deg": "PHD",
+    "Cos Prov": 62,
+    "Cos Cred": "MSN"
+  },
+  "Pediatric Ophthalmology": {
+    "NDB REC": "P",
+    "Ndb_spec": 263,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 8,
+    "Cos Cred": "MD/DO"
+  },
+  "Optician": {
+    "NDB REC": "P",
+    "Ndb_spec": 109,
+    "Ndb Deg": "OPT",
+    "Cos Prov": 21,
+    "Cos Cred": "OPT"
+  },
+  "Nurse, Registered": {
+    "NDB REC": "P",
+    "Ndb_spec": 64,
+    "Ndb Deg": "RN",
+    "Cos Prov": 83,
+    "Cos Cred": "RN"
+  },
+  "Radiological Physics": {
+    "NDB REC": "P",
+    "Ndb_spec": 324,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 24,
+    "Cos Cred": "RADIA"
+  },
+  "Medical Genetics": {
+    "NDB REC": "P",
+    "Ndb_spec": 309,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Thoracic Cardiovascular Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 33,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 18,
+    "Cos Cred": "MD/DO"
+  },
+  "Legal Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 285,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Neuromuscular Disease": {
+    "NDB REC": "P",
+    "Ndb_spec": 269,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 5,
+    "Cos Cred": "MD/DO"
+  },
+  "Radioisotopic Radiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 503,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 38,
+    "Cos Cred": "DIAG"
+  },
+  "Traumatic Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 293,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 17,
+    "Cos Cred": "MD/DO"
+  },
+  "Preventative Medicine Aerospace": {
+    "NDB REC": "P",
+    "Ndb_spec": 41,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 49,
+    "Cos Cred": "MD/DO"
+  },
+  "Nutritionist (Registered Dietician)": {
+    "NDB REC": "P",
+    "Ndb_spec": 89,
+    "Ndb Deg": "RD",
+    "Cos Prov": 63,
+    "Cos Cred": "RD"
+  },
+  "Pediatric Endocrinology": {
+    "NDB REC": "P",
+    "Ndb_spec": 82,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 33,
+    "Cos Cred": "MD/DO"
+  },
+  "Registered Nurse Anesthetist": {
+    "NDB REC": "P",
+    "Ndb_spec": 395,
+    "Ndb Deg": "RNA",
+    "Cos Prov": "XXXX",
+    "Cos Cred": "CRNA"
+  },
+  "Nurse, Licensed Practical": {
+    "NDB REC": "P",
+    "Ndb_spec": 65,
+    "Ndb Deg": "LPN",
+    "Cos Prov": 28,
+    "Cos Cred": "LPN"
+  },
+  "Medical Oncology": {
+    "NDB REC": "P",
+    "Ndb_spec": 59,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 36,
+    "Cos Cred": "MD/DO"
+  },
+  "Geriatric Medicine": {
+    "NDB REC": "P",
+    "Ndb_spec": 38,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 4,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Nurse Practitioner": {
+    "NDB REC": "P",
+    "Ndb_spec": 389,
+    "Ndb Deg": "NP",
+    "Cos Prov": "XXXX",
+    "Cos Cred": "RNP\nNP"
+  },
+  "Cardiovascular Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 500,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 37,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 114,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 17,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Nephrology": {
+    "NDB REC": "P",
+    "Ndb_spec": 31,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 31,
+    "Cos Cred": "MD/DO"
+  },
+  "Psychologist Psychoanalys": {
+    "NDB REC": "P",
+    "Ndb_spec": "237",
+    "Ndb Deg": "PSY",
+    "Cos Prov": "0062",
+    "Cos Cred": "PHD"
+  },
+  "Interventional Cardiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 342,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 25,
+    "Cos Cred": "MD/DO"
+  },
+  "Allergy": {
+    "NDB REC": "P",
+    "Ndb_spec": 252,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 2,
+    "Cos Cred": "MD/DO"
+  },
+  "Psychology, Clinical (Doctorate Level)": {
+    "NDB REC": "P",
+    "Ndb_spec": 70,
+    "Ndb Deg": "PHD",
+    "Cos Prov": 61,
+    "Cos Cred": "PHD "
+  },
+  "Speech Pathology": {
+    "NDB REC": "P",
+    "Ndb_spec": 246,
+    "Ndb Deg": "LSP",
+    "Cos Prov": 46,
+    "Cos Cred": "ST"
+  },
+  "Diagnostic Radiology": {
+    "NDB REC": "P",
+    "Ndb_spec": 220,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 16,
+    "Cos Cred": "DIAG"
+  },
+  "Digestive Diseases": {
+    "NDB REC": "P",
+    "Ndb_spec": 509,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 29,
+    "Cos Cred": "MD/DO"
+  },
+  "Pediatric Neurology": {
+    "NDB REC": "P",
+    "Ndb_spec": 262,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": "0005",
+    "Cos Cred": "MD/DO"
+  },
+  "Athletic Trainer": {
+    "NDB REC": "P",
+    "Ndb_spec": 121,
+    "Ndb Deg": "BA",
+    "Cos Prov": 49,
+    "Cos Cred": "BA"
+  },
+  "Family Practice Specialist": {
+    "NDB REC": "P",
+    "Ndb_spec": 275,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 73,
+    "Cos Cred": "MD/DO"
+  },
+  "Licensed Vocational Nurse": {
+    "NDB REC": "P",
+    "Ndb_spec": 382,
+    "Ndb Deg": "LVN",
+    "Cos Prov": 28,
+    "Cos Cred": "LVN"
+  },
+  "Back & Spine Surgery": {
+    "NDB REC": "P",
+    "Ndb_spec": 348,
+    "Ndb Deg": "MD/DO",
+    "Cos Prov": 17,
+    "Cos Cred": "MD/DO"
+  }
+}

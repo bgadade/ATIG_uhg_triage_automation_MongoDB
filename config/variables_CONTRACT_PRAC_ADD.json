@@ -1,0 +1,51 @@
+[
+    {"LayerName": "CleanseDataFrame","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"singleValue": {
+      "derivations": [
+        {"name": "createCol","type": "mv_cmn","input": {"defVal": "", "outputCol": "REQ_FIELD_CLAR"}},
+        {"name": "blankCol","type": "mv_cmn","input": {"outputCol":"REQ_FIELD_CLAR_DEL"}},
+        {"name": "createCol","type": "mv_cmn","input": {"defVal": "False", "outputCol": "RETRO_DEFAULT_VAL"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["REQ_FIELD_CLAR", "10", "max", "REQ_FIELD_CLAR" ], "mandatory":"True"}},
+        {"name": "applyRegex","type": "mv_cmn","input": {"inputCol":"EFFECTIVE_DATE", "regexKey":"EFFECTIVE_DATE"}}
+      ]
+    }}
+  ]},
+  {"LayerName": "CleanseLayer1","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "var_parseDate","type": "mv_cmn","input": ["EFFECTIVE_DATE", "C"],"col": "PARSED_EFFECTIVE_DATE"},
+        {"name": "var_parseDate","type": "mv_cmn","input": ["ORIGINAL_DEL_DATE", "C"],"col": "PARSED_ORIGINAL_DEL_DATE"}
+        ]
+    }}
+  ]},
+  {"LayerName": "multivaluedCols","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "placeHolder","type": "mv_cmn","input": [],"col": "placeHolder"},
+        {"name": "setDefaultValInRow","type": "mv_cmn","input": ["Y"],"col": "OUT_ROSTER_ATTACHED"},
+        {"name": "setDefaultValInRow","type": "mv_cmn","input": ["All Other"],"col": "OUT_CONTR_PRODS"},
+        {"name": "setDefaultValInRow","type": "mv_cmn","input": ["'99999'"],"col": "OUT_FEE_SCHED"}
+      ]
+    }}
+  ]},
+  {"LayerName": "FinalCleansingLayer","LayerType": "DF","ProcessStage": 0, "Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "effectiveDatePsi","type": "mv_cmn","input": {"inputCol":["PARSED_EFFECTIVE_DATE", "PARSED_ORIGINAL_DEL_DATE"],"outputCol":"OUT_EFFECTIVE_DATE"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_EFFECTIVE_DATE", "10", "max", "OUT_EFFECTIVE_DATE"]}},
+        {"name": "updateClarification","type": "mv_cmn","input": {"ignore":0,"updateFrom":"errDictDupValInSv","colMapping":{"EFFECTIVE_DATE":"OUT_EFFECTIVE_DATE"},"conditionMapping":{}}}
+        ]
+    }}
+  ]},
+
+
+  {"LayerName": "conflictRemovalLayer","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"singleValue": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}}
+  ]},
+  {"LayerName": "MasterDictListLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]},
+  {"LayerName": "fdfLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]}
+
+]

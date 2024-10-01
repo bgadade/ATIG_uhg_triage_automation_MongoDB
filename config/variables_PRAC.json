@@ -1,0 +1,348 @@
+[
+  {"LayerName": "CleanseDataFrame","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"FinalDegree": {
+      "derivations": [
+        {"name": "splitColumn","type": "mv_cmn","input": ["DEGREE"]},
+        {"name": "normalizeAfterSplit","type": "mv_cmn","input": ["DEGREE"]},
+        {"name": "extractIndicator","type": "mv_cmn","input": {"inputCol":"DEGREE", "outputCol":"DEGREE_INDICATOR","standardsKeys":["Primary","Secondary"]}},
+        {"name": "resetRowNumCount","type": "mv_cmn","input": []},
+        {"name": "rowLvlFuncFromDfLayer","type": "mv_cmn","input": {"funcName":"var_mergeDerivedWithInput","inputCol":["DEGREE_INDICATOR", "DERIVED_DEGREE_INDICATOR"],"outputCol": "MERGE_DEGREE_INDICATOR"}},
+        {"name": "var_finalColIndicator","type": "mv_cmn","input": {"inputCol":["MERGE_DEGREE_INDICATOR"],"outputCol": "CLEAN_DEGREE_INDICATOR"}},
+        {"name": "standardizeColumn","type": "mv_cmn","input": {"inputCol":["CLEAN_DEGREE_INDICATOR"],"outputCol": "DEGREE_FINAL_INDICATOR","standardsKeys":["Primary", "Secondary"]}},
+        {"name": "degreePunctuationClean","type": "mv_cmn","input": {"inputCol":["DEGREE"],"outputCol": "CLEAN_DEGREE"}}
+      ]}
+    },
+  {"singleValue": {
+      "derivations": [
+        {"name": "cleanProvType","type": "var","input": {"inputCol":"PROVIDER_TYPE", "val1": "PCP", "val2": "SPEC", "val3": "SPECIAL_CASE", "val4": "Hosp", "dfname": "singleValue", "standardsKeys":["pcp_prov_type", "pcp_special_case", "hosp"]}},
+        {"name": "npiLookup","type": "mv_cmn", "input": {"inpCol":"FINAL_NPI", "npiregDict": {
+            "NPI-1": {"last_name": "last_name", "first_name": "first_name", "middle_name": "middle_name", "credential": "credential"},
+            "NPI-2": {"last_name": "authorized_official_last_name","first_name": "authorized_official_first_name","middle_name": "authorized_official_middle_name","credential": "authorized_official_credential"},
+            "NPI": {"last_name": "","first_name": "","middle_name": "","credential": ""}
+          }, "npiParseFlag": "0", "output":"npilookup", "npiData": "npiData", "maxTries": 3} },
+        {"name": "fetchSpecAndTaxonomyFromAPI","type": "mv_cmn","input": {"apiSpec":"desc","apiTaxonomyCode":"code","isPrimary":"primary","outputCol":["TAXONOMY_SPECIALITY"]}}
+      ]
+    }},
+
+    {"Speciality": {
+      "derivations": [
+        {"name": "removeRowDf","type": "mv_cmn","input": {"qry":"SPECIALITY_INDICATOR != 'X' and (SPECIALITY == SPECIALITY or ROW_COUNT == 1)"}},
+        {"name": "splitColumn","type": "mv_cmn","input": ["SPECIALITY"]},
+        {"name": "normalizeAfterSplit","type": "mv_cmn","input": ["SPECIALITY"]},
+        {"name": "extractIndicator","type": "mv_cmn","input": {"inputCol":"SPECIALITY", "outputCol":"SPECIALITY_INDICATOR","standardsKeys":["Primary","Secondary"]}},
+
+        {"name": "getCleanDegree","type": "var","input": "masterDict['FinalDegree']"},
+        {"name": "sortDf","type": "mv_cmn","input": ["['DERIVED_SPECIALITY_INDICATOR', 'ROW_NUM']","[True,True]"]},
+        {"name": "resetRowNumCount","type": "mv_cmn","input": []},
+        {"name": "wrapperForSpltyIndCalculation","type": "mv_cmn", "input": {"mergeSpltyIndInput":["SPECIALITY_INDICATOR", "DERIVED_SPECIALITY_INDICATOR"],"cleanSpltyIndInput":["Primary", "Secondary"],"finalSpltyIndInput":["Empty Indicator Value"],"mrgSpltyInpOutput":"MERGE_SPECIALITY_INDICATOR","cleanSpltyIndOutput":"CLEAN_SPECIALITY_INDICATOR","finalSpltyIndOutput":"FINAL_INDICATOR"}},
+        {"name": "checkAndCreateEmptyRow","type": "mv_cmn","input": {"spltyInd": "FINAL_INDICATOR","qry":"FINAL_INDICATOR.str.lower() in ['primary']"}},
+        {"name": "sortDf","type": "mv_cmn","input": ["['FINAL_INDICATOR', 'ROW_NUM']","[True,True]"]},
+        {"name": "resetRowNumCount","type": "mv_cmn","input": []},
+        {"name": "isEmptySpec","type": "mv_cmn","input": {"diDf":{"singleValue":""},"svDF":"singleValue","spec": "SPECIALITY", "specInd": "FINAL_INDICATOR", "outputCol": "useApiVal"}},
+        {"name": "getSpecValFromSvDF","type": "mv_cmn","input": {"diDf":{"singleValue":""},"svDF":"singleValue","apiSpeciality":"TAXONOMY_SPECIALITY","useApiVal":"useApiVal","spec":"SPECIALITY"}}
+      ]}
+    },
+    {"singleValue": {
+      "derivations": [
+      {"name": "getTaxonomyFromAPIValues", "type": "mv_cmn", "input": {"diDf":{"Speciality":""},"specDF":"Speciality","useApiVal":"useApiVal","apiTaxonomy": "TAXONOMY_SPECIALITY","taxonomy":"TAXONOMY"}}
+        ]
+    }
+    },
+
+     {"Address":{
+      "derivations":[
+        {"name": "processCombinedAddTypeInd","type": "mv_cmn","input": {"inputCol":"COMBINED_ADDRESS_TYPE_IND","outputCol":["ADDRESS_TYPE","ADDRESS_INDICATOR"],"standardsKeys":["Primary","Secondary"]}}
+      ]
+    }},
+    {"singleValue": {
+      "derivations": [
+        {"name": "applyRegex","type": "mv_cmn","input": {"inputCol":"EFFECTIVE_DATE", "regexKey":"EFFECTIVE_DATE"}},
+        {"name": "applyRegex","type": "mv_cmn","input": {"inputCol":"ORIGINAL_DEL_DATE", "regexKey":"EFFECTIVE_DATE"}},
+        {"name": "cleanSVDF","type": "mv_cmn","input": {"inputCol":"NAME_MIDDLE", "outputCol":"NAME_MIDDLE","standardsKeys":["Blank"]}}
+      ]
+    }}
+  ]},
+
+  {"LayerName": "CleanseLayer1","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+     {"FinalDegree": {
+      "derivations": [
+        { "name": "var_fillPrimaryDegreeInd", "type": "var", "input": ["DEGREE_FINAL_INDICATOR"],"col": "OUT_DEGREE_PRIMARY_IND"}
+        ]}},
+    {"singleValue": {
+      "derivations": [
+        {"name": "var_parseDate","type": "mv_cmn","input": ["EFFECTIVE_DATE", "C"],"col": "PARSED_EFFECTIVE_DATE"},
+        {"name": "var_parseDate","type": "mv_cmn","input": ["ORIGINAL_DEL_DATE", "C"],"col": "PARSED_ORIGINAL_DEL_DATE"},
+        {"name": "taxIdClean","type": "var","input": ["TAX_ID"],"col": "CLEAN_TAX_ID"},
+        {"name": "parseNameFromFullNameCol","type": "var","input": ["'NAME_FIRST'", "'NAME_MIDDLE'", "'NAME_LAST'", "'SUFFIX'", "masterDict['diColMapping']"],"col": "PARSED_NAME"},
+        {"name": "fillFrstMidLstNames","type": "var","input": ["'PARSED_NAME'", "'NAME_FIRST'"],"col": "OUT_NAME_FIRST"},
+        {"name": "fillFrstMidLstNames","type": "var","input": ["'PARSED_NAME'", "'NAME_MIDDLE'"],"col": "MERGE_NAME_MIDDLE"},
+        {"name": "middleNameClarified","type": "var","input": ["'MERGE_NAME_MIDDLE'","'PARSED_NAME'"], "col": "OUT_NAME_MIDDLE"},
+        {"name": "fillFrstMidLstNames","type": "var","input": ["'PARSED_NAME'", "'NAME_LAST'"],"col": "OUT_NAME_LAST"},
+        {"name": "var_getDegDetails","type": "mv_cmn","input": ["masterDict['FinalDegree']","'OUT_DEGREE_PRIMARY_IND'", "'Primary'", "'CLEAN_DEGREE'"],"col": "var_primDeg"},
+        {"name": "parseDegreeFromName","type": "var","input": ["'PARSED_NAME'", "'SUFFIX'", "'var_primDeg'"], "col": "PARSED_SUFFIX_DEGREE"},
+        {"name": "getParsedSuffix","type": "var","input": ["'PARSED_SUFFIX_DEGREE'", "0", "'NAME_SUFFIX'"],"col": "OUT_SUFFIX"},
+        {"name": "getParsedVal", "type": "var", "input": ["PARSED_SUFFIX_DEGREE","1"],"col": "DEGREE_FROM_SUFFIX"}
+
+      ]}
+    },
+    {"Address": {
+      "derivations": [
+        {"name": "var_mergeDerivedWithInput","type": "mv_cmn","input": ["ADDRESS_INDICATOR", "DERIVED_ADDRESS_INDICATOR"],"col": "MERGE_ADDRESS_INDICATOR"},
+        {"name": "var_addOrderInd","type": "mv_cmn","input": ["ADDRESS_ORDER", "MERGE_ADDRESS_INDICATOR"],"col": "ADDRESS_ORDER_INDICATOR"},
+        {"name": "var_mergeDerivedWithInput","type": "mv_cmn","input": ["ADDRESS_TYPE", "DERIVED_ADDRESS_TYPE"],"col": "MERGE_ADDRESS_TYPE"},
+        {"name": "standardisePSIndi","type": "mv_cmn","input": ["ADDRESS_ORDER_INDICATOR", ["Primary", "Secondary"]],"col": "CLEAN_ADDRESS_IND"},
+        {"name": "var_standardiseString","type": "mv_cmn","input": ["MERGE_ADDRESS_TYPE", ["PLSV", "Bill", "Combo", "Mail", "Cred"]],"col": "CLEAN_ADDRESS_TYPE"},
+        {"name": "var_ConcatAddress","type": "mv_cmn","input": [{"address1":"ADDRESS_LINE_1","address2":"ADDRESS_LINE_2","city": "ADDRESS_CITY", "state": "ADDRESS_STATE", "zip_code": "ADDRESS_ZIP"}],"col": "CONCAT_ADDRESS"},
+        {"name": "var_ParseAddress","type": "mv_cmn","input": ["'CONCAT_ADDRESS'"],"col": "PARSED_ADDRESS"},
+        {"name": "var_getZipCode","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "OUT_ADDRESS_ZIP"},
+        {"name": "var_getAddress1","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "OUT_ADDRESS_LINE_1"},
+        {"name": "var_getAddress2","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "OUT_ADDRESS_LINE_2"},
+        {"name": "var_getCity","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "PAR_ADDRESS_CITY"},
+        {"name": "var_fnlCity","type": "mv_cmn","input": ["PAR_ADDRESS_CITY", "OUT_ADDRESS_LINE_1", "ADDRESS_CITY"],"col": "OUT_ADDRESS_CITY"},
+        {"name": "var_getState","type": "mv_cmn","input": ["'PARSED_ADDRESS'"],"col": "PAR_ADDRESS_STATE"},
+        {"name": "var_fnlState","type": "mv_cmn","input": ["PAR_ADDRESS_STATE", "OUT_ADDRESS_LINE_1", "ADDRESS_CITY"],"col": "OUT_ADDRESS_STATE"},
+        {"name": "var_generalToPlsv","type": "var","input": ["'CLEAN_ADDRESS_TYPE'","True"],"col": "CLEAN_ADDRESS_TYPE"},
+        {"name": "var_parseDate","type": "mv_cmn","input": ["ADDR_EFFECTIVE_DATE", "C"],"col": "PARSED_ADDR_EFFECTIVE_DATE"}
+    ]}
+    },
+    {"FinalDegree": {
+      "derivations": [
+        {"name": "getParsedDeg", "type": "var", "input": ["masterDict['singleValue']","DEGREE_FROM_SUFFIX","CLEAN_DEGREE"],"col": "CLEAN_DEGREE"},
+        {"name": "var_isInSot", "type": "mv_cmn", "input": ["CLEAN_DEGREE"],"col": "var_degInSot"},
+        {"name": "var_exceptionDeg", "type": "var", "input": ["CLEAN_DEGREE"],"col": "EX_sotDeg"},
+        {"name": "var_finalDegPsi", "type": "var", "input": ["var_degInSot","'EX_sotDeg'", "'CLEAN_DEGREE'"],"col": "var_finalDeg"},
+        {"name": "var_lkpMasterDeg","type": "var","input": ["'var_finalDeg'"],"col": "MASTER_DEG_LOOKUP"},
+        {"name": "var_masterDeg","type": "var","input": ["'MASTER_DEG_LOOKUP'","'var_finalDeg'"],"col": "MASTER_DEG_NAME"},
+        {"name": "var_masterDegIsMidLvl","type": "var","input": ["'MASTER_DEG_LOOKUP'"],"col": "var_isMidLevelDeg"},
+        { "name": "var_getDegreeCredTitlePsi", "type": "var", "input": ["'MASTER_DEG_NAME'"],"col": "var_getDegreeCredTitle"}
+      ]}
+    },
+    {"Speciality": {
+      "derivations": [
+        {"name": "var_getDegDetails","type": "mv_cmn","input": ["masterDict['FinalDegree']","'DEGREE_FINAL_INDICATOR'", "'Primary'", "'var_isMidLevelDeg'"],"col": "var_isPrimaDegMidLevel"},
+        {"name": "var_getDegDetails","type": "mv_cmn","input": ["masterDict['FinalDegree']","'DEGREE_FINAL_INDICATOR'", "'Primary'", "'var_getDegreeCredTitle'"],"col": "var_degreeVal"},
+        {"name": "var_getDegDetails","type": "mv_cmn","input": ["masterDict['FinalDegree']","'DEGREE_FINAL_INDICATOR'", "'Primary'", "'CLEAN_DEGREE'"],"col": "DEGREE_FOR_SPEC_LOOKUP"},
+
+        {"name": "var_isInSot", "type": "mv_cmn", "input": ["'SPECIALITY'"],"col": "var_inSot"},
+        {"name": "var_exceptionSpec", "type": "mv_cmn", "input": ["'SPECIALITY'","'DEGREE_FOR_SPEC_LOOKUP'"],"col": "EX_sotSPEC"},
+        {"name": "var_finalSpecPsi", "type": "mv_cmn", "input": ["'var_inSot'", "'EX_sotSPEC'", "'SPECIALITY'"],"col": "var_finalSpec"},
+        {"name": "var_lkpMasterSpec","type": "mv_cmn","input": ["'var_finalSpec'"],"col": "NDB_LOOKUP"},
+        {"name": "var_ndbSpec","type": "mv_cmn","input": ["'NDB_LOOKUP'","'var_finalSpec'", "var_inSot"],"col": "NDB_SPEC_NAME"},
+        {"name": "var_ndbSpecIsMidLvl","type": "mv_cmn","input": ["'NDB_LOOKUP'", "var_inSot"],"col": "var_isMidLevelSpec"}
+      ]}
+    }
+  ]},
+
+  {"LayerName": "multivaluedCols","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"Speciality": {
+      "derivations": [
+        {"name": "primarySpecialityName","type": "var","input": ["'NDB_SPEC_NAME'"],"col": "OUT_NDB_SPEC_NAME"},
+        {"name": "var_primSecSpecalityInd","type": "var","input": ["'var_isPrimaDegMidLevel'", "'var_isMidLevelSpec'", "FINAL_INDICATOR", "Primary"],"col": "OUT_SPECIALITY_PRIMARY_IND"},
+        {"name": "var_addTransactionTypeCol", "type": "var", "input": ["masterDict['singleValue']", "VALIDATED_ACTION"], "col":"var_ttype"}
+    ]}
+  },
+	{"FinalDegree": {
+	  "derivations": [
+        {"name": "var_getSpecDetails","type": "var","input": ["masterDict['Speciality']","'OUT_SPECIALITY_PRIMARY_IND'", "'Primary'", "'var_isMidLevelSpec'"],"col": "var_specialtyMidLvlInd"},
+        { "name": "var_getDegreeFromNdbGridPsi", "type": "var", "input": ["masterDict['Speciality']", "'var_getDegreeCredTitle'"],"col": "TITLE_DEGREE_CREDENTIAL"},
+        { "name": "var_getFinalDegreePsi", "type": "var", "input": ["'TITLE_DEGREE_CREDENTIAL'"],"col": "OUT_TITLE_DEGREE_CREDENTIAL"},
+        { "name": "var_fillPrimaryDegreeInd", "type": "var", "input": ["DEGREE_FINAL_INDICATOR"],"col": "OUT_DEGREE_PRIMARY_IND"},
+        { "name": "var_markDeletion", "type": "var", "input": ["'OUT_DEGREE_PRIMARY_IND'", "'TITLE_DEGREE_CREDENTIAL'"],"col": "DEGREE_DELETE_ROW"}
+    ]}
+  },
+    {"singleValue": {
+      "derivations": [
+        {"name": "var_getMinAddrEffectiveDate","type": "var","input": ["masterDict['Address']","'PARSED_EFFECTIVE_DATE'", "'PARSED_ADDR_EFFECTIVE_DATE'"],"col": "var_MinAddressEffectiveDate"},
+        {"name": "var_getSpecDetails","type": "var","input": ["masterDict['Speciality']","'OUT_SPECIALITY_PRIMARY_IND'", "'Primary'", "'var_finalSpec'"],"col": "var_primarySpecialty"},
+        {"name": "var_getSpecDetails","type": "var","input": ["masterDict['Speciality']","'OUT_SPECIALITY_PRIMARY_IND'", "'Primary'", "'NDB_LOOKUP'"],"col": "var_primarySpecialtyNDBLookup"},
+        {"name": "var_getSpecDetails","type": "var","input": ["masterDict['Speciality']","'OUT_SPECIALITY_PRIMARY_IND'", "'Primary'", "'NDB_SPEC_NAME'"],"col": "SV_NDB_SPEC"},
+        {"name": "var_getSpecDetails","type": "var","input": ["masterDict['Speciality']","'OUT_SPECIALITY_PRIMARY_IND'", "'supervising'", "'NDB_SPEC_NAME'"],"col": "SV_SUPER_NDB_SPEC"},
+        {"name": "var_getSpecDetails","type": "var","input": ["masterDict['Speciality']","'OUT_SPECIALITY_PRIMARY_IND'", "'supervising'", "'SUPERVISING_PHYSICIAN'"],"col": "var_SuperPhy"},
+        {"name": "var_getSpecDetails","type": "var","input": ["masterDict['Speciality']","'OUT_SPECIALITY_PRIMARY_IND'", "'Primary'", "'var_isMidLevelSpec'"],"col": "SPEC_MIDLEVEL_IND"},
+        {"name": "var_getDegDetails","type": "mv_cmn","input": ["masterDict['FinalDegree']","'DEGREE_FINAL_INDICATOR'", "'Primary'", "'var_isMidLevelDeg'"],"col": "DEG_MIDLEVEL_IND"}
+      ]}
+  },
+  {"Address": {
+    "derivations": [
+      {"name": "var_getAddType", "type": "var", "input": ["masterDict['Address']","'CLEAN_ADDRESS_TYPE'","'PARSED_ADDRESS'", "'bill'"], "col": "var_BillAdd"},
+      {"name": "var_getAddType", "type": "var", "input": ["masterDict['Address']","'CLEAN_ADDRESS_TYPE'","'PARSED_ADDRESS'", "'mail'"], "col": "var_MailAdd"},
+      {"name": "var_getAddType", "type": "var", "input": ["masterDict['Address']","'CLEAN_ADDRESS_TYPE'","'PARSED_ADDRESS'", "'cred'"], "col": "var_CredAdd"},
+      {"name": "var_CheckCombo", "type": "var", "input": ["masterDict['Address']","'CLEAN_ADDRESS_TYPE'","'PARSED_ADDRESS'","'var_BillAdd'"], "col": "var_CheckCombo"},
+      {"name": "var_CheckPOBOX", "type": "var", "input": ["'CLEAN_ADDRESS_TYPE'","'PARSED_ADDRESS'"], "col": "var_CheckPOBOX"},
+      {"name": "var_updateAddressType", "type": "var", "input": ["'CLEAN_ADDRESS_TYPE'","'var_CheckCombo'","'var_CheckPOBOX'","'PLSV address cannot hold PO Box'"], "col": "OUT_ADDRESS_TYPE"},
+      {"name": "var_getMinPLSVRow", "type": "var", "input": ["masterDict['Address']","'CLEAN_ADDRESS_TYPE'"], "col": "var_MinPLSVRow"},
+      {"name": "var_getAddressIndicator", "type": "var", "input": ["'CLEAN_ADDRESS_IND'","'OUT_ADDRESS_TYPE'","'var_MinPLSVRow'", "'OUT_ADDRESS_LINE_1'", "'OUT_ADDRESS_LINE_2'"], "col": "OUT_ADDRESS_IND"}
+    ]}
+  },
+  {"singleValue": {
+    "derivations": [
+      {"name": "placeHolder","type": "mv_cmn","input": [],"col": "placeHolder"},
+      {"name": "Type","type": "var","input": [],"col": "Type"},
+      {"name": "getCrossDfData","type": "mv_cmn","input": ["masterDict['Address']","(OUT_ADDRESS_TYPE.str.lower() in ['plsv','combo'] and OUT_ADDRESS_IND.str.lower() in ['p'])","(OUT_ADDRESS_TYPE.str.lower() in ['plsv','combo','general'])","OUT_ADDRESS_ZIP","Primary Plsv Zip Missing","c"],"col": "SV_OUT_ADDRESS_ZIP"},
+      {"name": "getCrossDfData","type": "mv_cmn","input": ["masterDict['Address']","(OUT_ADDRESS_TYPE.str.lower() in ['plsv','combo'] and OUT_ADDRESS_IND.str.lower() in ['p'])","(OUT_ADDRESS_TYPE.str.lower() in ['plsv','combo','general'])","OUT_ADDRESS_STATE","Primary Plsv State Missing","c"],"col": "SV_OUT_ADDRESS_STATE"},
+      {"name": "taxId","type": "tree","input": ["'CLEAN_TAX_ID'","'invalid Tax Id'"],"col": "INTERMEDIATE_TAX_ID"},
+      {"name": "checkZeros", "type": "mv_cmn", "input": ["INTERMEDIATE_TAX_ID", "tax id is zero", "c"], "col": "CLEANSED_TAX_ID"},
+      {"name": "lessThanXDigit", "type": "var", "input": ["CLEANSED_TAX_ID", "tax id is less than 9 digit", "c", 9], "col": "CLEANSED_TAX_ID_1"},
+      {"name": "checkNonNumeric", "type": "var", "input": ["CLEANSED_TAX_ID_1", "tax id is non numeric", "c"], "col": "OUT_TAX_ID"},
+
+      {"name": "npi","type": "tree","input": ["'FINAL_NPI'","'invalid NPI'"],"col": "INTERMEDIATE_NPI"},
+      {"name": "checkZeros", "type": "mv_cmn", "input": ["INTERMEDIATE_NPI", "npi is zero", "c"], "col": "CLEANSED_NPI"},
+      {"name": "lessThanXDigit", "type": "mv_cmn", "input": ["CLEANSED_NPI", "npi is less than 10 digit", "c", 10], "col": "CLEANSED_NPI_1"},
+      {"name": "checkNonNumeric", "type": "mv_cmn", "input": ["CLEANSED_NPI_1", "npi is non numeric", "c"], "col": "OUT_NPI"},
+      {"name": "confirmTaxID","type": "var","input": ["'OUT_TAX_ID'"], "col": "check_taxId"},
+      {"name": "get_pra","type": "var","input": [],"col": "OUT_PRA"}
+    ]}
+  }
+  ]},
+
+  {"LayerName": "FinalCleansingLayer","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"Address": {
+      "derivations": [
+        {"name": "sortDf","type": "mv_cmn","input": ["['OUT_ADDRESS_TYPE','OUT_ADDRESS_IND']","[True,True]"]},
+        {"name": "addrCheck", "type": "mv_cmn", "input": {"inputCol": ["OUT_ADDRESS_LINE_1","OUT_ADDRESS_TYPE"], "outputCol":"OUT_ADDRESS_LINE_1"}},
+        {"name": "addrCheck", "type": "mv_cmn", "input": {"inputCol": ["OUT_ADDRESS_LINE_2","OUT_ADDRESS_TYPE"], "outputCol":"OUT_ADDRESS_LINE_2"}}
+      ]}
+    },
+    {"Speciality": {
+      "derivations": [
+        {"name": "updateRowsPsi","type": "mv_cmn","input": {"cols":["var_isPrimaSpecMidLevel"], "replaceWithCol":"var_isMidLevelSpec", "replaceWithCondition":"(df['OUT_SPECIALITY_PRIMARY_IND'].isin(['Primary']))"}},
+        {"name": "getFirstNonMidLvlSupSpec","type": "var","input": {"outputCol":"superSpecPsi","replaceWithCol":"NDB_SPEC_NAME", "replaceWithCondition":"(df['OUT_SPECIALITY_PRIMARY_IND'].isin(['supervising'])) & (df['var_isMidLevelSpec'].isin(['N','']))", "isInSOT":"var_inSot", "IsEmptyCol":"isEmptyInputSuperSpec"}},
+        {"name": "createIsEmptySpec","type": "var","input": {"outputCol":"isEmptyInputSpec","inputCol":"var_inSot"}},
+        {"name": "removeRowDf","type": "mv_cmn","input": {"qry":"OUT_SPECIALITY_PRIMARY_IND != 'supervising'"}}
+      ]}
+    },
+     {"FinalDegree": {
+      "derivations": [
+        {"name": "removeRowDf","type": "mv_cmn","input":{"qry":"DEGREE_DELETE_ROW != 'Y'"}},
+        {"name": "removeRowDuplicate","type": "var","input": ["OUT_TITLE_DEGREE_CREDENTIAL"]},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_TITLE_DEGREE_CREDENTIAL", "3", "max", "OUT_TITLE_DEGREE_CREDENTIAL"]}}
+      ]}
+    },
+     {"singleValue": {
+      "derivations": [
+        {"name": "clarifyFields","type": "mv_cmn","input": ["OUT_PCP_HBP_SPEC"]},
+        {"name": "createAndClarifyCol","type": "mv_cmn","input": {"clrMsg": "Field not given", "outputCol": "REQ_FIELD_CLAR"}}
+       ]}
+    },
+     {"Speciality": {
+      "derivations": [
+      ]}
+     },
+    {"ProviderEmail/WebAddr":{
+      "derivations":[
+        {"name": "drvElecCommType","type": "mv_cmn","input": {"inputCol": "PROVIDER_EMAIL/WEB_ADDR", "outputColECTyp": "DRV_COMMUNICATION_TYPE_NM","outputColEC":"OUT_ELECTRONIC_COMM_NM"}}]
+    }}
+   ]},
+
+  {"LayerName": "PSILayerDf","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"singleValue": {
+      "derivations": [
+        {"name": "standardisePcpInd","type": "var","input": {"inputCol":"PROVIDER_TYPE", "outputCol":"PCP_IND","standardsKeys":"pcp"}},
+        {"name": "getPractionerType","type": "var","input": {"inputCol":["OUT_NAME_FIRST","OUT_NAME_LAST","GROUP_NAME"],"outputCol":"OUT_PRACT_TYPE"}},
+        {"name": "fillGroupName","type": "var","input": {"inputCol":["OUT_NAME_FIRST","OUT_NAME_LAST","GROUP_NAME","OUT_PRACT_TYPE"],"outputCol":"OUT_GROUP_NAME","placeHolder":{"P":"NOT APPLICABLE","G":""}}},
+        {"name": "cleanName","type": "var","input": {"inputCol":"OUT_NAME_FIRST","outputCol":"OUT_NAME_FIRST"}},
+        {"name": "cleanName","type": "var","input": {"inputCol":"OUT_NAME_LAST","outputCol":"OUT_NAME_LAST"}},
+        {"name": "cleanName","type": "var","input": {"inputCol":"OUT_NAME_MIDDLE","outputCol":"OUT_NAME_MIDDLE", "mandatory":false}},
+        {"name": "removeSpecialCharacters","type": "mv_cmn","input": {"inputCol":"OUT_GROUP_NAME","outputCol":"OUT_GROUP_NAME_NEW"}},
+        {"name": "abbreviateGrpName","type": "var","input": {"inputCol":"OUT_GROUP_NAME_NEW","outputCol":"OUT_GROUP_NAME_ABRV", "maxLength": "30"}},
+        {"name": "extractTaxonomyCode","type": "var","input": {"inputCol":"TAXONOMY","outputCol":"OUT_TAXONOMY"}},
+        {"name": "effectiveDatePsi","type": "mv_cmn","input": {"inputCol":["var_MinAddressEffectiveDate", "PARSED_ORIGINAL_DEL_DATE"],"outputCol":"OUT_EFFECTIVE_DATE"}},
+        {"name": "npiFeildValidation","type": "mv_cmn","input": {"ignore":0,"col":"OUT_NAME_LAST", "npiRegCol": "last_name", "npiDict": "npilookup", "npiFlag": "npiParseFlag", "cleanNPIStr": "0"}},
+        {"name": "npiFeildValidation","type": "mv_cmn","input": {"ignore":0,"col":"OUT_NAME_FIRST", "npiRegCol": "first_name", "npiDict": "npilookup", "npiFlag": "npiParseFlag", "cleanNPIStr": "0"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_PRACT_TYPE", "1", "eql", "OUT_PRACT_TYPE"]}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_NAME_LAST", "65", "max", "OUT_NAME_LAST"],"filter":{"OUT_PRACT_TYPE":["P"]}}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_NAME_FIRST", "30", "max", "OUT_NAME_FIRST"],"filter":{"OUT_PRACT_TYPE":["P"]}}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_GROUP_NAME_ABRV", "30", "max", "OUT_GROUP_NAME_ABRV"],"filter":{"OUT_PRACT_TYPE":["G"]}}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["PCP_IND", "1", "max", "PCP_IND"]}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_TAX_ID", "9", "max", "OUT_TAX_ID"]}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_NPI", "10", "max", "OUT_NPI"]}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_EFFECTIVE_DATE", "10", "eql", "OUT_EFFECTIVE_DATE"]}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["SV_OUT_ADDRESS_ZIP", "5", "max", "SV_OUT_ADDRESS_ZIP"]}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["SV_OUT_ADDRESS_STATE", "2", "max", "SV_OUT_ADDRESS_STATE"]}},
+        {"name": "updateClarification","type": "mv_cmn","input": {"ignore":0,"updateFrom":"errDictDupValInSv","colMapping":{"EFFECTIVE_DATE":"OUT_EFFECTIVE_DATE","GROUP_NAME":"OUT_GROUP_NAME_ABRV"},"conditionMapping":{"GROUP_NAME":"row['OUT_PRACT_TYPE']=='G'"}}},
+        {"name": "updateRowsPsi","type": "mv_cmn","input": {"cols":{"OUT_PRAC_DEL_CRED_DT":"PARSED_ORIGINAL_DEL_DATE"}, "filterCondition":"((df['PARSED_ORIGINAL_DEL_DATE']=='G'))","replaceWithValue":""}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_PRAC_DEL_CRED_DT", "10", "eql", "OUT_PRAC_DEL_CRED_DT"], "mandatory":"False"}}
+      ]}
+    },
+    {"FinalDegree": {
+      "derivations": [
+        {"name": "removeRowDf","type": "mv_cmn","input": {"qry":"OUT_DEGREE_PRIMARY_IND.str.lower() in ['primary']","topRow":true}},
+        {"name": "changeDegreeInd","type": "var","input": {"inputCol":"OUT_DEGREE_PRIMARY_IND","outputCol":"OUT_DEGREE_PRIMARY_IND"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_DEGREE_PRIMARY_IND", "1", "max", "OUT_DEGREE_PRIMARY_IND"]}}
+      ]}
+    },
+    {"Speciality": {
+      "derivations": [
+        {"name": "removeRowDf","type": "mv_cmn","input": {"qry":"OUT_SPECIALITY_PRIMARY_IND.str.lower() in ['primary']","topRow":true}},
+        {"name": "getSpecPSI","type": "var","input": {"inputCol":["var_isPrimaSpecMidLevel","superSpecPsi"],"outputCol":["OUT_SUPER_SPEC_PSI"]}},
+        {"name": "unknownSpPhy","type": "var","input": {"inputCol":{"spec":"OUT_NDB_SPEC_NAME","superSpec":"OUT_SUPER_SPEC_PSI","ttype":"var_ttype","isSpecEmptyCol":"isEmptyInputSpec","isSuperSpecEmptyCol":"isEmptyInputSuperSpec","ttypeList":["DEMO ADDR ADD","DEMO ADDR CHANGE","DEMO ADDR INACTIVATE","CONT TIN INACTIVATE","DEMO TAXID INACTIVATE","DEMO OTHER","NON MASS"]},"outputCol":["OUT_NDB_SPEC_NAME","OUT_SUPER_SPEC_PSI"]}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_NDB_SPEC_NAME", "50", "max", "OUT_NDB_SPEC_NAME"]}}
+      ]}
+    },
+    {"Address": {
+      "derivations": [{"name": "removeRowDf","type": "mv_cmn","input":{"qry":"(OUT_ADDRESS_TYPE.str.lower() in ['plsv','combo'] and OUT_ADDRESS_IND.str.lower() in ['p'])","topRow":true}}
+      ]}
+    },
+    {"ProviderEmail/WebAddr":{
+      "derivations":[
+        {"name": "encodeAndSortProvEml","type": "var","input": {"inputCol": "DRV_COMMUNICATION_TYPE_NM", "outputCol": "DRV_COMMUNICATION_TYPE_NM_ENCODED"}},
+        {"name": "removeRowDf","type": "mv_cmn","input": {"qry":"DRV_COMMUNICATION_TYPE_NM_ENCODED in [1,2]","topRow":true}}
+    ]}}
+  ]},
+  {"LayerName": "conflictRemovalLayer","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"Speciality": {
+      "derivations": [{"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}
+    },
+    {"ProviderEmail/WebAddr": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}
+    },
+    {"FinalDegree": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}
+    },
+    {"singleValue": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}
+    },
+    {"Address": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}
+    }
+  ]},
+  {"LayerName": "MasterDictListLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [
+    {
+      "Address": {
+        "derivations": [
+        ]
+      },
+      "singleValue":{
+        "derivations":[
+          {"name": "determineDuplicates","type": "var","input": {"ignore":0,"levels":["OUT_NPI"],"fields":["OUT_NAME_FIRST","OUT_NAME_LAST"],"msgCol":"OUT_NAME_LAST","clarification":"multiple persons found for npi"}}
+        ]
+      },
+      "Speciality":{
+        "derivations":[
+        ]
+      }
+    }
+   ]},
+  {"LayerName": "fdfLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [
+    {
+      "fdf": {
+        "derivations": [
+          {"name": "addPracPrimaryTin","type": "var","input": {}},
+          {"name": "locateProviderInFile","type": "var","input": {"ignore":0,"levels":["FINAL_NPI", "TAX_ID", "NAME_FIRST", "NAME_LAST","VALIDATED_ACTION"],"tabNameCol":"TABNAME","fileNameCol":"FILENAME","outputCol":"provLocationInFile","template":"Filename ({}), Tabname ({})"}},
+          {"name": "conditionallyDeduplicate","type": "var","input": {"ignore":0,"levels":["FINAL_NPI", "TAX_ID", "NAME_FIRST", "NAME_LAST","VALIDATED_ACTION"],"priorityCol":"OUT_NDB_SPEC_NAME"}},
+          {"name": "plmiTaxIdValidation","type": "var","input": {"diDf":{"plmiData":""},"elmName": "plmiData","outputCol": "taxIdPlmiValidation","taxIdCol": "OUT_TAX_ID"}},
+          {"name": "updateTaxIdWithPlmi","type": "var","input": {"plmiValidationCol": "taxIdPlmiValidation","taxIdCol": "OUT_TAX_ID"}}		  
+        ]
+      }
+    }
+  ]}
+]

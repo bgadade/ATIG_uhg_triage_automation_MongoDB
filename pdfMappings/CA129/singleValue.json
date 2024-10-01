@@ -1,0 +1,38 @@
+{
+  "NAME_LAST": {
+    "min_Y": {"text": ["DOB:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["PERSONAL DATA:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Name:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "DOB": {
+    "min_Y": {"text": ["Language:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Name:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["DOB:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Directory:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "GENDER": {
+    "min_Y": {"text": ["Language:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Name:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Sex:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["DOB:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "INDIVIDUAL_NPI": {
+    "min_Y": {"text": ["ACADEMIC APPOINTMENT:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Medicare UPIN:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["NPI:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "TAX_ID": {
+    "min_Y": {"text": ["Practice Name/Agency:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["BILLING ADDRESS:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Federal Tax ID No.:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "ORIGINAL_DEL_DATE": {
+    "min_Y": {"text": ["Directory Specialty:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Start Date:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Start:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["End:"],"point": "BOTTOM_LEFT","occurence": 1}
+  }
+}

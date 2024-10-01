@@ -1,0 +1,19 @@
+{
+  "demo-prac-add":{"Screenname": ["DEMO PRAC ADD"], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "demo-taxid-inact":{"Screenname":["DEMO TAXID INACTIVATE"], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "demo-addr-add":{"Screenname": ["DEMO ADDR ADD"], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "demo-addr-inact":{"Screenname": ["DEMO ADDR INACTIVATE"], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "demo-addr-change":{"Screenname": ["DEMO ADDR CHANGE"], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "tax-id":{"Screenname": ["DEMO TAXID ADD"], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "non-mass":{"Screenname": ["NON MASS"], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "demo-other":{"Screenname": ["DEMO OTHER"], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "contract-prac-add-to-grp":{"Screenname": ["CONTRACT PRAC ADD TO GRP"], "status": "Hidden", "DelParentTemplates": ["DEMO PRAC ADD","DEMO TAXID ADD"],"NonDelParentTemplates": ["DEMO TAXID ADD","DEMO NON PRAC ADD"]},
+  "demo-non-prac-add":{"Screenname": ["DEMO NON PRAC ADD"], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "cont-tin-inactivate":{"Screenname": ["CONT TIN INACTIVATE"], "status": "Hidden", "DelParentTemplates": ["DEMO TAXID INACTIVATE"],"NonDelParentTemplates": ["DEMO TAXID INACTIVATE"]},
+  "contract-author-execute":{"Screenname": ["CONTRACT AUTHOR EXECUTE"], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "contract-execute":{"Screenname": ["CONTRACT EXECUTE"], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "cont-amend-execute":{"Screenname": ["CONT AMEND EXECUTE "], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "contract-other":{"Screenname": ["CONTRACT OTHER "], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "cont_modf_inact":{"Screenname": ["CONT MODF INACT "], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []},
+  "cont_modf_add":{"Screenname": ["CONT MODF ADD "], "status": "NotHidden", "DelParentTemplates": [],"NonDelParentTemplates": []}
+}

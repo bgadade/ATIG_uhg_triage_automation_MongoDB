@@ -1,0 +1,113 @@
+{"ADDRESS_LINE_1": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["Silent Phone:", "See Patients Phone:", "Accept New Patients Phone:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Primary Clinic Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Primary Clinic Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Group Address NPI:", "Group Tax ID"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   },
+    {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": {"loopId": 1,
+                                  "locationX": {
+									"min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+									"max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+								  "locationY": {
+									"min_Y": {"text": ["Phone:"],"point": "TOP_RIGHT","occurence": 1},
+									"max_Y": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                                 }
+                 }]
+    }
+
+]},
+ "ADDRESS_COUNTY": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["County:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_Y": {"text": ["Group Address NPI:", "Group Tax ID:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["County:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["See Patients"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   },
+    {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": {"loopId":2,
+                                  "locationX": {
+									"min_X": {"text": ["County:"],"point": "TOP_RIGHT","occurence": 1},
+									"max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+								  "locationY": {
+									"min_Y": {"text": ["County:"],"point": "BOTTOM_LEFT","occurence": 1},
+									"max_Y": {"text": ["Group NPI:", "Group Tax ID:"],"point": "BOTTOM_LEFT","occurence": 1}}
+									}
+                 }]
+    }
+
+]},
+ "ADDRESS_PHONE": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"groupDetails": {"groupText":["Alt. Phone:","Phone:"], "textline":"False",
+                                  "bbox": {"min_X": {"ref":"TOP_RIGHT"},
+                                          "max_X": {"text": ["Group Address NPI:", "Group Tax ID:"], "point":"BOTTOM_LEFT", "ref":"TOP_RIGHT"},
+                                          "min_Y": {"ref": "BOTTOM_LEFT"},
+                                          "max_Y": {"text": ["Group Address NPI:", "County:","Group Tax ID:"], "point":"BOTTOM_LEFT", "ref":"TOP_RIGHT"}}},
+                 "parentBB": {
+                        "min_Y": {"text": ["Clinic Address"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["Primary Clinic Address"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": ["See Patients"],"point": "BOTTOM_LEFT","occurence": 1}}
+                }]
+   },
+   {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": {"loopId":2,
+                                  "locationX": "None",
+								  "locationY": "None"
+									},
+                 "groupDetails": {"groupText":["Alt. Phone:","Phone:"], "textline":"False",
+                                  "bbox": {"min_X": {"ref":"TOP_RIGHT"},
+                                          "max_X": {"text": ["Group Address NPI:", "Group Tax ID:"], "point":"BOTTOM_LEFT", "ref":"TOP_RIGHT"},
+                                          "min_Y": {"ref": "BOTTOM_LEFT"},
+                                          "max_Y": {"text": ["Group Address NPI:", "County:","Group Tax ID:"], "point":"BOTTOM_LEFT", "ref":"TOP_RIGHT"}}}
+                }]
+   }
+]},
+ "ADDRESS_PHONE_FAX": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PRIM_PLSV",
+    "Location": [{"parentBB": {
+                        "min_Y": {"text": ["Clinic Address"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["Phone:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Fax:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Group Tax ID"],"point": "BOTTOM_LEFT","occurence": 1}}
+                 }]
+   },
+    {
+    "Tag": "SEC_PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                  "locationX": {
+									"min_X": {"text": ["Fax:"],"point": "TOP_RIGHT","occurence": 1},
+									"max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+								  "locationY": {
+									"min_Y": {"text": ["Fax:"],"point": "BOTTOM_LEFT","occurence": 1},
+									"max_Y": {"text": ["Phone:"],"point": "BOTTOM_LEFT","occurence": 1}}
+									}
+                 }]
+    }
+
+]}
+}
+
+
+

@@ -1,0 +1,23 @@
+{
+  "Hospital": [{"type": "table2",
+               "xMargin": 4.5,
+               "tableId":1,
+               "parentBB":{
+                        "start": {"text": ["HOSPITAL PRIVILEGES"]},
+                        "min_Y": {"text": ["CALL COVERAGE ARRANGEMENTS"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["HOSPITAL PRIVILEGES"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["1."],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["From:"],"point": "BOTTOM_LEFT","occurence": 1}},
+               "tableHeader": "None"
+  }],
+  "Board": [{"type": "table2",
+            "xMargin": 4.5,
+            "tableId":1,
+            "parentBB": {
+                          "min_Y": { "text": ["EDUCATION INFORMATION"],"point": "TOP_RIGHT","occurence": 1},
+                          "max_Y": { "text": ["BOARD CERTIFICATION INFORMATION"],"point": "BOTTOM_LEFT","occurence": 1},
+                          "min_X": { "text": ["1:"],"point": "TOP_RIGHT","occurence": 1},
+                          "max_X": { "text": ["Provider Type ID:"],"point": "BOTTOM_LEFT","occurence": 1}},
+            "tableHeader":"None"
+            }]
+}

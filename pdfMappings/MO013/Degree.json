@@ -1,0 +1,16 @@
+{"DEGREE": {
+  "PARENT_CATEGORY": "Degree",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["Name:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_Y": { "text": ["Provider Information"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": { "text": ["Name:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

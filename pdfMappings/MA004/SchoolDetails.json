@@ -1,0 +1,31 @@
+{"SCHOOL_NAME": {
+  "PARENT_CATEGORY": "SchoolDetails",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["PROFESSIONAL TRAINING"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["MEDICAL SCHOOL"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["MEDICAL SCHOOL"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "max_X": {"text": ["Graduated:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "SCHOOL_COMP_DATE": {
+  "PARENT_CATEGORY": "SchoolDetails",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                        "min_Y": {"text": ["PROFESSIONAL TRAINING"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["MEDICAL SCHOOL"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Graduated:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Degree:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

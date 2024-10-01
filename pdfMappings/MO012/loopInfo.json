@@ -1,0 +1,23 @@
+{
+  "Address" : [
+    {"loopId":1,
+                "direction": "Y",
+                "delimiter": {"1": ["GROUP PRACTICE NAME:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["TRAINING TYPE"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["OFFICE ADDRESSES"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                },
+    {"loopId":2,
+                "direction": "Y",
+                "delimiter": {"1": ["GROUP PRACTICE NAME:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["Tax ID:"],"point": "TOP_RIGHT","occurence": 2},
+                        "max_Y": {"text": ["OFFICE ADDRESSES"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                }
+
+              ]
+}

@@ -1,0 +1,69 @@
+[
+  {"LayerName": "CleanseDataFrame","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "applyRegex","type": "mv_cmn","input": {"inputCol":"EFFECTIVE_DATE", "regexKey":"EFFECTIVE_DATE"}},
+        {"name": "applyRegex","type": "mv_cmn","input": {"inputCol":"ORIGINAL_DEL_DATE", "regexKey":"EFFECTIVE_DATE"}}
+      ]
+    }}
+
+
+    ]},
+
+
+  {"LayerName": "CleanseLayer1","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"Address": {
+      "derivations": [
+        {"name": "var_parseDate","type": "mv_cmn","input": ["ADDR_EFFECTIVE_DATE", "C"],"col": "PARSED_ADDR_EFFECTIVE_DATE"}
+    ]}
+    },
+    {"singleValue":{
+      "derivations":[
+        {"name": "var_parseDate","type": "mv_cmn","input": ["EFFECTIVE_DATE", "C"],"col": "PARSED_EFFECTIVE_DATE"},
+        {"name": "var_parseDate","type": "mv_cmn","input": ["ORIGINAL_DEL_DATE", "C"],"col": "PARSED_ORIGINAL_DEL_DATE"}
+    ]}
+    }
+  ]
+  },
+
+ {"LayerName": "multivaluedCols","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "var_getMinAddrEffectiveDate","type": "mv_cmn","input": ["masterDict['Address']","'PARSED_EFFECTIVE_DATE'", "'PARSED_ADDR_EFFECTIVE_DATE'"],"col": "var_MinAddressEffectiveDate"},
+        {"name": "placeHolder","type": "mv_cmn","input": [],"col": "placeHolder"},
+        {"name": "var_changetype","type": "mv_cmn","input": ["masterDict['ChangeType']"],"col": "OUT_ACTION"}
+      ]
+      }}
+  ]},
+  {"LayerName": "FinalCleansingLayer","LayerType": "DF","ProcessStage": 0, "Transformation": [
+    {
+      "singleValue":{
+        "derivations":[
+          {"name": "createCol","type": "mv_cmn","input": {"defVal": "CHANGE", "outputCol": "STD_DEMO_OTHER_SUB"}},
+          {"name": "createCol","type": "mv_cmn","input": {"defVal": "See SOT", "outputCol": "STD_DEMO_OTHER_COMMENTS"}},
+          {"name": "effectiveDatePsi","type": "mv_cmn","input": {"inputCol":["var_MinAddressEffectiveDate", "PARSED_ORIGINAL_DEL_DATE"],"outputCol":"OUT_EFFECTIVE_DATE"}},
+          {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_EFFECTIVE_DATE", "10", "max", "OUT_EFFECTIVE_DATE"]}}
+        ]
+      }
+    }
+  ]},
+
+  {"LayerName": "conflictRemovalLayer","LayerType": "DF","ProcessStage": 0,"Transformation": [
+
+    {"singleValue": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+     ]}}
+  ]},
+  {"LayerName": "MasterDictListLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]},
+   {"LayerName": "fdfLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [
+    {
+      "fdf": {
+        "derivations": [
+          {"name": "locateProviderInFile","type": "mv_cmn","input": {"ignore":0,"levels":["FINAL_NPI", "TAX_ID", "NAME_FIRST", "NAME_LAST","VALIDATED_ACTION"],"tabNameCol":"TABNAME","fileNameCol":"FILENAME","outputCol":"provLocationInFile","template":"Filename ({}), Tabname ({})"}}
+        ]
+      }
+    }
+  ]}
+
+]

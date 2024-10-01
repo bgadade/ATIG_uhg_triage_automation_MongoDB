@@ -1,0 +1,361 @@
+{
+  "ADDRESS_LINE_1": {
+    "PARENT_CATEGORY": "Address",
+    "Column_Type": [
+      {
+        "Tag": "BILL",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_X": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Billing Address:"
+                  ]
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Mailing Address"
+                  ]
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Billing Address:"
+                  ]
+                }
+              },
+              "loopId": 1
+            },
+            "tableDetails": "None"
+          }
+        ]
+      },
+      {
+        "Tag": "PRIM_PLSV",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_X": {
+                  "occurence": "None",
+                  "point": "BOTTOM_LEFT",
+                  "text": "None"
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Billing Address"
+                  ]
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Phone"
+                  ]
+                }
+              },
+              "loopId": 1
+            },
+            "tableDetails": "None"
+          }
+        ]
+      },
+      {
+        "Tag": "MAIL",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_X": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Mailing Address:"
+                  ]
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Tax ID:"
+                  ]
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Billing Address"
+                  ]
+                }
+              },
+              "loopId": 1
+            },
+            "tableDetails": "None"
+          }
+        ]
+      }
+    ]
+  },
+  "ADDRESS_PHONE": {
+    "PARENT_CATEGORY": "Address",
+    "Column_Type": [
+      {
+        "Tag": "PRIM_PLSV",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_X": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Phone:"
+                  ]
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Phone"
+                  ]
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Fax"
+                  ]
+                }
+              },
+              "loopId": 1
+            },
+            "tableDetails": "None",
+            "groupDetails": "None"
+          }
+        ]
+      }
+    ]
+  },
+  "ADDRESS_PHONE_FAX": {
+    "PARENT_CATEGORY": "Address",
+    "Column_Type": [
+      {
+        "Tag": "PRIM_PLSV",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_X": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Fax:"
+                  ]
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Phone"
+                  ]
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Office Languages"
+                  ]
+                }
+              },
+              "loopId": 1
+            },
+            "tableDetails": "None",
+            "groupDetails": "None"
+          }
+        ]
+      }
+    ]
+  },
+  "AGE_LIMIT": {
+    "PARENT_CATEGORY": "Address",
+    "Column_Type": [
+      {
+        "Tag": "PRIM_PLSV",
+        "Location": [
+          {
+            "parentBB": {
+              "max_X": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "Other Specialties"
+                ]
+              },
+              "max_Y": {
+                "occurence": 1,
+                "point": "BOTTOM_LEFT",
+                "text": [
+                  "HIV Specialist"
+                ]
+              },
+              "min_X": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Age Limit:"
+                ]
+              },
+              "min_Y": {
+                "occurence": 1,
+                "point": "TOP_RIGHT",
+                "text": [
+                  "Practice Location(s)"
+                ]
+              },
+              "start": {
+                "text": []
+              }
+            },
+            "textline": "False"
+          }
+        ]
+      }
+    ]
+  },
+  "LANGUAGE": {
+    "PARENT_CATEGORY": "Address",
+    "Column_Type": [
+      {
+        "Tag": "PRIM_PLSV",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_X": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Office Languages:"
+                  ]
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Fax"
+                  ]
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Office Hours"
+                  ]
+                }
+              },
+              "loopId": 1
+            },
+            "tableDetails": "None",
+            "groupDetails": "None"
+          }
+        ]
+      }
+    ]
+  },
+  "WORKING_HOURS": {
+    "PARENT_CATEGORY": "Address",
+    "Column_Type": [
+      {
+        "Tag": "PRIM_PLSV",
+        "Location": [
+          {
+            "loopDetails": {
+              "locationX": {
+                "max_X": {
+                  "occurence": "None",
+                  "point": "TOP_RIGHT",
+                  "text": "None"
+                },
+                "min_X": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Office Hours:"
+                  ]
+                }
+              },
+              "locationY": {
+                "max_Y": {
+                  "occurence": 1,
+                  "point": "BOTTOM_LEFT",
+                  "text": [
+                    "Office Languages"
+                  ]
+                },
+                "min_Y": {
+                  "occurence": 1,
+                  "point": "TOP_RIGHT",
+                  "text": [
+                    "Medical Practice"
+                  ]
+                }
+              },
+              "loopId": 1
+            },
+            "tableDetails": "None"
+          }
+        ]
+      }
+    ]
+  }
+}

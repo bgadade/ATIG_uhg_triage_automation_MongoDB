@@ -1,0 +1,19 @@
+{"MEDICARE": {
+  "PARENT_CATEGORY": "Medicare",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                            "min_Y": { "text": ["NPI #:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_Y": { "text": ["SSN #:"],"point": "BOTTOM_LEFT","occurence": 1},
+                            "min_X": { "text": ["Medicare #:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_X": { "text": ["Medicaid #:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"},
+                  {"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 1, "columnIndex": 3}}]
+  }
+  ]
+ }
+   }

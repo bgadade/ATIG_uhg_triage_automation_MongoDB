@@ -1,0 +1,17 @@
+{"SPECIALITY": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                  "textline":"True",
+                 "parentBB": {
+                        "min_Y": {"text": ["Code:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Credentialing Activity:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Directory Specialty:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Specialty Status:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

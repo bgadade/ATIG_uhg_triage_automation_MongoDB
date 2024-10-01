@@ -1,0 +1,45 @@
+{"BOARD_SPECIALITY": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 1, "columnIndex": 1}}]
+   }
+  ]
+ },
+  "BOARD_CERT_EXPIRATION_DATE": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 1, "columnIndex": 4}}]
+   }
+  ]
+ },
+  "BOARD_CERT_DATE": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 1, "columnIndex": 3}}]
+   }
+  ]
+ },
+  "BOARD_CERTIFIED": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId": 1, "columnIndex": 2}}]
+   }
+  ]
+ }
+}

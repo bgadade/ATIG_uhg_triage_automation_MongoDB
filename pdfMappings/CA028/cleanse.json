@@ -1,0 +1,21 @@
+[
+  {"LayerName": "CleanTableDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"Hospital":[
+          {"name": "filterRows","type": "clean","input": {"refCol":2}}
+      ]},
+      {"Dea":[
+          {"name": "chooseRows","type": "clean","input": {"refCol":1, "refVal":"Drug Enforcement Administration (DEA) Registration"}}
+      ]},
+      {"Licence":[
+          {"name": "chooseRows","type": "clean","input": {"refCol":1, "refVal":"State Medical License"}}
+      ]},
+      {"Medicare":[
+          {"name": "chooseRows","type": "clean","input": {"refCol":1, "refVal":"Medicare UPIN"}}
+      ]}
+  ]},
+  {"LayerName": "CleanFinalDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"GROUP_NAME","type":"sv"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"NAME_OF_LEGAL_TAX_ID_OWNER","type":"sv"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"TAX_ID","type":"sv", "errMsg":"Multiple Tax Id case", "errInput":"True"}}
+  ]}
+]

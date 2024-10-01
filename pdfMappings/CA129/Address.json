@@ -1,0 +1,122 @@
+{"ADDRESS_LINE_1": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location":[ {"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text": ["Street:"],"point": "TOP_RIGHT","occurence": 1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":["City:"], "point":"TOP_RIGHT", "occurence":1},
+                                                "max_Y": {"text":["Facility:"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 }]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                 "locationX": {"min_X":{"text": ["Street:"],"point": "TOP_RIGHT","occurence": 1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":["City:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Practice Name/Agency:"], "point":"BOTTOM_LEFT", "occurence":1}} }
+                 }]
+   }
+  ]
+ },
+ "ADDRESS_CITY": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text": ["City:"],"point": "TOP_RIGHT","occurence": 1},
+                                               "max_X": {"text": ["State:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                                 "locationY": {"min_Y":{"text":["Office No.:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["City:"], "point":"TOP_RIGHT", "occurence":1}} }}]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                 "locationX": {"min_X":{"text": ["City:"],"point": "TOP_RIGHT","occurence": 1},
+                                               "max_X": {"text": ["State:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                                 "locationY": {"min_Y":{"text":["State:"], "point":"BOTTOM_LEFT", "occurence": 1},
+                                               "max_Y": {"text":["Street:"], "point":"BOTTOM_LEFT", "occurence":1}} }}]
+   }
+  ]
+ },
+ "ADDRESS_STATE": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text": ["State:"],"point": "TOP_RIGHT","occurence": 1},
+                                               "max_X": {"text": ["Zip:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                                 "locationY": {"min_Y":{"text":["Office No.:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Street:"], "point":"BOTTOM_LEFT", "occurence":1}} }}]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                 "locationX": {"min_X":{"text": ["State:"],"point": "TOP_RIGHT","occurence": 1},
+                                               "max_X": {"text": ["Zip:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                                 "locationY": {"min_Y":{"text": "None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                               "max_Y": {"text":["Street:"], "point":"BOTTOM_LEFT", "occurence":1}} }}]
+   }
+  ]
+ },
+ "ADDRESS_ZIP": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text": ["Zip:"],"point": "TOP_RIGHT","occurence": 1},
+                                               "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                                 "locationY": {"min_Y":{"text": ["Office No.:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Street:"], "point":"BOTTOM_LEFT", "occurence":1}} }}]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                 "locationX": {"min_X":{"text": ["Zip:"],"point": "TOP_RIGHT","occurence": 1},
+                                               "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                                 "locationY": {"min_Y":{"text": "None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                               "max_Y": {"text":["Street:"], "point":"BOTTOM_LEFT", "occurence":1}} }}]
+   }
+  ]
+ },
+ "ADDRESS_PHONE": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text": ["Office No.:"],"point": "TOP_RIGHT","occurence": 1},
+                                               "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                                 "locationY": {"min_Y":{"text": ["Office FAX:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["City:"], "point":"BOTTOM_LEFT", "occurence":1}} }}]
+   },
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": {"loopId":2,
+                                 "locationX": {"min_X":{"text": ["City:"],"point": "TOP_RIGHT","occurence": 1},
+                                               "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                                 "locationY": {"min_Y":{"text": "None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                               "max_Y": {"text":["City:"], "point":"BOTTOM_LEFT", "occurence":1}} }}]
+   }
+  ]
+ },
+ "ADDRESS_PHONE_FAX": {
+  "PARENT_CATEGORY": "Board",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text": ["Office FAX:"],"point": "TOP_RIGHT","occurence": 1},
+                                               "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                                 "locationY": {"min_Y":{"text": ["Practice Status:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Office No.:"], "point":"BOTTOM_LEFT", "occurence":1}} }}]
+   }
+  ]
+ }
+}
+

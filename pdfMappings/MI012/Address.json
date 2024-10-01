@@ -1,0 +1,53 @@
+{
+  "ADDRESS_LINE_1": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "BILL",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Billing Address:"], "point":"BOTTOM_LEFT", "occurence":1},
+                                               "max_X": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}},
+                                 "locationY": {"min_Y":{"text":["NPI for Provider:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Billing Address:"], "point":"BOTTOM_LEFT", "occurence":1}}},
+                 "tableDetails": "None"}]
+   },
+   {
+    "Tag": "PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":"None", "point":"BOTTOM_LEFT", "occurence":"None"},
+                                               "max_X": {"text":["Billing Address:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y":{"text":["Phone:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":"None", "point":"TOP_RIGHT", "occurence":"None"}}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+  "ADDRESS_PHONE": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X":{"text":["Phone:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_X": {"text":["Tax ID:"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                 "locationY": {"min_Y": {"text":["NPI for Provider:"], "point":"TOP_RIGHT", "occurence":1},
+                                               "max_Y": {"text":["Phone:"], "point":"TOP_RIGHT", "occurence":1}}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+  "DIR_IND": {
+  "PARENT_CATEGORY": "Address",
+  "Column_Type": [
+   {
+    "Tag": "PLSV",
+    "Location": [{"loopDetails": {"loopId":1,
+                                 "locationX": {"min_X": {"text": ["Directory Listing:"],"point": "TOP_RIGHT","occurence": 1},
+                                               "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                                 "locationY": {"min_Y": {"text": ["Directory Listing:"],"point": "BOTTOM_LEFT","occurence": 1},
+                                               "max_Y": {"text": ["NPI Subpart:"],"point": "BOTTOM_LEFT","occurence": 1}}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

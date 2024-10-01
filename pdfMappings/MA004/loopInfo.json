@@ -1,0 +1,32 @@
+{
+  "Address" : [{"loopId":1,
+                "direction": "Y",
+                "delimiter": {"1":["Phone:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["Hospital Appointments"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["OFFICE ADDRESS"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": ["Most Recent Cred Date:"],"point": "BOTTOM_LEFT","occurence": 1}}
+                }
+              ],
+  "Hospital" : [{"loopId":1,
+                "direction": "X",
+                "delimiter": {"1":["Department:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["Provider Enrollment Type:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Hospital Appointments"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                }
+              ],
+  "Speciality" : [{"loopId":1,
+                "direction": "X",
+                "delimiter": {"1":["Department:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["Provider Enrollment Type:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Hospital Appointments"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                }
+              ]
+}

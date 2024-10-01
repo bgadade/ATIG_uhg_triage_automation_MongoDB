@@ -1,0 +1,50 @@
+{
+  "NAME_LAST": {
+    "min_Y": {"text": ["Name:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "max_Y": { "text": ["Provider Information"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Name:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "DOB": {
+    "min_Y": {"text": ["Place of Birth:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Gender:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Date of Birth:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "GENDER": {
+    "min_Y": {"text": ["Date of Birth:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["ID #:"],"point": "TOP_RIGHT","occurence": 1},
+    "min_X": { "text": ["Gender:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "INDIVIDUAL_NPI": {
+    "min_Y": {"text": ["Medicare #:","UPIN #:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["SSN #:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["NPI #:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Place of Birth:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "TAX_ID": {
+    "min_Y": {"text": ["Group NPI:"],"point": "TOP_RIGHT","occurence": 2},
+    "max_Y": { "text": ["Mailing Address"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Group Tax ID:"],"point": "TOP_RIGHT","occurence": 2},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "TAXONOMY": {
+    "min_Y": {"text": ["Medicare #"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Place of Birth:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["Taxonomy Code:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}
+  },
+  "SSN": {
+    "min_Y": {"text": ["NPI #:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["ID #:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["SSN #:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Date of Birth:"],"point": "BOTTOM_LEFT","occurence": 1}
+  },
+  "ID": {
+    "min_Y": {"text": ["SSN #:"],"point": "TOP_RIGHT","occurence": 1},
+    "max_Y": { "text": ["Name:"],"point": "BOTTOM_LEFT","occurence": 1},
+    "min_X": { "text": ["ID #"],"point": "TOP_RIGHT","occurence": 1},
+    "max_X": { "text": ["Gender:"],"point": "BOTTOM_LEFT","occurence": 1}
+  }
+}

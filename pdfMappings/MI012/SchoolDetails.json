@@ -1,0 +1,21 @@
+{"SCHOOL_NAME": {
+  "PARENT_CATEGORY": "SchoolDetails",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "tableDetails": {"tableId": 1, "columnIndex": 1}}]
+   }
+  ]
+ },
+ "SCHOOL_COMP_DATE": {
+  "PARENT_CATEGORY": "SchoolDetails",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "tableDetails": {"tableId": 1, "columnIndex": 5}}]
+   }
+  ]
+ }
+}

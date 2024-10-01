@@ -1,0 +1,15 @@
+{
+  "PROVIDER_LANGUAGE": {
+    "PARENT_CATEGORY": "ProviderLanguage",
+    "Column_Type": [
+      {
+        "Tag": "GENERAL",
+        "Location": [{"loopDetails": {"loopId":1,
+                                      "locationX": {"min_X":{"text":["Languages"], "point":"TOP_RIGHT", "occurence":1},
+                                                    "max_X": {"text":["On-Site Reviews"], "point":"BOTTOM_LEFT", "occurence":1}},
+                                      "locationY": {"min_Y":{"text":["Languages"], "point":"BOTTOM_LEFT", "occurence":1},
+                                                    "max_Y": {"text":["Email:"], "point":"BOTTOM_LEFT", "occurence":1}} }}]
+      }
+    ]
+  }
+}

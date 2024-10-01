@@ -1,0 +1,32 @@
+{
+  "Address" : [{"loopId":1,
+                "direction": "Y",
+                "delimiter": {"1": ["Directory Listing:"], "2":["Limitations:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["Limitations:", "Directory Listing:"],"point": "BOTTOM_LEFT","occurence": "last"},
+                        "max_Y": {"text": ["Clinic Address - Prim (NPI)"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                },
+                {"loopId":2,
+                "direction": "Y",
+                "delimiter": {"1": ["Directory Listing:"], "2":["Limitations:"], "type":"blockEnd"},
+                "parentBB":{
+                        "min_Y": {"text": ["Limitations:", "Directory Listing:"],"point": "BOTTOM_LEFT","occurence": "last"},
+                        "max_Y": {"text": ["Limitations:", "Directory Listing:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                }
+
+              ],
+  "Board" : [{"loopId":1,
+                "direction": "Y",
+                "delimiter": {"1": ["Verified:"], "type":"blockStart"},
+                "parentBB":{
+                        "min_Y": {"text": ["Board Information"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Boards"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}}
+                }
+              ]
+}

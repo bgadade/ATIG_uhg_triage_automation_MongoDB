@@ -1,0 +1,17 @@
+[
+  {"LayerName": "CleanFinalDataframe","LayerType": "DF","ProcessStage": 0,"Transformation": [
+      {"name": "cleanString","type": "clean","input": {"col":"BOARD_CERT_DATE","type":"mv","start":"","end":"","regex":"Date\\:"}},
+      {"name": "cleanString","type": "clean","input": {"col":"BOARD_SPECIALITY","type":"mv","start":"","end":"","regex":"Date\\:"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"DIR_IND","type":"mv","mvColRef":"ADDRESS_LINE_1"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"GROUP_NAME","type":"sv"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"NAME_OF_LEGAL_TAX_ID_OWNER","type":"sv"}},
+      {"name": "addClarifyColumn","type": "clean","input": {"col":"TAX_ID","type":"sv", "errMsg":"Multiple Tax Id case", "errInput":"True"}},
+      {"name": "copyColValOnRefVal", "type": "clean", "input": {"refCol":"PROVIDER_TYPE", "inpCol":"NAME_LAST", "outCol":"GROUP_NAME", "refVal":["ancillary"]}},
+      {"name": "removeColValOnRefColVal", "type": "clean", "input": {"refCol":"PROVIDER_TYPE", "inpCol":"NAME_LAST", "refVal":["ancillary"]}},
+      {"name": "removeColValOnRefColVal", "type": "clean", "input": {"refCol":"PROVIDER_TYPE", "inpCol":"DEGREE", "refVal":["ancillary"]}},
+      {"name": "createMvDefaultCol", "type": "clean", "input": {"col":"ADDRESS_INDICATOR", "tag": "PLSV", "refCol":"ADDRESS_LINE_1", "val":{"1":"P", "default":"S"}}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"NAME_LAST","outCol":"NAME_LAST","type":"sv","splitBy":" ","startIdx":0, "EndIdx":-1}},
+      {"name": "splitAndSelectVal","type": "clean","input": {"inpCol":"DEGREE","outCol":"DEGREE","type":"mv","splitBy":" ","startIdx":-1}}
+  ]}
+]
+

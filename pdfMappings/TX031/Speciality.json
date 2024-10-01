@@ -1,0 +1,45 @@
+{"SPECIALITY": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId":1, "columnIndex": 1}}]
+   }
+  ]
+ },
+ "SPECIALITY_INDICATOR": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId":1, "columnIndex": 2}}]
+   }
+  ]
+ },
+ "BOARD_CERTIFIED_SPEC": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId":1, "columnIndex": 3}}]
+   }
+  ]
+ },
+ "BOARD_CERT_EXPIRATION_DATE_SPEC": {
+  "PARENT_CATEGORY": "Speciality",
+  "Column_Type": [
+   {
+    "Tag": "PRIMARY",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": "None",
+                 "tableDetails":{"tableId":1, "columnIndex": 4}}]
+   }
+  ]
+ }
+}

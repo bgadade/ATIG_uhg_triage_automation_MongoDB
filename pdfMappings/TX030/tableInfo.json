@@ -1,0 +1,20 @@
+{
+  "Board": [{"type": "table1",
+             "tableId":1,
+            "parentBB":{
+                        "min_Y": {"text": ["Covering Physicians:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Certification"],"point": "TOP_RIGHT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+            "tableHeader": 1
+  }],
+  "Hospital": [{"type": "table1",
+                "tableId":2,
+               "parentBB":{
+                        "min_Y": {"text": ["Certification"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["Coverage:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+               "tableHeader": 1
+  }]
+}

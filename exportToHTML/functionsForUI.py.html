@@ -1,0 +1,771 @@
+<html>
+<head>
+<title>functionsForUI.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,0,255); }
+.s4 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+functionsForUI.py</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">import </span><span class="s1">utils </span><span class="s0">as </span><span class="s1">utils 
+</span><span class="s0">import </span><span class="s1">FetchNPIregistry </span><span class="s0">as </span><span class="s1">fnpi 
+</span><span class="s0">import </span><span class="s1">pandas </span><span class="s0">as </span><span class="s1">pd 
+</span><span class="s0">import </span><span class="s1">excelStructureXlrd </span><span class="s0">as </span><span class="s1">es 
+</span><span class="s0">import </span><span class="s1">mvDerivation </span><span class="s0">as </span><span class="s1">mv 
+</span><span class="s2"># import functionsForUI as funcUI</span><span class="s1"> 
+</span><span class="s0">import </span><span class="s1">nlpMapping </span><span class="s0">as </span><span class="s1">nlp 
+</span><span class="s0">from </span><span class="s1">copy </span><span class="s0">import </span><span class="s1">deepcopy 
+</span><span class="s0">import </span><span class="s1">json 
+</span><span class="s0">import </span><span class="s1">constants 
+</span><span class="s0">import </span><span class="s1">os 
+</span><span class="s0">import </span><span class="s1">copy 
+</span><span class="s0">import </span><span class="s1">datetime 
+</span><span class="s0">import </span><span class="s1">re 
+</span><span class="s0">from </span><span class="s1">collections </span><span class="s0">import </span><span class="s1">OrderedDict 
+</span><span class="s0">import </span><span class="s1">xlrd 
+</span><span class="s2"># mappings = &quot;../config/mappings.json&quot;</span><span class="s1"> 
+</span><span class="s2"># credentials=&quot;../config/credentials.json&quot;</span><span class="s1"> 
+</span><span class="s2"># loc = &quot;../input/&quot;</span><span class="s1"> 
+</span><span class="s2"># mvMappingsFile = &quot;../config/mvMappings.json&quot;</span><span class="s1"> 
+</span><span class="s2"># functionMappingsFile = &quot;..\config\\functionMappings.json&quot;</span><span class="s1"> 
+</span><span class="s2">#</span><span class="s1"> 
+</span><span class="s2"># credentialsData = utils.readFile(credentials,type=&quot;json&quot;)</span><span class="s1"> 
+</span><span class="s2"># mappings = utils.readFile(mappings, type=&quot;json&quot;)</span><span class="s1"> 
+</span><span class="s2"># functionMappings = utils.readFile(functionMappingsFile, type=&quot;json&quot;)</span><span class="s1"> 
+</span><span class="s2"># mvMappings = utils.readFile(mvMappingsFile, type=&quot;json&quot;)</span><span class="s1"> 
+ 
+ 
+</span><span class="s2">#-------------------------- Checking Credentials -------------------------------------#</span><span class="s1"> 
+ 
+</span><span class="s0">def </span><span class="s1">validateCredentials(_name,_password): 
+    i=</span><span class="s3">0</span><span class="s1"> 
+    role=</span><span class="s4">''</span><span class="s1"> 
+    </span><span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range(</span><span class="s3">2</span><span class="s1">): 
+        user = constants.credentialsData[i][</span><span class="s4">'userName'</span><span class="s1">] 
+        password = constants.credentialsData[i][</span><span class="s4">'password'</span><span class="s1">] 
+        </span><span class="s0">if </span><span class="s1">user== _name  </span><span class="s0">and </span><span class="s1">password ==_password: 
+            </span><span class="s0">if </span><span class="s1">user == </span><span class="s4">'admin'</span><span class="s1">: 
+                role = </span><span class="s4">'admin'</span><span class="s1"> 
+                msg = </span><span class="s4">'Successfully logged in as admin'</span><span class="s1"> 
+                </span><span class="s0">return </span><span class="s1">role 
+            </span><span class="s0">else</span><span class="s1">: 
+                role = </span><span class="s4">'user'</span><span class="s1"> 
+                msg = </span><span class="s4">'Successfully logged in as user'</span><span class="s1"> 
+                </span><span class="s0">return </span><span class="s1">role 
+    msg = </span><span class="s4">'Invalid Credentials'</span><span class="s1"> 
+    </span><span class="s0">return </span><span class="s1">msg 
+ 
+</span><span class="s2">#-------------------------- Reading File -------------------------------------#</span><span class="s1"> 
+ 
+</span><span class="s2"># def getFileJSON(filename):</span><span class="s1"> 
+</span><span class="s2">#     data = utils.readFile(loc+filename, type=&quot;xlsx&quot;)</span><span class="s1"> 
+</span><span class="s2">#     print data</span><span class="s1"> 
+</span><span class="s2">#     return data.to_json(loc+filename)</span><span class="s1"> 
+ 
+</span><span class="s2">#-------------------------- Format detection -------------------------------------#</span><span class="s1"> 
+ 
+</span><span class="s0">def </span><span class="s1">exportExcelToJSON(fileName): 
+    </span><span class="s0">global </span><span class="s1">globFileLoc 
+    globFileLoc = constants.loc+fileName 
+    workbookpath = constants.loc+fileName 
+    workbook = es.loadWorkBook(workbookpath) 
+    </span><span class="s0">return </span><span class="s1">es.exportExcelToJSON(workbook) 
+ 
+</span><span class="s0">def </span><span class="s1">readFrame(sheet, headerRow, Token): 
+    dfname = Token + </span><span class="s4">&quot;InpDF&quot; </span><span class="s1">+ </span><span class="s4">'.pkl'</span><span class="s1"> 
+    </span><span class="s0">print </span><span class="s1">sheet 
+    </span><span class="s2"># columns = utils.getExcelFieldNames(globFileLoc, sheet, headerRow)</span><span class="s1"> 
+    inputDF = utils.readFile(globFileLoc, type=</span><span class="s4">&quot;xlsx&quot;</span><span class="s1">, sheetIndex=int(sheet), headerIndx = int(headerRow)) 
+    inputDF = renameSOTCols(globFileLoc, int(sheet), int(headerRow), inputDF) 
+    inputDF.to_pickle(</span><span class="s4">&quot;../tmp/&quot; </span><span class="s1">+ dfname) 
+    </span><span class="s0">return </span><span class="s1">inputDF 
+ 
+</span><span class="s0">def </span><span class="s1">readPickle(token): 
+    dfname = token + </span><span class="s4">&quot;InpDF&quot; </span><span class="s1">+ </span><span class="s4">'.pkl'</span><span class="s1"> 
+    inputDF=pd.read_pickle(</span><span class="s4">&quot;../tmp/&quot; </span><span class="s1">+ dfname) 
+    </span><span class="s0">return </span><span class="s1">inputDF 
+ 
+</span><span class="s0">def </span><span class="s1">getSingleValueMap(inputDF): 
+    </span><span class="s2"># print sheet</span><span class="s1"> 
+    </span><span class="s2"># print globFileLoc</span><span class="s1"> 
+    </span><span class="s2"># global globSheet</span><span class="s1"> 
+    </span><span class="s2"># globSheet = sheet</span><span class="s1"> 
+    </span><span class="s2"># inputDF = utils.readFile(globFileLoc, type=&quot;xlsx&quot;, sheetIndex = int(sheet)) #Todo hit a func and get a inp-df</span><span class="s1"> 
+    cols = inputDF.columns 
+    svMappedOPColsDict, mappedOPColsList, unmappedOPCols, newInpCols, ioFeildMappings = svMapColumns(cols, constants.mappings) 
+    svFeildMappings = getSvFeildMappings(svMappedOPColsDict, inputDF, cols, mappedOPColsList, unmappedOPCols, newInpCols, ioFeildMappings, constants.mappings) 
+    </span><span class="s0">return </span><span class="s1">svFeildMappings 
+ 
+</span><span class="s0">def </span><span class="s1">getMultiValueMap(inputDF,svUserMapping): </span><span class="s2">#svUserMapping is {&quot;sv&quot;:{&quot;inpCol1&quot;:&quot;outputCol1&quot;,&quot;inpCol2&quot;:&quot;outputCol2&quot;}</span><span class="s1"> 
+    </span><span class="s2"># print globFileLoc</span><span class="s1"> 
+    </span><span class="s2"># print globSheet</span><span class="s1"> 
+    </span><span class="s2"># inputDF = utils.readFile(globFileLoc, type=&quot;xlsx&quot;, sheetIndex = int(globSheet))</span><span class="s1"> 
+    dictMVMappings = mv.mvMapColumns(inputDF.columns, constants.mvMappings,constants.functionMappings) 
+    mvMappedOPColsDict,mvMappedOPColsList,mvUnmappedOPCols,mvUnmappedInpCols=mv.combineMVMapping(dictMVMappings) 
+    mvFeildMappings=getMvFeildMappings(dictMVMappings,mvUnmappedOPCols, constants.mvMappings,mvUnmappedInpCols,</span><span class="s4">'mv'</span><span class="s1">,svUserMapping,mvMappedOPColsDict,list(inputDF.columns)) 
+    </span><span class="s0">return </span><span class="s1">mvFeildMappings 
+ 
+</span><span class="s0">def </span><span class="s1">svMapColumns(cols, mappings): 
+    </span><span class="s0">return </span><span class="s1">utils.mapColumns(cols, constants.mappings) 
+ 
+</span><span class="s0">def </span><span class="s1">getInFields(inputDF, cols, svMappedOPColsDict, lstBestMatch): 
+    inputFields = [] 
+    lstBestMatch1=list(set([item[</span><span class="s4">'bestMatch'</span><span class="s1">] </span><span class="s0">for </span><span class="s1">item </span><span class="s0">in </span><span class="s1">lstBestMatch </span><span class="s0">if </span><span class="s1">item[</span><span class="s4">'bestMatch'</span><span class="s1">]])) 
+    </span><span class="s2"># inputFields[&quot;inFields&quot;] = []</span><span class="s1"> 
+    </span><span class="s0">for </span><span class="s1">col </span><span class="s0">in </span><span class="s1">cols: 
+        inFields = {} 
+        inFields[</span><span class="s4">&quot;inputField&quot;</span><span class="s1">] = col 
+        inFields[</span><span class="s4">&quot;sampleInput&quot;</span><span class="s1">] = map(unicode, list(inputDF.head(</span><span class="s3">3</span><span class="s1">)[col])) 
+        mapped = col </span><span class="s0">in </span><span class="s1">svMappedOPColsDict.keys() 
+        </span><span class="s0">if </span><span class="s1">col </span><span class="s0">in </span><span class="s1">lstBestMatch1: 
+            mapped=</span><span class="s4">'nlp'</span><span class="s1"> 
+        inFields[</span><span class="s4">&quot;mapped&quot;</span><span class="s1">] = mapped 
+        inputFields.append(inFields) 
+    </span><span class="s0">return </span><span class="s1">inputFields 
+ 
+</span><span class="s0">def </span><span class="s1">getBestMatch(outputCols,inpCols,mappings,fieldType): 
+    </span><span class="s2">#TODO: NLP logic for determining best match</span><span class="s1"> 
+    </span><span class="s0">if </span><span class="s1">fieldType==</span><span class="s4">'sv'</span><span class="s1">: 
+        excluded=[] 
+        nlpMap={} 
+        </span><span class="s0">for </span><span class="s1">inpCol </span><span class="s0">in </span><span class="s1">inpCols: 
+            di={key:val[</span><span class="s4">'Input_Column'</span><span class="s1">] </span><span class="s0">for </span><span class="s1">key,val </span><span class="s0">in </span><span class="s1">mappings.items() </span><span class="s0">if </span><span class="s1">key </span><span class="s0">not in </span><span class="s1">excluded </span><span class="s0">and </span><span class="s1">key </span><span class="s0">in </span><span class="s1">outputCols} 
+            maxScore=</span><span class="s3">0</span><span class="s1"> 
+            maxScoreDict={} 
+            </span><span class="s0">for </span><span class="s1">outputCol,lookup </span><span class="s0">in </span><span class="s1">di.items(): 
+                </span><span class="s0">if not </span><span class="s1">lookup: 
+                    </span><span class="s0">continue</span><span class="s1"> 
+                scoreDict,maxScoreLst=nlp.get_nearest_matching_word(lookup,inpCol) 
+                </span><span class="s0">try</span><span class="s1">: 
+                    </span><span class="s0">if </span><span class="s1">maxScoreLst[</span><span class="s3">1</span><span class="s1">]&gt;maxScore: 
+                        maxScore=maxScoreLst[</span><span class="s3">1</span><span class="s1">] 
+                        maxScoreDict[</span><span class="s4">'outputCol'</span><span class="s1">]=outputCol 
+                        maxScoreDict[</span><span class="s4">'score'</span><span class="s1">]=maxScore 
+                </span><span class="s0">except</span><span class="s1">: 
+                    </span><span class="s0">continue</span><span class="s1"> 
+            </span><span class="s0">try</span><span class="s1">: 
+                </span><span class="s0">if </span><span class="s1">maxScoreDict[</span><span class="s4">'score'</span><span class="s1">] &gt; </span><span class="s3">0.75</span><span class="s1">: 
+                    nlpMap.update({inpCol:maxScoreDict[</span><span class="s4">'outputCol'</span><span class="s1">]}) 
+                    excluded.append(maxScoreDict[</span><span class="s4">'outputCol'</span><span class="s1">]) 
+            </span><span class="s0">except</span><span class="s1">: 
+                </span><span class="s0">continue</span><span class="s1"> 
+        nlpMapReverse={val:key </span><span class="s0">for </span><span class="s1">key,val </span><span class="s0">in </span><span class="s1">nlpMap.items()} 
+        </span><span class="s0">return </span><span class="s1">nlpMapReverse 
+    </span><span class="s0">elif </span><span class="s1">fieldType==</span><span class="s4">'mv'</span><span class="s1">: 
+        excluded = [] 
+        nlpMap = {} 
+        lstParentCat = [] 
+        diParentCat={} 
+        </span><span class="s0">for </span><span class="s1">key, val </span><span class="s0">in </span><span class="s1">mappings.items(): 
+            </span><span class="s2"># if key not in excluded and key in outputCols:</span><span class="s1"> 
+                </span><span class="s0">if </span><span class="s1">val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">] </span><span class="s0">not in </span><span class="s1">lstParentCat: 
+                    lstParentCat.append(val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">]) 
+                </span><span class="s0">for </span><span class="s1">lookup </span><span class="s0">in </span><span class="s1">val.get(</span><span class="s4">'Column_Type'</span><span class="s1">,[]): 
+                    </span><span class="s0">if </span><span class="s1">val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">] </span><span class="s0">not in </span><span class="s1">diParentCat: 
+                        diParentCat.update({val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">]:[]}) 
+                    </span><span class="s0">if </span><span class="s1">lookup[</span><span class="s4">'Input_Column'</span><span class="s1">]!=[</span><span class="s4">&quot;&quot;</span><span class="s1">]: 
+                        diParentCat[val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">]]+=lookup[</span><span class="s4">'Input_Column'</span><span class="s1">] 
+        </span><span class="s0">print </span><span class="s1">lstParentCat 
+        </span><span class="s0">print </span><span class="s1">diParentCat 
+ 
+        </span><span class="s0">for </span><span class="s1">inpCol </span><span class="s0">in </span><span class="s1">inpCols: 
+            </span><span class="s2"># di = {key['PARENT_CATEGORY']: [val['Column_Type']['Input_Column'] for key, val in mappings.items() if</span><span class="s1"> 
+            </span><span class="s2">#       key not in excluded and key in outputCols}</span><span class="s1"> 
+            maxScore = </span><span class="s3">0</span><span class="s1"> 
+            maxScoreDict = {} 
+            </span><span class="s0">for </span><span class="s1">outputCol, lookup </span><span class="s0">in </span><span class="s1">diParentCat.items(): 
+                </span><span class="s0">if not </span><span class="s1">lookup: 
+                     
+                    </span><span class="s0">continue</span><span class="s1"> 
+                scoreDict, maxScoreLst = nlp.get_nearest_matching_word(lookup, inpCol) 
+                </span><span class="s0">try</span><span class="s1">: 
+                    </span><span class="s0">if </span><span class="s1">maxScoreLst[</span><span class="s3">1</span><span class="s1">] &gt; maxScore: 
+                        maxScore = maxScoreLst[</span><span class="s3">1</span><span class="s1">] 
+                        maxScoreDict[</span><span class="s4">'outputCol'</span><span class="s1">] = outputCol 
+                        maxScoreDict[</span><span class="s4">'score'</span><span class="s1">] = maxScore 
+                </span><span class="s0">except</span><span class="s1">: 
+                    </span><span class="s0">continue</span><span class="s1"> 
+            </span><span class="s2"># excluded.append(maxScoreDict['outputCol'])</span><span class="s1"> 
+            </span><span class="s0">try</span><span class="s1">: 
+                </span><span class="s0">if </span><span class="s1">maxScoreDict[</span><span class="s4">'score'</span><span class="s1">]&gt;</span><span class="s3">0.75</span><span class="s1">: 
+                    nlpMap.update({inpCol: po[</span><span class="s4">'outputCol'</span><span class="s1">]}) 
+            </span><span class="s0">except</span><span class="s1">: 
+                </span><span class="s0">pass</span><span class="s1"> 
+        </span><span class="s0">return </span><span class="s1">nlpMap 
+        </span><span class="s2"># nlpMapReverse = {val: key for key, val in nlpMap.items()}</span><span class="s1"> 
+        </span><span class="s2"># return nlpMapReverse'</span><span class="s1"> 
+ 
+ 
+</span><span class="s0">def </span><span class="s1">getUnmapOtFields(cols, mappings,unmappedInpCols,field_type): 
+    unmapOtFields = [] 
+    bestMatchDict=getBestMatch(cols,unmappedInpCols,mappings,field_type) 
+    </span><span class="s0">if </span><span class="s1">field_type==</span><span class="s4">'mv'</span><span class="s1">: 
+        </span><span class="s0">return </span><span class="s1">bestMatchDict 
+    </span><span class="s0">for </span><span class="s1">col </span><span class="s0">in </span><span class="s1">cols: 
+        unmapOtField = {} 
+        unmapOtField[</span><span class="s4">&quot;outputField&quot;</span><span class="s1">] = col 
+        unmapOtField[</span><span class="s4">&quot;bestMatch&quot;</span><span class="s1">] = bestMatchDict.get(col) 
+        unmapOtFields.append(unmapOtField) 
+    </span><span class="s0">return </span><span class="s1">unmapOtFields 
+ 
+</span><span class="s0">def </span><span class="s1">getSvFeildMappings(svMappedOPColsDict,inputDF,inputcols, mappedOPColsList, unmappedOPCols, newInpCols, ioFeildMappings, mappings): 
+    mapping = {} 
+    mapping[</span><span class="s4">&quot;unmapOtFields&quot;</span><span class="s1">] = getUnmapOtFields(unmappedOPCols, mappings,newInpCols,</span><span class="s4">'sv'</span><span class="s1">) 
+    </span><span class="s2"># mapping[&quot;inFields&quot;] = getInFields(svMappedOPColsDict,inputDF,inputcols,mapping['unmapOtFields'])</span><span class="s1"> 
+    mapping[</span><span class="s4">&quot;inFields&quot;</span><span class="s1">] = getInFields(inputDF, inputcols, svMappedOPColsDict, mapping[</span><span class="s4">'unmapOtFields'</span><span class="s1">]) 
+    mapping[</span><span class="s4">&quot;mappedOtFields&quot;</span><span class="s1">] = ioFeildMappings 
+    </span><span class="s0">return </span><span class="s1">mapping 
+ 
+</span><span class="s0">def </span><span class="s1">filterMvUnmappedInpCols(mvUnmappedInpCols,svMappedInp): 
+    </span><span class="s2"># svMappedInp = []</span><span class="s1"> 
+    </span><span class="s2"># for di in svFieldMappings['inFields']:</span><span class="s1"> 
+    </span><span class="s2">#     if di['mapped'] and di['mapped']!='nlp':</span><span class="s1"> 
+    </span><span class="s2">#         svMappedInp.append(di['inputField'])</span><span class="s1"> 
+    mvUnmappedInpCols=[col </span><span class="s0">for </span><span class="s1">col </span><span class="s0">in </span><span class="s1">mvUnmappedInpCols </span><span class="s0">if </span><span class="s1">col </span><span class="s0">not in </span><span class="s1">svMappedInp] 
+    </span><span class="s0">return </span><span class="s1">svMappedInp,mvUnmappedInpCols 
+ 
+</span><span class="s0">def </span><span class="s1">computeUnmappedInpCols(svMappedInp,mvMappedInp,mvNlpMappedInp,sotColumns): 
+    unmappedInpCols=[col </span><span class="s0">for </span><span class="s1">col </span><span class="s0">in </span><span class="s1">sotColumns </span><span class="s0">if </span><span class="s1">col </span><span class="s0">not in </span><span class="s1">svMappedInp+mvMappedInp+mvNlpMappedInp] 
+    </span><span class="s0">return </span><span class="s1">unmappedInpCols 
+ 
+ 
+ 
+ 
+</span><span class="s0">def </span><span class="s1">getMvFeildMappings(dictMVMappings, mvUnmappedOPCols, mvMappings, mvUnmappedInpCols, fieldType,svUserMapping,mvMappedOPColsDict,sotColumns): 
+    diParentCat = {} 
+    asisTag = </span><span class="s4">'AsIs'</span><span class="s1"> 
+    </span><span class="s0">for </span><span class="s1">key, val </span><span class="s0">in </span><span class="s1">mvMappings.items(): 
+        </span><span class="s0">if </span><span class="s1">val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">] </span><span class="s0">not in </span><span class="s1">diParentCat: 
+            diParentCat[val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">]] = {} 
+        </span><span class="s0">if </span><span class="s4">'Column_Type' </span><span class="s0">in </span><span class="s1">val: 
+            tags = [di[</span><span class="s4">'Tag'</span><span class="s1">] </span><span class="s0">for </span><span class="s1">di </span><span class="s0">in </span><span class="s1">val[</span><span class="s4">'Column_Type'</span><span class="s1">]] 
+            </span><span class="s0">for </span><span class="s1">tag </span><span class="s0">in </span><span class="s1">tags: 
+                </span><span class="s0">if </span><span class="s1">tag </span><span class="s0">not in </span><span class="s1">diParentCat[val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">]]: 
+                    diParentCat[val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">]].update({tag: [key]}) 
+                </span><span class="s0">else</span><span class="s1">: 
+                    diParentCat[val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">]][tag].append(key) 
+ 
+        </span><span class="s0">if </span><span class="s1">val[</span><span class="s4">'DATAFRAME_TYPE'</span><span class="s1">] == asisTag: 
+            </span><span class="s0">if </span><span class="s1">asisTag </span><span class="s0">not in </span><span class="s1">diParentCat[val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">]]: 
+                diParentCat[val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">]].update({asisTag: [key]}) 
+            </span><span class="s0">else</span><span class="s1">: 
+                diParentCat[val[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">]][asisTag].append(key) 
+ 
+    diAll = {} 
+    </span><span class="s0">for </span><span class="s1">key, val </span><span class="s0">in </span><span class="s1">diParentCat.items(): 
+        </span><span class="s0">for </span><span class="s1">k, v </span><span class="s0">in </span><span class="s1">val.items(): 
+            di = {</span><span class="s4">'parentCategory'</span><span class="s1">: key, </span><span class="s4">'type'</span><span class="s1">: k, </span><span class="s4">'map'</span><span class="s1">: []} 
+            </span><span class="s0">for </span><span class="s1">outputCol </span><span class="s0">in </span><span class="s1">v: 
+                di[</span><span class="s4">'map'</span><span class="s1">].append({</span><span class="s4">'outputField'</span><span class="s1">: outputCol, </span><span class="s4">'inputField'</span><span class="s1">: None}) 
+            diAll.update({key + k: di}) 
+    </span><span class="s2"># print 'diAll:',json.dumps(diAll)</span><span class="s1"> 
+    </span><span class="s2"># exit(0)</span><span class="s1"> 
+    mvFieldMappings = [] 
+    mapped = [] 
+    suggested = [] 
+    covered = [] 
+    </span><span class="s0">for </span><span class="s1">parentCategory </span><span class="s0">in </span><span class="s1">dictMVMappings: 
+        filterdDict = dictMVMappings[parentCategory] 
+        dictReverse = {val: key </span><span class="s0">for </span><span class="s1">key, val </span><span class="s0">in </span><span class="s1">filterdDict[</span><span class="s3">0</span><span class="s1">].items()} 
+        </span><span class="s0">for </span><span class="s1">lst </span><span class="s0">in </span><span class="s1">filterdDict[</span><span class="s3">1</span><span class="s1">]: 
+            type = parentCategory + lst[</span><span class="s3">0</span><span class="s1">].split(</span><span class="s4">'@'</span><span class="s1">)[</span><span class="s3">0</span><span class="s1">] 
+            di = deepcopy(diAll[type]) 
+            lstMappedCols = [(item, item.split(</span><span class="s4">'@'</span><span class="s1">)[</span><span class="s3">1</span><span class="s1">]) </span><span class="s0">for </span><span class="s1">item </span><span class="s0">in </span><span class="s1">lst] 
+            </span><span class="s0">for </span><span class="s1">tup </span><span class="s0">in </span><span class="s1">lstMappedCols: 
+                </span><span class="s0">for </span><span class="s1">map </span><span class="s0">in </span><span class="s1">di[</span><span class="s4">'map'</span><span class="s1">]: 
+                    </span><span class="s0">if </span><span class="s1">map[</span><span class="s4">'outputField'</span><span class="s1">] == tup[</span><span class="s3">1</span><span class="s1">]: 
+                        map[</span><span class="s4">'inputField'</span><span class="s1">] = dictReverse[tup[</span><span class="s3">0</span><span class="s1">]] 
+            di[</span><span class="s4">'order'</span><span class="s1">]=lst[</span><span class="s3">0</span><span class="s1">].split(</span><span class="s4">'@'</span><span class="s1">)[-</span><span class="s3">1</span><span class="s1">] 
+            </span><span class="s2"># if lst[0].split('@')[0] == 'GENERAL':</span><span class="s1"> 
+            </span><span class="s2">#     for asIs in lstAsIs[0:2]:</span><span class="s1"> 
+            </span><span class="s2">#         di['map'].append({'outputField': asIs, 'inputField': dictReverse[asIs]})</span><span class="s1"> 
+ 
+            mapped.append(deepcopy(di)) 
+            covered.append(type) 
+ 
+        asisType=parentCategory+</span><span class="s4">'AsIs'</span><span class="s1"> 
+        </span><span class="s0">if </span><span class="s1">asisType </span><span class="s0">not in </span><span class="s1">diAll: 
+            </span><span class="s0">continue</span><span class="s1"> 
+        asisDi=deepcopy(diAll[asisType]) 
+        </span><span class="s0">for </span><span class="s1">d </span><span class="s0">in </span><span class="s1">asisDi[</span><span class="s4">'map'</span><span class="s1">]: 
+            d[</span><span class="s4">'inputField'</span><span class="s1">]=dictReverse.get(d[</span><span class="s4">'outputField'</span><span class="s1">]) 
+        mapped.append(asisDi) 
+        covered.append(asisType) 
+ 
+    </span><span class="s0">for </span><span class="s1">k, v </span><span class="s0">in </span><span class="s1">diAll.items(): 
+        </span><span class="s0">if </span><span class="s1">k </span><span class="s0">not in </span><span class="s1">covered: 
+            mapped.append(v) 
+    mvFieldMappings.append({</span><span class="s4">'mapped'</span><span class="s1">: mapped}) 
+    svMappedInp,mvUnmappedInpCols=filterMvUnmappedInpCols(mvUnmappedInpCols,svUserMapping[</span><span class="s4">'sv'</span><span class="s1">].keys()) 
+    bestMatchDict = getUnmapOtFields(mvUnmappedOPCols, mvMappings, mvUnmappedInpCols, fieldType) 
+    mvNlpMappedInp=[] 
+    </span><span class="s0">for </span><span class="s1">inpCol, nlpMatch </span><span class="s0">in </span><span class="s1">bestMatchDict.iteritems(): 
+        suggested.append({</span><span class="s4">'parentCategory'</span><span class="s1">: nlpMatch, </span><span class="s4">'inputField'</span><span class="s1">: inpCol}) 
+        mvNlpMappedInp.append(inpCol) 
+    mvFieldMappings[</span><span class="s3">0</span><span class="s1">].update({</span><span class="s4">'suggested'</span><span class="s1">: suggested}) 
+    unmappedInpCols=computeUnmappedInpCols(svMappedInp,mvMappedOPColsDict.keys(),mvNlpMappedInp,sotColumns) 
+    mvFieldMappings[</span><span class="s3">0</span><span class="s1">].update({</span><span class="s4">'unmappedInpCols'</span><span class="s1">: unmappedInpCols}) 
+    </span><span class="s0">return </span><span class="s1">mvFieldMappings 
+ 
+</span><span class="s2"># def getMvFeildMappings(dictMVMappings, mvUnmappedOPCols, mvMappings, mvUnmappedInpCols, fieldType):</span><span class="s1"> 
+</span><span class="s2">#     diParentCat = {}</span><span class="s1"> 
+</span><span class="s2">#     asisTag = 'AsIs'</span><span class="s1"> 
+</span><span class="s2">#     for key, val in mvMappings.items():</span><span class="s1"> 
+</span><span class="s2">#         if val['PARENT_CATEGORY'] not in diParentCat:</span><span class="s1"> 
+</span><span class="s2">#             diParentCat[val['PARENT_CATEGORY']] = {}</span><span class="s1"> 
+</span><span class="s2">#         if 'Column_Type' in val:</span><span class="s1"> 
+</span><span class="s2">#             tags = [di['Tag'] for di in val['Column_Type']]</span><span class="s1"> 
+</span><span class="s2">#             for tag in tags:</span><span class="s1"> 
+</span><span class="s2">#                 if tag not in diParentCat[val['PARENT_CATEGORY']]:</span><span class="s1"> 
+</span><span class="s2">#                     diParentCat[val['PARENT_CATEGORY']].update({tag: [key]})</span><span class="s1"> 
+</span><span class="s2">#                 else:</span><span class="s1"> 
+</span><span class="s2">#                     diParentCat[val['PARENT_CATEGORY']][tag].append(key)</span><span class="s1"> 
+</span><span class="s2">#</span><span class="s1"> 
+</span><span class="s2">#         if val['DATAFRAME_TYPE'] == asisTag:</span><span class="s1"> 
+</span><span class="s2">#             if asisTag not in diParentCat[val['PARENT_CATEGORY']]:</span><span class="s1"> 
+</span><span class="s2">#                 diParentCat[val['PARENT_CATEGORY']].update({asisTag: [key]})</span><span class="s1"> 
+</span><span class="s2">#             else:</span><span class="s1"> 
+</span><span class="s2">#                 diParentCat[val['PARENT_CATEGORY']][asisTag].append(key)</span><span class="s1"> 
+</span><span class="s2">#</span><span class="s1"> 
+</span><span class="s2">#     diAll = {}</span><span class="s1"> 
+</span><span class="s2">#     for key, val in diParentCat.items():</span><span class="s1"> 
+</span><span class="s2">#         for k, v in val.items():</span><span class="s1"> 
+</span><span class="s2">#             di = {'parentCategory': key, 'type': k, 'map': []}</span><span class="s1"> 
+</span><span class="s2">#             for outputCol in v:</span><span class="s1"> 
+</span><span class="s2">#                 di['map'].append({'outputField': outputCol, 'inputField': None})</span><span class="s1"> 
+</span><span class="s2">#             diAll.update({key + k: di})</span><span class="s1"> 
+</span><span class="s2">#     # print 'diAll:',json.dumps(diAll)</span><span class="s1"> 
+</span><span class="s2">#     # exit(0)</span><span class="s1"> 
+</span><span class="s2">#     mvFieldMappings = []</span><span class="s1"> 
+</span><span class="s2">#     mapped = []</span><span class="s1"> 
+</span><span class="s2">#     suggested = []</span><span class="s1"> 
+</span><span class="s2">#     covered = []</span><span class="s1"> 
+</span><span class="s2">#     for parentCategory in dictMVMappings:</span><span class="s1"> 
+</span><span class="s2">#         filterdDict = dictMVMappings[parentCategory]</span><span class="s1"> 
+</span><span class="s2">#         dictReverse = {val: key for key, val in filterdDict[0].items()}</span><span class="s1"> 
+</span><span class="s2">#         for lst in filterdDict[1]:</span><span class="s1"> 
+</span><span class="s2">#             type = parentCategory + lst[0].split('@')[0]</span><span class="s1"> 
+</span><span class="s2">#             di = deepcopy(diAll[type])</span><span class="s1"> 
+</span><span class="s2">#             lstMappedCols = [(item, item.split('@')[1]) for item in lst]</span><span class="s1"> 
+</span><span class="s2">#             for tup in lstMappedCols:</span><span class="s1"> 
+</span><span class="s2">#                 for map in di['map']:</span><span class="s1"> 
+</span><span class="s2">#                     if map['outputField'] == tup[1]:</span><span class="s1"> 
+</span><span class="s2">#                         map['inputField'] = dictReverse[tup[0]]</span><span class="s1"> 
+</span><span class="s2">#             di['order']=lst[0].split('@')[-1]</span><span class="s1"> 
+</span><span class="s2">#             # if lst[0].split('@')[0] == 'GENERAL':</span><span class="s1"> 
+</span><span class="s2">#             #     for asIs in lstAsIs[0:2]:</span><span class="s1"> 
+</span><span class="s2">#             #         di['map'].append({'outputField': asIs, 'inputField': dictReverse[asIs]})</span><span class="s1"> 
+</span><span class="s2">#</span><span class="s1"> 
+</span><span class="s2">#             mapped.append(deepcopy(di))</span><span class="s1"> 
+</span><span class="s2">#             covered.append(type)</span><span class="s1"> 
+</span><span class="s2">#</span><span class="s1"> 
+</span><span class="s2">#         asisType=parentCategory+'AsIs'</span><span class="s1"> 
+</span><span class="s2">#         if asisType not in diAll:</span><span class="s1"> 
+</span><span class="s2">#             continue</span><span class="s1"> 
+</span><span class="s2">#         asisDi=deepcopy(diAll[asisType])</span><span class="s1"> 
+</span><span class="s2">#         for d in asisDi['map']:</span><span class="s1"> 
+</span><span class="s2">#             d['inputField']=dictReverse.get(d['outputField'])</span><span class="s1"> 
+</span><span class="s2">#         mapped.append(asisDi)</span><span class="s1"> 
+</span><span class="s2">#         covered.append(asisType)</span><span class="s1"> 
+</span><span class="s2">#</span><span class="s1"> 
+</span><span class="s2">#     for k, v in diAll.items():</span><span class="s1"> 
+</span><span class="s2">#         if k not in covered:</span><span class="s1"> 
+</span><span class="s2">#             mapped.append(v)</span><span class="s1"> 
+</span><span class="s2">#     mvFieldMappings.append({'mapped': mapped})</span><span class="s1"> 
+</span><span class="s2">#     bestMatchDict = getUnmapOtFields(mvUnmappedOPCols, mvMappings, mvUnmappedInpCols, fieldType)</span><span class="s1"> 
+</span><span class="s2">#     for inpCol, nlpMatch in bestMatchDict.iteritems():</span><span class="s1"> 
+</span><span class="s2">#         suggested.append({'parentCategory': nlpMatch, 'inputField': inpCol})</span><span class="s1"> 
+</span><span class="s2">#     mvFieldMappings[0].update({'suggested': suggested})</span><span class="s1"> 
+</span><span class="s2">#     return mvFieldMappings</span><span class="s1"> 
+ 
+</span><span class="s0">class </span><span class="s1">NestedDict(dict): 
+    </span><span class="s0">def </span><span class="s1">__getitem__(self, key): 
+        </span><span class="s0">if </span><span class="s1">key </span><span class="s0">in </span><span class="s1">self: </span><span class="s0">return </span><span class="s1">self.get(key) 
+        </span><span class="s0">return </span><span class="s1">self.setdefault(key, NestedDict()) 
+ 
+</span><span class="s0">def </span><span class="s1">transformUserMapping(userMapping,type): </span><span class="s2">#todo we need to print userMaping</span><span class="s1"> 
+    </span><span class="s0">print </span><span class="s4">&quot;usermapping:&quot;</span><span class="s1">,userMapping 
+    </span><span class="s0">if </span><span class="s1">type==</span><span class="s4">'sv'</span><span class="s1">: 
+        lstTransformed = [] 
+        lstTransformed.insert(</span><span class="s3">0</span><span class="s1">,userMapping) 
+        lstTransformed.insert(</span><span class="s3">1</span><span class="s1">,userMapping.values()) 
+        lstTransformed.insert(</span><span class="s3">2</span><span class="s1">,[key </span><span class="s0">for </span><span class="s1">key </span><span class="s0">in </span><span class="s1">constants.mappings.keys() </span><span class="s0">if </span><span class="s1">key </span><span class="s0">not in </span><span class="s1">userMapping.values()]) 
+        lstTransformed.insert(</span><span class="s3">3</span><span class="s1">,[]) 
+        </span><span class="s0">return </span><span class="s1">lstTransformed 
+    </span><span class="s0">elif </span><span class="s1">type==</span><span class="s4">'mv'</span><span class="s1">: 
+        diTransformed=utils.NestedDict()
+        </span><span class="s0">for </span><span class="s1">parentCat,di </span><span class="s0">in </span><span class="s1">userMapping.items(): 
+            filterdMappingJson = {key: value </span><span class="s0">for </span><span class="s1">key, value </span><span class="s0">in </span><span class="s1">constants.mvMappings.items() </span><span class="s0">if </span><span class="s1">value[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">] == parentCat} 
+            diTransformed[parentCat]=[] 
+            diTemp=utils.NestedDict()
+            mappedOPColsList=[] 
+            </span><span class="s0">for </span><span class="s1">outputFieldString </span><span class="s0">in </span><span class="s1">di.values(): 
+                groupId=outputFieldString.split(</span><span class="s4">'@'</span><span class="s1">)[</span><span class="s3">2</span><span class="s1">] 
+                mappedOPColsList.append(outputFieldString.split(</span><span class="s4">'@'</span><span class="s1">)[</span><span class="s3">1</span><span class="s1">]) 
+                </span><span class="s0">if </span><span class="s1">groupId </span><span class="s0">not in </span><span class="s1">diTemp: 
+                    diTemp.update({groupId:[]}) 
+                diTemp[groupId].append(outputFieldString) 
+            diTransformed[parentCat].insert(</span><span class="s3">0</span><span class="s1">,di) 
+            diTransformed[parentCat].insert(</span><span class="s3">1</span><span class="s1">,diTemp.values()) 
+            unmappedOPCols = [col </span><span class="s0">for </span><span class="s1">col </span><span class="s0">in </span><span class="s1">filterdMappingJson.keys() </span><span class="s0">if </span><span class="s1">col </span><span class="s0">not in </span><span class="s1">mappedOPColsList] 
+</span><span class="s2">#             unmappedInpCols=[col for col in inputColumns  if col not in di.keys()]</span><span class="s1"> 
+            unmappedInpCols=[] 
+            diTransformed[parentCat].insert(</span><span class="s3">2</span><span class="s1">, unmappedOPCols) 
+            diTransformed[parentCat].insert(</span><span class="s3">3</span><span class="s1">, unmappedInpCols) 
+        </span><span class="s0">return </span><span class="s1">diTransformed 
+ 
+ 
+ 
+</span><span class="s2"># def getOutputJson(masterDictList):</span><span class="s1"> 
+</span><span class="s2">#     fdf = pd.DataFrame()</span><span class="s1"> 
+</span><span class="s2">#     rowsAddres=0</span><span class="s1"> 
+</span><span class="s2">#     for masterDict in masterDictList:</span><span class="s1"> 
+</span><span class="s2">#         record=pd.concat(masterDict.values(),axis=1)</span><span class="s1"> 
+</span><span class="s2">#         fdf=fdf._append(record)</span><span class="s1">
+</span><span class="s2">#         rowsAddres+=len(masterDict['Address'].index)</span><span class="s1"> 
+</span><span class="s2">#         # print &quot;len(masterDict['Address'].index):&quot;,len(masterDict['Address'].index)</span><span class="s1"> 
+</span><span class="s2">#     # print 'rowsAddres:',rowsAddres</span><span class="s1"> 
+</span><span class="s2">#     # print 'rowsFdf:',len(fdf.index)</span><span class="s1"> 
+</span><span class="s2">#     # exit(0)</span><span class="s1"> 
+</span><span class="s2">#     outputJson=deepcopy(constants.outputCols)</span><span class="s1"> 
+</span><span class="s2">#     for key,val in outputJson.items():</span><span class="s1"> 
+</span><span class="s2">#         for di in val['finalDfColNames']:</span><span class="s1"> 
+</span><span class="s2">#             try:</span><span class="s1"> 
+</span><span class="s2">#                 di['data']=map(str,list(fdf.get(di['dfColName'])))</span><span class="s1"> 
+</span><span class="s2">#             except:</span><span class="s1"> 
+</span><span class="s2">#                 di['data']=fdf.get(di['dfColName'])</span><span class="s1"> 
+</span><span class="s2">#             di.pop('dfColName')</span><span class="s1"> 
+</span><span class="s2">#     # print outputJson</span><span class="s1"> 
+</span><span class="s2">#     return outputJson</span><span class="s1"> 
+ 
+</span><span class="s2"># def renameSOTCols(inputDF):</span><span class="s1"> 
+</span><span class="s2">#     diRename={}</span><span class="s1"> 
+</span><span class="s2">#     for col in inputDF.columns:</span><span class="s1"> 
+</span><span class="s2">#         splits=col.split('\n')</span><span class="s1"> 
+</span><span class="s2">#         for elem in splits:</span><span class="s1"> 
+</span><span class="s2">#             if elem:</span><span class="s1"> 
+</span><span class="s2">#                 diRename[col]=elem</span><span class="s1"> 
+</span><span class="s2">#                 break</span><span class="s1"> 
+</span><span class="s2">#     inputDF.rename(columns=diRename,inplace=True)</span><span class="s1"> 
+</span><span class="s2">#     return inputDF</span><span class="s1"> 
+ 
+</span><span class="s0">def </span><span class="s1">renameSOTCols(ExcelLocation, sheetIdx, HeaderIdx, inputDF): 
+    </span><span class="s0">def </span><span class="s1">getrow(ws, hdidx): 
+        </span><span class="s0">if </span><span class="s1">hdidx &lt;&gt; </span><span class="s3">0</span><span class="s1">: 
+            </span><span class="s0">return </span><span class="s1">ws.row(hdidx - </span><span class="s3">1</span><span class="s1">) 
+        </span><span class="s0">return </span><span class="s1">ws.row(hdidx) 
+ 
+    </span><span class="s0">def </span><span class="s1">CleanColumnName(row, dflength): 
+        col = [] 
+        dstnctCol = [] 
+        dupCol = [] 
+        </span><span class="s0">for </span><span class="s1">i, vlu </span><span class="s0">in </span><span class="s1">enumerate(row): 
+            </span><span class="s0">if </span><span class="s1">(vlu.value </span><span class="s0">is </span><span class="s1">None </span><span class="s0">or </span><span class="s1">vlu.value.strip() == </span><span class="s4">''</span><span class="s1">)</span><span class="s0">and </span><span class="s1">i &lt; dflength: 
+                col.append(</span><span class="s4">&quot;empty_column&quot;</span><span class="s1">) 
+                dupCol.append(</span><span class="s4">&quot;empty_column&quot;</span><span class="s1">) 
+            </span><span class="s0">elif </span><span class="s1">vlu.value </span><span class="s0">is not </span><span class="s1">None: 
+                val = vlu.value 
+                val = re.sub(</span><span class="s4">&quot;tricare.*only[\s.:;,]*</span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s1">, </span><span class="s4">''</span><span class="s1">, val, flags=re.IGNORECASE) 
+                val = val.replace(</span><span class="s4">'</span><span class="s0">\n</span><span class="s4">'</span><span class="s1">, </span><span class="s4">'|'</span><span class="s1">).replace(</span><span class="s4">'</span><span class="s0">\r</span><span class="s4">'</span><span class="s1">, </span><span class="s4">'|'</span><span class="s1">) 
+                </span><span class="s0">print </span><span class="s1">vlu.value, val 
+                val = [x </span><span class="s0">for </span><span class="s1">x </span><span class="s0">in </span><span class="s1">val.split(</span><span class="s4">&quot;|&quot;</span><span class="s1">) </span><span class="s0">if </span><span class="s1">x][</span><span class="s3">0</span><span class="s1">] 
+                val = val.strip().lower() 
+                col.append(val) 
+                </span><span class="s0">if </span><span class="s1">val </span><span class="s0">not in </span><span class="s1">dstnctCol: 
+                    dstnctCol.append(val) 
+                </span><span class="s0">else</span><span class="s1">: 
+                    dupCol.append(val) 
+            </span><span class="s0">else</span><span class="s1">: 
+                </span><span class="s0">pass</span><span class="s1"> 
+        </span><span class="s0">return </span><span class="s1">col, dupCol 
+ 
+    </span><span class="s0">def </span><span class="s1">getFinalRowHeader(rowCol, dupCol): 
+        process = [] 
+        </span><span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">dupCol: 
+            count = </span><span class="s3">1</span><span class="s1"> 
+            </span><span class="s0">for </span><span class="s1">j, x </span><span class="s0">in </span><span class="s1">enumerate(rowCol): 
+                </span><span class="s0">if </span><span class="s1">x == i: 
+                    </span><span class="s0">if </span><span class="s1">x </span><span class="s0">in </span><span class="s1">process: 
+                        count = count + </span><span class="s3">1</span><span class="s1"> 
+                    </span><span class="s0">else</span><span class="s1">: 
+                        process.append(x) 
+                    v = x + str(count) 
+                    rowCol[j] = v 
+        </span><span class="s0">return </span><span class="s1">rowCol 
+ 
+    workbook = xlrd.open_workbook(ExcelLocation) 
+    workSheet = workbook.sheet_by_index(sheetIdx) 
+    HeaderRow = getrow(workSheet, HeaderIdx) 
+    rowCol, dupCol = CleanColumnName(HeaderRow, len(inputDF.columns)) 
+    inputDF.columns = getFinalRowHeader(rowCol, dupCol) 
+    </span><span class="s0">return </span><span class="s1">inputDF 
+ 
+ 
+</span><span class="s0">def </span><span class="s1">uiDriverFunction(userMapping,token,userID): 
+    writeUserMappingToDisk(userMapping,userID) 
+    inputDF=readPickle(token) 
+    svMappedOPColsDict, mappedOPColsList, unmappedOPCols,unmappedInpCols=transformUserMapping(userMapping[</span><span class="s4">'sv'</span><span class="s1">],</span><span class="s4">'sv'</span><span class="s1">) 
+    </span><span class="s0">print </span><span class="s4">'unmappedOPCols:'</span><span class="s1">,unmappedOPCols 
+    dictMVUserMapping=transformUserMapping(userMapping[</span><span class="s4">'mv'</span><span class="s1">],</span><span class="s4">'mv'</span><span class="s1">) 
+    mvMappedOPColsDict, mvMappedOPColsList, mvUnmappedOPCols,mvUnmappedInpCols = mv.combineMVMapping(dictMVUserMapping) 
+    </span><span class="s0">print </span><span class="s4">'mvUnmappedOPCols:'</span><span class="s1">,mvUnmappedOPCols 
+ 
+    dataframe = utils.renameColumns(inputDF, svMappedOPColsDict)  </span><span class="s2"># ToDo  rename it for single value</span><span class="s1"> 
+    dataframe = utils.renameColumns(dataframe, mvMappedOPColsDict)  </span><span class="s2"># ToDo then rename it for multi value</span><span class="s1"> 
+ 
+    </span><span class="s0">if </span><span class="s1">svMappedOPColsDict.get(</span><span class="s4">'NA'</span><span class="s1">): 
+        unmappedOPCols.append(svMappedOPColsDict[</span><span class="s4">'NA'</span><span class="s1">]) 
+    missingCols = unmappedOPCols + mvUnmappedOPCols + constants.variables[</span><span class="s4">&quot;npiReg&quot;</span><span class="s1">].keys()  </span><span class="s2"># Todo: if NPI reg fails #Todo: sv_unamapped and camel casing everywhere.</span><span class="s1"> 
+    dataframe = utils.addMissingColumns(dataframe, missingCols)  </span><span class="s2"># Todo: Rohan to get back on This</span><span class="s1"> 
+ 
+    </span><span class="s2"># Then Do this for multi value</span><span class="s1"> 
+ 
+    dataframe = utils.fillFinalNPIs(dataframe, </span><span class="s4">&quot;FINAL_NPI&quot;</span><span class="s1">) 
+    uniqueIds = utils.getUniqueIDs(dataframe)  </span><span class="s2"># returns list of tuples NPI + Tax_ID</span><span class="s1"> 
+ 
+    frames = utils.getFrames(dataframe, 
+                             uniqueIds)  </span><span class="s2"># returns list of dataframes for every unique id --&gt; tuples of (NPI, TAX_ID)</span><span class="s1"> 
+ 
+    sv_splitFrameCols = utils.merge_two_dicts(constants.mappings, constants.variables[ 
+        </span><span class="s4">&quot;mandatory&quot;</span><span class="s1">])  </span><span class="s2"># TODO: check with rohan, #ToDo This mappings should be the refreshed Single value Json #TODO: check with rohan</span><span class="s1"> 
+    sv_splitFrameCols = utils.merge_two_dicts(sv_splitFrameCols, constants.variables[</span><span class="s4">&quot;npiReg&quot;</span><span class="s1">]) 
+    mv_splitFrameCols = utils.merge_two_dicts(constants.mvMappings, constants.variables[ 
+        </span><span class="s4">&quot;mandatory&quot;</span><span class="s1">])  </span><span class="s2"># TODO: check with rohan, #ToDo do this same operation of merging for multivalue refreshed columns</span><span class="s1"> 
+    splittedFrames, rejectedFrames = utils.splitFrames1(frames, sv_splitFrameCols, 
+                                                        mv_splitFrameCols)  </span><span class="s2"># splittedFrames --&gt; list of single valued frames, multi valued frames for every unique NPI + Tax_ID combination.</span><span class="s1"> 
+    </span><span class="s4">'''Above function should return the list of Tuples (Single value dataframe, multivalue dataframe) 
+    pass two parameters to this function one is single value mapping another one is multivalue mapping'''</span><span class="s1"> 
+ 
+    </span><span class="s2"># todo for every tuple process Single value and multivalue data frame</span><span class="s1"> 
+    npiCols = constants.variables[</span><span class="s4">&quot;npiReg&quot;</span><span class="s1">] 
+    singleValuedFrames = [] 
+    multiValuedFrames = [] 
+    masterDictList = [] 
+    </span><span class="s2"># VariableCols = outputCols</span><span class="s1"> 
+ 
+    </span><span class="s0">for </span><span class="s1">tupple </span><span class="s0">in </span><span class="s1">splittedFrames: 
+        </span><span class="s2"># Todo get NPI supplementary data.</span><span class="s1"> 
+        </span><span class="s2"># enrichedDataFrame, emptyNpiDFs, failedNpis = fnpi.enrichDataFrame(tupple[0], npiCols) #ToDo this should be part of single value data frame operation</span><span class="s1"> 
+        enrichedDataFrame = tupple[</span><span class="s3">0</span><span class="s1">] 
+        </span><span class="s2"># MultiValueOP = DeriveMultiValue(tupple[0], VariableCols, mv_mappings) # returns a dictionary {&quot;Address&quot;: dataframe} (both notrmalized and with all associated derivations completed)</span><span class="s1"> 
+        </span><span class="s2"># ndf=utils.mv_address_normalization(tupple[1], mv_mappedOPColsList)</span><span class="s1"> 
+ 
+        </span><span class="s2"># Todo Normalization of Multi value dataframe to be done here.</span><span class="s1"> 
+        masterDict = mv.mvNormalizeColumns(tupple[</span><span class="s3">1</span><span class="s1">], constants.functionMappings, dictMVUserMapping, constants.mvMappings)  </span><span class="s2"># TOdo: recheck</span><span class="s1"> 
+ 
+        </span><span class="s2"># Todo Field wise derivation for Single value</span><span class="s1"> 
+        </span><span class="s2"># singlevalueOP, failedSNpis = fnpi.deriveSingleValue(enrichedDataFrame,outputCols)  # returns a single output dataframe</span><span class="s1"> 
+ 
+        masterDict = utils.merge_two_dicts(masterDict, {</span><span class="s4">&quot;singleValue&quot;</span><span class="s1">: enrichedDataFrame})  </span><span class="s2"># Todo: check with rohan**</span><span class="s1"> 
+ 
+        </span><span class="s2"># Todo Field wise derivation for Multi value</span><span class="s1"> 
+        </span><span class="s2"># masterDict = mv.deriveMVCols(masterDict, constants.multivaluedCols, constants.ndb_p,constants.midlevNdBSpec)</span><span class="s1"> 
+        </span><span class="s2"># masterDict = mv.deriveMVCols(masterDict, cleansingCols, constants.midlevNdBSpec)</span><span class="s1"> 
+        </span><span class="s2"># masterDict = mv.deriveMVCols(masterDict, multivaluedCols, constants.midlevNdBSpec)</span><span class="s1"> 
+        masterDict = mv.cleanseDF(masterDict, constants.cleansingDf) 
+        masterDict = mv.deriveMVCols(masterDict, constants.cleansingCols, constants.midlevNdBSpec) 
+        masterDict = mv.deriveMVCols(masterDict, constants.multivaluedCols, constants.midlevNdBSpec) 
+        masterDict = mv.cleanseDF(masterDict, constants.finalCleansingDf) 
+        masterDictList.append(masterDict) 
+        </span><span class="s2"># multivalueOP, failedMNpis = fnpi.deriveMultiValue(enrichedDataFrame, normalizedMVFrame, outputCols)  # returns a single output dataframe</span><span class="s1"> 
+        </span><span class="s2"># normalized_mv_frames.append(normalizedMVFrame)</span><span class="s1"> 
+ 
+        </span><span class="s2"># singleValuedFrames.append(singlevalueOP)</span><span class="s1"> 
+        </span><span class="s2"># multiValuedFrames.append(multivalueOP)</span><span class="s1"> 
+ 
+    </span><span class="s2"># print masterDictList</span><span class="s1"> 
+    fdf = getFinalDf(masterDictList) 
+    outputJson = getOutputJson(fdf.fillna(</span><span class="s4">''</span><span class="s1">)) 
+    </span><span class="s0">return </span><span class="s1">outputJson 
+ 
+ 
+</span><span class="s0">def </span><span class="s1">writeUserMappingToDisk(userMapping,userID): 
+    filename=str(datetime.datetime.now()).replace(</span><span class="s4">':'</span><span class="s1">,</span><span class="s4">'-'</span><span class="s1">)+</span><span class="s4">'_'</span><span class="s1">+userID 
+    </span><span class="s0">with </span><span class="s1">open(constants.userMappingsPath+filename+</span><span class="s4">'.json'</span><span class="s1">,</span><span class="s4">'w'</span><span class="s1">) </span><span class="s0">as </span><span class="s1">outfile: 
+        outfile.write(json.dumps(userMapping)) 
+ 
+ 
+</span><span class="s0">def </span><span class="s1">identifyMappingDiff(userMappings,diDiff): 
+    </span><span class="s0">print </span><span class="s1">userMappings 
+    </span><span class="s2"># exit(0)</span><span class="s1"> 
+    </span><span class="s0">for </span><span class="s1">key,val </span><span class="s0">in </span><span class="s1">userMappings[</span><span class="s4">'sv'</span><span class="s1">].items(): 
+        </span><span class="s0">if </span><span class="s1">key </span><span class="s0">not in </span><span class="s1">constants.mappings[val][</span><span class="s4">'Input_Column'</span><span class="s1">]: 
+            </span><span class="s0">if </span><span class="s1">val </span><span class="s0">not in </span><span class="s1">diDiff[</span><span class="s4">'sv'</span><span class="s1">]: 
+                diDiff[</span><span class="s4">'sv'</span><span class="s1">].update({val:[]}) 
+            </span><span class="s0">if </span><span class="s1">key </span><span class="s0">not in </span><span class="s1">diDiff[</span><span class="s4">'sv'</span><span class="s1">][val]: 
+                diDiff[</span><span class="s4">'sv'</span><span class="s1">][val].append(key) 
+    </span><span class="s0">for </span><span class="s1">parentCat, di </span><span class="s0">in </span><span class="s1">userMappings[</span><span class="s4">'mv'</span><span class="s1">].items(): 
+        </span><span class="s0">for </span><span class="s1">key,val </span><span class="s0">in </span><span class="s1">di.items(): 
+            tag=val.split(</span><span class="s4">'@'</span><span class="s1">)[</span><span class="s3">0</span><span class="s1">] 
+            outputField=val.split(</span><span class="s4">'@'</span><span class="s1">)[</span><span class="s3">1</span><span class="s1">] 
+            filterdDi=constants.mvMappings[outputField] 
+            </span><span class="s0">if </span><span class="s1">filterdDi[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">]==parentCat: 
+                flag=</span><span class="s3">0</span><span class="s1"> 
+                </span><span class="s0">if </span><span class="s1">filterdDi.get(</span><span class="s4">'Column_Type'</span><span class="s1">): 
+                    </span><span class="s0">for </span><span class="s1">diMap </span><span class="s0">in </span><span class="s1">filterdDi[</span><span class="s4">'Column_Type'</span><span class="s1">]: 
+                        </span><span class="s0">if </span><span class="s1">key </span><span class="s0">in </span><span class="s1">diMap[</span><span class="s4">'Input_Column'</span><span class="s1">]: 
+                            flag = </span><span class="s3">1</span><span class="s1"> 
+                            </span><span class="s0">break</span><span class="s1"> 
+                </span><span class="s0">else</span><span class="s1">: 
+                    </span><span class="s0">if </span><span class="s1">key </span><span class="s0">in </span><span class="s1">filterdDi.get(</span><span class="s4">'Input_Column'</span><span class="s1">): 
+                        flag = </span><span class="s3">1</span><span class="s1"> 
+                        </span><span class="s0">break</span><span class="s1"> 
+ 
+                </span><span class="s0">if not </span><span class="s1">flag: 
+                    </span><span class="s0">if </span><span class="s1">tag </span><span class="s0">not in </span><span class="s1">diDiff[</span><span class="s4">'mv'</span><span class="s1">][parentCat][outputField]: 
+                        diDiff[</span><span class="s4">'mv'</span><span class="s1">][parentCat][outputField].update({tag:[]}) 
+                    </span><span class="s0">if </span><span class="s1">key </span><span class="s0">not in </span><span class="s1">diDiff[</span><span class="s4">'mv'</span><span class="s1">][parentCat][outputField][tag]: 
+                        diDiff[</span><span class="s4">'mv'</span><span class="s1">][parentCat][outputField][tag].append(key) 
+ 
+ 
+</span><span class="s0">def </span><span class="s1">commitAdminMapping(adminMapping): 
+    </span><span class="s0">print </span><span class="s4">'adminMapping:'</span><span class="s1">,adminMapping 
+    svMappingsCopy=copy.deepcopy(constants.mappings) 
+    mvMappingsCopy=copy.deepcopy(constants.mvMappings) 
+    </span><span class="s0">for </span><span class="s1">key,val </span><span class="s0">in </span><span class="s1">adminMapping[</span><span class="s4">'sv'</span><span class="s1">].items(): 
+        svMappingsCopy[key][</span><span class="s4">'Input_Column'</span><span class="s1">]+=val 
+    </span><span class="s0">if </span><span class="s1">adminMapping[</span><span class="s4">'mv'</span><span class="s1">]: 
+        </span><span class="s0">for </span><span class="s1">parentCat,di </span><span class="s0">in </span><span class="s1">adminMapping[</span><span class="s4">'mv'</span><span class="s1">].items(): 
+            </span><span class="s0">for </span><span class="s1">outputField,di1 </span><span class="s0">in </span><span class="s1">di.items(): 
+                filtereddDi=mvMappingsCopy[outputField] 
+                </span><span class="s0">for </span><span class="s1">tag,lstInpCols </span><span class="s0">in </span><span class="s1">di1.items(): 
+                    </span><span class="s0">if </span><span class="s1">filtereddDi[</span><span class="s4">'PARENT_CATEGORY'</span><span class="s1">]==parentCat: 
+                        </span><span class="s0">try</span><span class="s1">: 
+                            </span><span class="s0">for </span><span class="s1">diMap </span><span class="s0">in </span><span class="s1">filtereddDi[</span><span class="s4">'Column_Type'</span><span class="s1">]: 
+                                </span><span class="s0">if </span><span class="s1">diMap[</span><span class="s4">'Tag'</span><span class="s1">]==tag: 
+                                    diMap[</span><span class="s4">'Input_Column'</span><span class="s1">]+=lstInpCols 
+                        </span><span class="s0">except</span><span class="s1">: 
+                            </span><span class="s0">if </span><span class="s1">filtereddDi[</span><span class="s4">'DATAFRAME_TYPE'</span><span class="s1">]==</span><span class="s4">'AsIs'</span><span class="s1">: 
+                                filtereddDi[</span><span class="s4">'Input_Column'</span><span class="s1">]+=lstInpCols 
+                            </span><span class="s0">pass</span><span class="s1"> 
+    </span><span class="s0">print </span><span class="s4">'updatedMvMappings:'</span><span class="s1">,mvMappingsCopy 
+    </span><span class="s0">print </span><span class="s4">'updatedSvMappings:'</span><span class="s1">,svMappingsCopy 
+    configPath = </span><span class="s4">&quot;../config/&quot;</span><span class="s1"> 
+    mvMappingsFileName = </span><span class="s4">&quot;mvMappings.json&quot;</span><span class="s1"> 
+    mvMappingsVar = </span><span class="s4">&quot;mvMappings&quot;</span><span class="s1"> 
+    mappingsFileName = </span><span class="s4">&quot;mappings.json&quot;</span><span class="s1"> 
+    mappingsVar = </span><span class="s4">&quot;mappings&quot;</span><span class="s1"> 
+    </span><span class="s0">with </span><span class="s1">open(configPath + mvMappingsFileName,</span><span class="s4">'w'</span><span class="s1">) </span><span class="s0">as </span><span class="s1">outfile: 
+        </span><span class="s0">try</span><span class="s1">: 
+            outfile.write(json.dumps(mvMappingsCopy)) 
+        </span><span class="s0">except </span><span class="s1">Exception </span><span class="s0">as </span><span class="s1">e: 
+            </span><span class="s0">print </span><span class="s1">e 
+        </span><span class="s0">else</span><span class="s1">: 
+            setattr(constants, mvMappingsVar, mvMappingsCopy) 
+ 
+    </span><span class="s0">with </span><span class="s1">open(configPath + mappingsFileName,</span><span class="s4">'w'</span><span class="s1">) </span><span class="s0">as </span><span class="s1">outfile: 
+        </span><span class="s0">try</span><span class="s1">: 
+            outfile.write(json.dumps(svMappingsCopy)) 
+        </span><span class="s0">except </span><span class="s1">Exception </span><span class="s0">as </span><span class="s1">e: 
+            </span><span class="s0">print </span><span class="s1">e 
+        </span><span class="s0">else</span><span class="s1">: 
+            setattr(constants, mappingsVar, svMappingsCopy) 
+ 
+</span><span class="s0">def </span><span class="s1">adminScreenDriverFunction(): 
+    userMappingsPath = constants.userMappingsPath 
+    </span><span class="s2"># lstFiles = os.listdir(userMappingsPath)</span><span class="s1"> 
+    lstFiles = [pos_json </span><span class="s0">for  </span><span class="s1">pos_json  </span><span class="s0">in  </span><span class="s1">os.listdir(userMappingsPath)  </span><span class="s0">if  </span><span class="s1">pos_json.endswith(</span><span class="s4">'.json'</span><span class="s1">)] 
+    diDiff = utils.NestedDict()
+    </span><span class="s0">for </span><span class="s1">file </span><span class="s0">in </span><span class="s1">lstFiles: 
+        userMappings = utils.readFile(userMappingsPath + file, </span><span class="s4">'json'</span><span class="s1">) 
+        identifyMappingDiff(userMappings, diDiff) 
+    </span><span class="s0">return </span><span class="s1">diDiff 
+ 
+ 
+</span><span class="s2"># def exportReviewedData(reviewedJson):</span><span class="s1"> 
+</span><span class="s2">#     lstTuples=[]</span><span class="s1"> 
+</span><span class="s2">#     for i in range(len(reviewedJson.keys())+1):</span><span class="s1"> 
+</span><span class="s2">#         for cat,json in reviewedJson.items():</span><span class="s1"> 
+</span><span class="s2">#             if json['order']==i:</span><span class="s1"> 
+</span><span class="s2">#                 for diData in json['finalDfColNames']:</span><span class="s1"> 
+</span><span class="s2">#                     # colName=cat + '@@@'+diData['outputcolName']</span><span class="s1"> 
+</span><span class="s2">#                     colName=diData['outputColName']</span><span class="s1"> 
+</span><span class="s2">#                     lstTuples.append((colName,pd.Series(diData['data'])))</span><span class="s1"> 
+</span><span class="s2">#     df = pd.DataFrame(OrderedDict(tuple(lstTuples)))</span><span class="s1"> 
+</span><span class="s2">#     # print df</span><span class="s1"> 
+</span><span class="s2">#     xlsxWriter = pd.ExcelWriter('../output/finalExcel.xlsx', engine='xlsxwriter')</span><span class="s1"> 
+</span><span class="s2">#</span><span class="s1"> 
+</span><span class="s2">#     # Convert the dataframe to an XlsxWriter Excel object.</span><span class="s1"> 
+</span><span class="s2">#     df.to_excel(xlsxWriter, sheet_name='Sheet1', index=False)</span><span class="s1"> 
+</span><span class="s2">#</span><span class="s1"> 
+</span><span class="s2">#     # Close the Pandas Excel writer and output the Excel file.</span><span class="s1"> 
+</span><span class="s2">#     xlsxWriter.save()</span><span class="s1"> 
+ 
+ 
+</span><span class="s0">def </span><span class="s1">dfToJson(inputDf,toJson=</span><span class="s3">1</span><span class="s1">): 
+    dataJson={} 
+    colSet=inputDf.columns.tolist() 
+    dataSet=inputDf.values.tolist() 
+    dataJson.update({</span><span class="s4">'colSet'</span><span class="s1">:colSet,</span><span class="s4">'dataSet'</span><span class="s1">:dataSet}) 
+    </span><span class="s0">if </span><span class="s1">toJson: 
+        </span><span class="s0">return </span><span class="s1">json.dumps(dataJson) 
+    </span><span class="s0">else</span><span class="s1">: 
+        </span><span class="s0">return </span><span class="s1">dataJson 
+ 
+</span><span class="s0">def </span><span class="s1">sotDataToJson(inputDf): 
+    </span><span class="s0">return </span><span class="s1">dfToJson(inputDf) 
+ 
+</span><span class="s0">def </span><span class="s1">getFinalDf(masterDictList): 
+    fdf = pd.DataFrame() 
+    </span><span class="s0">for </span><span class="s1">masterDict </span><span class="s0">in </span><span class="s1">masterDictList: 
+        colsToBeRemovedOthers = [</span><span class="s4">'index'</span><span class="s1">, </span><span class="s4">'ROW_COUNT'</span><span class="s1">, </span><span class="s4">'ROW_NUM'</span><span class="s1">] 
+        colsToBeRemovedFD = [</span><span class="s4">'ROW_COUNT'</span><span class="s1">, </span><span class="s4">'ROW_NUM'</span><span class="s1">] 
+        colsToBeRemovedSV = [] 
+        masterDict = {k: v </span><span class="s0">for </span><span class="s1">k, v </span><span class="s0">in </span><span class="s1">masterDict.items() </span><span class="s0">if </span><span class="s1">k </span><span class="s0">not in </span><span class="s1">[</span><span class="s4">'Degree'</span><span class="s1">, </span><span class="s4">'Title'</span><span class="s1">, </span><span class="s4">'Credential'</span><span class="s1">]} 
+        dfs = [v.drop(colsToBeRemovedFD, axis=</span><span class="s3">1</span><span class="s1">) </span><span class="s0">if </span><span class="s1">k == </span><span class="s4">'FinalDegree' </span><span class="s0">else </span><span class="s1">v.drop(colsToBeRemovedSV, 
+                                                                                   axis=</span><span class="s3">1</span><span class="s1">) </span><span class="s0">if </span><span class="s1">k == </span><span class="s4">'singleValue' </span><span class="s0">else </span><span class="s1">v.drop( 
+            colsToBeRemovedOthers, axis=</span><span class="s3">1</span><span class="s1">) </span><span class="s0">for </span><span class="s1">k, v </span><span class="s0">in </span><span class="s1">masterDict.items()] 
+        record = pd.concat(dfs, axis=</span><span class="s3">1</span><span class="s1">) 
+        fdf=fdf._append(record)
+    </span><span class="s0">return </span><span class="s1">fdf 
+ 
+ 
+</span><span class="s0">def </span><span class="s1">getOutputJson(fdf): 
+    outputJson=deepcopy(constants.outputCols) 
+    </span><span class="s0">print </span><span class="s4">'outputJson:'</span><span class="s1">,outputJson 
+    dataJson={} 
+    </span><span class="s0">for </span><span class="s1">key,val </span><span class="s0">in </span><span class="s1">outputJson.items(): 
+        colSet=[] 
+        dataSetCols=[] 
+        </span><span class="s0">for </span><span class="s1">di </span><span class="s0">in </span><span class="s1">val[</span><span class="s4">'finalDfColNames'</span><span class="s1">]: 
+            </span><span class="s0">if </span><span class="s1">di[</span><span class="s4">'dfColName'</span><span class="s1">]: 
+                colSet.append(di[</span><span class="s4">'outputColName'</span><span class="s1">]) 
+                dataSetCols.append(di[</span><span class="s4">'dfColName'</span><span class="s1">]) 
+        </span><span class="s0">print </span><span class="s4">'fdfCols;'</span><span class="s1">,fdf.columns.tolist() 
+        </span><span class="s0">print </span><span class="s4">'dataSetCols:'</span><span class="s1">,dataSetCols 
+        dataJson.update({key:dfToJson(fdf[dataSetCols],toJson=</span><span class="s3">0</span><span class="s1">)}) 
+        dataJson[key].update({</span><span class="s4">'colSet'</span><span class="s1">:colSet}) 
+        dataJson[key].update({</span><span class="s4">'order'</span><span class="s1">:val[</span><span class="s4">'order'</span><span class="s1">]}) 
+    </span><span class="s0">return </span><span class="s1">dataJson 
+ 
+</span><span class="s0">def </span><span class="s1">exportReviewedData(reviewedJson,token): 
+    lstDf=[] 
+    </span><span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range(len(reviewedJson.keys())+</span><span class="s3">1</span><span class="s1">): 
+        </span><span class="s0">for </span><span class="s1">cat,jsn </span><span class="s0">in </span><span class="s1">reviewedJson.items(): 
+            </span><span class="s0">if </span><span class="s1">jsn[</span><span class="s4">'order'</span><span class="s1">]==i: 
+                df=pd.DataFrame(jsn[</span><span class="s4">'dataSet'</span><span class="s1">],columns=jsn[</span><span class="s4">'colSet'</span><span class="s1">]) 
+                lstDf.append(df) 
+    fdf = pd.concat(lstDf,axis=</span><span class="s3">1</span><span class="s1">) 
+    outputFile = </span><span class="s4">&quot;Output_&quot;</span><span class="s1">+token 
+    xlsxWriter = pd.ExcelWriter(</span><span class="s4">'../UI/static/output/'</span><span class="s1">+outputFile+</span><span class="s4">'.xlsx'</span><span class="s1">, engine=</span><span class="s4">'xlsxwriter'</span><span class="s1">) 
+ 
+    </span><span class="s2"># Convert the dataframe to an XlsxWriter Excel object.</span><span class="s1"> 
+    fdf.to_excel(xlsxWriter, sheet_name=</span><span class="s4">'Sheet1'</span><span class="s1">, index=False) 
+ 
+    </span><span class="s2"># Close the Pandas Excel writer and output the Excel file.</span><span class="s1"> 
+    xlsxWriter.save() 
+    </span><span class="s0">return </span><span class="s1">outputFile 
+</span></pre>
+</body>
+</html>

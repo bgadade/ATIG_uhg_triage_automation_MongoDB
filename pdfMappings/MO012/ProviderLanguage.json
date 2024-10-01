@@ -1,0 +1,16 @@
+{"PROVIDER_LANGUAGE": {
+  "PARENT_CATEGORY": "ProviderLanguage",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                            "min_Y": { "text": ["WUMS EFFECTIVE DATE"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_Y": { "text": ["FOREIGN LANGUAGES SPOKEN"],"point": "TOP_RIGHT","occurence": 1},
+                            "min_X": { "text": ["FOREIGN LANGUAGES SPOKEN"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+  }
+  ]
+ }
+   }

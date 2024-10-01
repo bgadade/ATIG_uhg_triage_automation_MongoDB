@@ -1,0 +1,44 @@
+[
+  {"LayerName": "CleanseDataFrame","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"singleValue": {
+      "derivations": [
+        {"name": "applyRegex","type": "mv_cmn","input": {"inputCol":"EFFECTIVE_DATE", "regexKey":"EFFECTIVE_DATE"}}
+      ]
+    }}
+  ]},
+{"LayerName": "CleanseLayer1","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "var_parseDate","type": "mv_cmn","input": ["EFFECTIVE_DATE", "C"],"col": "PARSED_EFFECTIVE_DATE"},
+        {"name": "var_parseDate","type": "mv_cmn","input": ["ORIGINAL_DEL_DATE", "C"],"col": "PARSED_ORIGINAL_DEL_DATE"}
+        ]
+    }}]},
+  {"LayerName": "multivaluedCols","LayerType": "ROW","ProcessStage": 0,"Transformation": [
+     {"singleValue": {
+      "derivations": [
+      {"name": "placeHolder","type": "mv_cmn","input": [],"col": "placeHolder"}
+    ]}}
+  ]},
+  {"LayerName": "FinalCleansingLayer","LayerType": "DF","ProcessStage": 0, "Transformation": [
+    {"singleValue":{
+      "derivations":[
+        {"name": "effectiveDatePsi","type": "mv_cmn","input": {"inputCol":["PARSED_EFFECTIVE_DATE", "PARSED_ORIGINAL_DEL_DATE"],"outputCol":"OUT_EFFECTIVE_DATE"}},
+        {"name": "validateLength","type": "mv_cmn","input": {"params":["OUT_EFFECTIVE_DATE", "10", "max", "OUT_EFFECTIVE_DATE"]}},
+        {"name": "updateClarification","type": "mv_cmn","input": {"ignore":0,"updateFrom":"errDictDupValInSv","colMapping":{"EFFECTIVE_DATE":"OUT_EFFECTIVE_DATE"},"conditionMapping":{}}},
+        {"name": "createAndClarifyCol","type": "mv_cmn","input": {"clrMsg": "Mandatory field Missing Value", "outputCol": "DEFAULT_PAPER_TYPE_VAL"}},
+        {"name": "createCol","type": "mv_cmn","input": {"defVal":"See SOT ", "outputCol": "DEFAULT_COMMENTS"}},
+        {"name": "createAndClarifyCol","type": "mv_cmn","input": {"clrMsg": "Mandatory field Missing Value", "outputCol": "REQ_FIELD_CLAR"}},
+        {"name": "createCol","type": "mv_cmn","input": {"defVal": "Change", "outputCol": "DEFAULT_SUBJECT_VAL"}}
+        ]
+    }}
+  ]},
+  {"LayerName": "conflictRemovalLayer","LayerType": "DF","ProcessStage": 0,"Transformation": [
+    {"singleValue": {
+      "derivations": [
+        {"name": "dropColumns","type": "mv_cmn","input": []}
+      ]}}
+  ]},
+  {"LayerName": "MasterDictListLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]},
+  {"LayerName": "fdfLayer","LayerType": "DF","ProcessStage": 1,"Transformation": [{}]}
+
+]

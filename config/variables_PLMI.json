@@ -1,0 +1,48 @@
+[
+  {"LayerName": "plmi","LayerType": "DF","ProcessStage": 0,"Transformation": [
+
+    {"singleValue": {
+      "derivations": [
+        {"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","DoAnyCosmosDivsNeedToBeLoadedToProviders"],"val":"Yes"},"transform":{"Yes": true,"No": false},"outCol": "Prac_ParStatus_M&R"}},
+        {"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","AreThereOtherProductsToBeLoadedInNDB"],"val":"Yes"},"transform":{"Yes": true,"No": false},"outCol":"Prac_ParStatus_E&I"}},
+        {"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","IsCommunityAndStateToBeLoadedInNDBOrCosmos"],"val":"Yes"},"transform":{"Yes": true,"No": false},"outCol":"Prac_ParStatus_C&S"}},
+
+     
+        {"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","IsCommunityAndStateToBeLoadedInNDBOrCosmos"],"val":"Yes"},"transform":{"Y": true,"N": false},"outCol":"DelPracAdd_McaidPar?"}},        
+        {"name":"setDefault","type":"var","input":{"defaultVal":"No","outCol":"Prac_ParStatus_M&VWest"}},
+        {"name":"checkSystem","type":"var","input":{"plmiGlobalDataKey":"system","systemNm":"NDB","outCol":"Import_NDBImpacted"}},
+		    {"name":"checkSystem","type":"var","input":{"plmiGlobalDataKey":"system","systemNm":"NDB","outCol":"DelPracAdd_UHCPar?"}},
+        {"name":"checkMarket","type":"var",
+          "input":{"plmiGlobalDataKey":"market",
+            "marketDes":"NEW YORK STATE EMPIRE PLAN","outCol":"Import_NDBEMPIREImpacted"}},
+        {"name":"checkMarket","type":"var",
+              "input":{"plmiGlobalDataKey":"market",
+                "VAMarket":"TRUE", "VARegion" : "TRUE", "outCol":"Prac_ParStatus_VA CCN"}},
+        {"name":"checkMarket","type":"var",
+              "input":{"plmiGlobalDataKey":"market",
+               "VAMarket":"TRUE", "VARegion" : "TRUE", "outCol":"Import_Del_Segment_VA CCN"}},
+        {"name":"checkSystem","type":"var","input":{"plmiGlobalDataKey":"system","systemNm":"NICE","outCol":"Import_NICEImpacted"}},
+        {"name":"checkSystem","type":"var","input":{"plmiGlobalDataKey":"system","systemNm":"PULSE","outCol":"Import_PULSEImpacted"}},
+        {"name":"checkSystem","type":"var","input":{"plmiGlobalDataKey":"system","systemNm":"PULSE","outCol":"DelPracAdd_OxPar?"}},
+        {"name":"checkSystem","type":"var","input":{"plmiGlobalDataKey":"system","systemNm":"RVFacets","outCol":"Import_RVFacetsImpacted"}},
+        {"name":"setDefault","type":"var","input":{"defaultVal":"FALSE","outCol":"Import_CLMImpacted"}},
+        {"name":"setDefault","type":"var","input":{"defaultVal":"FALSE","outCol":"Import_EmptorisImpacted"}},
+        {"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","DoAnyCosmosDivsNeedToBeLoadedToProviders"],"val":"Yes"},"transform":{"TRUE":true,"FALSE":false},"outCol":"Import_NDBCOSMOSImpacted"}},
+		{"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","DoAnyCosmosDivsNeedToBeLoadedToProviders"],"val":"Yes"},"transform":{"Y":true,"N":false},"outCol":"DelPracAdd_McarePar?"}},
+        {"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","IsCommunityAndStateToBeLoadedInNDBOrCosmos"],"val":"Yes"},"transform":{"TRUE":true,"FALSE":false},"outCol":"Import_NDBCSPFACETSImpacted"}},
+        {"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","AreThereOtherProductsToBeLoadedInNDB"],"val":"Yes"},"transform":{"TRUE":true,"FALSE":false},"outCol":"Import_Del_Segment_E&I"}},
+        {"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","IsCommunityAndStateToBeLoadedInNDBOrCosmos"],"val":"Yes"},"transform":{"TRUE":true,"FALSE":false},"outCol":"Import_Del_Segment_C&S"}},
+		{"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","IsCommunityAndStateToBeLoadedInNDBOrCosmos"],"val":"Yes"},"transform":{"TRUE":true,"FALSE":false},"outCol":"Import_Del_Product_IFP"}},
+		{"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","IsCommunityAndStateToBeLoadedInNDBOrCosmos"],"val":"Yes"},"transform":{"TRUE":true,"FALSE":false},"outCol":"Import_Del_Product_MEDICAID"}},
+		{"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","IsCommunityAndStateToBeLoadedInNDBOrCosmos"],"val":"Yes"},"transform":{"TRUE":true,"FALSE":false},"outCol":"Import_Del_Product_DSNP"}},
+        {"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","DoAnyCosmosDivsNeedToBeLoadedToProviders"],"val":"Yes"},"transform":{"TRUE":true,"FALSE":false},"outCol":"Import_Del_Segment_M&R"}},        
+        {"name":"setDefault","type":"var","input":{"defaultVal":"FALSE","outCol": "Import_Del_Segment_M&VWest"}},
+        {"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","IsEmpireCSPToBeLoadedAsPartOfTheDelegatedAgreement"],"val":"Yes"},"transform":{"TRUE":true,"FALSE":false},"outCol":"Import_Del_Segment_EmpireCSP"}},
+        {"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","NiceList","NiceZOverviews"],"existence":true},"transform":{"TRUE":true,"FALSE":false},"outCol":"Import_Del_Segment_ndbZline"}},
+        {"name":"checkPlatform","type":"var","input":{"plmiDelDataKey":"platform","condition":{"keys":["NDB","NiceList","NiceYOverviews"],"existence":true},"transform":{"TRUE":true,"FALSE":false},"outCol":"Import_Del_Segment_ndbYline"}},
+        {"name":"setDefault","type":"var","input":{"defaultVal":"FALSE","outCol":"Import_Del_Segment_ndbFacetsHline"}},
+        {"name":"setDefault","type":"var","input":{"defaultVal":"FALSE","outCol":"Import_Del_Segment_ndbFacetsYline"}}
+      ]
+    }}
+  ]}
+]

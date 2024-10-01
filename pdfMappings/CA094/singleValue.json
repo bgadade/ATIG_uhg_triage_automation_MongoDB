@@ -1,0 +1,386 @@
+{
+  "NAME_LAST": {
+    "max_X": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "SSN:"
+      ]
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Provider Profile"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Name:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "NPI"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "SSN": {
+    "max_X": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "DOB"
+      ]
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Provider Profile"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "SSN:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "NPI"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "DOB": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Provider Profile"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "DOB:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "NPI"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "EFFECTIVE_DATE": {
+    "max_X": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "NPI"
+      ]
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Name"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Effective Date:",
+        "EffectiveDate:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Gender"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "GENDER": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "NPI"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Gender:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Age"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "INDIVIDUAL_NPI": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Name"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "NPI:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Gender"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "ORIGINAL_DEL_DATE": {
+    "max_X": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Gender"
+      ]
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "NPI"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Last Cred Date:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Next Recred Date"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "CURRENT_DEL_DATE": {
+    "max_X": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Age"
+      ]
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Last Cred Date"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Next Recred Date:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Provider Status"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "PROVIDER_TYPE": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "In Directory"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "ProviderType:",
+        "Provider Type:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Other Specialties"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "NAME_OF_LEGAL_TAX_ID_OWNER": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Practice Location(s)"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Group Name:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Tax ID"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "GROUP_NAME": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Practice Location(s)"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Group Name:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Tax ID"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  },
+  "TAX_ID": {
+    "max_X": {
+      "occurence": "None",
+      "point": "TOP_RIGHT",
+      "text": "None"
+    },
+    "max_Y": {
+      "occurence": 1,
+      "point": "BOTTOM_LEFT",
+      "text": [
+        "Group Name"
+      ]
+    },
+    "min_X": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Tax ID:"
+      ]
+    },
+    "min_Y": {
+      "occurence": 1,
+      "point": "TOP_RIGHT",
+      "text": [
+        "Mailing Address"
+      ]
+    },
+    "start": {
+      "text": []
+    }
+  }
+}

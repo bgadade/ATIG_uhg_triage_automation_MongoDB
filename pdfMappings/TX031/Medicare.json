@@ -1,0 +1,17 @@
+{"MEDICARE": {
+  "PARENT_CATEGORY": "Medicare",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                            "min_Y": { "text": ["PRACTICE GROUP INFORMATION"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_Y": { "text": ["INDIVIDUAL"],"point": "BOTTOM_LEFT","occurence": 1},
+                            "min_X": { "text": ["MEDICARE #s:"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_X": { "text": ["MEDICAID #s:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "textline":"True",
+                 "tableDetails": "None"}]
+  }
+  ]
+ }
+   }

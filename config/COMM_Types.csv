@@ -1,0 +1,24 @@
+comm_type_acrnm,comm_type_abb
+A,Administrator/Roster Contact
+B,Billing Contact
+C,Claims Contact
+D,Delegated Entity Contact
+E,Chief Executive Officer/CEO
+F,After Hours Contact
+G,Emergency Contact
+H,Health Plan Cortact
+I,Other Contact
+J,Administrative Contact
+L,Clinical Contact
+M,Other
+N,National Contracting
+O,Office Manager
+P,Contract Negotiation
+R,Credentialing Contact
+S,Customer Service
+T,TDD Phone Contact
+V,Medical Director
+W,Secure Fax
+X,Signatory
+Y,Primary Organization Contact
+Z,Recredentialing Contact

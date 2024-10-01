@@ -1,0 +1,69 @@
+<style>
+    .active, .inactive {
+            cursor: pointer;
+        }
+
+        .active, .inactive {
+            cursor: pointer;
+        }
+
+        i.active {
+               color: #4e8bf2;
+        }
+
+        i.inactive {
+            color:#f7f3f2;
+        }
+</style>
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin" data-ng-init="getPdfData();getHtmlData();">
+    <div class="main">
+        <div class="alpha">
+            <ul class="pageHeader">
+                <li>Process NonDel-PDF</li>
+            </ul>
+        </div>
+    </div>
+    <section class="contentSection">
+        <div class="row tableBox" id="setTableBox" style="height:508px">
+            <!-- Your Page Content Here -->
+            <div id="mydiv">
+                <img class="mappingSpinner" src="/static/images/page-loader.gif" />
+            </div>
+            <div class="container-fluid contentbody">
+                <div class="row z" style="margin-top: -2%;margin-bottom: 2%;">
+                    <div style="margin-left:10%;"  class="col-sm-6 scrollbar tabScrollNondelData">
+                        <div class="col-md-3"  ng-repeat="filename in fileList" title="{{filename}}" >
+                          <button style="border-radius: 11px 11px 0px 0px;" type="button" class="btn btn-lg
+                           sheetBtn" data-toggle="popover" data-placement="top"
+                                  data-trigger="hover" title="{{filename}}"
+                                  ng-class="filename == selectedFile?'successBtnNonDel':'tabsBtnNonDel'"
+                                  ng-click="getSelectedFileData(filename)">{{filename}} <span></span></button>
+                        </div>
+                    </div >
+                    <div class="col-sm-4">
+                         <div>
+                            <span style="font-size: 20px;"><strong>Selected File Type : </strong></span>
+                            <span>
+                                <label style="font-size: 20px;" ng-if="!isPDF">HTML</label>
+                                <label style="font-size: 20px;" ng-if="isPDF">PDF</label>
+                                <i style="font-size: 25px;margin-left: 20px;" class="fa fa-toggle-on" ng-class="isPDF?'active':'fa-rotate-180 inactive'" ng-model="isPDF" ng-click="isPDF=!isPDF;"></i>
+                            </span>
+                        </div>
+                    </div>
+                     <div class="col-sm-2">
+                         <button type="button" class="btn btndefault" style="width: 82%;margin-top: -2%;margin-bottom: 1%;margin-left: -72%;" ng-disabled="!enableNext" ng-click="processMapping()">Next >></button>
+                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <embed src="{{content}}" type="application/pdf" width="520" height="418">
+                    </div>
+                    <div class="col-sm-6">
+                        <div style="height:418px;width:103%;margin-left: 0%;"  class="htmlUnmapOtptDiv scrollbar" ng-bind-html="htmlDataContent" id="htmlContent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

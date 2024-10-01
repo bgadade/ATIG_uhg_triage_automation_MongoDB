@@ -1,0 +1,844 @@
+{
+	"Search Field": {
+		"order": 0,
+		"finalDfColNames": [{
+				"outputColName": "TAX ID",
+				"dfColName": "OUT_TAX_ID"
+			},
+			{
+				"outputColName": "NPI",
+				"dfColName": "OUT_NPI"
+			},
+			{
+				"outputColName": "C&S Check DLI-BSAR)",
+				"dfColName": "placeHolder"
+			}
+		]
+	},
+	"Physician-Main Screen(M)": {
+		"order": 1,
+		"finalDfColNames": [{
+				"outputColName": "Effective Date",
+				"dfColName": "OUT_EFFECTIVE_DATE"
+			},
+			{
+				"outputColName": "Last Name",
+				"dfColName": "OUT_NAME_LAST"
+			},
+			{
+				"outputColName": "First Name",
+				"dfColName": "OUT_NAME_FIRST"
+			},
+			{
+				"outputColName": "Middle Name",
+				"dfColName": "OUT_NAME_MIDDLE"
+			},
+			{
+				"outputColName": "Degree/Credentials/Title",
+				"dfColName": "OUT_TITLE_DEGREE_CREDENTIAL"
+			},
+			{
+				"outputColName": "Name Suffix",
+				"dfColName": "NAME_SUFFIX"
+			},
+			{
+				"outputColName": "Primary Ind",
+				"dfColName": "OUT_DEGREE_PRIMARY_IND"
+			},
+			{
+				"outputColName": "Alt L Name (If Given)",
+				"dfColName": "OUT_ALT_L_NAME"
+			},
+			{
+				"outputColName": "Alt F Name",
+				"dfColName": "OUT_ALT_F_NAME"
+			},
+			{
+				"outputColName": "Alt M Name",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Gender",
+				"dfColName": "OUT_GENDER"
+			},
+			{
+				"outputColName": "DOB",
+				"dfColName": "OUT_DOB"
+			},
+			{
+				"outputColName": "SSN",
+				"dfColName": "OUT_SSN"
+			},
+			{
+				"outputColName": "Medicare",
+				"dfColName": "OUT_MEDICARE"
+			}
+		]
+	},
+	"Specialty Screen(S)": {
+		"order": 2,
+		"finalDfColNames": [{
+				"outputColName": "Specialty Name ",
+				"dfColName": "OUT_NDB_SPEC_NAME"
+			},
+			{
+				"outputColName": "Primary Specialty/Specialty Code",
+				"dfColName": "OUT_PRIMARYSPECIALITY_SPECIALITYCODE"
+			},
+			{
+				"outputColName": "Primary/Secondary Indicator",
+				"dfColName": "OUT_SPECIALITY_PRIMARY_IND"
+			},
+			{
+				"outputColName": "Prac-Default Value Y",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Ver Source(Board Name if Provided or Default Value\"PRV\"",
+				"dfColName": "VER_SOURCE"
+			},
+			{
+				"outputColName": "Board Cerified(Mid-level value is x)",
+				"dfColName": "OUT_BOARD_CERTIFIED"
+			},
+			{
+				"outputColName": "Cert Date",
+				"dfColName": "OUT_BOARD_CERT_DATE"
+			},
+			{
+				"outputColName": "Expiration Date",
+				"dfColName": "OUT_BOARD_EXPIRATION_DATE"
+			},
+			{
+				"outputColName": "TRC Indicator-Refer Tricare Grid",
+				"dfColName": "placeHolder"
+			}
+		]
+	},
+	"TAX ID Information(T)": {
+		"order": 3,
+		"finalDfColNames": [{
+				"outputColName": "Type",
+				"dfColName": "Type"
+			},
+			{
+				"outputColName": "TIER Indicator",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Bulk Recovery",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Name of Legal Owner of Tax id Number",
+				"dfColName": "OUT_NAME_OF_LEGAL_OWNER"
+			},
+			{
+				"outputColName": "PTI Name or Group Name / PTI MPIN",
+				"dfColName": "OUT_GROUP_NAME"
+			},
+			{
+				"outputColName": "PTI MPIN",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "TRICARE ONLY  Does this Provider accept VA? Default Value is Y(Y or N)",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "TRICARE ONLY Does this Provider accept CHAMPVA? Default Value is Y(Y or N?)",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "PROVIDER STATUS (PROVIDER STATUS SHOULD BE NEW LOAD OR PROVIDER NOT LOADED IN TIN OR PROVIDER LOADED IN TIN)",
+				"dfColName": "placeHolder"
+			}
+		]
+	},
+	"ADDRESS DETAILS SCREEN(A)": {
+		"order": 4,
+		"finalDfColNames": [{
+				"outputColName": "ADDRESS STATUS",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "ADDRESS TYPE",
+				"dfColName": "OUT_ADDRESS_TYPE"
+			},
+			{
+				"outputColName": "Address Line 1",
+				"dfColName": "OUT_ADDRESS_LINE_1"
+			},
+			{
+				"outputColName": "Address Line 2",
+				"dfColName": "OUT_ADDRESS_LINE_2"
+			},
+			{
+				"outputColName": "Address  City",
+				"dfColName": "OUT_ADDRESS_CITY"
+			},
+			{
+				"outputColName": "Address State",
+				"dfColName": "OUT_ADDRESS_STATE"
+			},
+			{
+				"outputColName": "Address Zip(00000)",
+				"dfColName": "OUT_ADDRESS_ZIP"
+			},
+			{
+				"outputColName": "P/S",
+				"dfColName": "OUT_ADDRESS_IND"
+			},
+			{
+				"outputColName": "Correspondence",
+				"dfColName": "OUT_ADDRESS_CORRESPONDENCE_IND"
+			},
+			{
+				"outputColName": "Address Phone Number-1",
+				"dfColName": "OUT_ADDRESS_PHONE_NO_1"
+			},
+			{
+				"outputColName": "Extn",
+				"dfColName": "OUT_PHONE_EXT_1"
+			},
+			{
+				"outputColName": "P/S",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Phone Type",
+				"dfColName": "OUT_PHONE_TYPE_1"
+			},
+			{
+				"outputColName": "Address Phone Number-2",
+				"dfColName": "OUT_ADDRESS_PHONE_NO_2"
+			},
+			{
+				"outputColName": "Extn",
+				"dfColName": "OUT_PHONE_EXT_2"
+			},
+			{
+				"outputColName": "P/S",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Phone Type",
+				"dfColName": "OUT_PHONE_TYPE_2"
+			},
+			{
+				"outputColName": "Address Phone Number-3",
+				"dfColName": "OUT_ADDRESS_PHONE_NO_3"
+			},
+			{
+				"outputColName": "Extn",
+				"dfColName": "OUT_PHONE_EXT_3"
+			},
+			{
+				"outputColName": "P/S",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Phone Type",
+				"dfColName": "OUT_PHONE_TYPE_3"
+			},
+			{
+				"outputColName": "Address Phone Number-4",
+				"dfColName": "OUT_ADDRESS_PHONE_NO_4"
+			},
+			{
+				"outputColName": "Extn",
+				"dfColName": "OUT_PHONE_EXT_4"
+			},
+			{
+				"outputColName": "P/S",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Phone Type",
+				"dfColName": "OUT_PHONE_TYPE_4"
+			},
+			{
+				"outputColName": "Address TypeP = PracticeC = Billing and PracticeM = Mail OnlyD = Credentialing Only",
+				"dfColName": "OUT_ADDRESS_TYPE"
+			},
+			{
+				"outputColName": "HANDICAP ACCESSIBILITY",
+				"dfColName": "OUT_HANDICAP_ACCESSIBILITY"
+			},
+			{
+				"outputColName": "MAID",
+				"dfColName": "placeHolder"
+			}
+
+		]
+	},
+	"MPIN": {
+		"order": 5,
+		"finalDfColNames": [{
+			"outputColName": "NEW MPIN",
+			"dfColName": "placeHolder"
+		}]
+	},
+	"OFFICE LIMITATION/COMMUNICATION (L)": {
+		"order": 6,
+		"finalDfColNames": [{
+				"outputColName": "AGE LIMIT(FORMAT SHOULD BE \"00-000\")",
+				"dfColName": "OUT_AGE_LIMIT"
+			},
+			{
+				"outputColName": "EXT HR IND",
+				"dfColName": "OUT_EXT_HR_IND"
+			},
+			{
+				"outputColName": "MEDICAID",
+				"dfColName": "OUT_MEDICAID"
+			},
+			{
+				"outputColName": "LOC",
+				"dfColName": "OUT_MEDICAID_LOCATION"
+			},
+			{
+				"outputColName": "Office limitation Gender",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "MON(START TIME)",
+				"dfColName": "OUT_MON_START_TIME"
+			},
+			{
+				"outputColName": "MON(END TIME)",
+				"dfColName": "OUT_MON_END_TIME"
+			},
+			{
+				"outputColName": "TUE(START TIME)",
+				"dfColName": "OUT_TUE_START_TIME"
+			},
+			{
+				"outputColName": "TUE(END TIME)",
+				"dfColName": "OUT_TUE_END_TIME"
+			},
+			{
+				"outputColName": "WED(START TIME)",
+				"dfColName": "OUT_WED_START_TIME"
+			},
+			{
+				"outputColName": "WED(END TIME)",
+				"dfColName": "OUT_WED_END_TIME"
+			},
+			{
+				"outputColName": "THU(START TIME)",
+				"dfColName": "OUT_THU_START_TIME"
+			},
+			{
+				"outputColName": "THU(END TIME)",
+				"dfColName": "OUT_THU_END_TIME"
+			},
+			{
+				"outputColName": "FRI(START TIME)",
+				"dfColName": "OUT_FRI_START_TIME"
+			},
+			{
+				"outputColName": "FRI(END TIME)",
+				"dfColName": "OUT_FRI_END_TIME"
+			},
+			{
+				"outputColName": "SAT(START TIME)",
+				"dfColName": "OUT_SAT_START_TIME"
+			},
+			{
+				"outputColName": "SAT(END TIME)",
+				"dfColName": "OUT_SAT_END_TIME"
+			},
+			{
+				"outputColName": "SUN(START TIME)",
+				"dfColName": "OUT_SUN_START_TIME"
+			},
+			{
+				"outputColName": "SUN(END TIME)",
+				"dfColName": "OUT_SUN_END_TIME"
+			}, {
+				"outputColName": "Cred Contact type1",
+				"dfColName": "OUT_CRED_CONTACT_TYPE1"
+			},
+			{
+				"outputColName": "Cred Name",
+				"dfColName": "OUT_CRED_NAME1"
+			},
+			{
+				"outputColName": "Cred Comm Type1",
+				"dfColName": "OUT_CRED_COMMUNICATION1"
+			},
+			{
+				"outputColName": "Cred Phone1",
+				"dfColName": "OUT_CRED_PHONE_NUMBER1"
+			},
+			{
+				"outputColName": "Cred EXT1",
+				"dfColName": "OUT_CRED_EXT_NUMBER1"
+			},
+			{
+				"outputColName": "Cred Contact type2",
+				"dfColName": "OUT_CRED_CONTACT_TYPE2"
+			},
+			{
+				"outputColName": "Cred Name2",
+				"dfColName": "OUT_CRED_NAME2"
+			},
+			{
+				"outputColName": "Cred Comm Type2",
+				"dfColName": "OUT_CRED_COMMUNICATION2"
+			},
+			{
+				"outputColName": "Cred Phone2",
+				"dfColName": "OUT_CRED_PHONE_NUMBER2"
+			},
+			{
+				"outputColName": "Cred EXT2",
+				"dfColName": "OUT_CRED_EXT_NUMBER2"
+			},
+			{
+				"outputColName": "Cred Contact type3",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Cred Name3",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Cred Comm Type3",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Cred Phone3",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Cred EXT3",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Languages Spoken(FIRST LANGAUGE)",
+				"dfColName": "OUT_LANG_1"
+			},
+			{
+				"outputColName": "Language Spoken By P = Provider S = Staff B = Both",
+				"dfColName": "OUT_LANGUAGE_SPOKEN_BY_1"
+			},
+			{
+				"outputColName": "Written By P = Provider S = Staff B = Both",
+				"dfColName": "OUT_LANGUAGE_WRITTEN_BY_1"
+			},
+			{
+				"outputColName": "Languages Spoken(SECOND LANGAUGE)",
+				"dfColName": "OUT_LANG_2"
+			},
+			{
+				"outputColName": "Language Spoken By P = Provider S = Staff B = Both",
+				"dfColName": "OUT_LANGUAGE_SPOKEN_BY_2"
+			},
+			{
+				"outputColName": "Written By P = Provider S = Staff B = Both",
+				"dfColName": "OUT_LANGUAGE_WRITTEN_BY_2"
+			},
+			{
+				"outputColName": "Languages Spoken at this Location(THIRD LANGUAGE)",
+				"dfColName": "OUT_LANG_3"
+			},
+			{
+				"outputColName": "Language Spoken By P = Provider S = Staff B = Both",
+				"dfColName": "OUT_LANGUAGE_SPOKEN_BY_3"
+			},
+			{
+				"outputColName": "Written By P = Provider S = Staff B = Both",
+				"dfColName": "OUT_LANGUAGE_WRITTEN_BY_3"
+			},
+			{
+				"outputColName": "Languages Spoken at this Location(FOURTH LANGUAGE)",
+				"dfColName": "OUT_LANG_4"
+			},
+			{
+				"outputColName": "Language Spoken By P = Provider S = Staff B = Both",
+				"dfColName": "OUT_LANGUAGE_SPOKEN_BY_4"
+			},
+			{
+				"outputColName": "Written By P = Provider S = Staff B = Both",
+				"dfColName": "OUT_LANGUAGE_WRITTEN_BY_4"
+			},
+			{
+				"outputColName": "Languages Spoken at this Location(FIFTH LANUAGE)",
+				"dfColName": "OUT_LANG_5"
+			},
+			{
+				"outputColName": "Language Spoken By P = Provider S = Staff B = Both",
+				"dfColName": "OUT_LANGUAGE_SPOKEN_BY_5"
+			},
+			{
+				"outputColName": "Written By P = Provider S = Staff B = Both",
+				"dfColName": "OUT_LANGUAGE_WRITTEN_BY_5"
+			},
+			{
+				"outputColName": "Languages Spoken at this Location(SIXTH LANUAGE)",
+				"dfColName": "OUT_LANG_6"
+			},
+			{
+				"outputColName": "Language Spoken By P = Provider S = Staff B = Both",
+				"dfColName": "OUT_LANGUAGE_SPOKEN_BY_6"
+			},
+			{
+				"outputColName": "Written By P = Provider S = Staff B = Both",
+				"dfColName": "OUT_LANGUAGE_WRITTEN_BY_6"
+			},
+			{
+				"outputColName": "Electronic Communication-1",
+				"dfColName": "OUT_ELECTRONIC_COMM_1"
+			},
+			{
+				"outputColName": "Type: E/W",
+				"dfColName": "OUT_COMMUNICATION_TYPE_1"
+			},
+			{
+				"outputColName": "Prov/Addr:P/A",
+				"dfColName": "OUT_EMAILPA_1"
+			},
+			{
+				"outputColName": "Electronic Communication-2",
+				"dfColName": "OUT_ELECTRONIC_COMM_2"
+			},
+			{
+				"outputColName": "Type: E/W",
+				"dfColName": "OUT_COMMUNICATION_TYPE_2"
+			},
+			{
+				"outputColName": "Prov/Addr",
+				"dfColName": "OUT_EMAILPA_2"
+			}
+		]
+	},
+	"CREDENTIAL CATEGORY :DEA/CDS/LICENSE(F)": {
+		"order": 7,
+		"finalDfColNames": [{
+				"outputColName": "License Number",
+				"dfColName": "OUT_LICENCE_NUMBER"
+			},
+			{
+				"outputColName": "State in which License is Held",
+				"dfColName": "OUT_LICENCE_STATE"
+			},
+			{
+				"outputColName": "State License Number Effective Date-Default Date: 01/01/0001",
+				"dfColName": "OUT_STATE_LICENCE_EFFECTIVE_DATE"
+			},
+			{
+				"outputColName": "State License Number Expiration Date",
+				"dfColName": "OUT_LICENCE_EXPIRY_DATE"
+			},
+			{
+				"outputColName": "DEA Number",
+				"dfColName": "DEA_NUMBER"
+			},
+			{
+				"outputColName": "DEA Number Expiration Date: Default Value 12/31/9999 unless specified",
+				"dfColName": "OUT_DEA_NUMBER_EXPIRATIONDATE"
+			},
+			{
+				"outputColName": "State in which CDS is Held",
+				"dfColName": "OUT_CDS_STATE"
+			},
+			{
+				"outputColName": "CDS/CSR Number",
+				"dfColName": "CDS_CSR_NUMBER"
+			},
+			{
+				"outputColName": "CDS Expiration Date: Default Value 12/31/9999 unless specified",
+				"dfColName": "OUT_CDS_EXPIRY_DATE"
+			}
+
+		]
+	},
+	"Provider Type": {
+		"order": 8,
+		"finalDfColNames": [{
+				"outputColName": "Is this provider a Hospital-based provider operating SOLELY in a Hospital?(Y/N)(Required for TRICARE)",
+				"dfColName": "OUT_HBP_SOLELY_IN_HOSPITAL"
+			},
+			{
+				"outputColName": "Is this Provider a PCP, Specialist, Hospitalist or Hospital Based Provider(PCP, Spec, Hosp or HBP.)",
+				"dfColName": "OUT_PCP_HBP_SPEC"
+			}
+		]
+	},
+	"SPECIFIC SPECIALTY DETAILS": {
+		"order": 9,
+		"finalDfColNames": [{
+				"outputColName": "Supervising Physician Name",
+				"dfColName": "OUT_MID_LEVEL_SUPERVISOR_PHYSICIAN"
+			},
+			{
+				"outputColName": "Mid-Level Supervising Specialty Name",
+				"dfColName": "OUT_MID_LEVEL_SUPERVISOR_SPECIALITY_NAME"
+			},
+			{
+				"outputColName": "Mid-level Supervising Specialty (provide the specialty, not provider name) (Required For all Mid-Level Provider Only)",
+				"dfColName": "OUT_MID_LEVEL_SUPERVISOR_SPECIALITY"
+			},
+			{
+				"outputColName": "Supervising specailty M/s \" Name of Speciality or Physician Name\".OPID.Date.",
+				"dfColName": "placeHolder"
+			}
+		]
+	},
+	"AFFILIATIONS-CATEGORY: HOSPITAL (H)": {
+		"order": 10,
+		"finalDfColNames": [{
+				"outputColName": "Hospital Affiliation or Covering Group/Provider name",
+				"dfColName": "OUT_HOPITAL_NAME"
+			},
+			{
+				"outputColName": "Hospital MPIN",
+				"dfColName": "OUT_HOSPITAL_AFFILIATION"
+			},
+			{
+				"outputColName": "P/S",
+				"dfColName": "OUT_HOSPITAL_IND"
+			},
+			{
+				"outputColName": "Hospital Privilege / Affiliation Status: Default \"AC\" if not given.Roll over the header and see the Affiliation status",
+				"dfColName": "OUT_HOSPITAL_AFF_STATUS"
+			},
+			{
+				"outputColName": "DIR: Default Value \"Y\" unless specificied (Note for Hospitalist value is \"N\")",
+				"dfColName": "OUT_HOSPITAL_DIR"
+			}
+		]
+	},
+	"NPI INFORMATION \"I5Z\"": {
+		"order": 11,
+		"finalDfColNames": [{
+				"outputColName": "TAXONOMY",
+				"dfColName": "OUT_TAXONOMY"
+			},
+			{
+				"outputColName": "Enumeration Date",
+				"dfColName": "OUT_ENUMERATION_DATE"
+			}
+		]
+	},
+	"FOR TRICARE ONLY: PROVIDER EDUCATION INFORMATION \"IDZ\"": {
+		"order": 12,
+		"finalDfColNames": [{
+				"outputColName": "Completion Date",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "School Name",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "School Code",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Completion Date",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "School Name",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "School Code",
+				"dfColName": "placeHolder"
+			}
+		]
+	},
+	"CREDENTIALS-CATEGORY:DELEGATED ENTITIES NAME (T)": {
+		"order": 13,
+		"finalDfColNames": [{
+				"outputColName": "Delegate Code",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Original Del Date:Initial/Credential/Appointment",
+				"dfColName": "OUT_ORIGINAL_DEL_DATE"
+			},
+			{
+				"outputColName": "CURRENT DEL DT: Recred or Reappoint or Last Cred Dt",
+				"dfColName": "OUT_CURRENT_DEL_DATE"
+			}
+		]
+	},
+	"PROVIDER DIRECTORY MAINTENANCE SCREEN(@)- I@Z": {
+		"order": 14,
+		"finalDfColNames": [{
+				"outputColName": "BUS SEG",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "PRD CD",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "DIV CD",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "DIR IND",
+				"dfColName": "OUT_DIR_IND"
+			},
+			{
+				"outputColName": "SPL CD",
+				"dfColName": "OUT_DIR_SPEC_IND"
+			},
+			{
+				"outputColName": "ADR TYP(MAID)",
+				"dfColName": "placeHolder"
+			}
+		]
+	},
+	"UHC ID Screen": {
+		"order": 15,
+		"finalDfColNames": [{
+				"outputColName": "COS Prov Num",
+				"dfColName": "OUT_COSMOS_NUM"
+			},
+			{
+				"outputColName": "CLN Name(PCP Ony)",
+				"dfColName": "OUT_CLN_NAME"
+			},
+			{
+				"outputColName": "PRA",
+				"dfColName": "OUT_PRA"
+			},
+			{
+				"outputColName": "Cred Desig",
+				"dfColName": "OUT_CRED_DESIGN"
+			},
+			{
+				"outputColName": "Mail",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "All Payor",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "UR Indicator",
+				"dfColName": "OUT_UR_IND"
+			},
+			{
+				"outputColName": "Rx Priv",
+				"dfColName": "placeHolder"
+			}
+		]
+	},
+	"C & S (I-7-Z and I-4-Z Screen)": {
+		"order": 16,
+		"finalDfColNames": [{
+				"outputColName": "Instance",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "IPA",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "LOB",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Pricing Package(Aggreement ID)",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Load",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Network Affliation",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "CAP Code",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "Enrollment Limit",
+				"dfColName": "OUT_ENROLLMENT_DATE"
+			}
+		]
+	},
+	"Contract Detail Information": {
+		"order": 17,
+		"finalDfColNames": [{
+				"outputColName": "Accepting patient value",
+				"dfColName": "OUT_NEW_PATIENTS"
+			},
+			{
+				"outputColName": "ENW Indicator",
+				"dfColName": "OUT_ENW_IND"
+			},
+			{
+				"outputColName": "STATUS",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "OFFICE HOURS",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "NPI  STATUS",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "IFC",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "ITC",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "IDC",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "OFFICE EMAIL",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "OFFICE LANGUAGE",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "DEA COMMENT",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "CDS COMMENT",
+				"dfColName": "placeHolder"
+			},
+			{
+				"outputColName": "PCP_REASSIGN1",
+				"dfColName": "OUT_PCP_REASSIGN1"
+			},
+			{
+				"outputColName": "PCP_REASSIGN2",
+				"dfColName": "OUT_PCP_REASSIGN2"
+			},
+			{
+				"outputColName": "RSN_CODE",
+				"dfColName": "OUT_RSN_CODE"
+			},
+			{
+
+				"outputColName": "RSN_DESCRIPTION",
+				"dfColName": "OUT_RSN_DESCRIPTION"
+
+			},
+			{
+				"outputColName": "Action",
+				"dfColName": "OUT_ACTION"
+			}
+		]
+	}
+}

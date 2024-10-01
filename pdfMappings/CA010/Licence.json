@@ -1,0 +1,46 @@
+{"LICENCE_NUMBER": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"textline": "True",
+                 "parentBB": {
+                        "min_Y": {"text": ["DEA Number"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["NPI:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Provider License Number(s)"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Issued:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "LICENCE_EXPIRY_DATE": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"textline":"True",
+                 "parentBB": {
+                        "min_Y": {"text": ["DEA Number"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["NPI:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Expiration:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ },
+ "STATE_LICENCE_EFFECTIVE_DATE": {
+  "PARENT_CATEGORY": "Licence",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"textline": "True",
+                 "parentBB": {
+                        "min_Y": {"text": ["DEA Number"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_Y": {"text": ["NPI:"],"point": "BOTTOM_LEFT","occurence": 1},
+                        "min_X": {"text": ["Issued:"],"point": "TOP_RIGHT","occurence": 1},
+                        "max_X": {"text": ["Expiration:"],"point": "BOTTOM_LEFT","occurence": 1}},
+                 "tableDetails": "None"}]
+   }
+  ]
+ }
+}

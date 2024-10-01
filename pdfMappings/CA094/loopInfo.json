@@ -1,0 +1,172 @@
+{
+  "Hospital": [
+    {
+      "delimiter": {
+        "1": [
+          "Facility"
+        ],
+        "2": [],
+        "type": "blockStart"
+      },
+      "direction": "Y",
+      "loopId": 1,
+      "parentBB": {
+        "max_X": {
+          "occurence": "None",
+          "point": "TOP_RIGHT",
+          "text": "None"
+        },
+        "max_Y": {
+          "occurence": 1,
+          "point": "BOTTOM_LEFT",
+          "text": [
+            "Hospitals"
+          ]
+        },
+        "min_X": {
+          "occurence": "None",
+          "point": "BOTTOM_LEFT",
+          "text": "None"
+        },
+        "min_Y": {
+          "occurence": "last",
+          "point": "BOTTOM_LEFT",
+          "text": [
+            "Position"
+          ]
+        },
+        "start": {
+          "text": []
+        }
+      }
+    }
+  ],
+  "Speciality": [
+    {
+      "delimiter": {
+        "1": [
+          "Board:"
+        ],
+        "2": [],
+        "type": "blockStart"
+      },
+      "direction": "Y",
+      "loopId": 1,
+      "parentBB": {
+        "max_X": {
+          "occurence": "None",
+          "point": "TOP_RIGHT",
+          "text": "None"
+        },
+        "max_Y": {
+          "occurence": 1,
+          "point": "BOTTOM_LEFT",
+          "text": [
+            "Board Certification Information"
+          ]
+        },
+        "min_X": {
+          "occurence": "None",
+          "point": "BOTTOM_LEFT",
+          "text": "None"
+        },
+        "min_Y": {
+          "occurence": 1,
+          "point": "TOP_RIGHT",
+          "text": [
+            "Credentials"
+          ]
+        },
+        "start": {
+          "text": [
+            "Board Certification Information"
+          ]
+        }
+      }
+    }
+  ],
+  "SchoolDetails": [
+    {
+      "delimiter": {
+        "1": [
+          "Start Date:"
+        ],
+        "2": [],
+        "type": "blockEnd"
+      },
+      "direction": "Y",
+      "loopId": 1,
+      "parentBB": {
+        "max_X": {
+          "occurence": "None",
+          "point": "TOP_RIGHT",
+          "text": "None"
+        },
+        "max_Y": {
+          "occurence": 1,
+          "point": "BOTTOM_LEFT",
+          "text": [
+            "Credentials"
+          ]
+        },
+        "min_X": {
+          "occurence": "None",
+          "point": "BOTTOM_LEFT",
+          "text": "None"
+        },
+        "min_Y": {
+          "occurence": 1,
+          "point": "TOP_RIGHT",
+          "text": [
+            "Covering Physician"
+          ]
+        },
+        "start": {
+          "text": []
+        }
+      }
+    }
+  ],
+  "Address": [
+    {
+      "delimiter": {
+        "1": [
+          "Group Name:"
+        ],
+        "2": [],
+        "type": "blockStart"
+      },
+      "direction": "Y",
+      "loopId": 1,
+      "parentBB": {
+        "max_X": {
+          "occurence": "None",
+          "point": "TOP_RIGHT",
+          "text": "None"
+        },
+        "max_Y": {
+          "occurence": 1,
+          "point": "BOTTOM_LEFT",
+          "text": [
+            "Practice Location(s)"
+          ]
+        },
+        "min_X": {
+          "occurence": "None",
+          "point": "BOTTOM_LEFT",
+          "text": "None"
+        },
+        "min_Y": {
+          "occurence": 1,
+          "point": "TOP_RIGHT",
+          "text": [
+            "Insurance Information"
+          ]
+        },
+        "start": {
+          "text": []
+        }
+      }
+    }
+  ]
+}

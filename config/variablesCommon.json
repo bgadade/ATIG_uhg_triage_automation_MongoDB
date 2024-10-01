@@ -1,0 +1,74 @@
+{
+  "npiReg": {
+    "NPI_GENDER": {
+      "DATAFRAME_TYPE": "Single value",
+      "Input_Column": "Gender",
+      "Tree": {}
+    },
+    "NPI_LAST_NAME": {
+      "DATAFRAME_TYPE": "Single value",
+      "Input_Column": "Last name",
+      "Tree": {}
+    },
+    "NPI_FIRST_NAME": {
+      "DATAFRAME_TYPE": "Single value",
+      "Input_Column": "First name",
+      "Tree": {}
+    },
+    "NPI_TAXONOMY_PRIMARY": {
+      "DATAFRAME_TYPE": "Single value",
+      "Input_Column": "Taxonomy Primary",
+      "Tree": {}
+    },
+    "NPI_SPECIALITY_PRIMARY": {
+      "DATAFRAME_TYPE": "Single value",
+      "Input_Column": "Speciality Primary",
+      "Tree": {}
+    },
+    "NPI_ENUMERATION_TYPE": {
+      "DATAFRAME_TYPE": "Single value",
+      "Input_Column": "Enumeration Type",
+      "Tree": {}
+    },
+    "NPI_ENUMERATION_DATE": {
+      "DATAFRAME_TYPE": "Single value",
+      "Input_Column": "Enumeration Date",
+      "Tree": {}
+    },
+    "NPI_CREDENTIAL_PRIMARY": {
+      "DATAFRAME_TYPE": "Single value",
+      "Input_Column": "Credential",
+      "Tree": {}
+    }
+  },
+  "mandatory": {
+    "TABNAME": {
+      "DATAFRAME_TYPE": "Single value",
+      "Input_Column": [
+        ""
+      ],
+      "Tree": {}
+    },
+    "FILENAME": {
+      "DATAFRAME_TYPE": "Single value",
+      "Input_Column": [
+        ""
+      ],
+      "Tree": {}
+    },
+    "FINAL_NPI": {
+      "DATAFRAME_TYPE": "Single value",
+      "Input_Column": [
+        ""
+      ],
+      "Tree": {}
+    },
+    "NPI_TYPE_IND": {
+      "DATAFRAME_TYPE": "Single value",
+      "Input_Column": [
+        ""
+      ],
+      "Tree": {}
+    },"VALIDATED_ACTION": {"DATAFRAME_TYPE": "Single value", "Input_Column": [""], "Tree": {} }
+  }
+}

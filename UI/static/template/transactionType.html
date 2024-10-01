@@ -1,0 +1,147 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Transaction Type</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+    <div class="row tableBox" style="height: 506px;margin-left: 2px;width: 100%;margin-top: -10px;margin-bottom: 31px;">
+      <div id="mydiv">
+        <img  class="mappingSpinner" src="/static/images/page-loader.gif"/>
+      </div>
+      <!-- Your Page Content Here -->
+      <!-- <div class="container-fluid contentbody" style="padding-right:6%" data-ng-init="getTranstypes()"> -->
+      <div class="container-fluid contentbody" data-ng-init="getTranstypes()">
+        <div class="row autoMargin">
+          <div class="col-md-12" style="margin-top: 25px;">
+            <div class="processContent">
+              <div class="row z">
+                <!-- <button type="button" name="button" class="btn btndefault" ng-click="proceedToBack()">Back</button> -->
+                <!-- <div class="col-md-2 pull-left"> -->
+                  <button type="button" class="btn btndefault" style="float:left;width:10%" ng-click="proceedToBack()">Back</button>
+                <!-- </div> -->
+                <span style="font-size: 15px;margin-left: 1%;color: #333333;width: 58%;float: left;line-height: 1.5;word-break: break-all;">File Name:<strong>{{transData.filename}}</strong></span>
+                <button type="button" name="button" class="btn btndefault" ng-If="redirect == true" style="float:right;width:10%;margin-right:0;" ng-click="generateOutput()">Next>> </button>
+                <!-- <button type="button" name="button" class="btn btndefault" ng-If="redirect == false" style="float:right;width:10%;margin-right:7%;" ng-click="showPopup()">Next>> </button> -->
+                <button type="button" name="button" class="btn btndefault" ng-If="redirect == false" style="float:right;width:10%;margin-right:0;" ng-click="proceedToOutput()">Save </button>
+                <button type="button" name="button" class="btn btndefault" style="float:right;width:10%;margin-right:1%;" ng-disabled="originalData == false" ng-click="fetchSOTData()">Fetch SOT</button>
+              </div>
+              <div class="row z">
+                <div class="col-md-9 scrollbar tabScroll" style="width:100%">
+                  <div class="col-md-2"  ng-repeat="(sheetName,sheetData) in transData.data" style="margin-right: -2.5%;">
+                    <button style="border-radius: 11px 11px 0px 0px;" type="button" class="btn btn-lg sheetBtn" data-toggle="popover" data-placement="top" data-trigger="hover" title="{{sheetName}}" ng-class="sheetName == selectedSheetName?'successBtn':'tabsBtn'" ng-click="showSheet(sheetName)">{{sheetName}}</button>
+                  </div>
+                </div>
+              </div>
+                <div class="row transDataDiv scale" style="margin-top:25px;">
+                  <div class="col-md-3 scrollbar typesDiv">
+                    <table class="table childgrid">
+                      <tr ui-on-Drop="onDrop($event,$data,types)" on-drop-success="dropSuccessHandler($event,$index,transData.AllTransactionTypes)" ng-repeat="types in transData.AllTransactionTypes track by $index">
+                        <td class="typeTd">
+                          {{types}}<span class="badge" style="float:right">{{allTypes[types]}}</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div  class="col-md-9">
+                    <div class="row" style="margin: 12px 5px;">
+                      <input type="checkbox" ng-model="selectAll" value="selectAll" ng-click="toggleAll()" style="float:left;margin-top:6px;margin-right: 3px;"> Select all
+                      <input class="typeSearch" type="text" placeholder="Search" ng-model="viewSearch" ng-change="applySearch()">
+
+                      <button class="clone-btn" ng-model="cloneRow" ng-disabled="selectedArray.length == 0" ng-click="cloneSelectedRow()">Clone</button>
+                      <button class="del-btn" ng-model="deleteRow" ng-disabled="selectedcloneArray.length == 0 && selectedArray.length == 0" ng-click="deleteSelectedRow()">Delete</button>
+                      <!-- <button class="clone-btn" ng-model="cloneRow"  ng-click="cloneSelectedRow()">Clone</button>
+                      <button class="del-btn" ng-model="deleteRow"  ng-click="deleteSelectedRow()">Delete</button> -->
+                      <button class="reset-btn" ng-model="resetRow" ng-disabled="resetData == false" ng-click="resetChanges()">Reset</button>
+                      <span>{{rowcount}} rows <span ng-If="selectAll == true || selectedArray.length > 0">Selected</span></span>
+                    </div>
+                    <table class="col-md-12 table table-hover table-fixed childgrid" ng-repeat="(sheetName, sheetData) in transData.data" ng-if="sheetName == selectedSheetName">
+                      <thead>
+                        <tr>
+                          <th class="col-md-2 rowindex">Row Index</th>
+                          <th class="col-md-4">Row Values</th>
+                          <th class="col-md-2" style="margin-left:-1%">Provider NPI</th>
+                          <th class="col-md-3" style="margin-left: -1.2%;">Transaction Type</th>
+                          <th class="col-md-1 type" style="margin-left:-2%">Type</th>
+                        </tr>
+                      </thead>
+                      <tbody class="scrollbar">
+                        <!-- on-drop-success="dropSuccessHandler($event,selectedArray,sheetData,data)" -->
+                        <tr class="col-md-12" ui-draggable="true" drag="data" style="padding: 0;"
+                        on-drop-success="dropSuccessHandler($event,selecteddelArray,sheetData,data)"
+                        ng-repeat="data in ($parent.filteredItems[selectedSheetName] = (sheetData | filter:viewSearch)) track by $index"
+                        ng-click="highlightDragRow(data.rowIndex,data.updatedrowIndex,selecteddelArray,sheetData,data)"
+                        ng-class="selecteddelArray.indexOf(data.updatedrowIndex)!=-1?'selectedRow':(checkType(data.TransactionType)?'warningRows':'')">
+                          <!-- <td class="col-md-2">{{data.rowIndex}}</td> -->
+                          <td class="col-md-2 rowindex" style="padding: 0 25px;line-height: 6;">{{data.updatedrowIndex}}</td>
+
+                          <td class="col-md-4">
+                            <span ng-repeat="values in data.colValues" >{{values}} </span>
+                          </td>
+                          <td class="col-md-2">{{data.provider_npi}}</td>
+                          <td class="col-md-3" ng-if="!checkType(data.TransactionType)">{{data.TransactionType[0]}}</td>
+                          <td class="col-md-3" ng-if="checkType(data.TransactionType)">
+                            <span ng-repeat="colType in data.TransactionType track by $index">{{colType}}
+                              <span ng-if="!$last">,</span>
+                            </span>
+                          </td>
+                          <td class="col-md-1 type">{{data.row}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+              <br>
+            </div>
+          </div>
+      </div>
+      </div>
+      <div class="modal fade saveModal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              You have Unsaved Changes. Do you want to save and proceed?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" ng-click="proceedToOutput()">Save & Proceed</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="errorModal"  tabindex="-1" role="dialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- <h5 class="modal-title">Modal title</h5> -->
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>{{error}}</p>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

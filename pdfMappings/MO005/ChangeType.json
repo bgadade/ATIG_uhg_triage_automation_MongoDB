@@ -1,0 +1,16 @@
+{"ACTION": {
+  "PARENT_CATEGORY": "ChangeType",
+  "Column_Type": [
+   {
+    "Tag": "GENERAL",
+    "Location": [{"loopDetails": "None",
+                 "parentBB": {
+                            "min_Y": { "text": ["PHYSICIAN INFORMATION"],"point": "TOP_RIGHT","occurence": 1},
+                            "max_Y": { "text": ["CoxHealth Network", "Phelps County", "Ozarks Community Hospital"],"point": "BOTTOM_LEFT","occurence": 1},
+                            "min_X": { "text": "None","point": "BOTTOM_LEFT","occurence": "None"},
+                            "max_X": { "text": "None","point": "TOP_RIGHT","occurence": "None"}},
+                 "tableDetails": "None"}]
+  }
+  ]
+ }
+   }
